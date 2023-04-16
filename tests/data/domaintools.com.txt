@@ -1,0 +1,54 @@
+Domain Name: domaintools.com
+Registry Domain ID: 1697312_DOMAIN_COM-VRSN
+Registrar WHOIS Server: WHOIS.ENOM.COM
+Registrar URL: WWW.ENOM.COM
+Updated Date: 2020-01-09T23:06:29.00Z
+Creation Date: 1998-08-02T04:00:00.00Z
+Registrar Registration Expiration Date: 2027-08-01T04:00:00.00Z
+Registrar: ENOM, INC.
+Registrar IANA ID: 48
+Domain Status: clientTransferProhibited https://www.icann.org/epp#clientTransferProhibited
+Registrant Name: REDACTED FOR PRIVACY
+Registrant Organization: REDACTED FOR PRIVACY
+Registrant Street: REDACTED FOR PRIVACY
+Registrant Street:
+Registrant City: REDACTED FOR PRIVACY
+Registrant State/Province: WA
+Registrant Postal Code: REDACTED FOR PRIVACY
+Registrant Country: US
+Registrant Phone: REDACTED FOR PRIVACY
+Registrant Phone Ext:
+Registrant Fax: REDACTED FOR PRIVACY
+Registrant Email: https://tieredaccess.com/contact/0209f77f-1367-4fa8-b2d6-72a3f8bd3696
+Admin Name: REDACTED FOR PRIVACY
+Admin Organization: REDACTED FOR PRIVACY
+Admin Street: REDACTED FOR PRIVACY
+Admin Street:
+Admin City: REDACTED FOR PRIVACY
+Admin State/Province: REDACTED FOR PRIVACY
+Admin Postal Code: REDACTED FOR PRIVACY
+Admin Country: REDACTED FOR PRIVACY
+Admin Phone: REDACTED FOR PRIVACY
+Admin Phone Ext:
+Admin Fax: REDACTED FOR PRIVACY
+Admin Email: REDACTED FOR PRIVACY
+Tech Name: REDACTED FOR PRIVACY
+Tech Organization: REDACTED FOR PRIVACY
+Tech Street: REDACTED FOR PRIVACY
+Tech Street:
+Tech City: REDACTED FOR PRIVACY
+Tech State/Province: REDACTED FOR PRIVACY
+Tech Postal Code: REDACTED FOR PRIVACY
+Tech Country: REDACTED FOR PRIVACY
+Tech Phone: REDACTED FOR PRIVACY
+Tech Phone Ext:
+Tech Fax: REDACTED FOR PRIVACY
+Tech Email: REDACTED FOR PRIVACY
+Name Server: DNS1.P04.NSONE.NET.
+Name Server: DNS2.P04.NSONE.NET.
+Name Server: DNS3.P04.NSONE.NET.
+Name Server: DNS4.P04.NSONE.NET.
+DNSSEC: unsigned
+Registrar Abuse Contact Email: ABUSE@ENOM.COM
+Registrar Abuse Contact Phone: +1.4259744689
+URL of the ICANN WHOIS Data Problem Reporting System: HTTP://WDPRS.INTERNIC.NET/
