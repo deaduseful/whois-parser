@@ -7,13 +7,16 @@ use Carbon\Exceptions\InvalidFormatException;
 use Illuminate\Support\Str;
 use stdClass;
 
-class Parser {
+class Parser
+{
     private stdClass $data;
     private ?string $lookup;
+    private ?Carbon $date;
 
-    public function __construct(string $lookup)
+    public function __construct(string $lookup, string $date = null)
     {
         $this->lookup = $lookup;
+        $this->date = Carbon::parse($date);
     }
 
     public function getData(): stdClass
@@ -88,7 +91,7 @@ class Parser {
         $response->registration = $registration;
         $response->name_servers = $raw['nameServer'];
         $whois = new stdClass();
-        $whois->date = now()->format('Y-m-d');
+        $whois->date = $this->date->format('Y-m-d');
         $whois->record = $lookup;
         $response->whois = $whois;
         $parsedWhois = new stdClass();
@@ -100,12 +103,12 @@ class Parser {
         $parsedWhois->name_servers = $raw['nameServer'];
         $registrar = new stdClass();
         /**
-        'name' => 'ENOM, INC. eNom, LLC'
-        'abuse_contact_phone' => '+1.4259744689'
-        'abuse_contact_email' => 'ABUSE@ENOM.COM'
-        'iana_id' => '48'
-        'url' => 'WWW.ENOM.COM,http://www.enomd...ns.com'
-        'whois_server' => 'WHOIS.ENOM.COM'
+         * 'name' => 'ENOM, INC. eNom, LLC'
+         * 'abuse_contact_phone' => '+1.4259744689'
+         * 'abuse_contact_email' => 'ABUSE@ENOM.COM'
+         * 'iana_id' => '48'
+         * 'url' => 'WWW.ENOM.COM,http://www.enomd...ns.com'
+         * 'whois_server' => 'WHOIS.ENOM.COM'
          */
         $registrar->name = $raw['registrar'];
         $registrar->abuse_contact_phone = $raw['registrarAbuseContactPhone'];
@@ -115,23 +118,23 @@ class Parser {
         $registrar->whois_server = $raw['registrarWHOISServer'];
         $parsedWhois->registrar = $registrar;
         /**
-        'registrant' => stdClass Object (...)
-        'admin' => stdClass Object (...)
-        'tech' => stdClass Object (...)
-        'billing' => stdClass Object (...)
+         * 'registrant' => stdClass Object (...)
+         * 'admin' => stdClass Object (...)
+         * 'tech' => stdClass Object (...)
+         * 'billing' => stdClass Object (...)
          */
         $contacts = new stdClass();
         /**
-        'name' => 'REDACTED FOR PRIVACY'
-        'org' => 'REDACTED FOR PRIVACY'
-        'street' => Array (...)
-        'city' => 'REDACTED FOR PRIVACY'
-        'state' => 'WA'
-        'postal' => 'REDACTED FOR PRIVACY'
-        'country' => 'US'
-        'phone' => 'REDACTED FOR PRIVACY'
-        'fax' => 'REDACTED FOR PRIVACY'
-        'email' => 'https://tieredaccess.com/cont...bd3696'
+         * 'name' => 'REDACTED FOR PRIVACY'
+         * 'org' => 'REDACTED FOR PRIVACY'
+         * 'street' => Array (...)
+         * 'city' => 'REDACTED FOR PRIVACY'
+         * 'state' => 'WA'
+         * 'postal' => 'REDACTED FOR PRIVACY'
+         * 'country' => 'US'
+         * 'phone' => 'REDACTED FOR PRIVACY'
+         * 'fax' => 'REDACTED FOR PRIVACY'
+         * 'email' => 'https://tieredaccess.com/cont...bd3696'
          */
         $registrant = new stdClass();
         $registrant->name = $raw['registrantName'] ?? '';
@@ -183,8 +186,8 @@ class Parser {
         $contacts->billing = $billing;
         $parsedWhois->contacts = $contacts;
         /**
-        'dnssec' => 'unsigned'
-        'registry_domain_id' => '1697312_DOMAIN_COM-VRSN'
+         * 'dnssec' => 'unsigned'
+         * 'registry_domain_id' => '1697312_DOMAIN_COM-VRSN'
          */
         $otherProperties = new stdClass();
         $otherProperties->dnssec = $raw['dNSSEC'];

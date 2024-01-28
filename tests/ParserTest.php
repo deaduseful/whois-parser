@@ -12,7 +12,7 @@ class ParserTest extends TestCase
         $lookup = file_get_contents(__DIR__ . '/data/' . $query . '.txt');
         $json = file_get_contents(__DIR__ . '/data/' . $query . '.json');
         $data = json_decode($json);
-        $parser = new Parser($lookup);
+        $parser = new Parser($lookup, '2023-04-14');
         $this->assertEquals($parser->getData(), $data);
     }
 }
