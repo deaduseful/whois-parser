@@ -196,7 +196,6 @@ class Parser
         $response->parsed_whois = $parsedWhois;
         $response->record_source = $raw['domainName'];
         $data->response = $response;
-        $data->raw = $raw;
         return $data;
     }
 }
