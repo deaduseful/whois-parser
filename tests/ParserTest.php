@@ -16,4 +16,24 @@ class ParserTest extends TestCase
         $actual = $parser->getData();
         $this->assertEquals($expected, $actual);
     }
+
+    /** @dataProvider NotFoundData */
+    public function testNotFound($domain)
+    {
+        $lookup = file_get_contents(__DIR__ . '/data/' . $domain . '.txt');
+        $parser = new Parser($lookup);
+        $actual = $parser->getData();
+        $expected = json_decode('{ "error": "Domain not found" }');
+        self::assertEquals($expected, $actual);
+    }
+
+    public function NotFoundData(): array
+    {
+        return [
+            //['07.tv'],
+            ['walksolutions.org'],
+            //['cambridge.org'],
+            //['dns-001.com'],
+        ];
+    }
 }

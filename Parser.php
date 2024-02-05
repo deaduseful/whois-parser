@@ -77,30 +77,39 @@ class Parser
     private function parse(): stdClass
     {
         $lookup = $this->lookup;
-        $raw = $this->getRaw($lookup);
-        $statuses = is_array($raw['domainStatus']) ? $raw['domainStatus'] : [$raw['domainStatus']];
         $data = new stdClass();
+        if (str_contains($lookup, 'Domain not found.')) {
+            $data->error = 'Domain not found';
+            return $data;
+        }
+        $raw = $this->getRaw($lookup);
+        if (empty($raw['domainName'])) {
+            $data->error = 'Unable to parse Domain Name';
+            return $data;
+        }
         $response = new stdClass();
-        $response->registrant = $raw['registrantName'];
+        $response->registrant = $raw['registrantName'] ?? null;
+        $domainStatus = $raw['domainStatus'] ?? null;
+        $statuses = is_array($domainStatus) ? $domainStatus : [$domainStatus];
         $registration = new stdClass();
-        $registration->created = $raw['creationDate']->format('Y-m-d');
-        $registration->expires = $raw['registrarRegistrationExpirationDate']->format('Y-m-d');
-        $registration->updated = $raw['updatedDate']->format('Y-m-d');
-        $registration->registrar = $raw['registrar'];
+        $registration->created = isset($raw['creationDate']) ? $raw['creationDate']->format('Y-m-d') : null;
+        $registration->expires = isset($raw['registrarRegistrationExpirationDate']) ? $raw['registrarRegistrationExpirationDate']->format('Y-m-d') : null;
+        $registration->updated = isset($raw['updatedDate']) ? $raw['updatedDate']->format('Y-m-d') : null;
+        $registration->registrar = $raw['registrar'] ?? null;
         $registration->statuses = $statuses;
         $response->registration = $registration;
-        $response->name_servers = $raw['nameServer'];
+        $response->name_servers = $raw['nameServer'] ?? null;
         $whois = new stdClass();
         $whois->date = $this->date->format('Y-m-d');
         $whois->record = $lookup;
         $response->whois = $whois;
         $parsedWhois = new stdClass();
-        $parsedWhois->domain = $raw['domainName'];
-        $parsedWhois->created_date = $raw['creationDate']->toAtomString();
-        $parsedWhois->updated_date = $raw['updatedDate']->toAtomString();
-        $parsedWhois->expired_date = $raw['registrarRegistrationExpirationDate']->toAtomString();
+        $parsedWhois->domain = $raw['domainName'] ?? null;
+        $parsedWhois->created_date = isset($raw['creationDate']) ? $raw['creationDate']->toAtomString() : null;
+        $parsedWhois->updated_date = isset($raw['updatedDate']) ? $raw['updatedDate']->toAtomString() : null;
+        $parsedWhois->expired_date = isset($raw['registrarRegistrationExpirationDate']) ? $raw['registrarRegistrationExpirationDate']->toAtomString() : null;
         $parsedWhois->statuses = $statuses;
-        $parsedWhois->name_servers = $raw['nameServer'];
+        $parsedWhois->name_servers = $raw['nameServer'] ?? null;
         $registrar = new stdClass();
         /**
          * 'name' => 'ENOM, INC. eNom, LLC'
@@ -110,12 +119,12 @@ class Parser
          * 'url' => 'WWW.ENOM.COM,http://www.enomd...ns.com'
          * 'whois_server' => 'WHOIS.ENOM.COM'
          */
-        $registrar->name = $raw['registrar'];
-        $registrar->abuse_contact_phone = $raw['registrarAbuseContactPhone'];
-        $registrar->abuse_contact_email = $raw['registrarAbuseContactEmail'];
-        $registrar->iana_id = $raw['registrarIANAID'];
-        $registrar->url = $raw['registrarURL'];
-        $registrar->whois_server = $raw['registrarWHOISServer'];
+        $registrar->name = $raw['registrar'] ?? null;
+        $registrar->abuse_contact_phone = $raw['registrarAbuseContactPhone'] ?? null;
+        $registrar->abuse_contact_email = $raw['registrarAbuseContactEmail'] ?? null;
+        $registrar->iana_id = $raw['registrarIANAID'] ?? null;
+        $registrar->url = $raw['registrarURL'] ?? null;
+        $registrar->whois_server = $raw['registrarWHOISServer'] ?? null;
         $parsedWhois->registrar = $registrar;
         /**
          * 'registrant' => stdClass Object (...)
@@ -190,11 +199,11 @@ class Parser
          * 'registry_domain_id' => '1697312_DOMAIN_COM-VRSN'
          */
         $otherProperties = new stdClass();
-        $otherProperties->dnssec = $raw['dNSSEC'];
-        $otherProperties->registry_domain_id = $raw['registryDomainID'];
+        $otherProperties->dnssec = $raw['dNSSEC'] ?? null;
+        $otherProperties->registry_domain_id = $raw['registryDomainID'] ?? null;
         $parsedWhois->other_properties = $otherProperties;
         $response->parsed_whois = $parsedWhois;
-        $response->record_source = $raw['domainName'];
+        $response->record_source = $raw['domainName'] ?? null;
         $data->response = $response;
         return $data;
     }
