@@ -30,10 +30,10 @@ class ParserTest extends TestCase
     public function NotFoundData(): array
     {
         return [
-            //['07.tv'],
+            ['07.tv'],
             ['walksolutions.org'],
-            //['cambridge.org'],
-            //['dns-001.com'],
+            ['cambridge.org'],
+            ['dns-001.com'],
         ];
     }
 }

@@ -9,6 +9,7 @@ use stdClass;
 
 class Parser
 {
+    const ERROR_DOMAIN_NOT_FOUND = 'Domain not found';
     private stdClass $data;
     private ?string $lookup;
     private ?Carbon $date;
@@ -78,11 +79,15 @@ class Parser
     {
         $lookup = $this->lookup;
         $data = new stdClass();
-        if (str_contains($lookup, 'Domain not found.')) {
-            $data->error = 'Domain not found';
+        $raw = $this->getRaw($lookup);
+        if (str_starts_with($raw[0], 'Domain not found')) {
+            $data->error = self::ERROR_DOMAIN_NOT_FOUND;
             return $data;
         }
-        $raw = $this->getRaw($lookup);
+        if (str_starts_with($raw[0], 'No match for')) {
+            $data->error = self::ERROR_DOMAIN_NOT_FOUND;
+            return $data;
+        }
         if (empty($raw['domainName'])) {
             $data->error = 'Unable to parse Domain Name';
             return $data;
