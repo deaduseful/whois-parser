@@ -53,6 +53,7 @@ class ParserTest extends TestCase
             ['tubosparis.es'],
             ['devonhampers.com'],
             ['test.ch'],
+            ['test.com'],
         ];
     }
 }
