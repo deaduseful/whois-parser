@@ -24,7 +24,7 @@ class Parser
         'whois.nic.es' => 'exceeded the established limit',
         'whois.godaddy.com' => 'Rate limit exceeded',
         'generic' => 'Query rate exceeded, please try again later.',
-        'org' => 'WHOIS LIMIT EXCEEDED - SEE WWW.PIR.ORG/WHOIS FOR DETAILS',
+        '.org' => 'WHOIS LIMIT EXCEEDED',
         'qa' => 'BLACKLISTED: You have exceeded the query limit for your network or IP address and have been blacklisted.',
         'uk_whois2' => 'not registered.  Closing...',
         'uk' => 'the WHOIS query quota',
@@ -107,7 +107,7 @@ class Parser
             }
         }
         foreach (self::MATCH_RATE_LIMIT as $find) {
-            if (str_contains($lookup, $find)) {
+            if (str_contains(strtolower($lookup), strtolower($find))) {
                 $data->error = self::ERROR_RATE_LIMITED;
                 return $data;
             }
