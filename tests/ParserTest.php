@@ -54,6 +54,7 @@ class ParserTest extends TestCase
             ['devonhampers.com'],
             ['test.ch'],
             ['test.com'],
+            ['dogtrainingcollar.org'],
         ];
     }
 }
