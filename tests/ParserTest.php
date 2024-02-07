@@ -36,4 +36,21 @@ class ParserTest extends TestCase
             ['dns-001.com'],
         ];
     }
+
+    /** @dataProvider RateLimitedData */
+    public function testRateLimited($domain)
+    {
+        $lookup = file_get_contents(__DIR__ . '/data/' . $domain . '.txt');
+        $parser = new Parser($lookup);
+        $actual = $parser->getData();
+        $expected = json_decode('{ "error": "Rate limited" }');
+        self::assertEquals($expected, $actual);
+    }
+
+    public function RateLimitedData(): array
+    {
+        return [
+            ['tubosparis.es'],
+        ];
+    }
 }
