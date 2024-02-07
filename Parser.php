@@ -10,6 +10,20 @@ use stdClass;
 class Parser
 {
     const ERROR_DOMAIN_NOT_FOUND = 'Domain not found';
+    const ERROR_RATE_LIMITED = 'Rate limited';
+    const MATCH_NOT_FOUND = ['Domain not found', 'No match for'];
+
+    const MATCH_RATE_LIMIT = [
+        'ch' => 'temporarily not available',
+        'com' => 'IP Address Has Reached Rate Limit',
+        'es' => 'exceeded the established limit',
+        'generic' => 'Query rate exceeded, please try again later.',
+        'org' => 'WHOIS LIMIT EXCEEDED - SEE WWW.PIR.ORG/WHOIS FOR DETAILS',
+        'qa' => 'BLACKLISTED: You have exceeded the query limit for your network or IP address and have been blacklisted.',
+        'uk_whois2' => 'not registered.  Closing...',
+        'uk' => 'the WHOIS query quota',
+        'app' => 'Rate limit exceeded',
+    ];
     private stdClass $data;
     private ?string $lookup;
     private ?Carbon $date;
@@ -80,13 +94,17 @@ class Parser
         $lookup = $this->lookup;
         $data = new stdClass();
         $raw = $this->getRaw($lookup);
-        if (str_starts_with($raw[0], 'Domain not found')) {
-            $data->error = self::ERROR_DOMAIN_NOT_FOUND;
-            return $data;
+        foreach (self::MATCH_NOT_FOUND as $find) {
+            if (str_starts_with($raw[0], $find)) {
+                $data->error = self::ERROR_DOMAIN_NOT_FOUND;
+                return $data;
+            }
         }
-        if (str_starts_with($raw[0], 'No match for')) {
-            $data->error = self::ERROR_DOMAIN_NOT_FOUND;
-            return $data;
+        foreach (self::MATCH_RATE_LIMIT as $find) {
+            if (str_contains($lookup, $find)) {
+                $data->error = self::ERROR_RATE_LIMITED;
+                return $data;
+            }
         }
         if (empty($raw['domainName'])) {
             $data->error = 'Unable to parse Domain Name';
