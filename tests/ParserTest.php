@@ -51,6 +51,8 @@ class ParserTest extends TestCase
     {
         return [
             ['tubosparis.es'],
+            ['devonhampers.com'],
+            ['test.ch'],
         ];
     }
 }

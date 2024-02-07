@@ -13,9 +13,14 @@ class Parser
     const ERROR_RATE_LIMITED = 'Rate limited';
     const MATCH_NOT_FOUND = ['Domain not found', 'No match for'];
 
+    /**
+     * @var string[] Rate Limit Matching
+     * @see https://github.com/cheenanet/whois-servers-list/blob/master/limit-reached-messages.json
+     */
     const MATCH_RATE_LIMIT = [
-        'ch' => 'temporarily not available',
-        'com' => 'IP Address Has Reached Rate Limit',
+        'whois.joker.com' => 'Service is temporarily not available',
+        'whois.nic.ch' => 'Requests of this client are not permitted',
+        'whois.networksolutions.com' => 'IP Address Has Reached Rate Limit',
         'es' => 'exceeded the established limit',
         'generic' => 'Query rate exceeded, please try again later.',
         'org' => 'WHOIS LIMIT EXCEEDED - SEE WWW.PIR.ORG/WHOIS FOR DETAILS',
