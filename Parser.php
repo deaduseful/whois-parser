@@ -37,6 +37,8 @@ class Parser
         'uk_whois2' => 'not registered.  Closing...',
         'uk' => 'the WHOIS query quota',
         'app' => 'Rate limit exceeded',
+        'whois.nic.vip' => 'Number of allowed queries exceeded',
+        'whois.nic.cz' => 'Your connection limit exceeded',
     ];
     private stdClass $data;
     private ?string $lookup;
