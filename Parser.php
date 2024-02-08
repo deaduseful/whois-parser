@@ -11,7 +11,10 @@ class Parser
 {
     const ERROR_DOMAIN_NOT_FOUND = 'Domain not found';
     const ERROR_RATE_LIMITED = 'Rate limited';
-    const MATCH_NOT_FOUND = ['Domain not found', 'No match for'];
+    const MATCH_NOT_FOUND = [
+        'Domain not found',
+        'No match for',
+    ];
 
     /**
      * @var string[] Rate Limit Matching
@@ -100,6 +103,10 @@ class Parser
         $lookup = $this->lookup;
         $data = new stdClass();
         $raw = $this->getRaw($lookup);
+        if (empty($raw['notFound']) === false) {
+            $data->error = self::ERROR_DOMAIN_NOT_FOUND;
+            return $data;
+        }
         foreach (self::MATCH_NOT_FOUND as $find) {
             if (str_starts_with($raw[0], $find)) {
                 $data->error = self::ERROR_DOMAIN_NOT_FOUND;
