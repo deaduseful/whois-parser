@@ -35,6 +35,7 @@ class ParserTest extends TestCase
             ['cambridge.org'],
             ['dns-001.com'],
             ['smock.co.nz'],
+            ['regenerate.co.in'],
         ];
     }
 

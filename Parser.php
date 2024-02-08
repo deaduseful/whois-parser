@@ -11,9 +11,14 @@ class Parser
 {
     const ERROR_DOMAIN_NOT_FOUND = 'Domain not found';
     const ERROR_RATE_LIMITED = 'Rate limited';
+    /**
+     * @var string[] Not Found Matching
+     * @see https://github.com/cheenanet/whois-servers-list/blob/master/whois.json
+     */
     const MATCH_NOT_FOUND = [
         'Domain not found',
         'No match for',
+        'whois.registry.in' => 'No Data Found',
     ];
 
     /**
