@@ -1,0 +1,69 @@
+Domain Name: WOODCHUCK.APP
+Registry Domain ID: DFE893B3A-APP
+Registrar WHOIS Server: whois.cloudflare.com
+Registrar URL: https://www.cloudflare.com
+Updated Date: 2023-11-16T08:09:01Z
+Creation Date: 2023-11-09T20:24:44Z
+Registrar Registration Expiration Date: 2026-11-09T20:24:44Z
+Registrar: Cloudflare, Inc.
+Registrar IANA ID: 1910
+Domain Status: clienttransferprohibited https://icann.org/epp#clienttransferprohibited
+Registry Registrant ID:
+Registrant Name: DATA REDACTED
+Registrant Organization: DATA REDACTED
+Registrant Street: DATA REDACTED
+Registrant City: DATA REDACTED
+Registrant State/Province: MI
+Registrant Postal Code: DATA REDACTED
+Registrant Country: US
+Registrant Phone: DATA REDACTED
+Registrant Phone Ext: DATA REDACTED
+Registrant Fax: DATA REDACTED
+Registrant Fax Ext: DATA REDACTED
+Registrant Email: https://domaincontact.cloudflareregistrar.com/woodchuck.app
+Registry Admin ID:
+Admin Name: DATA REDACTED
+Admin Organization: DATA REDACTED
+Admin Street: DATA REDACTED
+Admin City: DATA REDACTED
+Admin State/Province: DATA REDACTED
+Admin Postal Code: DATA REDACTED
+Admin Country: DATA REDACTED
+Admin Phone: DATA REDACTED
+Admin Phone Ext: DATA REDACTED
+Admin Fax: DATA REDACTED
+Admin Fax Ext: DATA REDACTED
+Admin Email: https://domaincontact.cloudflareregistrar.com/woodchuck.app
+Registry Tech ID:
+Tech Name: DATA REDACTED
+Tech Organization: DATA REDACTED
+Tech Street: DATA REDACTED
+Tech City: DATA REDACTED
+Tech State/Province: DATA REDACTED
+Tech Postal Code: DATA REDACTED
+Tech Country: DATA REDACTED
+Tech Phone: DATA REDACTED
+Tech Phone Ext: DATA REDACTED
+Tech Fax: DATA REDACTED
+Tech Fax Ext: DATA REDACTED
+Tech Email: https://domaincontact.cloudflareregistrar.com/woodchuck.app
+Registry Billing ID:
+Billing Name: DATA REDACTED
+Billing Organization: DATA REDACTED
+Billing Street: DATA REDACTED
+Billing City: DATA REDACTED
+Billing State/Province: DATA REDACTED
+Billing Postal Code: DATA REDACTED
+Billing Country: DATA REDACTED
+Billing Phone: DATA REDACTED
+Billing Phone Ext: DATA REDACTED
+Billing Fax: DATA REDACTED
+Billing Fax Ext: DATA REDACTED
+Billing Email: https://domaincontact.cloudflareregistrar.com/woodchuck.app
+Name Server: kay.ns.cloudflare.com
+Name Server: salvador.ns.cloudflare.com
+DNSSEC: unsigned
+Registrar Abuse Contact Email: registrar-abuse@cloudflare.com
+Registrar Abuse Contact Phone: +1.4153197517
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+>>> Last update of WHOIS database: 2024-02-10T11:54:24Z <<<

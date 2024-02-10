@@ -1,0 +1,35 @@
+** Domain Name: aytitekstil.com.tr
+Frozen Status: -
+Transfer Status: The domain is LOCKED to transfer.
+
+** Registrant:
+   AYTI TEKSTÄ°L
+   Hidden upon user request
+   Hidden upon user request
+   Hidden upon user request
+
+
+
+** Registrar:
+NIC Handle		: tyh14-metu
+Organization Name	: Turkticaret.Net YazÄ±lÄ±m Hizmetleri Sanayi Ticaret A.Å.
+Address			: Uludag Universitesi Gorukle Kampusu
+			  Ulutek Tek. Bol. Arge Binasi Yani Ek Bina Nilufer
+			  - Bursa TÃ¼rkiye
+Phone			: 90-224-2248640
+Fax			: 90-224-2249520
+
+
+** Domain Servers:
+ns1.turkticaret.net
+ns2.turkticaret.net
+ns3.turkticaret.net
+
+
+** Additional Info:
+Created on..............: 2011-Apr-27.
+Expires on..............: 2025-Apr-26.
+
+
+** Whois Server:
+Last Update Time: 2023-04-07T13:16:47+03:00

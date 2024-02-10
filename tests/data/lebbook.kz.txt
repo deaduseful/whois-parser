@@ -1,0 +1,41 @@
+Whois Server for the KZ top level domain name.
+This server is maintained by KazNIC Organization, a ccTLD manager for Kazakhstan Republic.
+
+Domain Name............: lebbook.kz
+
+Organization Using Domain Name
+Name...................: GU "Ceetralizovannaya bibliotechnaya sistema Lebyazhinskogo rayona", 040740004758
+Organization Name......: GU "Ceetralizovannaya bibliotechnaya sistema Lebyazhinskogo rayona", 040740004758
+Street Address.........: Lebyazhinskiy rayon selo Akku ul. Baymoldina,6
+City...................: selo
+State..................: Pavlodarskaya oblast
+Postal Code............: 140700
+Country................: KZ
+
+Administrative Contact/Agent
+NIC Handle.............: PS-KZ-1487762830
+Name...................: GU "Ceetralizovannaya bibliotechnaya sistema Lebyazhinskogo rayona", 040740004758
+Phone Number...........: 77056135505
+Fax Number.............:
+Email Address..........: leb-library@mail.ru
+
+Nameserver in listed order
+
+Primary server.........: ns3.ps.kz
+Primary ip address.....: 31.210.174.104
+
+Secondary server.......: ns1.ps.kz
+Secondary ip address...: 195.210.46.194, 2a00:5da0:0:1::194
+
+Secondary server.......: ns2.ps.kz
+Secondary ip address...: 195.210.46.2, 2a00:5da0:1000::2
+
+
+Domain created: 2017-02-22 11:27:11 (GMT+0:00)
+Last modified :
+Domain status : clientTransferProhibited -
+                clientRenewProhibited -
+
+Registar created: ICPS
+Current Registar: ICPS
+

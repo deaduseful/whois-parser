@@ -1,0 +1,49 @@
+*********************************************************************
+* Please note that the following result could be a subgroup of      *
+* the data contained in the database.                               *
+*                                                                   *
+* Additional information can be visualized at:                      *
+* http://web-whois.nic.it                                           *
+*********************************************************************
+
+Domain:             cohenhouse.it
+Status:             ok
+Signed:             no
+Created:            2020-08-21 22:50:48
+Last Update:        2022-09-06 00:52:47
+Expire Date:        2023-08-21
+
+Registrant
+  Organization:     Sicilian Valley
+  Address:          via Bongiovanni 30
+                    Taormina
+                    98039
+                    ME
+                    IT
+  Created:          2020-08-21 22:50:47
+  Last Update:      2020-08-21 22:50:46
+
+Admin Contact
+  Name:             hidden
+
+Technical Contacts
+  Name:             Technical Support
+  Organization:     Register SpA
+  Address:          Via Zanchi 22
+                    Bergamo
+                    24126
+                    BG
+                    IT
+  Created:          2009-09-28 11:01:09
+  Last Update:      2020-12-09 16:18:25
+
+Registrar
+  Organization:     Register S.p.a.
+  Name:             REGISTER-REG
+  Web:              https://www.register.it
+  DNSSEC:           yes
+
+
+Nameservers
+  ns1.register.it
+  ns2.register.it

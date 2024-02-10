@@ -1,0 +1,22 @@
+
+
+domain...............: test.ax
+status...............: Registered
+created..............: 19.09.2020
+expires..............: 19.09.2025
+available............: 20.10.2025
+modified.............: 15.12.2020
+RegistryLock.........: no
+
+Nameservers
+
+nserver..............: aria.ns.cloudflare.com
+nserver..............: vern.ns.cloudflare.com
+
+Registrar
+
+registrar............: NETIM
+www..................: https://www.netim.com/en/domain-name/ax-domain
+
+Copyright (c) Ãlands Landskapsregering
+

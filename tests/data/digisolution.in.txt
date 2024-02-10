@@ -1,0 +1,25 @@
+Domain Name: DIGISOLUTION.IN
+Registry Domain ID: D414400000006569106-AFIN
+Registrar WHOIS Server:
+Registrar URL: www.godaddy.com
+Updated Date: 2018-10-29T21:50:12Z
+Creation Date: 2018-08-29T08:29:54Z
+Registry Expiry Date: 2019-08-29T08:29:54Z
+Registrar Registration Expiration Date:
+Registrar: GoDaddy.com, LLC
+Registrar IANA ID: 146
+Registrar Abuse Contact Email: abuse@godaddy.com
+Registrar Abuse Contact Phone: +1.4806242505
+Reseller:
+Domain Status: clientDeleteProhibited
+Domain Status: clientRenewProhibited
+Domain Status: clientTransferProhibited
+Domain Status: clientUpdateProhibited
+Registrant Organization: Rinam Infosys
+Registrant State/Province: West Bengal
+Registrant Country: IN
+Name Server: NS29.DOMAINCONTROL.COM
+Name Server: NS30.DOMAINCONTROL.COM
+DNSSEC: unsigned
+
+>>> Last update of WHOIS database: 2018-11-29T19:00:23Z <<<

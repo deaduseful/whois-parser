@@ -1,0 +1,37 @@
+This is the PF top level domain whois server.
+Informations about 'vini.pf' :
+
+Status : active
+Created (JJ/MM/AAAA) : 01/06/2003
+Last renewed (JJ/MM/AAAA) : 27/05/2022
+Expire (JJ/MM/AAAA) : 27/05/2023
+Name server 1 : ns1.mana.pf
+Name server 2 : ns2.mana.pf
+Registrant Company Name : TIKIPHONE
+Registrant Name : TERIIEROOITERAI YANNICK
+Registrant Address : 440
+Registrant Postal Code : 98713
+Registrant City : PAPEETE - RP
+Registrant Region / Island : TAHITI
+Registrant Country : PolynÃ©sie FranÃ§aise
+Tech 1 Company Name : TIKIPHONE
+Tech 1 Name : TERIIEROOITERAI YANNICK
+Tech 1 Address : 440
+Tech 1 Postal Code : 98713
+Tech 1 City : PAPEETE - RP
+Tech 1 Region / Island : TAHITI
+Tech 1 Country : PolynÃ©sie FranÃ§aise
+Tech 2 Company Name : TIKIPHONE SA
+Tech 2 Name : Yannick LOUX
+Tech 2 Address : BP 440
+Tech 2 Postal Code : 98713
+Tech 2 City : PAPEETE
+Tech 2 Region / Island : RP TAHITI
+Tech 2 Country : PolynÃ©sie FranÃ§aise
+Registrar Company Name : ONATI SAS
+Registrar Name : Thomas LEFEBVRE
+Registrar Address : BP 440
+Registrar Address : Immeuble Ainapare au Pont de l'Est
+Registrar Postal Code : 98713
+Registrar City : PAPEETE
+Registrar Country : PolynÃ©sie FranÃ§aise

@@ -1,0 +1,81 @@
+Domain Name: TOKOBUNGAINDONESIA.COM
+Registry Domain ID: 2785109107_DOMAIN_COM-VRSN
+Registrar WHOIS Server: whois.webnic.cc
+Registrar URL: http://www.webnic.cc
+Updated Date: 2023-05-29T04:52:05Z
+Creation Date: 2023-05-29T04:52:12Z
+Expiration Date: 2024-05-29T04:52:11Z
+Registrar: WEBCC
+Registrar IANA ID: 460
+Registrar Abuse Contact Email: compliance_abuse@webnic.cc
+Registrar Abuse Contact Phone: +60.389966799
+Domain Status: ok https://icann.org/epp#ok
+Registry Registrant ID: Not Available From Registry
+Registrant Name: Taskam Muhaemin
+Registrant Organization: Bandung Website
+Registrant Street: Kp.Sinarmukti Rt/01 Rw/02 Ds.Selacau Kec.batujajar Kab.Bandung Barat Bandung
+Registrant City: Bandung
+Registrant State/Province: Jawa Barat
+Registrant Postal Code: 40156
+Registrant Country: ID
+Registrant Phone: +62.081323023200
+Registrant Phone Ext:
+Registrant Fax: +0.0
+Registrant Fax Ext:
+Registrant Email: taskam99@gmail.com
+Registry Admin ID: Not Available From Registry
+Admin Name: Taskam Muhaemin
+Admin Organization: Bandung Website
+Admin Street: Kp.Sinarmukti Rt/01 Rw/02 Ds.Selacau Kec.batujajar Kab.Bandung Barat Bandung
+Admin City: Bandung
+Admin State/Province: Jawa Barat
+Admin Postal Code: 40156
+Admin Country: ID
+Admin Phone: +62.081323023200
+Admin Phone Ext:
+Admin Fax: +0.0
+Admin Fax Ext:
+Admin Email: taskam99@gmail.com
+Registry Tech ID: Not Available From Registry
+Tech Name: Taskam Muhaemin
+Tech Organization: Bandung Website
+Tech Street: Kp.Sinarmukti Rt/01 Rw/02 Ds.Selacau Kec.batujajar Kab.Bandung Barat Bandung
+Tech City: Bandung
+Tech State/Province: Jawa Barat
+Tech Postal Code: 40156
+Tech Country: ID
+Tech Phone: +62.081323023200
+Tech Phone Ext:
+Tech Fax: +0.0
+Tech Fax Ext:
+Tech Email: taskam99@gmail.com
+Name Server: NS1.SUPERSERVER.CO.ID
+Name Server: NS2.SUPERSERVER.CO.ID
+Name Server: NS3.SUPERSERVER.CO.ID
+Name Server: NS4.SUPERSERVER.CO.ID
+DNSSEC: unsigned
+URL of the ICANN WHOIS Data Problem Reporting System: https://www.icann.org/wicf
+>>> Last update of WHOIS database: 2023-05-30T08:33:03Z <<<
+
+For more information on Whois status codes, please visit https://icann.org/epp
+
+The Data in Web Commerce Communications Limited ("WEBCC")'s WHOIS database
+is provided by WEBCC for information purposes, and to assist in obtaining
+information about or related to a domain name registration record. WEBCC
+does not guarantee its accuracy. By submitting a WHOIS query, you agree
+that you will use this Data only for lawful purposes and that, under no
+circumstances will you use this Data to:
+
+(1) allow, enable, or otherwise support the transmission of mass unsolicited,
+    commercial advertising or solicitations via e-mail (spam).
+(2) enable high volume, automated, electronic processes that apply to WEBCC
+    (or its systems).
+
+The compilation, repackaging, dissemination or other use of this Data is
+expressly prohibited without the prior written consent of WEBCC. WEBCC
+reserves the right to terminate your access to the WEBCC WHOIS database in
+its sole discretion, including without limitation, for excessive querying
+of the WHOIS database or for failure to otherwise abide by this policy.
+WEBCC reserves the right to modify these terms at any time.
+
+

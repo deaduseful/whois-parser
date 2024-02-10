@@ -1,0 +1,72 @@
+Domain Name: aname.net
+Registry Domain ID: 1066612_DOMAIN_NET-VRSN
+Registrar WHOIS Server: whois.namesrs.com
+Registrar URL: https://www.namesrs.com
+Creation Date: 1998-01-17T05:00:00.00Z
+Registrar Registration Expiration Date: 2023-01-16T05:00:00.00Z
+Registrar: Name SRS AB
+Registrar IANA ID: 638
+Registrar Abuse Contact Email: abuse@namesrs.com
+Registrar Abuse Contact Phone: +46.313011220
+Domain Status: ok https://icann.org/epp#ok
+Registry Registrant ID: Protected
+Registrant Name: Protected Protected
+Registrant Organization: Shield Whois
+Registrant Street: RadiovÃ¤gen 2
+Registrant City: VÃ¤stra FrÃ¶lunda
+Registrant State:
+Registrant Postal Code: 42147
+Registrant Country: SE
+Registrant Phone: +46.104500390
+Registrant Fax:
+Registrant Email: aname.net@shieldwhois.com
+Registry Admin ID: Protected
+Admin Name: Protected Protected
+Admin Organization: Shield Whois
+Admin Street: RadiovÃ¤gen 2
+Admin City: VÃ¤stra FrÃ¶lunda
+Admin Postal Code: 42147
+Admin Country: SE
+Admin Phone: +46.104500390
+Admin Fax:
+Admin Email: aname.net@shieldwhois.com
+Registry Tech ID: Protected
+Tech Name: Protected Protected
+Tech Organization: Shield Whois
+Tech Street: RadiovÃ¤gen 2
+Tech City: VÃ¤stra FrÃ¶lunda
+Tech Postal Code: 42147
+Tech Country: SE
+Tech Phone: +46.104500390
+Tech Fax:
+Tech Email: aname.net@shieldwhois.com
+Name Server: NS.ANAME.NET
+Name Server: NS2.ANAME.NET
+Name Server: NS3.ANAME.SE
+DNSSEC: unsigned
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+Last update of WHOIS database: 2022-11-02T21:31:09.00Z
+
+Whois information protected.
+Contact the registrant via http://www.shieldwhois.com
+
+Whois server 3.0
+
+The data in the www.namesrs.com whois database is provided to you for
+information purposes only, that is, to assist you in obtaining information
+about or related to a domain name registration record. We make this
+information available "as is," and do not guarantee its accuracy.
+
+By submitting a whois query, you agree that you will use this data only for
+lawful purposes and that, under no circumstances will you use this data to:
+
+(1) enable high volume, automated, electronic processes that stress or load
+this whois database system providing you this information; or
+(2) allow, enable, or otherwise support the transmission of mass
+unsolicited,
+commercial advertising or solicitations via direct mail, electronic
+mail, or by telephone. The compilation, repackaging, dissemination or
+other use of this data is expressly prohibited without prior written
+consent from us.
+
+NOTE! ALL WHOIS QUERIES AND IP ADDRESSES ARE LOGGED!

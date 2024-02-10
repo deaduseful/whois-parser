@@ -1,0 +1,46 @@
+Domain:
+     giveaway.gg
+
+Domain Status:
+     Active
+     Transfer Prohibited by Registrar
+
+Registrant:
+     (not available)
+
+Registrar:
+     NameCheap, Inc (https://www.namecheap.com)
+
+Relevant dates:
+     Registered on 03rd June 2020 at 18:06:52.856
+     Registry fee due on 03rd June each year
+
+Registration status:
+     Registered until cancelled
+
+Name servers:
+     bruce.ns.cloudflare.com
+     liz.ns.cloudflare.com
+
+
+WHOIS lookup made on Mon, 4 Jan 2021 at 0:44:15 GMT
+
+This WHOIS information is provided for free by CIDR, operator of
+the backend registry for domain names ending in GG, JE, and AS.
+
+Copyright (c) and database right Island Networks 1996 - 2021.
+
+You may not access this WHOIS server or use any data from it except
+as permitted by our Terms and Conditions which are published
+at http://www.channelisles.net/legal/whoisterms
+
+They include restrictions and prohibitions on
+
+- using or re-using the data for advertising;
+- using or re-using the service for commercial purposes without a licence;
+- repackaging, recompilation, redistribution or reuse;
+- obscuring, removing or hiding any or all of this notice;
+- exceeding query rate or volume limits.
+
+The data is provided on an 'as-is' basis and may lag behind the
+register. Access may be withdrawn or restricted at any time.

@@ -1,0 +1,106 @@
+%%                                   ***************** UX *****************
+%% This is the AFNIC Whois server.   __      _ _ _
+%%                                     | ___(_) | | ___ _   _ _ __ ___   __
+%% complete date format : YYYY-MM-DD | |/ _ \ | | |/ _ \ | | | '__/ __|  \
+%% short date format    : DD/MM      | |  __/ | | |  __/ |_| | |  \__ \   \
+%% version              : FRNIC-2.5  |_|\___|_|_|_|\___|\__,_|_|  |___/
+%%
+%% Rights restricted by copyright.   ***************** UX *****************
+%% See https://www.afnic.fr/en/products-and-services/services/whois/whois-special-notice/
+%%
+%% Use '-h' option to obtain more information about this service.
+%%
+%% [34.252.72.212 REQUEST] >> euros-en-or.fr
+%%
+%% RL Net [##########] - RL IP [#########.]
+%%
+
+domain:      euros-en-or.fr
+status:      ACTIVE
+hold:        NO
+holder-c:    ANO00-FRNIC
+admin-c:     P15294-FRNIC
+tech-c:      P15294-FRNIC
+zone-c:      NFC1-FRNIC
+nsl-id:      NSL55784-FRNIC
+registrar:   PLANETHOSTER
+Expiry Date: 2019-06-10T22:07:26Z
+created:     2011-07-27T17:26:12Z
+last-update: 2018-05-22T15:11:11Z
+source:      FRNIC
+
+ns-list:     NSL55784-FRNIC
+nserver:     nsc.planethoster.net
+nserver:     nsa.planethoster.net
+nserver:     nsb.planethoster.net
+source:      FRNIC
+
+registrar:   PLANETHOSTER
+type:        Isp Option 1
+address:     4416 Louis B. Mayer
+address:     H7P 0G1 LAVAL (GRAND MONTRÉAL)
+country:     CA
+phone:       +1 514 802 1644
+e-mail:      support@planethoster.info
+website:     https://www.planethoster.net/fr/Noms-de-Domaine
+anonymous:   NO
+registered:  2013-05-23T12:00:00Z
+source:      FRNIC
+
+nic-hdl:     ANO00-FRNIC
+type:        PERSON
+contact:     Ano Nymous
+remarks:     -------------- WARNING --------------
+remarks:     While the registrar knows him/her,
+remarks:     this person chose to restrict access
+remarks:     to his/her personal data. So PLEASE,
+remarks:     don't send emails to Ano Nymous. This
+remarks:     address is bogus and there is no hope
+remarks:     of a reply.
+remarks:     -------------- WARNING --------------
+registrar:   PLANETHOSTER
+changed:     2015-06-10T22:07:25Z anonymous@anonymous
+anonymous:   YES
+obsoleted:   NO
+eligstatus:  ok
+eligdate:    2015-06-10T22:07:25Z
+reachstatus: not identified
+source:      FRNIC
+
+nic-hdl:     P15294-FRNIC
+type:        ORGANIZATION
+contact:     PlanetHoster
+address:     4416 Louis B. Mayer
+address:     H7P 0G1 Laval
+country:     CA
+phone:       +1 5148021644
+e-mail:      domaines@support.planethoster.info
+registrar:   PLANETHOSTER
+changed:     2013-05-23T16:38:26Z nic@nic.fr
+anonymous:   NO
+obsoleted:   NO
+eligstatus:  not identified
+reachmedia:  email
+reachstatus: ok
+reachsource: REGISTRAR
+reachdate:   2013-05-23T16:38:26Z
+source:      FRNIC
+
+nic-hdl:     P15294-FRNIC
+type:        ORGANIZATION
+contact:     PlanetHoster
+address:     4416 Louis B. Mayer
+address:     H7P 0G1 Laval
+country:     CA
+phone:       +1 5148021644
+e-mail:      domaines@support.planethoster.info
+registrar:   PLANETHOSTER
+changed:     2013-05-23T16:38:26Z nic@nic.fr
+anonymous:   NO
+obsoleted:   NO
+eligstatus:  not identified
+reachmedia:  email
+reachstatus: ok
+reachsource: REGISTRAR
+reachdate:   2013-05-23T16:38:26Z
+source:      FRNIC

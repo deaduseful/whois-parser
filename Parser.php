@@ -114,10 +114,12 @@ class Parser
             $data->error = self::ERROR_DOMAIN_NOT_FOUND;
             return $data;
         }
-        foreach (self::MATCH_NOT_FOUND as $find) {
-            if (str_starts_with($raw[0], $find)) {
-                $data->error = self::ERROR_DOMAIN_NOT_FOUND;
-                return $data;
+        if (isset($raw[0])) {
+            foreach (self::MATCH_NOT_FOUND as $find) {
+                if (str_starts_with($raw[0], $find)) {
+                    $data->error = self::ERROR_DOMAIN_NOT_FOUND;
+                    return $data;
+                }
             }
         }
         foreach (self::MATCH_RATE_LIMIT as $find) {

@@ -1,0 +1,68 @@
+Domain Name: SAUSAGE.IO
+Registry Domain ID: ba74562ffeea4012b034a75eb988b826-DONUTS
+Registrar WHOIS Server: whois.porkbun.com
+Registrar URL: http://www.porkbun.com
+Updated Date: 2023-03-07 20:24:05
+Created Date: 2015-01-26 21:16:56
+Registrar Registration Expiration Date: 2024-01-26 21:16:56
+Registrar: Porkbun LLC
+Registrar IANA ID: 1861
+Registrar Abuse Contact Email: abuse@porkbun.com
+Registrar Abuse Contact Phone: +1.5038508351
+Domain Status: clientDeleteProhibited http://icann.org/epp#clientDeleteProhibited
+Domain Status: clientTransferProhibited http://icann.org/epp#clientTransferProhibited
+Registry Registrant ID: c-25507
+Registrant Name: Thangavelu Lakshmanan
+Registrant Organization:
+Registrant Street: 4A, Meenakshi Nagar, Mangamma Nagar South West Extn.
+Registrant Street: Srirangam
+Registrant City: Trichy
+Registrant State/Province: Tamil Nadu
+Registrant Postal Code: 620006
+Registrant Country: IN
+Registrant Phone: +91.9715168733
+Registrant Phone Ext:
+Registrant Fax:
+Registrant Fax Ext:
+Registrant Email: l.thangavelu@yahoo.com
+Registry Admin ID: c-25507
+Admin Name: Thangavelu Lakshmanan
+Admin Organization:
+Admin Street: 4A, Meenakshi Nagar, Mangamma Nagar South West Extn.
+Admin Street: Srirangam
+Admin City: Trichy
+Admin State/Province: Tamil Nadu
+Admin Postal Code: 620006
+Admin Country: IN
+Admin Phone: +91.9715168733
+Admin Phone Ext:
+Admin Fax:
+Admin Fax Ext:
+Admin Email: l.thangavelu@yahoo.com
+Registry Tech ID: c-25507
+Tech Name: Thangavelu Lakshmanan
+Tech Organization:
+Tech Street: 4A, Meenakshi Nagar, Mangamma Nagar South West Extn.
+Tech Street: Srirangam
+Tech City: Trichy
+Tech State/Province: Tamil Nadu
+Tech Postal Code: 620006
+Tech Country: IN
+Tech Phone: +91.9715168733
+Tech Phone Ext:
+Tech Fax:
+Tech Fax Ext:
+Tech Email: l.thangavelu@yahoo.com
+Name Server: ns1.brandbucket.com
+Name Server: ns1.brandbucket.com
+Name Server: ns2.brandbucket.com
+Name Server: ns2.brandbucket.com
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net
+>>> Last update of WHOIS database: 2023-03-07 20:24:05 <<<
+
+For more information on Whois status codes, please visit https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en.
+
+The Data in the Porkbun LLC WHOIS database is provided by Porkbun LLC for information purposes, and to assist persons in obtaining information about or related to a domain name registration record. Porkbun LLC does not guarantee its accuracy. By submitting a WHOIS query, you agree that you will use this Data only for lawful purposes and that, under no circumstances will you use this Data to: (1) allow, enable, or otherwise support the transmission of mass unsolicited, commercial advertising or solicitations via e-mail (spam); or (2) enable high volume, automated, electronic processes that apply to Porkbun LLC (or its systems). Porkbun LLC reserves the right to modify these terms at any time. By submitting this query, you agree to abide by this policy.
+
+Porkbun!
+

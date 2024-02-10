@@ -1,0 +1,43 @@
+
+Domain name: covid-19.xyz
+Registry Domain ID:39228232_DOMAIN_-VRSN
+Registrar WHOIS Server: whois.cnolnic.com
+Registrar URL: http://www.zzy.cn
+Updated Date: 2023-04-26 08:57:22.0T00:00:00Z
+Creation Date: 2023-04-26 08:57:22.0T00:00:00Z
+Registrar Registration Expiration Date: 2024-04-26 08:57:22.0T00:00:00Z
+Registrar: XIAMEN CHINASOURCE INTERNET SERVICE CO., LTD.
+Registrar IANA ID: 1366
+Registrar Abuse Contact Email:kf@zzy.cn
+Registrar Abuse Contact Phone:+86.5922958888
+Domain Status: serverTransferProhibited
+Domain Status: clientTransferProhibited
+Name Server: ns1.cnolnic.net
+Name Server: ns2.cnolnic.net
+DNSSEC:unsigned
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+>>> Last update of WHOIS database:2023-04-26 08:57:22.0T00:00:00Z<<<
+
+
+    NOTICE AND TERMS OF USE:
+ You are not authorized to accessor query our WHOIS database through the use of high-volume, automated, electronic processes.
+ The Data in Xiamen ChinaSource Internet Service Co,. ltd.' WHOIS database is provided by
+ Xiamen ChinaSource Internet Service Co,. ltd. for information purposes only,
+ and to assist persons in obtaining information about or related to a domain name registration record.
+ Xiamen ChinaSource Internet Service Co,. ltd. does not guarantee its accuracy.
+    By submitting a WHOIS query, you agree to abide by the following terms of use:
+    You agree that you may use this Data only for lawful purposes and that under no circumstances will you use this Data to:
+ (1) allow, enable, or otherwise support the transmission of mass unsolicited,
+commercial advertising or solicitations via e-mail, telephone, or facsimile; or
+ (2) enable high volume, automated,electronic processes that apply to
+ Xiamen ChinaSource Internet Service Co,. ltd. (or its computer systems).
+ The compilation, repackaging, dissemination or other use of this Data is expressly
+ prohibited without the prior written consent of Xiamen ChinaSource Internet Service Co,. ltd..
+ You agree not to use high-volume, automated, electronic processes to access or query the WHOIS database.
+ Xiamen ChinaSource Internet Service Co,. ltd. reserves the right to terminate
+ your access to the WHOIS database in its sole discretion,
+ including without limitation, for excessive querying of the WHOIS database or for failure to otherwise abide by this policy.
+    Xiamen ChinaSource Internet Service Co,. ltd. reserves the right to modify these terms at any time.
+ Registration Service Provided By: Xiamen ChinaSource Internet Service Co,. ltd.
+    [Visit:www.zzy.com]
+ <a href='http://www.zzy.cn/' target='_blank'><img src='http://www.zzy.cn/images/whoisbanner.jpg' border='0'></a>

@@ -1,0 +1,41 @@
+Whois Server for the KZ top level domain name.
+This server is maintained by KazNIC Organization, a ccTLD manager for Kazakhstan Republic.
+
+Domain Name............: alprof.kz
+
+Organization Using Domain Name
+Name...................: TOO "ALPROF"
+Organization Name......: TOO "ALPROF"
+Street Address.........: Suyunbaya 89D
+City...................: Almaty
+State..................: -
+Postal Code............: 050016
+Country................: KZ
+
+Administrative Contact/Agent
+NIC Handle.............: HOSTERKZ-27633
+Name...................: Narzhanov Samat
+Phone Number...........: +77272504677
+Fax Number.............: +77272504677
+Email Address..........: marketing@alprof.kz
+
+Nameserver in listed order
+
+Primary server.........: ns1.hoster.kz
+Primary ip address.....: 185.98.6.222
+
+Secondary server.......: ns2.hoster.kz
+Secondary ip address...: 104.236.84.38, 2604:a880:800:10::2ebe:7001
+
+Secondary server.......: ns3.hoster.kz
+Secondary ip address...: 151.248.123.101, 2a00:f940:1:1:2::154
+
+
+Domain created: 2006-07-03 06:31:35 (GMT+0:00)
+Last modified : 2017-11-16 09:40:04 (GMT+0:00)
+Domain status : clientDeleteProhibited - status prevent domain deletion from the Register (ÑÑÐ°ÑÑÑ Ð¿ÑÐµÐ´Ð¾ÑÐ²ÑÐ°ÑÐ°ÐµÑ ÑÐ´Ð°Ð»ÐµÐ½Ð¸Ðµ Ð´Ð¾Ð¼ÐµÐ½Ð° Ð¸Ð· ÑÐµÐµÑÑÑÐ°)
+                clientTransferProhibited - status prohibits domain transfer without documents (ÑÑÐ°ÑÑÑ Ð·Ð°Ð¿ÑÐµÑÐ°ÐµÑ ÑÑÐ°Ð½ÑÑÐµÑ Ð´Ð¾Ð¼ÐµÐ½Ð° Ð±ÐµÐ· Ð¿ÑÐµÐ´Ð¾ÑÑÐ°Ð²Ð»ÐµÐ½Ð¸Ñ Ð´Ð¾ÐºÑÐ¼ÐµÐ½ÑÐ¾Ð²)
+                clientRenewProhibited - status prevent domain auto renewal without payment (ÑÑÐ°ÑÑÑ Ð¿ÑÐµÐ´Ð¾ÑÐ²ÑÐ°ÑÐ°ÐµÑ Ð°Ð²ÑÐ¾ Ð¿ÑÐ¾Ð´Ð»ÐµÐ½Ð¸Ðµ Ð±ÐµÐ· Ð¾Ð¿Ð»Ð°ÑÑ)
+
+Registar created: KAZNIC
+Current Registar: HOSTER.KZ

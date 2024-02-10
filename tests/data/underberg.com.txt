@@ -1,0 +1,111 @@
+Domain Name: underberg.com
+Registry Domain ID: 2105339_DOMAIN_COM-VRSN
+Registrar WHOIS Server: whois.global-village.de
+Registrar URL: http://www.global-village.de
+Updated Date: 2019-07-29T07:04:51Z.0Z
+Creation Date: 1998-07-29T04:00:00Z.0Z
+Registrar Registration Expiration Date: 2023-07-28T04:00:00.0Z
+Registrar: Global Village GmbH
+Registrar IANA ID: 1725
+Registrar Abuse Contact Email: domreg@global-village.de
+Registrar Abuse Contact Phone: +49.285596511
+Domain Status: clientTransferProhibited http://www.icann.org/epp#clientTransferProhibited
+Domain Status: clientUpdateProhibited http://www.icann.org/epp#clientUpdateProhibited
+Registry Registrant ID: GVVERI200465
+Registrant Name: Role Account
+Registrant Organization: Underberg GmbH & Co. KG
+Registrant Street: Underbergstrasse 1-3
+Registrant City: Rheinberg
+Registrant State/Province: NRW
+Registrant Postal Code: D-47495
+Registrant Country: DE
+Registrant Phone: +49.2843920298
+Registrant Phone Ext:
+Registrant Fax: +49.2843920500
+Registrant Fax Ext:
+Registrant Email: s8rbwsuauu4pjptykmekpsez@forwarder.address-verification.info
+Registry Admin ID: GVVERI206032
+Admin Name: Role Account
+Admin Organization: Underberg GmbH & Co. KG
+Admin Street: Underbergstrasse 1-3
+Admin City: Rheinberg
+Admin State/Province: DE
+Admin Postal Code: D-47495
+Admin Country: DE
+Admin Phone: +49.2843920298
+Admin Phone Ext:
+Admin Fax: +49.2843920500
+Admin Fax Ext:
+Admin Email: 8bwcgs7q7u4bsbzwqepcfg58@forwarder.address-verification.info
+Registry Tech ID: GVVERI1
+Tech Name: Marcus Faure
+Tech Organization: Global Village GmbH
+Tech Street: Mehrumer Str. 16
+Tech City: Voerde
+Tech State/Province:
+Tech Postal Code: 46562
+Tech Country: DE
+Tech Phone: +49.285596510
+Tech Phone Ext:
+Tech Fax: +49.28559651110
+Tech Fax Ext:
+Tech Email: uc75u87ig5ayhsvsxks7wswq@forwarder.address-verification.info
+Registry Billing ID: GVVERI1
+Billing Name: Marcus Faure
+Billing Organization: Global Village GmbH
+Billing Street: Mehrumer Str. 16
+Billing City: Voerde
+Billing State/Province:
+Billing Postal Code: 46562
+Billing Country: DE
+Billing Phone: +49.285596510
+Billing Phone Ext:
+Billing Fax: +49.28559651110
+Billing Fax Ext:
+Billing Email: uc75u87ig5ayhsvsxks7wswq@forwarder.address-verification.info
+Name Server: dns.globvill.de
+Name Server: dns.voerde.globvill.de
+DNSSEC: unsigned
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net
+>>> Last update of WHOIS database: 2023-04-10T0:1:37.0Z <<<
+
+% All data, while believed to be accurate, is provided 'as-is' without warranty of
+% any kind to the extent permitted by law
+%
+% This  information  is provided  for the sole purpose  of helping  you to  obtain
+% information  about particilar  domain names that you are associated with or have
+% a legal interest  in. By submitting  whois queries  you agree  that you will use
+% this data for lawful purposes  only. Any use of this data for any other  purpose
+% is expressly  forbidden. This includes, but is not limited to, the collection or
+% mass-collection  of data ('data-mining')  to allow, enable or otherwise  support
+% the transmission of unsolicited email and/or commercial advertising
+%
+% Access to this service is rate-limited. If you are an ICANN accredited registrar
+% with the need to relax the limits, contact us using the ICANN RADAR contact data
+%
+% For an explanation of domain status codes, please visit the following links
+% OK - http://www.icann.org/epp#OK
+% serverTransferProhibited - http://www.icann.org/epp#serverTransferProhibited
+% serverRenewProhibited - http://www.icann.org/epp#serverRenewProhibited
+% pendingTransfer - http://www.icann.org/epp#pendingTransfer
+% pendingUpdate - http://www.icann.org/epp#pendingUpdate
+% pendingRenew - http://www.icann.org/epp#pendingRenew
+% pendingCreate - http://www.icann.org/epp#pendingCreate
+% inactive - http://www.icann.org/epp#inactive
+% serverHold - http://www.icann.org/epp#serverHold
+% serverDeleteProhibited - http://www.icann.org/epp#serverDeleteProhibited
+% serverUpdateProhibited - http://www.icann.org/epp#serverUpdateProhibited
+% addPeriod - http://www.icann.org/epp#addPeriod
+% autoRenewPeriod - http://www.icann.org/epp#autoRenewPeriod
+% renewPeriod - http://www.icann.org/epp#renewPeriod
+% transferPeriod - http://www.icann.org/epp#transferPeriod
+% redemptionPeriod - http://www.icann.org/epp#redemptionPeriod
+% pendingRestore - http://www.icann.org/epp#pendingRestore
+% pendingDelete - http://www.icann.org/epp#pendingDelete
+% clientTransferProhibited - http://www.icann.org/epp#clientTransferProhibited
+% clientRenewProhibited - http://www.icann.org/epp#clientRenewProhibited
+% clientHold - http://www.icann.org/epp#clientHold
+% clientDeleteProhibited - http://www.icann.org/epp#clientDeleteProhibited
+% clientUpdateProhibited - http://www.icann.org/epp#clientUpdateProhibited
+% For more information on Whois status codes, please visit
+% https://www.icann.org/epp

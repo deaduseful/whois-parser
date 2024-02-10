@@ -1,0 +1,23 @@
+%%
+%% This is the NIC Chile Whois server (whois.nic.cl).
+%%
+%% Rights restricted by copyright.
+%% See https://www.nic.cl/normativa/politica-publicacion-de-datos-cl.pdf
+%%
+
+Domain name: mpudahuel.cl
+Registrant name: Municipalidad de Pudahuel
+Registrant organisation:
+Registrar name: NIC Chile
+Registrar URL: https://www.nic.cl
+Creation date: 2000-11-16 12:30:06 CLST
+Expiration date: 2023-12-12 21:30:00 CLST
+Name server: dns1.hosting.cl
+Name server: dns2.hosting.cl
+Name server: dns3.hosting.cl
+Name server: dns4.hosting.cl
+
+%%
+%% For communication with domain contacts please use website.
+%% See https://www.nic.cl/registry/Whois.do?d=mpudahuel.cl
+%%

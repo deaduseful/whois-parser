@@ -1,0 +1,53 @@
+% Request from 52.209.78.121
+% This is the Ukrainian Whois query server #F.
+% The Whois is subject to Terms of use
+% See https://hostmaster.ua/services/
+%
+% IN THE PROCESS OF DELEGATION OF A DOMAIN NAME,
+% THE REGISTRANT IS AN ENTITY WHO USES AND MANAGES A CERTAIN DOMAIN NAME,
+% AND THE REGISTRAR IS A BUSINESS ENTITY THAT PROVIDES THE REGISTRANT
+% WITH THE SERVICES NECESSARY FOR THE TECHNICAL MAINTENANCE OF THE REGISTRATION AND OPERATION OF THE DOMAIN NAME.
+% FOR INFORMATION ABOUT THE REGISTRANT OF THE DOMAIN NAME, YOU SHOULD CONTACT THE REGISTRAR.
+
+
+% % .UA whois
+% Domain Record:
+% =============
+domain:     bank.gov.ua
+admin-c:    AUY52-UANIC
+tech-c:     PP1491-UANIC
+status:     OK-UNTIL 20240604085203
+nserver:    elaine.ns.cloudflare.com
+nserver:    patrick.ns.cloudflare.com
+remark:     ÐÐ°ÑÑÐ¾Ð½Ð°Ð»ÑÐ½Ð¸Ð¹ Ð±Ð°Ð½Ðº Ð£ÐºÑÐ°ÑÐ½Ð¸
+remark:     National Bank of Ukraine
+created:    0-UANIC 00000000000000
+changed:    UARR149-UANIC 20230505093147
+source:     UANIC
+
+
+% Administrative Contact:
+% ======================
+nic-handle: AUY52-UANIC
+remark:     Whois privacy protection service
+remark:     http://hostmaster.ua/priv.html
+e-mail:     auy52-uanic@priv.uanic.ua
+mnt-by:     NONE
+source:     UANIC
+
+% Technical Contact:
+% =================
+nic-handle: PP1491-UANIC
+remark:     Whois privacy protection service
+remark:     http://hostmaster.ua/priv.html
+e-mail:     pp1491-uanic@priv.uanic.ua
+mnt-by:     NONE
+source:     UANIC
+
+
+% % .UA whois
+
+% Query time:     41 msec
+
+
+

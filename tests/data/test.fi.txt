@@ -1,0 +1,37 @@
+domain.............: test.fi
+status.............: Registered
+created............: 3.8.2006 00:00:00
+expires............: 25.8.2023 13:52:00
+available..........: 25.9.2023 13:52:00
+modified...........: 7.9.2017 17:47:38
+RegistryLock.......: no
+
+Nameservers
+
+nserver............: ns1.vihi.org [OK]
+nserver............: ns2.tunk.net [OK]
+nserver............: ns0.tunk.net [OK]
+
+DNSSEC
+
+dnssec.............: no
+
+Holder
+
+name...............: Loopback Oy
+register number....: 2008311-4
+address............: PL 49
+postal.............: 02611
+city...............: Espoo
+country............: Finland
+phone..............:
+holder email.......:
+
+Registrar
+
+registrar..........: Loopback Oy
+
+>>> Last update of WHOIS database: 4.5.2023 22:00:12 (EET) <<<
+
+
+Copyright (c) Finnish Transport and Communications Agency Traficom

@@ -1,0 +1,72 @@
+Domain Name: SALSALESSONSCHICAGO.ORG
+Registry Domain ID: D103910647-LROR
+Registrar WHOIS Server: whois.aitdomains.com
+Registrar URL: http://ait.com
+Updated Date: 2020-01-28T01:39:010Z
+Creation Date: 2004-01-28T00:03:010Z
+Registrar Registration Expiration Date: 2021-01-28T00:03:010Z
+Registrar: THE NAME IT CORPORATION DBA NAMESERVICES.NET
+Registrar IANA ID: 57
+Registrar Abuse Contact Email: abuse@ait.com
+Registrar Abuse Contact Phone: +1.9103211200
+Reseller:
+Domain Status: clientDeleteProhibited
+Domain Status: clientTransferProhibited
+Domain Status: clientUpdateProhibited
+Registry Registrant ID:
+Registrant Name: Miguel  Mendez
+Registrant Organization: SalsaChicago, Inc.
+Registrant Street: 2731 W Division Street
+Registrant City: Chicago
+Registrant State/Province: IL
+Registrant Postal Code: 60622
+Registrant Country: US
+Registrant Phone: +1.7738958184
+Registrant Phone Ext:
+Registrant Fax:
+Registrant Fax Ext:
+Registrant Email: Lsalsero@aol.com
+Registry Admin ID:
+Admin Name: Miguel  Mendez
+Admin Organization: SalsaChicago, Inc.
+Admin Street: 2731 W Division Street
+Admin City: Chicago
+Admin State/Province: IL
+Admin Postal Code: 60622
+Admin Country: US
+Admin Phone: +1.7738958184
+Admin Phone Ext:
+Admin Fax:
+Admin Fax Ext:
+Admin Email: Lsalsero@aol.com
+Registry Tech ID:
+Tech Name: Miguel  Mendez
+Tech Organization: SalsaChicago, Inc.
+Tech Street: 2731 W Division Street
+Tech City: Chicago
+Tech State/Province: IL
+Tech Postal Code: 60622
+Tech Country: US
+Tech Phone: +1.7738958184
+Tech Phone Ext:
+Tech Fax:
+Tech Fax Ext:
+Tech Email: Lsalsero@aol.com
+Name Server: ns59.worldnic.com
+Name Server: ns60.worldnic.com
+DNSSEC: unsigned
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+>>> Last update of WHOIS database: 2020-07-26T11:24:09Z <<<
+
+  The Data in THE NAMEIT CORPORATION WHOIS database is provided by
+  THE NAMEIT CORPORATION for information purposes, and to assist persons
+  in obtaining information about or related to a domain name registration record.
+  THE NAMEIT CORPORATION does not guarantee its accuracy.  By submitting a
+  WHOIS query, you agree that you will use this Data only for lawful purposes
+  and that, under no circumstances will you use this Data to: (1) allow, enable,
+  or otherwise support the transmission of mass unsolicited, commercial advertising
+  or solicitations via e-mail (spam); or  (2) enable high volume, automated,
+  electronic processes that apply to THE NAMEIT CORPORATION (or its systems).
+
+    THE NAMEIT CORPORATION reserves the right to modify these terms at any time.
+  By submitting this query, you agree to abide by this policy.

@@ -14,9 +14,12 @@ class Controller extends BaseController
 
     public function store(Request $request)
     {
-        $query = $request->get('query');
-        $whois = Whois::where(['query' => $query])->firstOrFail();
-        $lookup = $whois->lookup;
+        $lookup = $request->get('lookup');
+        if (empty($lookup)) {
+            $query = $request->get('query');
+            $whois = Whois::where(['query' => $query])->firstOrFail();
+            $lookup = $whois->lookup;
+        }
         $parser = new Parser($lookup);
         $result = $parser->getData();
         return json_encode($result, JSON_PRETTY_PRINT);

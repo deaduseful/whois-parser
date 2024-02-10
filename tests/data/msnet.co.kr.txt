@@ -1,0 +1,57 @@
+query : msnet.co.kr
+
+
+# KOREAN(UTF8)
+
+ëë©ì¸ì´ë¦                  : msnet.co.kr
+ë±ë¡ì¸                      : ë§¤ì¼ì ë¬¸ì¬
+ë±ë¡ì¸ ì£¼ì                 : ëêµ¬ê´ì­ì ì¤êµ¬ ìì±ë¡ 20 .
+ë±ë¡ì¸ ì°í¸ë²í¸             : 41933
+ì±ìì                      : ë§¤ì¼ì ë¬¸ì¬
+ì±ìì ì ìì°í¸             : junsan@imaeil.com
+ì±ìì ì íë²í¸             : 053-251-1542
+ë±ë¡ì¼                      : 2000. 01. 29.
+ìµê·¼ ì ë³´ ë³ê²½ì¼            : 2021. 04. 14.
+ì¬ì© ì¢ë£ì¼                 : 2024. 01. 27.
+ì ë³´ê³µê°ì¬ë¶                : Y
+ë±ë¡ëíì                  : (ì£¼)ìì´ë¤ìì¦(http://www.inames.co.kr)
+DNSSEC                      : ë¯¸ìëª
+
+1ì°¨ ë¤ììë² ì ë³´
+   í¸ì¤í¸ì´ë¦               : ns1.uhost.co.kr
+   IP ì£¼ì                  : 202.31.187.220
+
+2ì°¨ ë¤ììë² ì ë³´
+   í¸ì¤í¸ì´ë¦               : ns2.uhost.co.kr
+   IP ì£¼ì                  : 219.251.156.14
+
+ë¤ììë² ì´ë¦ì´ .krì´ ìë ê²½ì°ë IPì£¼ìê° ë³´ì´ì§ ììµëë¤.
+
+
+# ENGLISH
+
+Domain Name                 : msnet.co.kr
+Registrant                  : MaeilShinmun
+Registrant Address          : Maeil Sinmun Bldg., 20 Seoseong-ro Jung-gu, Daegu, KR
+Registrant Zip Code         : 41933
+Administrative Contact(AC)  : MaeilShinmun
+AC E-Mail                   : junsan@imaeil.com
+AC Phone Number             : 053-251-1542
+Registered Date             : 2000. 01. 29.
+Last Updated Date           : 2021. 04. 14.
+Expiration Date             : 2024. 01. 27.
+Publishes                   : Y
+Authorized Agency           : Inames Co., Ltd.(http://www.inames.co.kr)
+DNSSEC                      : unsigned
+
+Primary Name Server
+   Host Name                : ns1.uhost.co.kr
+   IP Address               : 202.31.187.220
+
+Secondary Name Server
+   Host Name                : ns2.uhost.co.kr
+   IP Address               : 219.251.156.14
+
+
+- KISA/KRNIC WHOIS Service -
+

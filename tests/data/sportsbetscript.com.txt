@@ -1,0 +1,74 @@
+Domain Name: sportsbetscript.com
+Registry Domain ID: 2448006674_DOMAIN_COM-VRSN
+Registrar WHOIS Server: whois.one.com
+Registrar URL: https://www.one.com/
+Updated Date: 2019-10-27T00:12:43Z[UTC]
+Creation Date: 2019-10-26T17:08:19Z[UTC]
+Registrar Registration Expiration Date: 2020-10-26T17:08:19Z[UTC]
+Registrar: One.com A/S
+Registrar IANA ID: 1462
+Registrar Abuse Contact Email: abuse@one.com
+Registrar Abuse Contact Phone: +45.46907100
+Domain Status: ok https://icann.org/epp#ok
+Registry Registrant ID: REDACTED FOR PRIVACY
+Registrant Name: REDACTED FOR PRIVACY
+Registrant Organization: REDACTED FOR PRIVACY
+Registrant Street: REDACTED FOR PRIVACY
+Registrant City: REDACTED FOR PRIVACY
+Registrant State/Province:
+Registrant Postal Code: REDACTED FOR PRIVACY
+Registrant Country: SE
+Registrant Phone: REDACTED FOR PRIVACY
+Registrant Phone Ext:
+Registrant Fax:
+Registrant Fax Ext:
+Registrant Email: https://www.one.com/en/whois
+Registry Admin ID: REDACTED FOR PRIVACY
+Admin Name: REDACTED FOR PRIVACY
+Admin Organization: REDACTED FOR PRIVACY
+Admin Street: REDACTED FOR PRIVACY
+Admin City: REDACTED FOR PRIVACY
+Admin State/Province:
+Admin Postal Code: REDACTED FOR PRIVACY
+Admin Country: REDACTED FOR PRIVACY
+Admin Phone: REDACTED FOR PRIVACY
+Admin Phone Ext:
+Admin Fax:
+Admin Fax Ext:
+Admin Email: https://www.one.com/en/whois
+Registry Tech ID: ONECOMHM
+Tech Name: Host Master
+Tech Organization: One.com A/S
+Tech Street: Kalvebod Brygge 24
+Tech City: Koebenhavn V
+Tech Postal Code: 1560
+Tech State/Province:
+Tech Country: DK
+Tech Phone: +45.46907100
+Tech Phone Ext:
+Tech Fax:
+Tech Fax Ext:
+Tech Email: hostmaster@one.com
+Name Server: ns02.one.com
+Name Server: ns01.one.com
+DNSSEC: signedDelegation
+URL of the ICANN WHOIS Data Problem Reporting System: https://www.icann.org/wicf/
+>>> Last update of WHOIS database: 2020-10-14T04:50:36Z <<<
+
+For more information on Whois status codes, please visit https://www.icann.org/epp
+
+
+This data is provided by One.com A/S
+for information purposes, and to assist persons obtaining information
+about or related to domain name registration records.
+One.com A/S does not guarantee its accuracy.
+By submitting a WHOIS query, you agree that you will use this data
+only for lawful purposes and that, under no circumstances, you will
+use this data to
+1) allow, enable, or otherwise support the transmission of mass
+  unsolicited, commercial advertising or solicitations via E-mail
+  (spam) or
+2) enable high volume, automated, electronic processes that apply
+  to this WHOIS server.
+These terms may be changed without prior notice.
+By submitting this query, you agree to abide by this policy.

@@ -1,0 +1,64 @@
+Registrant:
+   Codebrick
+   John Park Park
+   169 Yeoksamro
+   Seoul
+   Seoul
+   South Korea
+   Zip/Postal code: 13479
+   Phone: 34434343
+   developer@codebrick.co
+
+Domain Name:   toko.ly
+
+Administrative Contact:
+   Codebrick
+   John Park Park
+   169 Yeoksamro
+   Seoul
+   Seoul
+   South Korea
+   Zip/Postal code: 13479
+   Phone: 34434343
+   developer@codebrick.co
+
+Technical Contact:
+   Codebrick
+   John Park Park
+   169 Yeoksamro
+   Seoul
+   Seoul
+   South Korea
+   Zip/Postal code: 13479
+   Phone: 34434343
+   developer@codebrick.co
+
+Billing Contact:
+   Codebrick
+   John Park Park
+   169 Yeoksamro
+   Seoul
+   Seoul
+   South Korea
+   Zip/Postal code: 13479
+   Phone: 34434343
+   developer@codebrick.co
+
+Created: 2020-01-21 08:50:34
+Updated: 2020-01-21 08:50:34
+Expired: 2022-01-21 08:50:34
+
+Domain servers in listed order:
+   freedns5.registrar-servers.com
+   freedns4.registrar-servers.com
+   freedns3.registrar-servers.com
+   freedns2.registrar-servers.com
+   freedns1.registrar-servers.com
+
+Domain Status: ACTIVE
+--
+Whois information provided by:
+LY Registry
+whois.nic.ly
+-For Whois usage policy please check:
+ http://whois.nic.ly/policy.php

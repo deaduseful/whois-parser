@@ -1,0 +1,68 @@
+NIC Whois server for cTLDs : .tn , .ØªÙÙØ³
+All rights reserved
+Copyright "Tunisian Internet Agency - https://whois.ati.tn
+Supported ccTLDs : .tn , .ØªÙÙØ³
+Sectorial domains : .com.tn,.ens.tn,.fin.tn,.gov.tn,.ind.tn,.intl.tn,.nat.tn,.net.tn,.org.tn,.info.tn,.perso.tn,.tourism.tn,.mincom.tn
+
+Domain name.........: skyconnect.tn
+Details:
+Creation date.......: 04-04-2022 11:12:03 GMT+1
+Domain status.......: Active
+Registrar...........: OVH
+
+Owner Contact
+Name................: MT Informatique
+First name..........:
+Address.............: Villa gb83 res ahmed el ghazela
+zip: 2083
+city: Ariana
+country: TN
+
+address2............:
+City................:
+stateProvince.......:
+Zip code............:
+Country.............:
+Phone...............: 23131982
+Fax.................:
+Email...............: mtinformatique@topnet.tn
+
+Administrativ contact
+Name................: MT Informatique
+First name..........:
+Address.............: Villa gb83 res ahmed el ghazela
+zip: 2083
+city: Ariana
+country: TN
+
+address2............:
+City................:
+stateProvince.......:
+Zip code............:
+Country.............:
+Phone...............: 23131982
+Fax.................:
+Email...............: mtinformatique@topnet.tn
+
+Technical contact
+Name................: MT Informatique
+First name..........:
+Address.............: Villa gb83 res ahmed el ghazela
+zip: 2083
+city: Ariana
+country: TN
+
+address2............:
+City................:
+stateProvince.......:
+Zip code............:
+Country.............:
+Phone...............: 23131982
+Fax.................:
+Email...............: mtinformatique@topnet.tn
+dnssec..............: unsigned
+
+DNS servers
+Name................: dns1.tn.ovh.net.
+Name................: ns1.tn.ovh.net.
+

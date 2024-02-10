@@ -1,0 +1,77 @@
+; This data is provided for information purposes, and to assist persons
+; obtaining information about or related to domain name registration
+; records. We do not guarantee its accuracy.
+; By submitting a WHOIS query, you agree that you will use this data
+; only for lawful purposes and that, under no circumstances, you will
+; use this data to
+; 1) allow, enable, or otherwise support the transmission of mass
+;    unsolicited, commercial advertising or solicitations via E-mail
+;    (spam); or
+; 2) enable high volume, automated, electronic processes that apply
+;    to this WHOIS server.
+; These terms may be changed without prior notice.
+; By submitting this query, you agree to abide by this policy.
+Registrar: 1api GmbH
+
+
+DOMAIN: CLICKBANK.NET
+
+RSP: iwantmyname
+URL: http://iwantmyname.com
+
+created-date: 1997-07-11 04:00:00
+updated-date: 2018-05-23 12:28:47
+registration-expiration-date: 2019-07-10 04:00:00
+
+owner-organization: REDACTED FOR PRIVACY
+owner-name: REDACTED FOR PRIVACY
+owner-street: REDACTED FOR PRIVACY
+owner-city: REDACTED FOR PRIVACY
+owner-state: ID
+owner-zip: REDACTED FOR PRIVACY
+owner-country: US
+owner-phone: REDACTED FOR PRIVACY
+owner-fax:
+owner-email: contact via https://www.1api.net/send-message/clickbank.net/registrant
+
+admin-organization: REDACTED FOR PRIVACY
+admin-name: REDACTED FOR PRIVACY
+admin-street: REDACTED FOR PRIVACY
+admin-city: REDACTED FOR PRIVACY
+admin-state: REDACTED FOR PRIVACY
+admin-zip: REDACTED FOR PRIVACY
+admin-country: REDACTED FOR PRIVACY
+admin-phone: REDACTED FOR PRIVACY
+admin-fax:
+admin-email: contact via https://www.1api.net/send-message/clickbank.net/admin
+
+tech-organization: REDACTED FOR PRIVACY
+tech-name: REDACTED FOR PRIVACY
+tech-street: REDACTED FOR PRIVACY
+tech-city: REDACTED FOR PRIVACY
+tech-state: REDACTED FOR PRIVACY
+tech-zip: REDACTED FOR PRIVACY
+tech-country: REDACTED FOR PRIVACY
+tech-phone: REDACTED FOR PRIVACY
+tech-fax:
+tech-email: contact via https://www.1api.net/send-message/clickbank.net/tech
+
+billing-organization: REDACTED FOR PRIVACY
+billing-name: REDACTED FOR PRIVACY
+billing-street: REDACTED FOR PRIVACY
+billing-city: REDACTED FOR PRIVACY
+billing-state: ID
+billing-zip: REDACTED FOR PRIVACY
+billing-country: US
+billing-phone: REDACTED FOR PRIVACY
+billing-fax:
+billing-email: contact via https://www.1api.net/send-message/clickbank.net/billing
+
+nameserver: ns-94.awsdns-11.com
+nameserver: ns-913.awsdns-50.net
+nameserver: ns-1812.awsdns-34.co.uk
+nameserver: ns-1390.awsdns-45.org
+
+; Painless Domain Management
+; Need help? Send us an email:
+; help@support.iwantmyname.com

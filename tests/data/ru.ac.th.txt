@@ -1,0 +1,28 @@
+Whois Server Version 2.1.7
+
+Domain Name:                RU.AC.TH
+Registrar:                  THNIC
+Name Server:                RUNS1.RU.AC.TH
+Name Server:                ARALE.LIB.RU.AC.TH
+Name Server:                RAM6.RU.AC.TH
+Name Server:                RUNS2.RU.AC.TH
+Name Server:                RAM3.RU.AC.TH
+DNSSEC:                     signedDelegation
+Status:                     ACTIVE
+Updated date:               22 Sep 2022
+Created date:               26 Aug 1999
+Exp date:                   25 Aug 2030
+Domain Holder Organization: Ramkhamhaeng University (à¸¡à¸«à¸²à¸§à¸´à¸à¸¢à¸²à¸¥à¸±à¸¢à¸£à¸²à¸¡à¸à¸³à¹à¸«à¸)
+Domain Holder Street:       Personal Information*
+Domain Holder Country:      TH
+
+Tech Contact:               Personal Information*
+Tech Organization:          Personal Information*
+Tech Street:                Personal Information*
+Tech Country:               Personal Information*
+
+>>> Last updated on Sun, 09 Apr 2023 01:39:03 UTC+7 <<<
+
+If you have a legitimate interest in viewing the non-public WHOIS details, send your request and the reasons for your request to staff@thnic.co.th and specify the domain name in the subject line. We will review that request and may ask for supporting documentation and explanation.
+
+For more information please visit: https://www.thnic.co.th/whois

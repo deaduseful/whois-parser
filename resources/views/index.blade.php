@@ -13,11 +13,20 @@
                             @csrf
 
                             <div class="form-group row">
-                                <label for="user"
+                                <label for="query"
                                        class="col-sm-4 col-form-label text-md-right">{{ __('Query') }}</label>
                                 <div class="col-md-6">
                                     <input id="query" type="text" class="form-control" name="query"
-                                           value="{{ old('query') }}" placeholder="eg: example.com" required autofocus>
+                                           value="{{ old('query') }}" placeholder="eg: example.com" autofocus>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="lookup"
+                                       class="col-sm-4 col-form-label text-md-right">{{ __('Lookup') }}</label>
+                                <div class="col-md-6">
+                                    <textarea id="lookup" class="form-control" name="lookup"
+                                              placeholder="Whois Lookup..." required autofocus></textarea>
                                 </div>
                             </div>
 

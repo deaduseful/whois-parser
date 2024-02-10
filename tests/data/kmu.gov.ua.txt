@@ -1,0 +1,77 @@
+% Request from 52.209.78.121
+% This is the Ukrainian Whois query server #F.
+% The Whois is subject to Terms of use
+% See https://hostmaster.ua/services/
+%
+% IN THE PROCESS OF DELEGATION OF A DOMAIN NAME,
+% THE REGISTRANT IS AN ENTITY WHO USES AND MANAGES A CERTAIN DOMAIN NAME,
+% AND THE REGISTRAR IS A BUSINESS ENTITY THAT PROVIDES THE REGISTRANT
+% WITH THE SERVICES NECESSARY FOR THE TECHNICAL MAINTENANCE OF THE REGISTRATION AND OPERATION OF THE DOMAIN NAME.
+% FOR INFORMATION ABOUT THE REGISTRANT OF THE DOMAIN NAME, YOU SHOULD CONTACT THE REGISTRAR.
+
+
+% % .UA whois
+% Domain Record:
+% =============
+domain:     kmu.gov.ua
+admin-c:    KG814-UANIC
+tech-c:     PO206-UANIC
+status:     OK-UNTIL 20231202080901
+nserver:    ns2.datagroup.kharkov.com
+nserver:    ns.kmu.gov.ua
+nserver:    ns2.adamant.net
+nserver:    ns1.datagroup.kharkov.com
+nserver:    ns2.kmu.gov.ua
+nserver:    ns3.kmu.gov.ua
+nserver:    ns.e.gov.ua
+remark:     ÐÐ°Ð±ÑÐ½ÐµÑ ÐÑÐ½ÑÑÑÑÑÐ² Ð£ÐºÑÐ°ÑÐ½Ð¸
+created:    0-UANIC 00000000000000
+changed:    UARR149-UANIC 20230330112321
+source:     UANIC
+
+
+% Glue Record:
+% ===========
+nserver: ns.kmu.gov.ua
+ip-addr: 195.78.68.2
+
+% Glue Record:
+% ===========
+nserver: ns3.kmu.gov.ua
+ip-addr: 3.75.41.113
+
+% Glue Record:
+% ===========
+nserver: ns2.kmu.gov.ua
+ip-addr: 18.194.25.136
+
+% Administrative Contact:
+% ======================
+nic-handle: KG814-UANIC
+remark:     Whois privacy protection service
+remark:     http://hostmaster.ua/priv.html
+e-mail:     kg814-uanic@priv.uanic.ua
+mnt-by:     NONE
+source:     UANIC
+
+% Technical Contact:
+% =================
+nic-handle:   PO206-UANIC
+organization: SEKTRETARIAT OF THE CABINET OF MINISTERS OF UKRAINE
+address:      Grushevskogo, 12/2
+address:      01008 KYIV
+address:      UA
+phone:        +380 (44) 2567966
+e-mail:       popovich@kmu.gov.ua
+org-id:       N/A
+mnt-by:       NONE
+changed:      PO206-UANIC 20151102113329
+source:       UANIC
+
+
+% % .UA whois
+
+% Query time:     41 msec
+
+
+

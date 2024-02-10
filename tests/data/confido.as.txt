@@ -1,0 +1,47 @@
+Domain:
+     confido.as
+
+Domain Status:
+     Active
+     Pending Delete
+     Locked by Registry
+
+Registrant:
+     PRODATA DESIGN AS
+
+Registrar:
+     Ascio Technologies (http://www.ascio.com)
+
+Relevant dates:
+     Registered on 08th March 2023 at 12:54:30.219
+     Registry fee due on 08th March each year
+
+Registration status:
+     Registered until cancelled
+
+Name servers:
+     delilah.ns.cloudflare.com
+     leonard.ns.cloudflare.com
+
+
+WHOIS lookup made on Sun, 26 Mar 2023 at 11:15:28 BST
+
+This WHOIS information is provided for free by CIDR, operator of
+the backend registry for domain names ending in GG, JE, and AS.
+
+Copyright (c) and database right AS Domain Registry 1997 - 2023.
+
+You may not access this WHOIS server or use any data from it except
+as permitted by our Terms and Conditions which are published
+at http://www.channelisles.net/legal/whoisterms
+
+They include restrictions and prohibitions on
+
+- using or re-using the data for advertising;
+- using or re-using the service for commercial purposes without a licence;
+- repackaging, recompilation, redistribution or reuse;
+- obscuring, removing or hiding any or all of this notice;
+- exceeding query rate or volume limits.
+
+The data is provided on an 'as-is' basis and may lag behind the
+register. Access may be withdrawn or restricted at any time.

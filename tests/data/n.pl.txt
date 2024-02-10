@@ -1,0 +1,26 @@
+DOMAIN NAME:           n.pl
+registrant type:       organization
+nameservers:           kim.ns.cloudflare.com.
+                       rudy.ns.cloudflare.com.
+created:               1999.03.04 12:00:00
+last modified:         2023.02.13 16:10:26
+renewal date:          2024.03.03 13:00:00
+
+option created:        2023.01.24 01:07:12
+option expiration date:       2026.01.24 01:07:12
+
+dnssec:                Unsigned
+
+
+REGISTRAR:
+MSERWIS Sp.z o.o. sp. k.
+ul. Stacyjna 1/63
+53-613 Wrocław
+Polska/Poland
++48.717181310
+info@domeny.tv
+www.domeny.tv
+
+WHOIS database responses: https://dns.pl/en/whois
+
+WHOIS displays data with a delay not exceeding 15 minutes in relation to the .pl Registry system

@@ -1,0 +1,9 @@
+Domain   name:  mana.md
+Domain  state:  OK, Delegated
+Registrar:      Park Avenue Capital, LLC
+
+Registered on:  2005-01-05
+Expires    on:  2026-01-05
+
+Nameserver:     dns1.easydns.com
+Nameserver:     dns2.easydns.net

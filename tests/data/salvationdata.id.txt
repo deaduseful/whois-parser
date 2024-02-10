@@ -1,0 +1,26 @@
+ID ccTLD whois server
+Please see 'whois -h whois.id help' for usage.
+
+Domain ID: PANDI-DO5907133
+Domain Name: salvationdata.id
+Created On: 2021-10-09 14:09:10
+Last Updated On: 2022-10-10 04:09:10
+Expiration Date: 2023-10-09 00:09:10
+Status: clientTransferProhibited
+
+====================================================
+Sponsoring Registrar Organization: Jagoan Hosting
+Sponsoring Registrar URL: www.jagoanhosting.id
+Sponsoring Registrar Street: Jl. MT Haryono No. 1 Blok C4
+Sponsoring Registrar City: Malang
+Sponsoring Registrar State/Province: Jawa Timur
+Sponsoring Registrar Postal Code: 61145
+Sponsoring Registrar Country: ID
+Sponsoring Registrar Phone: 0341565353
+Sponsoring Registrar Email: care@jagoanhosting.id
+Name Server: ns1.ttm.my.id
+Name Server: ns2.ttm.my.id
+DNSSEC: Unsigned
+
+Abuse Domain Report https://pandi.id/domain-abuse-form/?lang=en
+For more information on Whois status codes, please visit https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en

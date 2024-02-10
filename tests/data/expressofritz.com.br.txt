@@ -1,0 +1,47 @@
+% Copyright (c) Nic.br
+%  The use of the data below is only permitted as described in
+%  full by the Use and Privacy Policy at https://registro.br/upp ,
+%  being prohibited its distribution, commercialization or
+%  reproduction, in particular, to use it for advertising or
+%  any similar purpose.
+%  2023-04-06T21:02:24-03:00 - IP: 34.249.105.252
+
+domain:      expressofritz.com.br
+owner:       Inácio Tauri Simon
+ownerid:     027.715.759-57
+country:     BR
+owner-c:     INTSI16
+tech-c:      MASIS55
+nserver:     barbara.ns.cloudflare.com
+nsstat:      20230406 AA
+nslastaa:    20230406
+nserver:     clark.ns.cloudflare.com
+nsstat:      20230406 AA
+nslastaa:    20230406
+saci:        yes
+created:     20220803 #24844081
+changed:     20220815
+expires:     20230803
+status:      published
+
+nic-hdl-br:  INTSI16
+person:      Inácio Tauri Simon
+e-mail:      inaciotauris@gmail.com
+country:     BR
+created:     20220803
+changed:     20220803
+
+nic-hdl-br:  MASIS55
+person:      Mapp Sistemas
+e-mail:      contato@mappsistemas.com.br
+country:     BR
+created:     20181227
+changed:     20181227
+
+% Security and mail abuse issues should also be addressed to
+% cert.br, http://www.cert.br/ , respectivelly to cert@cert.br
+% and mail-abuse@cert.br
+%
+% whois.registro.br accepts only direct match queries. Types
+% of queries are: domain (.br), registrant (tax ID), ticket,
+% provider, CIDR block, IP and ASN.

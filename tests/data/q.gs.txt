@@ -1,0 +1,24 @@
+Domain Name: q.gs
+Registry Domain ID: 503112-CoCCA
+Registry WHOIS Server: whois.coccaregistry.org
+Registrar URL: http://www.1API.net/
+Updated Date: 2023-02-15T19:07:14.486Z
+Creation Date: 2011-02-16T07:58:03.114Z
+Registry Expiry Date: 2024-02-16T18:01:06.737Z
+Registrar Registration Expiration Date: 2024-02-16T18:01:06.737Z
+Registrar: 1API GmbH
+Registrar Country: DE
+Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
+Registry Registrant ID: lvyvg-ASw7a
+Registrant Name: Redacted | EU Registrar
+Registrant Organization: x19 Limited
+Registrant Street: 27 Old Gloucester Street
+Registrant City: London
+Registrant Postal Code: WC1N 3AX
+Registrant Country: GB
+Registrant Phone: Redacted | EU Registrar
+Registrant Email: Redacted | EU Registrar
+Name Server: jim.ns.cloudflare.com
+Name Server: zara.ns.cloudflare.com
+DNSSEC: unsigned
+>>> Last update of WHOIS database: 2023-03-28T21:05:05.852Z <<<
