@@ -3,8 +3,7 @@
 namespace Deaduseful\WhoisParser;
 
 use Carbon\Carbon;
-use Carbon\Exceptions\InvalidFormatException;
-use Illuminate\Support\Str;
+use Deaduseful\WhoisParser\Parsers\Raw;
 use stdClass;
 
 class Parser
@@ -32,9 +31,8 @@ class Parser
         'whois.nic.es' => 'exceeded the established limit',
         'whois.godaddy.com' => 'Rate limit exceeded',
         'generic' => 'Query rate exceeded, please try again later.',
-        '.org' => 'WHOIS LIMIT EXCEEDED',
+        'org' => 'WHOIS LIMIT EXCEEDED',
         'qa' => 'BLACKLISTED: You have exceeded the query limit for your network or IP address and have been blacklisted.',
-        'uk_whois2' => 'not registered.  Closing...',
         'uk' => 'the WHOIS query quota',
         'app' => 'Rate limit exceeded',
         'whois.nic.vip' => 'Number of allowed queries exceeded',
@@ -60,49 +58,8 @@ class Parser
 
     private function getRaw(?string $lookup): array
     {
-        $lines = explode(PHP_EOL, $lookup);
-        $raw = [];
-        $hasKeys = [];
-        foreach ($lines as $line) {
-            $line = trim($line);
-            if (strpos($line, ':')) {
-                [$key, $value] = explode(':', $line, 2);
-                $key = Str::camel($key);
-                $value = trim($value);
-                if (str_contains(strtolower($key), 'date')) {
-                    try {
-                        $value = Carbon::parse($value);
-                    } catch (InvalidFormatException $exception) {
-                        //
-                    }
-                } elseif (str_contains(strtolower($key), 'url')) {
-                    $value = strtolower(filter_var($value, FILTER_VALIDATE_URL | FILTER_VALIDATE_DOMAIN));
-                } elseif (str_contains(strtolower($key), 'email')) {
-                    $filter = strpos($value, '@') ? FILTER_VALIDATE_EMAIL : FILTER_VALIDATE_URL;
-                    $value = filter_var(strtolower($value), $filter) ?: '';
-                } elseif (str_contains(strtolower($key), 'server')) {
-                    $value = trim(strtolower(filter_var($value, FILTER_VALIDATE_DOMAIN)), '.');
-                }
-                if (in_array($key, $hasKeys)) {
-                    if (is_array($raw[$key]) === false) {
-                        $firstValue = $raw[$key];
-                        $raw[$key] = [];
-                        $raw[$key][] = $firstValue;
-                    }
-                    if ($value) {
-                        $raw[$key][] = $value;
-                    }
-                } else {
-                    $raw[$key] = $value;
-                    if (in_array($key, $hasKeys) === false) {
-                        $hasKeys[] = $key;
-                    }
-                }
-            } else {
-                $raw[] = $line;
-            }
-        }
-        return $raw;
+        $raw = new Raw;
+        return $raw($lookup);
     }
 
     private function parse(): stdClass
