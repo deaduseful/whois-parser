@@ -3,8 +3,9 @@
 namespace Deaduseful\WhoisParser\tests;
 
 use Carbon\Carbon;
-use Deaduseful\WhoisParser\Parser;
+use Deaduseful\WhoisParser\src\Parser;
 use Tests\TestCase;
+
 class UpdatedDateTest extends TestCase
 {
     /** @dataProvider updatedData */
@@ -12,7 +13,7 @@ class UpdatedDateTest extends TestCase
     {
         $lookup = file_get_contents(__DIR__ . '/data/' . $domain . '.txt');
         $parser = new Parser($lookup);
-        $data = $parser->getData();
+        $data = $parser->getOutput();
         $result = $data->response->parsed_whois->updated_date;
         $expected = $expected ? Carbon::parse($expected)->toAtomString() : null;
         self::assertEquals($expected, $result);

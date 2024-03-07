@@ -2,19 +2,20 @@
 
 namespace Deaduseful\WhoisParser\tests;
 
-use Deaduseful\WhoisParser\Parser;
+use Deaduseful\WhoisParser\src\Parser;
 use Tests\TestCase;
 
 class NotFoundTest extends TestCase
 {
     /** @dataProvider NotFoundData */
-    public function testNotFound($domain)
+    public function testNotFound(string $domain)
     {
         $lookup = file_get_contents(__DIR__ . '/data/' . $domain . '.txt');
         $parser = new Parser($lookup);
-        $actual = $parser->getData();
-        $expected = json_decode('{ "error": "Domain not found" }');
-        self::assertEquals($expected, $actual);
+        $output = $parser->getOutput();
+        self::assertNull($output);
+        $expected = 'Domain not found';
+        self::assertEquals($expected, $parser->getError());
     }
 
     public function NotFoundData(): array

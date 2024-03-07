@@ -2,7 +2,7 @@
 
 namespace Deaduseful\WhoisParser\tests;
 
-use Deaduseful\WhoisParser\Parser;
+use Deaduseful\WhoisParser\src\Parser;
 use Tests\TestCase;
 
 class StatusTest extends TestCase

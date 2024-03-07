@@ -2,8 +2,9 @@
 
 namespace Deaduseful\WhoisParser\tests;
 
-use Deaduseful\WhoisParser\Parser;
+use Deaduseful\WhoisParser\src\Parser;
 use Tests\TestCase;
+
 class RateLimitTest extends TestCase
 {
 
@@ -12,7 +13,7 @@ class RateLimitTest extends TestCase
     {
         $lookup = file_get_contents(__DIR__ . '/data/' . $domain . '.txt');
         $parser = new Parser($lookup);
-        $actual = $parser->getData();
+        $actual = $parser->getOutput();
         $expected = json_decode('{ "error": "Rate limited" }');
         self::assertEquals($expected, $actual);
     }

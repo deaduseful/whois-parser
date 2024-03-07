@@ -3,6 +3,7 @@
 namespace Deaduseful\WhoisParser;
 
 use App\Whois;
+use Deaduseful\WhoisParser\src\Parser;
 use Illuminate\Routing\Controller as BaseController;
 
 class Controller extends BaseController
@@ -21,7 +22,7 @@ class Controller extends BaseController
             $lookup = $whois->lookup;
         }
         $parser = new Parser($lookup);
-        $result = $parser->getData();
+        $result = $parser->getOutput();
         return json_encode($result, JSON_PRETTY_PRINT);
     }
 }
