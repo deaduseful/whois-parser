@@ -9,28 +9,29 @@ class RateLimitTest extends TestCase
 {
 
     /** @dataProvider RateLimitedData */
-    public function testRateLimited($domain)
+    public function testRateLimited(string $domain, ?string $whoisServer)
     {
         $lookup = file_get_contents(__DIR__ . '/data/' . $domain . '.txt');
-        $parser = new Parser($lookup);
-        $actual = $parser->getOutput();
-        $expected = json_decode('{ "error": "Rate limited" }');
-        self::assertEquals($expected, $actual);
+        $parser = new Parser($lookup, $domain, $whoisServer);
+        $output = $parser->getOutput();
+        self::assertNull($output);
+        $expected = 'Rate limited';
+        self::assertEquals($expected, $parser->getError());
     }
 
     public function RateLimitedData(): array
     {
         return [
-            ['tubosparis.es'],
-            ['devonhampers.com'],
-            ['test.ch'],
-            ['test.com'],
-            ['dogtrainingcollar.org'],
-            ['glucofence.org'],
-            ['hebrewbooks.org'],
-            ['qcmf.com.au'],
-            ['test.vip'],
-            ['test.cz'],
+            ['tubosparis.es', null],
+            ['devonhampers.com', 'whois.joker.com'],
+            ['test.ch', null],
+            ['test.com', 'whois.networksolutions.com'],
+            ['dogtrainingcollar.org', 'whois.godaddy.com'],
+            ['glucofence.org', null],
+            ['hebrewbooks.org', null],
+            ['qcmf.com.au', null],
+            ['test.vip', null],
+            ['test.cz', null],
         ];
     }
 }

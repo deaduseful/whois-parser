@@ -11,7 +11,7 @@ class NotFoundTest extends TestCase
     public function testNotFound(string $domain)
     {
         $lookup = file_get_contents(__DIR__ . '/data/' . $domain . '.txt');
-        $parser = new Parser($lookup);
+        $parser = new Parser($lookup, $domain);
         $output = $parser->getOutput();
         self::assertNull($output);
         $expected = 'Domain not found';

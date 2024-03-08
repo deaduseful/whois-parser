@@ -2,6 +2,6 @@
 
 namespace Deaduseful\WhoisParser\src\Parsers;
 
-class Nz extends KeyValue
+class Nz extends Generic
 {
 }

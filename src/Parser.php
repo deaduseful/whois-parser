@@ -3,6 +3,8 @@
 namespace Deaduseful\WhoisParser\src;
 
 use Carbon\Carbon;
+use Deaduseful\WhoisParser\src\Parsers\Factory;
+use Deaduseful\WhoisParser\src\Parsers\Strategy;
 use Deaduseful\WhoisParser\src\Records\Contact;
 use Deaduseful\WhoisParser\src\Records\Other;
 use Deaduseful\WhoisParser\src\Records\Registrar;
@@ -13,48 +15,18 @@ use stdClass;
 
 class Parser
 {
-    const ERROR_DOMAIN_NOT_FOUND = 'Domain not found';
-    const ERROR_RATE_LIMITED = 'Rate limited';
-    /**
-     * @var string[] Not Found Matching
-     * @see https://github.com/cheenanet/whois-servers-list/blob/master/whois.json
-     */
-    const MATCH_NOT_FOUND = [
-        'Domain not found',
-        'No match for',
-        'whois.registry.in' => 'No Data Found',
-    ];
-
-    /**
-     * @var string[] Rate Limit Matching
-     * @see https://github.com/cheenanet/whois-servers-list/blob/master/limit-reached-messages.json
-     */
-    const MATCH_RATE_LIMIT = [
-        //'whois.joker.com' => 'Service is temporarily not available',
-        //'whois.nic.ch' => 'Requests of this client are not permitted',
-        //'whois.networksolutions.com' => 'IP Address Has Reached Rate Limit',
-        //'whois.nic.es' => 'exceeded the established limit',
-        //'whois.godaddy.com' => 'Rate limit exceeded',
-        'generic' => 'Query rate exceeded, please try again later.',
-        //'org' => 'WHOIS LIMIT EXCEEDED',
-        //'qa' => 'BLACKLISTED: You have exceeded the query limit for your network or IP address and have been blacklisted.',
-        //'uk' => 'the WHOIS query quota',
-        //'app' => 'Rate limit exceeded',
-        //'whois.nic.vip' => 'Number of allowed queries exceeded',
-        //'whois.nic.cz' => 'Your connection limit exceeded',
-    ];
     private Response $response;
     private ?string $lookup;
-    private ?Carbon $date;
-    private ?string $error;
     private ?array $raw;
+    private ?Strategy $parser;
     private ?string $source;
+    private ?string $whoisServer;
 
-    public function __construct(string $lookup, string $date = null, string $source = null)
+    public function __construct(string $lookup, ?string $source = null, ?string $whoisServer = null)
     {
         $this->lookup = $lookup;
-        $this->date = Carbon::parse($date);
         $this->source = $source;
+        $this->whoisServer = $whoisServer;
     }
 
     public function getOutput(): ?Response
@@ -65,58 +37,35 @@ class Parser
         return $this->output;
     }
 
+    private function getParser(): Strategy
+    {
+        if (empty($this->parser)) {
+            $tld = $this->getTldFromSource();
+            $this->parser = Factory::create($this->lookup, $tld, $this->whoisServer);
+        }
+        return $this->parser;
+    }
+
     private function getRaw(): array
     {
         if (empty($this->raw)) {
-            $raw = Factory::create($this->lookup);
-            $this->raw = $raw->parse();
+            $parser = $this->getParser();
+            $this->raw = $parser->parse();
         }
         return $this->raw;
     }
 
     private function parse(): ?Response
     {
-        if ($this->parseRateLimit()) {
+        $parser = $this->getParser();
+        if ($parser->parseRateLimit()) {
             return null;
         }
-        if ($this->isNotFound()) {
+        if ($parser->isNotFound()) {
             return null;
         }
         $this->response = $this->parseResponse();
         return $this->response;
-    }
-
-    protected function parseRateLimit(): bool
-    {
-        $lookup = $this->lookup;
-        foreach (self::MATCH_RATE_LIMIT as $find) {
-            if (str_contains(strtolower($lookup), strtolower($find))) {
-                $this->error = self::ERROR_RATE_LIMITED;
-                return true;
-            }
-        }
-        return false;
-    }
-
-    private function isNotFound(): bool
-    {
-        foreach (self::MATCH_NOT_FOUND as $find) {
-            if (str_starts_with($this->lookup, $find)) {
-                $this->error = self::ERROR_DOMAIN_NOT_FOUND;
-                return true;
-            }
-        }
-        $rawData = $this->getRaw();
-        if (empty($rawData['notFound']) === false) {
-            $this->error = self::ERROR_DOMAIN_NOT_FOUND;
-            return true;
-        }
-        return false;
-    }
-
-    public function getError(): ?string
-    {
-        return $this->error;
     }
 
     public function getResponse(): Response
@@ -147,7 +96,6 @@ class Parser
     {
         $rawData = $this->getRaw();
         $whois = new Whois();
-        $whois->date = $this->date->format('Y-m-d');
         $whois->record = $this->lookup;
         $whois->domain = $rawData['domainName'] ?? null;
         $whois->created_date = $rawData['creationDate'] ?? null;
@@ -314,5 +262,20 @@ class Parser
         $billing = $this->getBilling();
         $contacts->billing = $billing;
         return $contacts;
+    }
+
+    public function getError()
+    {
+        $parser = $this->getParser();
+        return $parser->getError();
+    }
+
+    private function getTldFromSource(): ?string
+    {
+        $source = $this->source;
+        if (strpos($source, '.')) {
+            return pathinfo(strtolower($source), PATHINFO_EXTENSION);
+        }
+        return null;
     }
 }
