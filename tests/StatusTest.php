@@ -11,7 +11,8 @@ class StatusTest extends TestCase
     {
         $query = 'fiat';
         $lookup = file_get_contents(__DIR__ . '/data/' . $query . '.txt');
-        $parser = new Parser($lookup);
-        $this->markTestIncomplete('@todo needs to be done');
+        $parser = new Parser($lookup, $query, 'whois.iana.org');
+        $output = $parser->getOutput();
+        $this->assertEquals('FORMER', $output->registration->statuses[0]);
     }
 }

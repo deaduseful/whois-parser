@@ -39,9 +39,10 @@ class Factory
         'whois.uniregistrar.net' => WhoisUniregistrar::class,
         'whois.one.com' => WhoisOne::class,
         'whois.global-village.de' => WhoisGlobalVillage::class,
+        'whois.iana.org' => WhoisIana::class,
     ];
 
-    public static function create(string $lookup, string $tld = null, string $whoisServer = null): Strategy
+    public static function create(string $lookup, string $query = null, string $whoisServer = null): Strategy
     {
         if ($whoisServer) {
             if (isset(self::WHOIS_SERVER_MAP[$whoisServer])) {
@@ -49,12 +50,21 @@ class Factory
                 return new $class($lookup);
             }
         }
-        if ($tld) {
+        if (strpos($query, '.')) {
+            $tld = self::parseTld($query);
             if (isset(self::TLD_MAP[$tld])) {
                 $class = self::TLD_MAP[$tld];
                 return new $class($lookup);
             }
         }
         return new Generic($lookup);
+    }
+
+    private static function parseTld(string $query): ?string
+    {
+        if (strpos($query, '.')) {
+            return pathinfo(strtolower($query), PATHINFO_EXTENSION);
+        }
+        return null;
     }
 }

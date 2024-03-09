@@ -40,8 +40,7 @@ class Parser
     private function getParser(): Strategy
     {
         if (empty($this->parser)) {
-            $tld = $this->getTldFromSource();
-            $this->parser = Factory::create($this->lookup, $tld, $this->whoisServer);
+            $this->parser = Factory::create($this->lookup, $this->source, $this->whoisServer);
         }
         return $this->parser;
     }
@@ -88,8 +87,9 @@ class Parser
     private function getStatuses(): array
     {
         $rawData = $this->getRaw();
-        $domainStatus = $rawData['domainStatus'] ?? null;
-        return is_array($domainStatus) ? $domainStatus : [$domainStatus];
+        $parser = $this->getParser();
+        $statues = $parser->getStatus($rawData);
+        return is_array($statues) ? $statues : [$statues];
     }
 
     private function getWhois(): Whois
@@ -264,19 +264,10 @@ class Parser
         return $contacts;
     }
 
-    public function getError()
+    public function getError(): ?string
     {
         $parser = $this->getParser();
         return $parser->getError();
-    }
-
-    private function getTldFromSource(): ?string
-    {
-        $source = $this->source;
-        if (strpos($source, '.')) {
-            return pathinfo(strtolower($source), PATHINFO_EXTENSION);
-        }
-        return null;
     }
 
     private function getNameServers(array $rawData): ?array

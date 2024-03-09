@@ -20,6 +20,8 @@ abstract class KeyValue implements Strategy
         'expiry',
     ];
 
+    protected string $statusField = 'domainStatus';
+
     public function __construct(string $lookup)
     {
         $this->lookup = $lookup;
@@ -29,38 +31,7 @@ abstract class KeyValue implements Strategy
     {
         $lookup = $this->lookup;
         $lines = $this->getLines($lookup);
-        $raw = [];
-        $hasKeys = [];
-        foreach ($lines as $line) {
-            $line = trim($line);
-            if (strpos($line, ':')) {
-                [$key, $value] = explode(':', $line, 2);
-                $key = $this->getCamel(trim($key, '.'));
-                $value = trim($value);
-                if (in_array($key, $hasKeys)) {
-                    if (is_array($raw[$key]) === false) {
-                        $firstValue = $raw[$key];
-                        $raw[$key] = [];
-                        $raw[$key][] = $firstValue;
-                    }
-                    if ($value &&
-                        in_array($value, $raw[$key])) {
-                        $raw[$key][] = $value;
-                    }
-                    $raw[$key] = array_unique($raw[$key]);
-                    if (count($raw[$key]) === 1) {
-                        $raw[$key] = array_shift($raw[$key]);
-                    }
-                } else {
-                    $raw[$key] = $value;
-                    if (in_array($key, $hasKeys) === false) {
-                        $hasKeys[] = $key;
-                    }
-                }
-            } else {
-                $raw[] = $line;
-            }
-        }
+        $raw = $this->getRaw($lines);
         return $this->getFilter($raw);
     }
 
@@ -126,5 +97,47 @@ abstract class KeyValue implements Strategy
     protected function getLines(?string $lookup): array
     {
         return explode(PHP_EOL, $lookup);
+    }
+
+    private function getRaw(array $lines): array
+    {
+        $raw = [];
+        $hasKeys = [];
+        foreach ($lines as $line) {
+            $line = trim($line);
+            if (strpos($line, ':')) {
+                [$key, $value] = explode(':', $line, 2);
+                $key = $this->getCamel(trim($key, '.'));
+                $value = trim($value);
+                if (in_array($key, $hasKeys)) {
+                    if (is_array($raw[$key]) === false) {
+                        $firstValue = $raw[$key];
+                        $raw[$key] = [];
+                        $raw[$key][] = $firstValue;
+                    }
+                    if ($value &&
+                        in_array($value, $raw[$key])) {
+                        $raw[$key][] = $value;
+                    }
+                    $raw[$key] = array_unique($raw[$key]);
+                    if (count($raw[$key]) === 1) {
+                        $raw[$key] = array_shift($raw[$key]);
+                    }
+                } else {
+                    $raw[$key] = $value;
+                    if (in_array($key, $hasKeys) === false) {
+                        $hasKeys[] = $key;
+                    }
+                }
+            } else {
+                $raw[] = $line;
+            }
+        }
+        return $raw;
+    }
+
+    public function getStatus(array $rawData)
+    {
+        return $rawData[$this->statusField] ?? null;
     }
 }
