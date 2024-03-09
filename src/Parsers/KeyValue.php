@@ -7,6 +7,7 @@ use Illuminate\Support\Str;
 
 abstract class KeyValue implements Strategy
 {
+    protected ?string $dateFormat = null;
     const ERROR_DOMAIN_NOT_FOUND = 'Domain not found';
     const ERROR_RATE_LIMITED = 'Rate limited';
     protected array $matchNotFound = [];
@@ -105,6 +106,9 @@ abstract class KeyValue implements Strategy
     {
         if (strlen($dateString) < 3) {
             return null;
+        }
+        if ($this->dateFormat) {
+            return Carbon::createFromFormat($this->dateFormat, $dateString);
         }
         return Carbon::parse($dateString);
     }

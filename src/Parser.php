@@ -78,7 +78,7 @@ class Parser
         $rawData = $this->getRaw();
         $registration = new Registration();
         $registration->created = $rawData['created'] ?? null;
-        $registration->expires = $rawData['expiry'] ?? null;
+        $registration->expiry = $rawData['expiry'] ?? null;
         $registration->updated = $rawData['updated'] ?? null;
         $registration->registrar = $rawData['registrar'] ?? null;
         $registration->statuses = $this->getStatuses();
@@ -239,6 +239,7 @@ class Parser
         $response->contacts = $contacts;
         $otherProperties = $this->getOtherProperties();
         $response->other = $otherProperties;
+        $response->rawData = $rawData;
         $response->recordSource = $this->source;
         return $response;
     }

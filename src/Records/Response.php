@@ -7,8 +7,8 @@ use stdClass;
 
 class Response extends Record
 {
-    const DATE_REGISTRATION = 'registration';
-    const DATE_EXPIRATION = 'expiration';
+    const DATE_CREATED = 'created';
+    const DATE_EXPIRY = 'expiry';
     const DATE_UPDATED = 'updated';
 
     public ?string $registrant;
@@ -19,6 +19,7 @@ class Response extends Record
     public ?stdClass $contacts;
     public ?Other $other;
     public ?string $recordSource;
+    public ?array $rawData;
 
     public function __construct()
     {
@@ -40,37 +41,34 @@ class Response extends Record
 
     public function get(string $key): mixed
     {
-        return $this->registration->{$key};
+        if (isset($this->registration->{$key})) {
+            return $this->registration->{$key};
+        }
+        return null;
     }
 
-    public function registrationDate(): ?Carbon
+    public function createdDate(): ?Carbon
     {
-        return $this->getDate(self::DATE_REGISTRATION);
+        $key = self::DATE_CREATED;
+        return $this->get($key);
     }
 
-    public function expirationDate(): ?Carbon
+    public function expiryDate(): ?Carbon
     {
-        return $this->getDate(self::DATE_EXPIRATION);
+        $key = self::DATE_EXPIRY;
+        return $this->get($key);
     }
 
     public function updatedDate(): ?Carbon
     {
-        return $this->getDate(self::DATE_UPDATED);
+        $key = self::DATE_UPDATED;
+        return $this->get($key);
     }
 
     public function hasStatus(string $domainStatus): bool
     {
         $allStatuses = $this->get('status') ?? [];
         return in_array($domainStatus, $allStatuses);
-    }
-
-    protected function getDate(string $key): ?Carbon
-    {
-        $dateString = $this->get($key);
-        if (empty($dateString)) {
-            return null;
-        }
-        return Carbon::parse($dateString);
     }
 
     public function getRegistrant(): ?string

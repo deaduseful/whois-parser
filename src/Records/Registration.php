@@ -2,11 +2,13 @@
 
 namespace Deaduseful\WhoisParser\src\Records;
 
+use Carbon\Carbon;
+
 class Registration extends Record
 {
-    public ?string $created;
-    public ?string $expires;
-    public ?string $updated;
+    public ?Carbon $created;
+    public ?Carbon $expiry;
+    public ?Carbon $updated;
     public ?string $registrar;
     public ?array $statuses = [];
 }

@@ -41,10 +41,10 @@ class Generic extends KeyValue implements Strategy
     {
         $data = [];
         foreach ($raw as $key => $value) {
-            if (isset($this->mapFields[$key])) {
-                $key = $this->mapFields[$key];
-            }
             if ($value) {
+                if (isset($this->mapFields[$key])) {
+                    $key = $this->mapFields[$key];
+                }
                 $data[$key] = $value;
             }
         }

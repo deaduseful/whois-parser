@@ -16,12 +16,14 @@ class Factory
         'vip' => Vip::class,
         'se' => Se::class,
         'kz' => Kz::class,
+        'tr' => Tr::class,
     ];
     private const WHOIS_SERVER_MAP = [
         'whois.registry.in' => In::class,
         'whois.joker.com' => WhoisJoker::class,
         'whois.godaddy.com' => WhoisGodaddy::class,
         'whois.networksolutions.com' => WhoisNetworkSolutions::class,
+        'whois.webmasters.com' => WhoisWebmasters::class,
     ];
 
     public static function create(string $lookup, string $tld = null, string $whoisServer = null): Strategy
