@@ -30,6 +30,7 @@ class Factory
         'pf' => Pf::class,
         'bn' => Bn::class,
         'ru' => Ru::class,
+        'pl' => Pl::class,
     ];
     private const WHOIS_SERVER_MAP = [
         'whois.registry.in' => In::class,
