@@ -10,7 +10,7 @@ class Kz extends Generic
     protected array $mapFields = [
         'domainCreated' => 'created',
         'lastModified' => 'updated',
-        'expires' => 'expires',
+        'expires' => 'expiry',
     ];
 
     protected function parseDate(string $dateString): ?Carbon
