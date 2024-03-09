@@ -27,6 +27,7 @@ class Factory
         'sg' => Sg::class,
         'id' => Id::class,
         'fi' => Fi::class,
+        'pf' => Pf::class,
     ];
     private const WHOIS_SERVER_MAP = [
         'whois.registry.in' => In::class,
@@ -36,6 +37,7 @@ class Factory
         'whois.webmasters.com' => WhoisWebmasters::class,
         'whois.uniregistrar.net' => WhoisUniregistrar::class,
         'whois.one.com' => WhoisOne::class,
+        'whois.global-village.de' => WhoisGlobalVillage::class,
     ];
 
     public static function create(string $lookup, string $tld = null, string $whoisServer = null): Strategy

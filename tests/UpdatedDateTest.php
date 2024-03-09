@@ -47,7 +47,7 @@ class UpdatedDateTest extends TestCase
             ['salvationdata.id', '2022-10-10 04:09:10', null],
             ['sportsbetscript.com', '2019-10-27T00:12:43Z', 'whois.one.com'],
             ['test.fi', '7.9.2017 17:47:38', null],
-            ['underberg.com', '2019-07-29 07:04:51', null],
+            ['underberg.com', '2019-07-29 07:04:51', 'whois.global-village.de'],
             ['vini.pf', '2022-05-27', null],
             ['woodchuck.app', '2023-11-16T08:09:01Z', null],
             ['www.gov.bn', '02-Feb-2018 16:45:04', null],
