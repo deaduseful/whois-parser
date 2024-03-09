@@ -31,6 +31,7 @@ class Factory
         'whois.godaddy.com' => WhoisGodaddy::class,
         'whois.networksolutions.com' => WhoisNetworkSolutions::class,
         'whois.webmasters.com' => WhoisWebmasters::class,
+        'whois.uniregistrar.net' => WhoisUniregistrar::class,
     ];
 
     public static function create(string $lookup, string $tld = null, string $whoisServer = null): Strategy
