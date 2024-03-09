@@ -2,17 +2,22 @@
 
 namespace Deaduseful\WhoisParser\src\Parsers;
 
+use Carbon\Carbon;
 use Illuminate\Support\Str;
 
-class KeyValue implements Strategy
+abstract class KeyValue implements Strategy
 {
     const ERROR_DOMAIN_NOT_FOUND = 'Domain not found';
     const ERROR_RATE_LIMITED = 'Rate limited';
     protected array $matchNotFound = [];
     protected array $matchRateLimit = [];
     protected ?string $lookup;
-
     protected ?string $error;
+    protected array $dateFields = [
+        'created',
+        'updated',
+        'expiry',
+    ];
 
     public function __construct(string $lookup)
     {
@@ -29,7 +34,7 @@ class KeyValue implements Strategy
             $line = trim($line);
             if (strpos($line, ':')) {
                 [$key, $value] = explode(':', $line, 2);
-                $key = $this->getCamel($key);
+                $key = $this->getCamel(trim($key, '.'));
                 $value = trim($value);
                 if (in_array($key, $hasKeys)) {
                     if (is_array($raw[$key]) === false) {
@@ -50,7 +55,7 @@ class KeyValue implements Strategy
                 $raw[] = $line;
             }
         }
-        return array_filter($raw);
+        return $this->getFilter($raw);
     }
 
     private function getCamel(string $key): string
@@ -62,7 +67,6 @@ class KeyValue implements Strategy
     {
         return $this->error;
     }
-
 
     public function parseRateLimit(): bool
     {
@@ -90,5 +94,18 @@ class KeyValue implements Strategy
             return true;
         }
         return false;
+    }
+
+    protected function getFilter(array $raw): array
+    {
+        return array_filter($raw);
+    }
+
+    protected function parseDate(string $dateString): ?Carbon
+    {
+        if (strlen($dateString) < 3) {
+            return null;
+        }
+        return Carbon::parse($dateString);
     }
 }

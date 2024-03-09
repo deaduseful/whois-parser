@@ -12,10 +12,10 @@ class UpdatedDateTest extends TestCase
     public function testParseUpdatedDateData($domain, $expected)
     {
         $lookup = file_get_contents(__DIR__ . '/data/' . $domain . '.txt');
-        $parser = new Parser($lookup);
+        $parser = new Parser($lookup, $domain);
         $data = $parser->getOutput();
-        $result = $data->response->parsed_whois->updated_date;
-        $expected = $expected ? Carbon::parse($expected)->toAtomString() : null;
+        $result = $data->updatedDate();
+        $expected = $expected ? Carbon::parse($expected) : null;
         self::assertEquals($expected, $result);
     }
 

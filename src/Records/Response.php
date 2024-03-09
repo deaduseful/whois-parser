@@ -40,7 +40,7 @@ class Response extends Record
 
     public function get(string $key): mixed
     {
-        return $this->all()->{$key};
+        return $this->registration->{$key};
     }
 
     public function registrationDate(): ?Carbon
@@ -67,7 +67,10 @@ class Response extends Record
     protected function getDate(string $key): ?Carbon
     {
         $dateString = $this->get($key);
-        return Carbon::createFromTimeString($dateString);
+        if (empty($dateString)) {
+            return null;
+        }
+        return Carbon::parse($dateString);
     }
 
     public function getRegistrant(): ?string

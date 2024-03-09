@@ -77,9 +77,9 @@ class Parser
     {
         $rawData = $this->getRaw();
         $registration = new Registration();
-        $registration->created = $rawData['creationDate'] ?? null;
-        $registration->expires = $rawData['registrarRegistrationExpirationDate'] ?? null;
-        $registration->updated = $rawData['updatedDate'] ?? null;
+        $registration->created = $rawData['created'] ?? null;
+        $registration->expires = $rawData['expiry'] ?? null;
+        $registration->updated = $rawData['updated'] ?? null;
         $registration->registrar = $rawData['registrar'] ?? null;
         $registration->statuses = $this->getStatuses();
         return $registration;
@@ -146,7 +146,7 @@ class Parser
         $registrant->type = 'registrant';
         $registrant->name = $rawData['registrantName'] ?? '';
         $registrant->org = $rawData['registrantOrganization'] ?? '';
-        $registrant->street = $rawData['registrantStreet'] ?? [];
+        $registrant->street = $rawData['registrantStreet'] ?? '';
         $registrant->city = $rawData['registrantCity'] ?? '';
         $registrant->state = $rawData['registrantState/Province'] ?? '';
         $registrant->postal = $rawData['registrantPostalCode'] ?? '';
@@ -245,7 +245,6 @@ class Parser
 
     private function getContacts(): stdClass
     {
-        $rawData = $this->getRaw();
         /**
          * 'registrant' => stdClass Object (...)
          * 'admin' => stdClass Object (...)

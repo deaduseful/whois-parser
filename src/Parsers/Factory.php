@@ -4,7 +4,6 @@ namespace Deaduseful\WhoisParser\src\Parsers;
 
 class Factory
 {
-
     private const TLD_MAP = [
         'au' => Au::class,
         'ch' => Ch::class,
@@ -15,6 +14,8 @@ class Factory
         'org' => Org::class,
         'qa' => Qa::class,
         'vip' => Vip::class,
+        'se' => Se::class,
+        'kz' => Kz::class,
     ];
     private const WHOIS_SERVER_MAP = [
         'whois.registry.in' => In::class,
