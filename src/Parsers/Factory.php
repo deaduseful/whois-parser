@@ -20,6 +20,7 @@ class Factory
         'it' => It::class,
         'online' => Online::class,
         'xyz' => Xyz::class,
+        'fr' => Fr::class,
     ];
     private const WHOIS_SERVER_MAP = [
         'whois.registry.in' => In::class,

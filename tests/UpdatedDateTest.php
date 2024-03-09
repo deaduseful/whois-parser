@@ -32,7 +32,7 @@ class UpdatedDateTest extends TestCase
             ['cohenhouse.it', '2022-09-06 00:52:47', null],
             ['covid-19.xyz', '2023-04-26 08:57:22.0Z', null],
             ['downloader.social', '2022-12-11 10:51:02', null],
-            ['euros-en-or.fr', '2015-06-10T22:07:25Z', null],
+            ['euros-en-or.fr', '2018-05-22T15:11:11Z', null],
             ['google.co.il', '1999-06-05', null],
             ['intercede.app', '2023-12-19T20:51:33Z', null],
             ['kmu.gov.ua', '2023-03-30 11:23:21', null],
