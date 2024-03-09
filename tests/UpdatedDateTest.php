@@ -4,7 +4,6 @@ namespace Deaduseful\WhoisParser\tests;
 
 use Carbon\Carbon;
 use Deaduseful\WhoisParser\src\Parser;
-use Deaduseful\WhoisParser\src\Parsers\WhoisWebmasters;
 use Tests\TestCase;
 
 class UpdatedDateTest extends TestCase

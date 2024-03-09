@@ -27,6 +27,7 @@ class NotFoundTest extends TestCase
             ['dns-001.com'],
             ['smock.co.nz'],
             ['regenerate.co.in'],
+            ['xexample.ru'],
         ];
     }
 }
