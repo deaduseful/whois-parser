@@ -113,9 +113,14 @@ abstract class KeyValue implements Strategy
             return null;
         }
         if ($this->dateFormat) {
-            return Carbon::createFromFormat($this->dateFormat, $dateString);
+            $carbon = Carbon::createFromFormat($this->dateFormat, $dateString);
+        } else {
+            $carbon = Carbon::parse($dateString);
         }
-        return Carbon::parse($dateString);
+        if ($carbon->unix() > 0) {
+            return $carbon;
+        }
+        return null;
     }
 
     protected function getLines(?string $lookup): array

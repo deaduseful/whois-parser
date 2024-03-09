@@ -2,7 +2,7 @@
 
 namespace Deaduseful\WhoisParser\src\Parsers;
 
-class Generic extends KeyValue implements Strategy
+class Generic extends KeyValue
 {
     /**
      * @var string[] Not Found Matching

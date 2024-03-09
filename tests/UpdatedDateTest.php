@@ -42,7 +42,7 @@ class UpdatedDateTest extends TestCase
             ['mana.md', null, null],
             ['multi-net.su', '2023-04-06 13:36:31', null],
             ['nma.com', '2020-03-14T17:43:37Z', 'whois.uniregistrar.net'],
-            ['prediksijitu.site', null, null],
+            ['prediksijitu.site', null, null], // 0001-01-01T00:00:00.00Z
             ['pupsik.sg', '07-04-2023 08:41:54', null],
             ['salvationdata.id', '2022-10-10 04:09:10', null],
             ['sportsbetscript.com', '2019-10-27T00:12:43Z', null],
