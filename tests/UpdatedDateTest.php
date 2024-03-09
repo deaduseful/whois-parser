@@ -45,7 +45,7 @@ class UpdatedDateTest extends TestCase
             ['prediksijitu.site', null, null], // 0001-01-01T00:00:00.00Z
             ['pupsik.sg', '07-04-2023 08:41:54', null],
             ['salvationdata.id', '2022-10-10 04:09:10', null],
-            ['sportsbetscript.com', '2019-10-27T00:12:43Z', null],
+            ['sportsbetscript.com', '2019-10-27T00:12:43Z', 'whois.one.com'],
             ['test.fi', '7.9.2017 17:47:38', null],
             ['underberg.com', '2019-07-29 07:04:51', null],
             ['vini.pf', '2022-05-27', null],

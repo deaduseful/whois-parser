@@ -34,6 +34,7 @@ class Factory
         'whois.networksolutions.com' => WhoisNetworkSolutions::class,
         'whois.webmasters.com' => WhoisWebmasters::class,
         'whois.uniregistrar.net' => WhoisUniregistrar::class,
+        'whois.one.com' => WhoisOne::class,
     ];
 
     public static function create(string $lookup, string $tld = null, string $whoisServer = null): Strategy
