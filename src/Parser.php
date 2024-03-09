@@ -2,7 +2,6 @@
 
 namespace Deaduseful\WhoisParser\src;
 
-use Carbon\Carbon;
 use Deaduseful\WhoisParser\src\Parsers\Factory;
 use Deaduseful\WhoisParser\src\Parsers\Strategy;
 use Deaduseful\WhoisParser\src\Records\Contact;
@@ -230,7 +229,7 @@ class Parser
         $response->registrant = $rawData['registrantName'] ?? null;
         $registration = $this->getRegistration();
         $response->registration = $registration;
-        $response->nameServers = $this->getNameServers($rawData);
+        $response->name_servers = $this->getNameServers($rawData);
         $whois = $this->getWhois();
         $response->whois = $whois;
         $registrar = $this->getRegistrar();
@@ -239,8 +238,8 @@ class Parser
         $response->contacts = $contacts;
         $otherProperties = $this->getOtherProperties();
         $response->other = $otherProperties;
-        $response->rawData = $rawData;
-        $response->recordSource = $this->source;
+        $response->raw_data = $rawData;
+        $response->record_source = $this->source;
         return $response;
     }
 
@@ -272,7 +271,15 @@ class Parser
 
     private function getNameServers(array $rawData): ?array
     {
-        $nameServers = $rawData['nameServer'] ?? null;
-        return is_string($nameServers) ? [$nameServers] : $nameServers;
+        if (empty($rawData['nameServer'])) {
+            return null;
+        }
+        $nameServers = $rawData['nameServer'];
+        $nameServers = is_string($nameServers) ? [$nameServers] : $nameServers;
+        $data = [];
+        foreach ($nameServers as $nameServer) {
+            $data[] = strtolower(trim($nameServer, '.'));
+        }
+        return $data;
     }
 }

@@ -13,8 +13,9 @@ class ParserTest extends TestCase
         $lookup = file_get_contents(__DIR__ . '/data/' . $query . '.txt');
         $json = file_get_contents(__DIR__ . '/data/' . $query . '.json');
         $expected = json_decode($json);
-        $parser = new Parser($lookup, '2023-04-14');
+        $parser = new Parser($lookup, $query);
         $actual = $parser->getOutput();
+        $actual = json_decode(json_encode($actual));
         $this->assertEquals($expected, $actual);
     }
 }

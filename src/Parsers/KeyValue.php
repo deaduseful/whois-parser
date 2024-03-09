@@ -116,7 +116,7 @@ abstract class KeyValue implements Strategy
                         $raw[$key][] = $firstValue;
                     }
                     if ($value &&
-                        in_array($value, $raw[$key])) {
+                        in_array($value, $raw[$key]) === false) {
                         $raw[$key][] = $value;
                     }
                     $raw[$key] = array_unique($raw[$key]);

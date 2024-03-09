@@ -13,13 +13,13 @@ class Response extends Record
 
     public ?string $registrant;
     public ?Registration $registration;
-    public ?array $nameServers;
+    public ?array $name_servers;
     public ?Whois $whois;
     public ?Registrar $registrar;
     public ?stdClass $contacts;
     public ?Other $other;
-    public ?string $recordSource;
-    public ?array $rawData;
+    public ?string $record_source;
+    public ?array $raw_data;
 
     public function __construct()
     {
@@ -30,12 +30,12 @@ class Response extends Record
         $properties = new stdClass();
         $properties->registrant = $this->registrant;
         $properties->registration = $this->registration;
-        $properties->name_servers = $this->nameServers;
+        $properties->name_servers = $this->name_servers;
         $properties->whois = $this->whois;
         $properties->registrar = $this->registrar;
         $properties->contacts = $this->contacts;
         $properties->other = $this->other;
-        $properties->record_source = $this->recordSource;
+        $properties->record_source = $this->record_source;
         return $properties;
     }
 
