@@ -28,7 +28,7 @@ abstract class KeyValue implements Strategy
     public function parse(): array
     {
         $lookup = $this->lookup;
-        $lines = explode(PHP_EOL, $lookup);
+        $lines = $this->getLines($lookup);
         $raw = [];
         $hasKeys = [];
         foreach ($lines as $line) {
@@ -116,5 +116,10 @@ abstract class KeyValue implements Strategy
             return Carbon::createFromFormat($this->dateFormat, $dateString);
         }
         return Carbon::parse($dateString);
+    }
+
+    protected function getLines(?string $lookup): array
+    {
+        return explode(PHP_EOL, $lookup);
     }
 }
