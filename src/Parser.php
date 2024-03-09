@@ -102,7 +102,7 @@ class Parser
         $whois->updated_date = $rawData['updatedDate'] ?? null;
         $whois->expired_date = $rawData['registrarRegistrationExpirationDate'] ?? null;
         $whois->statuses = $this->getStatuses();
-        $whois->name_servers = $rawData['nameServer'] ?? null;
+        $whois->name_servers = $this->getNameServers($rawData['nameServer']);
         return $whois;
     }
 
@@ -230,7 +230,7 @@ class Parser
         $response->registrant = $rawData['registrantName'] ?? null;
         $registration = $this->getRegistration();
         $response->registration = $registration;
-        $response->nameServers = $rawData['nameServer'] ?? null;
+        $response->nameServers = $this->getNameServers($rawData['nameServer']);
         $whois = $this->getWhois();
         $response->whois = $whois;
         $registrar = $this->getRegistrar();
@@ -277,5 +277,11 @@ class Parser
             return pathinfo(strtolower($source), PATHINFO_EXTENSION);
         }
         return null;
+    }
+
+    private function getNameServers(array|string|null $nameServer): array|string|null
+    {
+        $nameServer = is_string($nameServer) ? [$nameServer] : $nameServer;
+        return $nameServer ?? null;
     }
 }
