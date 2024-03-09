@@ -5,7 +5,6 @@ namespace Deaduseful\WhoisParser\src;
 use Deaduseful\WhoisParser\src\Parsers\Factory;
 use Deaduseful\WhoisParser\src\Parsers\Strategy;
 use Deaduseful\WhoisParser\src\Records\Contact;
-use Deaduseful\WhoisParser\src\Records\Other;
 use Deaduseful\WhoisParser\src\Records\Registrar;
 use Deaduseful\WhoisParser\src\Records\Registration;
 use Deaduseful\WhoisParser\src\Records\Response;
@@ -97,11 +96,16 @@ class Parser
         $whois = new Whois();
         $whois->record = $this->lookup;
         $whois->domain = $rawData['domainName'] ?? null;
-        $whois->created_date = $rawData['creationDate'] ?? null;
-        $whois->updated_date = $rawData['updatedDate'] ?? null;
-        $whois->expired_date = $rawData['registrarRegistrationExpirationDate'] ?? null;
+        $whois->created_date = $rawData['created'] ?? null;
+        $whois->updated_date = $rawData['updated'] ?? null;
+        $whois->expired_date = $rawData['expiry'] ?? null;
         $whois->statuses = $this->getStatuses();
         $whois->name_servers = $this->getNameServers($rawData);
+        $registrar = $this->getRegistrar();
+        $whois->registrar = $registrar;
+        $contacts = $this->getContacts();
+        $whois->contacts = $contacts;
+        $whois->other_properties = $this->getOtherProperties();
         return $whois;
     }
 
@@ -209,17 +213,17 @@ class Parser
         return $billing;
     }
 
-    private function getOtherProperties(): Other
+    private function getOtherProperties(): stdClass
     {
         $rawData = $this->getRaw();
         /**
          * 'dnssec' => 'unsigned'
          * 'registry_domain_id' => '1697312_DOMAIN_COM-VRSN'
          */
-        $other = new Other();
-        $other->dnssec = $rawData['dNSSEC'] ?? null;
-        $other->registry_domain_id = $rawData['registryDomainID'] ?? null;
-        return $other;
+        $properties = new stdClass();
+        $properties->dnssec = $rawData['dNSSEC'] ?? null;
+        $properties->registry_domain_id = $rawData['registryDomainID'] ?? null;
+        return $properties;
     }
 
     private function parseResponse(): Response
@@ -232,12 +236,6 @@ class Parser
         $response->name_servers = $this->getNameServers($rawData);
         $whois = $this->getWhois();
         $response->whois = $whois;
-        $registrar = $this->getRegistrar();
-        $response->registrar = $registrar;
-        $contacts = $this->getContacts();
-        $response->contacts = $contacts;
-        $otherProperties = $this->getOtherProperties();
-        $response->other = $otherProperties;
         $response->raw_data = $rawData;
         $response->record_source = $this->source;
         return $response;
