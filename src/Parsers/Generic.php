@@ -2,8 +2,6 @@
 
 namespace Deaduseful\WhoisParser\src\Parsers;
 
-use Carbon\Carbon;
-
 class Generic extends KeyValue implements Strategy
 {
     /**
@@ -50,6 +48,9 @@ class Generic extends KeyValue implements Strategy
         }
         foreach ($this->dateFields as $dateField) {
             if (isset($data[$dateField])) {
+                if (is_array($data[$dateField])) {
+                    $data[$dateField] = array_shift($data[$dateField]);
+                }
                 $data[$dateField] = $this->parseDate($data[$dateField]);
             }
         }

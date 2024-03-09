@@ -43,8 +43,13 @@ abstract class KeyValue implements Strategy
                         $raw[$key] = [];
                         $raw[$key][] = $firstValue;
                     }
-                    if ($value) {
+                    if ($value &&
+                        in_array($value, $raw[$key])) {
                         $raw[$key][] = $value;
+                    }
+                    $raw[$key] = array_unique($raw[$key]);
+                    if (count($raw[$key]) === 1) {
+                        $raw[$key] = array_shift($raw[$key]);
                     }
                 } else {
                     $raw[$key] = $value;

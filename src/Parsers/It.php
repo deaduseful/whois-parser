@@ -12,6 +12,9 @@ class It extends Generic
 
     protected function getFilter(array $raw): array
     {
-        // @todo handle dates better.
+        // @todo handle sections and dates better.
+        $data = parent::getFilter($raw);
+
+        return $data;
     }
 }
