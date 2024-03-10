@@ -54,7 +54,7 @@ class CreatedDateTest extends TestCase
             ['test.ax', '19.09.2020'],
             ['bank.gov.ua', null],
             ['confido.as', '08th March 2023 at 12:54:30.219'],
-            ['salsalessonschicago.org', '2004-01-28T00:03:01Z'],
+            ['salsalessonschicago.org', '2004-01-28T00:03:01Z', 'whois.aitdomains.com'],
             ['google.co.ug', '2016-02-17'],
         ];
     }

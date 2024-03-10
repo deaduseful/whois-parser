@@ -64,6 +64,7 @@ class Factory
         'whois.webnic.cc' => WhoisWebNic::class,
         'whois.1api.net' => Whois1API::class,
         'whois.porkbun.com' => WhoisPorkBun::class,
+        'whois.aitdomains.com' => WhoisAitDomains::class,
     ];
 
     public static function create(string $lookup, string $query = null, string $whoisServer = null): Strategy
