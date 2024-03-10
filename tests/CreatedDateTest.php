@@ -47,7 +47,7 @@ class CreatedDateTest extends TestCase
             ['test.ro', null],
             ['officecomsetup.support', '2020-07-10 13:28:44'],
             ['3xxx.info', '2023-02-25 18:20:31'],
-            ['clickbank.net', '1997-07-11 04:00:00'],
+            ['clickbank.net', '1997-07-11 04:00:00', 'whois.1api.net'],
             ['sausage.io', '2015-01-26 21:16:56'],
             ['papatyadernegi.org', '2023-02-17 11:14:13'],
             ['test.je', '31st December 2001 at 00:00:00.000'],
