@@ -2,13 +2,12 @@
 
 namespace Deaduseful\WhoisParser\src\Parsers;
 
-use Carbon\Carbon;
-
 class Su extends Generic
 {
     protected array $mapFields = [
         'created' => 'created',
         'lastUpdatedOn' => 'updated',
+        'freeDate' => 'expiry',
         'nserver' => 'nameServer',
     ];
 
