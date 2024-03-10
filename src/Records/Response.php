@@ -31,6 +31,9 @@ class Response extends Record
 
     public function get(string $key): mixed
     {
+        if (isset($this->whois->{$key})) {
+            return $this->whois->{$key};
+        }
         if (isset($this->registration->{$key})) {
             return $this->registration->{$key};
         }

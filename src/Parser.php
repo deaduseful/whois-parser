@@ -73,10 +73,11 @@ class Parser
     private function getRegistration(): Registration
     {
         $rawData = $this->getRaw();
+        $parser = $this->getParser();
         $registration = new Registration();
-        $registration->created = $rawData['created'] ?? null;
-        $registration->expiry = $rawData['expiry'] ?? null;
-        $registration->updated = $rawData['updated'] ?? null;
+        $registration->created = $parser->getCreated($rawData);
+        $registration->expiry = $parser->getExpiry($rawData);
+        $registration->updated = $parser->getUpdated($rawData);
         $registration->registrar = $rawData['registrar'] ?? null;
         $registration->statuses = $this->getStatuses();
         return $registration;
@@ -93,12 +94,13 @@ class Parser
     private function getWhois(): Whois
     {
         $rawData = $this->getRaw();
+        $parser = $this->getParser();
         $whois = new Whois();
         $whois->record = $this->lookup;
         $whois->domain = $rawData['domainName'] ?? null;
-        $whois->created_date = $rawData['created'] ?? null;
-        $whois->updated_date = $rawData['updated'] ?? null;
-        $whois->expired_date = $rawData['expiry'] ?? null;
+        $whois->created_date = $parser->getCreated($rawData);
+        $whois->updated_date = $parser->getUpdated($rawData);
+        $whois->expired_date = $parser->getExpiry($rawData);
         $whois->statuses = $this->getStatuses();
         $whois->name_servers = $this->getNameServers($rawData);
         $registrar = $this->getRegistrar();

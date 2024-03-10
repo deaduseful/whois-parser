@@ -2,6 +2,8 @@
 
 namespace Deaduseful\WhoisParser\src\Parsers;
 
+use Carbon\Carbon;
+
 class Generic extends KeyValue
 {
     /**
@@ -55,5 +57,20 @@ class Generic extends KeyValue
             }
         }
         return parent::getFilter($data);
+    }
+
+    public function getCreated(array $rawData): ?Carbon
+    {
+        return $rawData[self::DATE_CREATED] ?? null;
+    }
+
+    public function getUpdated(array $rawData): ?Carbon
+    {
+        return $rawData[self::DATE_UPDATED] ?? null;
+    }
+
+    public function getExpiry(array $rawData): ?Carbon
+    {
+        return $rawData[self::DATE_EXPIRY] ?? null;
     }
 }

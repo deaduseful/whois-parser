@@ -7,6 +7,9 @@ use Illuminate\Support\Str;
 
 abstract class KeyValue implements Strategy
 {
+    const DATE_CREATED = 'created';
+    const DATE_UPDATED = 'updated';
+    const DATE_EXPIRY = 'expiry';
     protected ?string $dateFormat = null;
     const ERROR_DOMAIN_NOT_FOUND = 'Domain not found';
     const ERROR_RATE_LIMITED = 'Rate limited';
@@ -15,9 +18,9 @@ abstract class KeyValue implements Strategy
     protected ?string $lookup;
     protected ?string $error;
     protected array $dateFields = [
-        'created',
-        'updated',
-        'expiry',
+        self::DATE_CREATED,
+        self::DATE_UPDATED,
+        self::DATE_EXPIRY,
     ];
 
     protected string $statusField = 'domainStatus';
