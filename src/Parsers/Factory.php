@@ -61,6 +61,7 @@ class Factory
         'whois.publicdomainregistry.com' => WhoisPublicDomainRegistry::class,
         'whois.webnic.cc' => WhoisWebNic::class,
         'whois.1api.net' => Whois1API::class,
+        'whois.porkbun.com' => WhoisPorkBun::class,
     ];
 
     public static function create(string $lookup, string $query = null, string $whoisServer = null): Strategy

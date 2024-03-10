@@ -49,7 +49,7 @@ class CreatedDateTest extends TestCase
             ['3xxx.info', '2023-02-25 18:20:31'],
             ['clickbank.net', '1997-07-11 04:00:00', 'whois.1api.net'],
             ['sausage.io', '2015-01-26 21:16:56'],
-            ['papatyadernegi.org', '2023-02-17 11:14:13'],
+            ['papatyadernegi.org', '2023-02-17 11:14:13', 'whois.porkbun.com'],
             ['test.je', '31st December 2001 at 00:00:00.000'],
             ['test.ax', '19.09.2020'],
             ['bank.gov.ua', null],
