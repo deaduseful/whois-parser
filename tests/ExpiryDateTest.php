@@ -40,7 +40,7 @@ class ExpiryDateTest extends TestCase
             ['us-alphatonic.info', '2024-04-06T11:12:13Z'],
             ['msnet.co.kr', '2024-01-27'],
             ['google.pt', '28-02-2023 23:59:00'],
-            ['tokobungaindonesia.com', '2024-05-29T04:52:11Z'],
+            ['tokobungaindonesia.com', '2024-05-29T04:52:11Z', 'whois.webnic.cc'],
             ['dinamoon.pl', null],
             ['toko.ly', '2022-01-21 08:50:34'],
         ];

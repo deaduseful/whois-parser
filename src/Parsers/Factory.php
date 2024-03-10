@@ -56,6 +56,7 @@ class Factory
         'whois.global-village.de' => WhoisGlobalVillage::class,
         'whois.iana.org' => WhoisIana::class,
         'whois.publicdomainregistry.com' => WhoisPublicDomainRegistry::class,
+        'whois.webnic.cc' => WhoisWebNic::class,
     ];
 
     public static function create(string $lookup, string $query = null, string $whoisServer = null): Strategy
