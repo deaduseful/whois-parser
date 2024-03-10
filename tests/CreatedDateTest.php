@@ -25,7 +25,7 @@ class CreatedDateTest extends TestCase
             ['ess.do', null],
             ['n.pl', '1999-03-04 12:00:00'],
             ['q.gs', '2011-02-16T07:58:03.114000+0000'],
-            ['michael-bredahl.dk', null],
+            ['michael-bredahl.dk', '2011-02-20'],
             ['cfa.ge', '2020-09-17 00:00:00'],
             ['salvationdata.id', '2021-10-09T14:09:10'],
             ['multi-net.su', '2020-01-29T08:52:19'],
