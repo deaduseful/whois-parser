@@ -46,6 +46,7 @@ class Factory
         'pt' => Pt::class,
         'ly' => Ly::class,
         'support' => Support::class,
+        'io' => Io::class,
     ];
     private const WHOIS_SERVER_MAP = [
         'whois.registry.in' => In::class,

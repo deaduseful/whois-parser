@@ -2,8 +2,6 @@
 
 namespace Deaduseful\WhoisParser\src\Parsers;
 
-use Carbon\Carbon;
-
 class Th extends Generic
 {
     protected array $mapFields = [
