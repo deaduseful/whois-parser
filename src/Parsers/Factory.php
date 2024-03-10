@@ -52,12 +52,13 @@ class Factory
         'whois.one.com' => WhoisOne::class,
         'whois.global-village.de' => WhoisGlobalVillage::class,
         'whois.iana.org' => WhoisIana::class,
-        'whois.PublicDomainRegistry.com' => WhoisPublicDomainRegistry::class,
+        'whois.publicdomainregistry.com' => WhoisPublicDomainRegistry::class,
     ];
 
     public static function create(string $lookup, string $query = null, string $whoisServer = null): Strategy
     {
         if ($whoisServer) {
+            $whoisServer = strtolower($whoisServer);
             if (isset(self::WHOIS_SERVER_MAP[$whoisServer])) {
                 $class = self::WHOIS_SERVER_MAP[$whoisServer];
                 return new $class($lookup);

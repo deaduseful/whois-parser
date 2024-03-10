@@ -36,7 +36,7 @@ class ExpiryDateTest extends TestCase
             ['smsbomber.co.in', '2023-09-20 10:23:51'],
             ['mana.md', '2026-01-05'],
             ['muxcdn.net', '2024-05-08T09:08:49'],
-            ['makoons.com', '2025-09-08T05:42:39Z'],
+            ['makoons.com', '2025-09-08T05:42:39Z', 'whois.PublicDomainRegistry.com'],
             ['us-alphatonic.info', '2024-04-06T11:12:13Z'],
             ['msnet.co.kr', '2024-01-27'],
             ['google.pt', '28-02-2023 23:59:00'],
