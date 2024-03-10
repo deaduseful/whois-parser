@@ -18,7 +18,7 @@ class StatusTest extends TestCase
 
     public function testStatusClientTransferProhibited()
     {
-        $query = 'woodchuck.app';
+        $query = 'news.app';
         $lookup = file_get_contents(__DIR__ . '/data/' . $query . '.txt');
         $parser = new Parser($lookup, $query);
         $output = $parser->getOutput();
