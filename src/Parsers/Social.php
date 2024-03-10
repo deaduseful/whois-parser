@@ -7,6 +7,6 @@ class Social extends Generic
     protected array $mapFields = [
         'createdDate' => 'created',
         'updatedDate' => 'updated',
-        'expirationDate' => 'expiry',
+        'registrarRegistrationExpirationDate' => 'expiry',
     ];
 }
