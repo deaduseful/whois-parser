@@ -15,4 +15,14 @@ class StatusTest extends TestCase
         $output = $parser->getOutput();
         $this->assertEquals('FORMER', $output->registration->statuses[0]);
     }
+
+    public function testStatusClientTransferProhibited()
+    {
+        $query = 'woodchuck.app';
+        $lookup = file_get_contents(__DIR__ . '/data/' . $query . '.txt');
+        $parser = new Parser($lookup, $query);
+        $output = $parser->getOutput();
+        $status = $output->hasStatus('clienttransferprohibited');
+        $this->assertTrue($status);
+    }
 }

@@ -10,6 +10,7 @@ class Response extends Record
     const DATE_CREATED = 'created';
     const DATE_EXPIRY = 'expiry';
     const DATE_UPDATED = 'updated';
+    const FIELD_STATUSES = 'statuses';
 
     public ?string $registrant;
     public ?Registration $registration;
@@ -58,10 +59,18 @@ class Response extends Record
         return $this->get($key);
     }
 
-    public function hasStatus(string $domainStatus): bool
+    public function hasStatus(string $checkStatus): bool
     {
-        $allStatuses = $this->get('status') ?? [];
-        return in_array($domainStatus, $allStatuses);
+        $allStatuses = $this->get(self::FIELD_STATUSES) ?? [];
+        if (in_array($checkStatus, $allStatuses)) {
+            return true;
+        }
+        foreach ($allStatuses as $status) {
+            if (str_contains(strtolower($status), strtolower($checkStatus))) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public function getRegistrant(): ?string
