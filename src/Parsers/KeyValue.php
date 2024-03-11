@@ -11,10 +11,13 @@ abstract class KeyValue implements Strategy
     const DATE_UPDATED = 'updated';
     const DATE_EXPIRY = 'expiry';
     protected ?string $dateFormat = null;
-    const ERROR_DOMAIN_NOT_FOUND = 'Domain not found';
+    const ERROR_NOT_FOUND = 'Not found';
     const ERROR_RATE_LIMITED = 'Rate limited';
+    const ERROR_INVALID = 'Invalid query';
     protected array $matchNotFound = [];
     protected array $matchRateLimit = [];
+    protected array $matchInvalid = [];
+
     protected ?string $lookup;
     protected ?string $error;
     protected array $dateFields = [
@@ -48,7 +51,7 @@ abstract class KeyValue implements Strategy
         return $this->error;
     }
 
-    public function parseRateLimit(): bool
+    public function isRateLimit(): bool
     {
         $lookup = $this->lookup;
         foreach ($this->matchRateLimit as $find) {
@@ -60,17 +63,29 @@ abstract class KeyValue implements Strategy
         return false;
     }
 
+    public function isInvalid(): bool
+    {
+        $lookup = $this->lookup;
+        foreach ($this->matchInvalid as $find) {
+            if (str_contains(strtolower($lookup), strtolower($find))) {
+                $this->error = self::ERROR_INVALID;
+                return true;
+            }
+        }
+        return false;
+    }
+
     public function isNotFound(): bool
     {
         foreach ($this->matchNotFound as $find) {
             if (str_starts_with($this->lookup, $find)) {
-                $this->error = self::ERROR_DOMAIN_NOT_FOUND;
+                $this->error = self::ERROR_NOT_FOUND;
                 return true;
             }
         }
         $rawData = $this->parse();
         if (empty($rawData['notFound']) === false) {
-            $this->error = self::ERROR_DOMAIN_NOT_FOUND;
+            $this->error = self::ERROR_NOT_FOUND;
             return true;
         }
         return false;

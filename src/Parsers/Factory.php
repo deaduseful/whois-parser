@@ -50,6 +50,10 @@ class Factory
         'je' => Je::class,
         'as' => AsTld::class,
         'ug' => Ug::class,
+        'eu' => Eu::class,
+        'tv' => Tv::class,
+        'sb' => Sb::class,
+        'top' => Top::class,
     ];
     private const WHOIS_SERVER_MAP = [
         'whois.registry.in' => In::class,

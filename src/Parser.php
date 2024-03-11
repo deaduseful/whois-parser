@@ -55,7 +55,10 @@ class Parser
     private function parse(): ?Response
     {
         $parser = $this->getParser();
-        if ($parser->parseRateLimit()) {
+        if ($parser->isRateLimit()) {
+            return null;
+        }
+        if ($parser->isInvalid()) {
             return null;
         }
         if ($parser->isNotFound()) {
