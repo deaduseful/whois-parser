@@ -11,15 +11,12 @@ abstract class KeyValue implements Strategy
     const DATE_UPDATED = 'updated';
     const DATE_EXPIRY = 'expiry';
     protected ?string $dateFormat = null;
-    const ERROR_NOT_FOUND = 'Not found';
-    const ERROR_RATE_LIMITED = 'Rate limited';
-    const ERROR_INVALID = 'Invalid query';
     protected array $matchNotFound = [];
     protected array $matchRateLimit = [];
     protected array $matchInvalid = [];
 
     protected ?string $lookup;
-    protected ?string $error;
+    protected ?string $error = null;
     protected array $dateFields = [
         self::DATE_CREATED,
         self::DATE_UPDATED,
@@ -56,7 +53,6 @@ abstract class KeyValue implements Strategy
         $lookup = $this->lookup;
         foreach ($this->matchRateLimit as $find) {
             if (str_contains(strtolower($lookup), strtolower($find))) {
-                $this->error = self::ERROR_RATE_LIMITED;
                 return true;
             }
         }
@@ -68,7 +64,6 @@ abstract class KeyValue implements Strategy
         $lookup = $this->lookup;
         foreach ($this->matchInvalid as $find) {
             if (str_contains(strtolower($lookup), strtolower($find))) {
-                $this->error = self::ERROR_INVALID;
                 return true;
             }
         }
@@ -79,13 +74,19 @@ abstract class KeyValue implements Strategy
     {
         foreach ($this->matchNotFound as $find) {
             if (str_starts_with($this->lookup, $find)) {
-                $this->error = self::ERROR_NOT_FOUND;
                 return true;
             }
         }
         $rawData = $this->parse();
+        foreach ($this->matchNotFound as $find) {
+            if (in_array($find, $rawData, true)) {
+                return true;
+            }
+        }
         if (empty($rawData['notFound']) === false) {
-            $this->error = self::ERROR_NOT_FOUND;
+            return true;
+        }
+        if (isset($rawData[$this->statusField]) && $rawData[$this->statusField] === 'No Object Found') {
             return true;
         }
         return false;

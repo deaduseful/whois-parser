@@ -13,6 +13,15 @@ class Generic extends KeyValue
     protected array $matchNotFound = [
         'Domain not found',
         'No match for',
+        'in' => 'No Data Found',
+        'id' => 'DOMAIN NOT FOUND',
+        'nominet' => 'This domain name has not been registered',
+        'top' => 'The queried object does not exist',
+        'do' => 'No Object Found',
+        'fr' => '%% NOT FOUND',
+        'cn' => 'No matching record.',
+        'io' => 'Domain not found.',
+        'as' => 'NOT FOUND',
     ];
 
     /**
@@ -29,7 +38,7 @@ class Generic extends KeyValue
         'updatedDate' => 'updated',
         'registrarRegistrationExpirationDate' => 'expiry',
         'registrar' => 'registrar',
-        'status' => 'status',
+        'domainStatus' => 'status',
         'dnssec' => 'dnssec',
         'holder' => 'registrar',
         'admin-c' => 'admin',

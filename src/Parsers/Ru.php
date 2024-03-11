@@ -12,9 +12,9 @@ class Ru extends Generic
     {
         foreach ($this->matchNotFound as $find) {
             if (str_contains($this->lookup, $find)) {
-                $this->error = self::ERROR_NOT_FOUND;
                 return true;
             }
         }
+        return false;
     }
 }

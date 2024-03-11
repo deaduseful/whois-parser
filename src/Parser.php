@@ -13,12 +13,16 @@ use stdClass;
 
 class Parser
 {
+    const ERROR_NOT_FOUND = 'Not found';
+    const ERROR_RATE_LIMITED = 'Rate limited';
+    const ERROR_INVALID = 'Invalid query';
     private Response $response;
     private ?string $lookup;
     private ?array $raw;
     private ?Strategy $parser;
     private ?string $source;
     private ?string $whoisServer;
+    private ?string $error;
 
     public function __construct(string $lookup, ?string $source = null, ?string $whoisServer = null)
     {
@@ -56,12 +60,15 @@ class Parser
     {
         $parser = $this->getParser();
         if ($parser->isRateLimit()) {
+            $this->error = self::ERROR_RATE_LIMITED;
             return null;
         }
         if ($parser->isInvalid()) {
+            $this->error = self::ERROR_INVALID;
             return null;
         }
         if ($parser->isNotFound()) {
+            $this->error = self::ERROR_NOT_FOUND;
             return null;
         }
         $this->response = $this->parseResponse();
@@ -268,8 +275,7 @@ class Parser
 
     public function getError(): ?string
     {
-        $parser = $this->getParser();
-        return $parser->getError();
+        return $this->error;
     }
 
     private function getNameServers(array $rawData): ?array

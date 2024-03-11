@@ -4,6 +4,7 @@ namespace Deaduseful\WhoisParser\src\Parsers;
 
 class Se extends Generic
 {
+    protected string $statusField = 'status';
     protected array $mapFields = [
         'nserver' => 'nameserver',
         'created' => 'created',

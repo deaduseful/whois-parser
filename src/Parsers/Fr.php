@@ -2,10 +2,12 @@
 
 namespace Deaduseful\WhoisParser\src\Parsers;
 
-use Carbon\Carbon;
-
 class Fr extends Generic
 {
+    protected array $matchNotFound = [
+        '%% NOT FOUND',
+    ];
+
     protected array $mapFields = [
         'registered' => 'created',
         'lastUpdate' => 'updated',
