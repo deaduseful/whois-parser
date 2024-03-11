@@ -1,0 +1,5 @@
+% SaudiNIC Whois server.
+% Rights restricted by copyright.
+% http://nic.sa/en/view/whois-cmd-copyright
+
+No Match for 99a0cf3fce1c579916612fce551f7c30.sa.

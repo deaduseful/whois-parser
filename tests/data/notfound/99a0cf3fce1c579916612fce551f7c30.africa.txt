@@ -1,0 +1,13 @@
+Available
+Domain: 99a0cf3fce1c579916612fce551f7c30.africa
+
+>>> Last update of WHOIS database: 2024-02-08T20:18:10Z <<<
+
+# --
+# For more information on Whois status codes, please visit https://icann.org/epp
+#
+# The use of this Whois facility is subject to the terms and
+# conditions listed at https://registry.africa/whois-terms/
+# Copyright (c)  Registry Africa Ltd. 2024
+
+

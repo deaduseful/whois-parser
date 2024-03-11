@@ -1,0 +1,12 @@
+The queried object does not exist: 99A0CF3FCE1C579916612FCE551F7C30.TATAR
+
+>>> Last update of WHOIS database: 2024-02-08T20:51:30Z <<<
+
+% For more information on Whois status codes, please visit
+% https://icann.org/epp
+
+% By submitting a query to Whois Service
+% you agree to abide by the following terms of use:
+% http://whois.nic.tatar/terms_of_use.html (in Russian)
+% http://whois.nic.tatar/terms_of_use.en.html (in English).
+

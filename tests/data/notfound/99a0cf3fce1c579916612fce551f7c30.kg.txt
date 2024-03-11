@@ -1,0 +1,8 @@
+% This is the .kg ccTLD Whois server
+% Register your own domain at http://www.cctld.kg
+% Use @cctld_kg_bot telegram bot for whois service
+
+Domain 99A0CF3FCE1C579916612FCE551F7C30.KG
+
+Data not found. This domain is available for registration.
+
