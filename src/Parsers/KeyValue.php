@@ -11,7 +11,9 @@ abstract class KeyValue implements Strategy
     const DATE_UPDATED = 'updated';
     const DATE_EXPIRY = 'expiry';
     protected ?string $dateFormat = null;
-    protected array $matchNotFound = [];
+    protected array $matchNotFound = [
+        'No Object Found',
+    ];
     protected array $matchRateLimit = [];
     protected array $matchInvalid = [];
 
@@ -72,21 +74,7 @@ abstract class KeyValue implements Strategy
 
     public function isNotFound(): bool
     {
-        foreach ($this->matchNotFound as $find) {
-            if (str_starts_with($this->lookup, $find)) {
-                return true;
-            }
-        }
-        $rawData = $this->parse();
-        foreach ($this->matchNotFound as $find) {
-            if (in_array($find, $rawData, true)) {
-                return true;
-            }
-        }
-        if (empty($rawData['notFound']) === false) {
-            return true;
-        }
-        if (isset($rawData[$this->statusField]) && $rawData[$this->statusField] === 'No Object Found') {
+        if (isset($rawData[$this->statusField]) && $rawData[$this->statusField] === $this->matchNotFound[0]) {
             return true;
         }
         return false;

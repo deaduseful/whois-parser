@@ -22,6 +22,54 @@ class Generic extends KeyValue
         'cn' => 'No matching record.',
         'io' => 'Domain not found.',
         'as' => 'NOT FOUND',
+        'bn' => 'Domain Not Found',
+        'bo' => 'DOMINIO NO REGISTRADO',
+        'by' => 'Object does not exist',
+        'za' => 'Available',
+        'cl' => 'no entries found.',
+        'click' => 'is available for registration',
+        //'cr,hr,ir,ls,mk,ve' => '%ERROR' => '101: no entries found'
+        'gf' => 'NO OBJECT FOUND!',
+        'mq' => 'NO OBJECT FOUND!',
+        'gq' => 'The domain you requested is not known in Freenoms database.',
+        'hk' => 'The domain has not been registered.',
+        'hu' => 'Nincs talalat / No match',
+        'im' => ' was not found.',
+        'is' => '% No entries found for query ',
+        //it 'status' => 'AVAILABLE'
+        'jp' => 'No match!!',
+        'kg' => 'Data not found. This domain is available for registration.',
+        'lu' => '% No such domain',
+        'mtr' => 'The domain has not been registered.',
+        //lt 'status' => 'available'
+        //lv 'status' => 'free'
+        //lv 'status' => 'free'
+        //edu 'nOMATCH' => '99a0cf3fce1c579916612fce551f7c30.edu'
+        //hr '%ERROR' => 'No entries found'
+        //is         5 => '% No entries found for query "99a0cf3fce1c579916612fce551f7c30.is".'
+        'mx' => 'No_Se_Encontro_El_Objeto/Object_Not_Found',
+        //name         24 => 'No match for "99A0CF3FCE1C579916612FCE551F7C30.NAME".'
+        'nc' => 'No entries found in the .nc database',
+        //'nl' =>         0 => '99a0cf3fce1c579916612fce551f7c30.nl is free'
+        'no' => '% No match',
+        //        14 => 'domain "99a0cf3fce1c579916612fce551f7c30.nu" not found.'
+        //pl         1 => 'No information available about domain name 99a0cf3fce1c579916612fce551f7c30.pl in the Registry NASK database.'
+        // politie         'status' => 'free'
+        //pt         0 => '99a0cf3fce1c579916612fce551f7c30.pt - No Match'
+        //rs         '%ERROR' => '103: Domain is not registered'
+        //sa         3 => 'No Match for 99a0cf3fce1c579916612fce551f7c30.sa.'
+        //se         14 => 'domain "99a0cf3fce1c579916612fce551f7c30.se" not found.'
+        //si         27 => '% No entries found for the selected source(s).'
+        //sm 'No entries found.'
+        //st         0 => 'No entries found for domain 99a0cf3fce1c579916612fce551f7c30.st'
+        //th         3 => '% No match found.'
+        //tm         1 => 'Domain 99a0cf3fce1c579916612fce551f7c30.tm is available for purchase'
+        //tr         0 => 'No match found for 99a0cf3fce1c579916612fce551f7c30.tr'
+        //tw         0 => 'No Found'
+        //ua         10 => '% No entries found for 99a0cf3fce1c579916612fce551f7c30.ua'
+        //ug         5 => '>>> Domain not Found'
+        //uk         3 => 'This domain name has not been registered.'
+        //uz         3 => '% Domain names in the .uz domain can now be registered'
     ];
 
     /**
@@ -45,6 +93,29 @@ class Generic extends KeyValue
         'tech-c' => 'tech',
         'billing-c' => 'billing',
     ];
+
+    public function isNotFound(): bool
+    {
+        foreach ($this->matchNotFound as $find) {
+            if (str_starts_with($this->lookup, $find)) {
+                return true;
+            }
+        }
+        $rawData = $this->parse();
+        foreach ($this->matchNotFound as $find) {
+            if (in_array($find, $rawData, true)) {
+                return true;
+            }
+            if (isset($rawData[0])
+                && str_contains($rawData[0], $find)) {
+                return true;
+            }
+        }
+        if (empty($rawData['notFound']) === false) {
+            return true;
+        }
+        return parent::isNotFound();
+    }
 
     protected function getFilter(array $raw): array
     {

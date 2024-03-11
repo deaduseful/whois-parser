@@ -7,6 +7,9 @@ use Carbon\Carbon;
 
 class Kz extends Generic
 {
+    protected array $matchNotFound = [
+        '*** Nothing found for this query.',
+    ];
     protected array $mapFields = [
         'domainCreated' => 'created',
         'lastModified' => 'updated',

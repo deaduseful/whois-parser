@@ -68,6 +68,8 @@ class Factory
         'at' => At::class,
         'aw' => Aw::class,
         'be' => Be::class,
+        'bg' => Bg::class,
+        'int' => Arpa::class,
     ];
     private const WHOIS_SERVER_MAP = [
         'whois.registry.in' => In::class,

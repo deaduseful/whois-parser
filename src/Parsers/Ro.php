@@ -6,6 +6,9 @@ use Carbon\Carbon;
 
 class Ro extends Generic
 {
+    protected array $matchNotFound = [
+        '% No entries found for the selected source(s).',
+    ];
     protected array $mapFields = [
         'registeredOn' => 'created',
         'expiresOn' => 'expiry',

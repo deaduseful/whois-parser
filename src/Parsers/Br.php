@@ -20,4 +20,18 @@ class Br extends Generic
         }
         return parent::parseDate($dateString);
     }
+
+    protected array $matchNotFound = [
+        '% No match for',
+    ];
+
+    public function isNotFound(): bool
+    {
+        foreach ($this->matchNotFound as $find) {
+            if (str_contains($this->lookup, $find)) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

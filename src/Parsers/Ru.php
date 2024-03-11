@@ -5,7 +5,7 @@ namespace Deaduseful\WhoisParser\src\Parsers;
 class Ru extends Generic
 {
     protected array $matchNotFound = [
-        'No entries found for the selected source(s)',
+        'No entries found for the selected source(s).',
     ];
 
     public function isNotFound(): bool
