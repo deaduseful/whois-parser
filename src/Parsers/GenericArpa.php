@@ -2,7 +2,7 @@
 
 namespace Deaduseful\WhoisParser\src\Parsers;
 
-class Arpa extends Generic
+class GenericArpa extends Generic
 {
     protected array $matchNotFound = [
         '% This query returned 0 objects.',

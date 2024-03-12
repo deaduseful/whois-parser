@@ -25,7 +25,20 @@ abstract class KeyValue implements Strategy
         self::DATE_EXPIRY,
     ];
 
-    protected string $statusField = 'domainStatus';
+    protected array $mapFields = [
+        'nserver' => 'nameserver',
+        'creationDate' => 'created',
+        'updatedDate' => 'updated',
+        'registrarRegistrationExpirationDate' => 'expiry',
+        'registrar' => 'registrar',
+        'domainStatus' => 'status',
+        'dnssec' => 'dnssec',
+        'holder' => 'registrar',
+        'admin-c' => 'admin',
+        'tech-c' => 'tech',
+        'billing-c' => 'billing',
+    ];
+    protected string $statusField = 'status';
 
     public function __construct(string $lookup)
     {
@@ -37,7 +50,8 @@ abstract class KeyValue implements Strategy
         $lookup = $this->lookup;
         $lines = $this->getLines($lookup);
         $raw = $this->getRaw($lines);
-        return $this->getFilter($raw);
+        $data = $this->getParsed($raw);
+        return $this->getFilter($data);
     }
 
     private function getCamel(string $key): string
@@ -146,5 +160,27 @@ abstract class KeyValue implements Strategy
     public function getStatus(array $rawData)
     {
         return $rawData[$this->statusField] ?? null;
+    }
+
+    public function getParsed(array $raw): array
+    {
+        $data = [];
+        foreach ($raw as $key => $value) {
+            if ($value) {
+                if (isset($this->mapFields[$key])) {
+                    $key = $this->mapFields[$key];
+                }
+                $data[$key] = $value;
+            }
+        }
+        foreach ($this->dateFields as $dateField) {
+            if (isset($data[$dateField])) {
+                if (is_array($data[$dateField])) {
+                    $data[$dateField] = array_shift($data[$dateField]);
+                }
+                $data[$dateField] = $this->parseDate($data[$dateField]);
+            }
+        }
+        return $data;
     }
 }

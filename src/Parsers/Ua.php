@@ -25,4 +25,15 @@ class Ua extends Generic
         }
         return null;
     }
+
+    protected array $matchNotFound = [
+        '% No entries found for',
+    ];
+
+    public function isNotFound(): bool
+    {
+        $rawData = $this->parse();
+        $lastElement = array_pop($rawData);
+        return str_starts_with($lastElement, $this->matchNotFound[0]);
+    }
 }

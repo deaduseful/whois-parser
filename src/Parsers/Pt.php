@@ -9,4 +9,15 @@ class Pt extends Generic
         'creationDate' => 'created',
         'expirationDate' => 'expiry',
     ];
+
+    protected array $matchNotFound = [
+        ' - No Match',
+    ];
+
+    public function isNotFound(): bool
+    {
+        $rawData = $this->parse();
+        return isset($rawData[0]) &&
+            str_ends_with($rawData[0], $this->matchNotFound[0]);
+    }
 }

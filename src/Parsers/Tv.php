@@ -2,9 +2,6 @@
 
 namespace Deaduseful\WhoisParser\src\Parsers;
 
-class Tv extends Generic
+class Tv extends GenericGodaddy
 {
-    protected array $matchInvalid = [
-        'Reserved Domain Name',
-    ];
 }

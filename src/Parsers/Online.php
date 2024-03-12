@@ -2,11 +2,6 @@
 
 namespace Deaduseful\WhoisParser\src\Parsers;
 
-class Online extends Generic
+class Online extends GenericCentralNic
 {
-    protected array $mapFields = [
-        'creationDate' => 'created',
-        'lastUpdateOfWHOISDatabase' => 'updated',
-        'registrarRegistrationExpirationDate' => 'expiry',
-    ];
 }

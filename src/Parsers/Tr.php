@@ -9,4 +9,12 @@ class Tr extends Generic
         'lastUpdateTime' => 'updated',
         'expiresOn' => 'expiry',
     ];
+    protected array $matchNotFound = [
+        'No match found for ',
+    ];
+
+    public function isNotFound(): bool
+    {
+        return str_starts_with($this->lookup, $this->matchNotFound[0]);
+    }
 }

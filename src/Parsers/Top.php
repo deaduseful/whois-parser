@@ -2,9 +2,6 @@
 
 namespace Deaduseful\WhoisParser\src\Parsers;
 
-class Top extends Generic
+class Top extends GenericCentralNic
 {
-    protected array $matchInvalid = [
-        'Name Collision Reservation From ICANN',
-    ];
 }

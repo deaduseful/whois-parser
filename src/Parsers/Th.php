@@ -9,4 +9,13 @@ class Th extends Generic
         'updatedDate' => 'updated',
         'expDate' => 'expiry',
     ];
+    protected array $matchNotFound = [
+        '% No match found.',
+    ];
+    public function isNotFound(): bool
+    {
+        $rawData = $this->parse();
+        $lastElement = array_pop($rawData);
+        return $lastElement === $this->matchNotFound[0];
+    }
 }

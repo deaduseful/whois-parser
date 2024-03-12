@@ -5,7 +5,7 @@ namespace Deaduseful\WhoisParser\src\Parsers;
 class Aw extends Generic
 {
     protected array $matchNotFound = [
-        'is free',
+        ' is free',
     ];
 
     public function isNotFound(): bool

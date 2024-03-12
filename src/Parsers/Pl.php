@@ -11,4 +11,15 @@ class Pl extends Generic
         'lastModified' => 'updated',
         'optionExpirationDate' => 'expiry',
     ];
+
+    protected array $matchNotFound = [
+        'No information available about domain name',
+    ];
+
+    public function isNotFound(): bool
+    {
+        $rawData = $this->parse();
+        return isset($rawData[1])
+            && str_starts_with($rawData[1], $this->matchNotFound[0]);
+    }
 }

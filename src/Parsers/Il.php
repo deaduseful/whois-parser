@@ -6,6 +6,9 @@ use Carbon\Carbon;
 
 class Il extends Generic
 {
+    protected array $matchNotFound = [
+        '% No data was found to match the request criteria.',
+    ];
     protected ?string $dateFormat = 'Ymd|'; // eg: registrar AT ns.il 19990605 Assigned;
     protected array $mapFields = [
         'changed' => 'updated',

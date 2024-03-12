@@ -4,8 +4,6 @@ namespace Deaduseful\WhoisParser\src\Records;
 
 class Contact extends Record
 {
-
-    public ?string $type;
     public ?string $name;
     public ?string $org;
     public mixed $street;

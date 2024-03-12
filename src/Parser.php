@@ -158,7 +158,6 @@ class Parser
          * 'email' => 'https://tieredaccess.com/cont...bd3696'
          */
         $registrant = new Contact();
-        $registrant->type = 'registrant';
         $registrant->name = $rawData['registrantName'] ?? '';
         $registrant->org = $rawData['registrantOrganization'] ?? '';
         $registrant->street = $rawData['registrantStreet'] ?? '';
@@ -176,7 +175,6 @@ class Parser
     {
         $rawData = $this->getRaw();
         $admin = new Contact();
-        $admin->type = 'admin';
         $admin->name = $rawData['adminName'] ?? '';
         $admin->org = $rawData['adminOrganization'] ?? '';
         $admin->street = $rawData['adminStreet'] ?? [];
@@ -190,10 +188,10 @@ class Parser
         return $admin;
     }
 
-    private function getTech(): stdClass
+    private function getTech(): Contact
     {
         $rawData = $this->getRaw();
-        $tech = new stdClass();
+        $tech = new Contact();
         $tech->name = $rawData['techName'] ?? '';
         $tech->org = $rawData['techOrganization'] ?? '';
         $tech->street = $rawData['techStreet'] ?? [];
@@ -211,7 +209,6 @@ class Parser
     {
         $rawData = $this->getRaw();
         $billing = new Contact();
-        $billing->type = 'billing';
         $billing->name = $rawData['billingName'] ?? '';
         $billing->org = $rawData['billingOrganization'] ?? '';
         $billing->street = $rawData['billingStreet'] ?? [];

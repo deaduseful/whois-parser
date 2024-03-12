@@ -2,7 +2,7 @@
 
 namespace Deaduseful\WhoisParser\src\Parsers;
 
-class Whois1API extends Generic
+class Whois1Api extends Generic
 {
     protected array $mapFields = [
         'createdDate' => 'created',

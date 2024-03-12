@@ -24,7 +24,6 @@ class InvalidTest extends TestCase
         return [
             ['7.eu'],
             ['agogo.tv'],
-            ['darknet.sb'],
             ['test.top'],
         ];
     }

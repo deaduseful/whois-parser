@@ -18,4 +18,14 @@ class Se extends Generic
         'tech-c' => 'tech',
         'billing-c' => 'billing',
     ];
+
+    protected array $matchNotFound = [
+        ' not found.',
+    ];
+    public function isNotFound(): bool
+    {
+        $rawData = $this->parse();
+        $lastElement = array_pop($rawData);
+        return str_ends_with($lastElement, $this->matchNotFound[0]);
+    }
 }

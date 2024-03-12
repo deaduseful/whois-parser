@@ -9,4 +9,7 @@ class Id extends Generic
         'lastUpdatedOn' => 'updated',
         'expirationDate' => 'expiry',
     ];
+    protected array $matchNotFound = [
+        'DOMAIN NOT FOUND',
+    ];
 }

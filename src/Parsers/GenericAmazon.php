@@ -2,6 +2,6 @@
 
 namespace Deaduseful\WhoisParser\src\Parsers;
 
-class AsTld extends Gg
+class GenericAmazon extends GenericNominet
 {
 }
