@@ -656,6 +656,8 @@ class Factory
         'zappos' => RegistrarAmazon::class,
         'zm' => GenericCcTld::class,
         'zuerich' => RegistrarCentralNic::class,
+        'firmdale' => Firmdale::class,
+        'gdn' => Gdn::class,
     ];
     private const WHOIS_SERVER_MAP = [
         'whois.registry.in' => In::class,
