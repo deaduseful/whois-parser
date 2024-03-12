@@ -13,7 +13,7 @@ class Generic extends KeyValue
     protected array $matchNotFound = [
         'Domain not found',
         'No match for',
-        'as' => 'NOT FOUND',
+        //'as' => 'NOT FOUND',
         'bn' => 'Domain Not Found',
         'bo' => 'DOMINIO NO REGISTRADO',
         'by' => 'Object does not exist',
