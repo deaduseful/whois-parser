@@ -676,6 +676,8 @@ class Factory
         'tk' => WhoisFreenoms::class,
         'hk' => Hk::class,
         'mtr' => Hk::class,
+        'hu' => Hu::class,
+        'jp' => Jp::class,
     ];
     private const WHOIS_SERVER_MAP = [
         'whois.registry.in' => In::class,
