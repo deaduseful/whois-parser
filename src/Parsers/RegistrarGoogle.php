@@ -2,6 +2,6 @@
 
 namespace Deaduseful\WhoisParser\src\Parsers;
 
-class Online extends GenericCentralNic
+class RegistrarGoogle extends RegistrarGodaddy
 {
 }

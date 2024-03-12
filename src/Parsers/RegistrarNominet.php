@@ -2,7 +2,7 @@
 
 namespace Deaduseful\WhoisParser\src\Parsers;
 
-class GenericNominet extends Generic
+class RegistrarNominet extends Generic
 {
     protected array $matchRateLimit = [
         'the WHOIS query quota',

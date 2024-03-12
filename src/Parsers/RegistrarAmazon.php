@@ -2,6 +2,6 @@
 
 namespace Deaduseful\WhoisParser\src\Parsers;
 
-class GenericAmazon extends GenericNominet
+class RegistrarAmazon extends RegistrarNominet
 {
 }

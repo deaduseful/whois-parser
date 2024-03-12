@@ -2,6 +2,6 @@
 
 namespace Deaduseful\WhoisParser\src\Parsers;
 
-class Top extends GenericCentralNic
+class Top extends RegistrarCentralNic
 {
 }

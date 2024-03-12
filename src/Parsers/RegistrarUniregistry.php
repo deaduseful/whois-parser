@@ -2,7 +2,7 @@
 
 namespace Deaduseful\WhoisParser\src\Parsers;
 
-class GenericUniregistry extends Generic
+class RegistrarUniregistry extends Generic
 {
     protected array $matchNotFound = [
         ' is available for registration',

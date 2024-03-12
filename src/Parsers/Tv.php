@@ -2,6 +2,6 @@
 
 namespace Deaduseful\WhoisParser\src\Parsers;
 
-class Tv extends GenericGodaddy
+class Tv extends RegistrarGodaddy
 {
 }

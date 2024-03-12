@@ -2,7 +2,7 @@
 
 namespace Deaduseful\WhoisParser\src\Parsers;
 
-class WhoisNameSrs extends GenericCentralNic
+class WhoisNameSrs extends RegistrarCentralNic
 {
     protected array $mapFields = [
         'creationDate' => 'created',

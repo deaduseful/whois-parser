@@ -2,7 +2,7 @@
 
 namespace Deaduseful\WhoisParser\src\Parsers;
 
-class GenericGodaddy extends Generic
+class RegistrarGodaddy extends Generic
 {
     protected array $matchRateLimit = [
         'Rate limit exceeded',

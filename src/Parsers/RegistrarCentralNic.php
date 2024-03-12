@@ -2,7 +2,7 @@
 
 namespace Deaduseful\WhoisParser\src\Parsers;
 
-class GenericCentralNic extends Generic
+class RegistrarCentralNic extends Generic
 {
     protected array $mapFields = [
         'creationDate' => 'created',
