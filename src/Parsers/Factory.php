@@ -136,7 +136,7 @@ class Factory
         'food' => RegistrarUniregistry::class,
         'ford' => RegistrarGodaddy::class,
         'fox' => RegistrarGodaddy::class,
-        'fr' => Fr::class,
+        'fr' => RegistrarAfNic::class,
         'free' => RegistrarAmazon::class,
         'frontier' => RegistrarGodaddy::class,
         'ftr' => RegistrarGodaddy::class,
@@ -630,6 +630,13 @@ class Factory
         'zuerich' => RegistrarCentralNic::class,
         'army' => RegistrarIdentityDigital::class,
         'navy' => RegistrarIdentityDigital::class,
+        're' => RegistrarAfNic::class,
+        'ga' => RegistrarAfNic::class,
+        'pm' => RegistrarAfNic::class,
+        'sn' => RegistrarAfNic::class,
+        'tf' => RegistrarAfNic::class,
+        'wf' => RegistrarAfNic::class,
+        'yt' => RegistrarAfNic::class,
     ];
     private const WHOIS_SERVER_MAP = [
         'whois.registry.in' => In::class,
