@@ -667,6 +667,15 @@ class Factory
         'wien' => RegistrarRyce::class,
         'cologne' => RegistrarRyce::class,
         'koeln' => RegistrarRyce::class,
+        'gf' => WhoisMediaServ::class,
+        'mq' => WhoisMediaServ::class,
+        'gp' => WhoisMediaServ::class,
+        'tg' => WhoisMediaServ::class,
+        'tn' => WhoisMediaServ::class,
+        'gq' => WhoisFreenoms::class,
+        'tk' => WhoisFreenoms::class,
+        'hk' => Hk::class,
+        'mtr' => Hk::class,
     ];
     private const WHOIS_SERVER_MAP = [
         'whois.registry.in' => In::class,
@@ -685,6 +694,7 @@ class Factory
         'whois.aitdomains.com' => WhoisAitDomains::class,
         'whois.namesrs.com' => WhoisNameSrs::class,
         'whois.teleinfo.cn' => Cn::class,
+        'whois.mediaserv.net' => WhoisMediaServ::class,
     ];
 
     public static function create(string $lookup, string $query = null, string $whoisServer = null): Strategy

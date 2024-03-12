@@ -13,17 +13,10 @@ class Generic extends KeyValue
     protected array $matchNotFound = [
         'Domain not found',
         'No match for',
-        //'by' => 'Object does not exist',
-        //'za' => 'Available',
-        'gf' => 'NO OBJECT FOUND!',
-        'mq' => 'NO OBJECT FOUND!',
-        'gq' => 'The domain you requested is not known in Freenoms database.',
-        'hk' => 'The domain has not been registered.',
         'hu' => 'Nincs talalat / No match',
         'jp' => 'No match!!',
         'kg' => 'Data not found. This domain is available for registration.',
         'lu' => '% No such domain',
-        'mtr' => 'The domain has not been registered.',
         'mx' => 'No_Se_Encontro_El_Objeto/Object_Not_Found',
         'nc' => 'No entries found in the .nc database',
     ];
