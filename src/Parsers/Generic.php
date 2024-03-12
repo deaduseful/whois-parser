@@ -11,8 +11,7 @@ class Generic extends KeyValue
      * @see https://github.com/cheenanet/whois-servers-list/blob/master/whois.json
      */
     protected array $matchNotFound = [
-        'Domain not found',
-        'No match for',
+        'verisign-grs' => 'No match for',
     ];
 
     /**
