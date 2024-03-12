@@ -2,7 +2,7 @@
 
 namespace Deaduseful\WhoisParser\src\Parsers;
 
-class WhoisPublicDomainRegistry extends Generic
+class WhoisPublicDomainRegistry extends RegistrarIdentityDigital
 {
     protected array $mapFields = [
         'creationDate' => 'created',

@@ -10,9 +10,7 @@ class Generic extends KeyValue
      * @var string[] Not Found Matching
      * @see https://github.com/cheenanet/whois-servers-list/blob/master/whois.json
      */
-    protected array $matchNotFound = [
-        'verisign-grs' => 'No match for',
-    ];
+    protected array $matchNotFound = [];
 
     /**
      * @var string[] Rate Limit Matching

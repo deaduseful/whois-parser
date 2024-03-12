@@ -1,0 +1,58 @@
+<?php
+
+namespace Deaduseful\WhoisParser\src\Parsers;
+
+use Carbon\Carbon;
+
+class RegistrarVerisignGrs extends Generic
+{
+    protected array $matchNotFound = [
+        'verisign-grs' => 'No match for',
+    ];
+
+    /**
+     * @var string[] Rate Limit Matching
+     * @see https://github.com/cheenanet/whois-servers-list/blob/master/limit-reached-messages.json
+     */
+    protected array $matchRateLimit = [
+        'Query rate exceeded, please try again later.',
+    ];
+
+    public function isNotFound(): bool
+    {
+        foreach ($this->matchNotFound as $find) {
+            if (str_starts_with($this->lookup, $find)) {
+                return true;
+            }
+        }
+        $rawData = $this->parse();
+        foreach ($this->matchNotFound as $find) {
+            if (in_array($find, $rawData, true)) {
+                return true;
+            }
+            if (isset($rawData[0])
+                && str_contains($rawData[0], $find)) {
+                return true;
+            }
+        }
+        if (empty($rawData['notFound']) === false) {
+            return true;
+        }
+        return parent::isNotFound();
+    }
+
+    public function getCreated(array $rawData): ?Carbon
+    {
+        return $rawData[self::DATE_CREATED] ?? null;
+    }
+
+    public function getUpdated(array $rawData): ?Carbon
+    {
+        return $rawData[self::DATE_UPDATED] ?? null;
+    }
+
+    public function getExpiry(array $rawData): ?Carbon
+    {
+        return $rawData[self::DATE_EXPIRY] ?? null;
+    }
+}
