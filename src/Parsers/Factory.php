@@ -88,6 +88,10 @@ class Factory
         'cloud' => RegistrarUniregistry::class,
         'club' => RegistrarGodaddy::class,
         'cn' => Cn::class,
+        'shouji' => Cn::class,
+        'xihuan' => Cn::class,
+        'yun' => Cn::class,
+        'yun' => Cn::class,
         'co' => RegistrarGodaddy::class,
         'commbank' => RegistrarGodaddy::class,
         'compare' => RegistrarGodaddy::class,
@@ -654,6 +658,7 @@ class Factory
         'whois.porkbun.com' => WhoisPorkBun::class,
         'whois.aitdomains.com' => WhoisAitDomains::class,
         'whois.namesrs.com' => WhoisNameSrs::class,
+        'whois.teleinfo.cn' => Cn::class,
     ];
 
     public static function create(string $lookup, string $query = null, string $whoisServer = null): Strategy
