@@ -2,7 +2,7 @@
 
 namespace Deaduseful\WhoisParser\src\Parsers;
 
-class Firmdale extends Generic
+class RegistrarRegistryAsp extends Generic
 {
     protected array $mapFields = [
         'creationDate' => 'created',

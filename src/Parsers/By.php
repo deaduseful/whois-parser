@@ -2,15 +2,10 @@
 
 namespace Deaduseful\WhoisParser\src\Parsers;
 
-class Sg extends Generic
+class By extends Generic
 {
-    protected array $mapFields = [
-        'creationDate' => 'created',
-        'modifiedDate' => 'updated',
-        'expirationDate' => 'expiry',
-    ];
     protected array $matchNotFound = [
-        'Domain Not Found',
+        'Object does not exist',
     ];
     public function isNotFound(): bool
     {
