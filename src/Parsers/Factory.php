@@ -17,7 +17,7 @@ class Factory
         'afl' => RegistrarGodaddy::class,
         'africa' => Africa::class,
         'aig' => RegistrarGodaddy::class,
-        'airforce' => Airforce::class,
+        'airforce' => RegistrarIdentityDigital::class,
         'ally' => RegistrarGodaddy::class,
         'am' => Am::class,
         'amazon' => RegistrarAmazon::class,
@@ -628,6 +628,8 @@ class Factory
         'yodobashi' => RegistrarCentralNic::class,
         'yokohama' => RegistrarCentralNic::class,
         'zuerich' => RegistrarCentralNic::class,
+        'army' => RegistrarIdentityDigital::class,
+        'navy' => RegistrarIdentityDigital::class,
     ];
     private const WHOIS_SERVER_MAP = [
         'whois.registry.in' => In::class,

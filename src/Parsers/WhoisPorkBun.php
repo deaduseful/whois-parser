@@ -2,6 +2,6 @@
 
 namespace Deaduseful\WhoisParser\src\Parsers;
 
-class WhoisPorkBun extends Social
+class WhoisPorkBun extends RegistrarIdentityDigital
 {
 }

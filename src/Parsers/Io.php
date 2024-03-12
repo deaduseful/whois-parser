@@ -2,6 +2,6 @@
 
 namespace Deaduseful\WhoisParser\src\Parsers;
 
-class Io extends Social
+class Io extends RegistrarIdentityDigital
 {
 }
