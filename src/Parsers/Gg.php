@@ -8,9 +8,19 @@ class Gg extends Generic
     protected array $mapFields = [
         'registeredOn' => 'created',
     ];
+
+    protected array $matchNotFound = [
+        'NOT FOUND',
+    ];
+
     protected function getLines(?string $lookup): array
     {
         $lookup = str_replace('Registered on ', 'Registered on:', $lookup);
         return parent::getLines($lookup);
+    }
+
+    public function isNotFound(): bool
+    {
+        return str_starts_with($this->lookup, $this->matchNotFound[0]);
     }
 }
