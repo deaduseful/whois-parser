@@ -678,6 +678,10 @@ class Factory
         'mtr' => Hk::class,
         'hu' => Hu::class,
         'jp' => Jp::class,
+        'kg' => Kg::class,
+        'lu' => Lu::class,
+        'nc' => Nc::class,
+        'mx' => Mx::class,
     ];
     private const WHOIS_SERVER_MAP = [
         'whois.registry.in' => In::class,
