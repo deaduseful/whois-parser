@@ -11,11 +11,11 @@ class NotFoundTest extends TestCase
     public function testNotFound(string $domain)
     {
         $lookup = file_get_contents(__DIR__ . '/data/notfound/' . $domain . '.txt');
-        if (str_starts_with($lookup, 'No match for')) {
+        /*if (str_starts_with($lookup, 'No match for')) {
             $tld = pathinfo($domain, PATHINFO_EXTENSION);
             $content = "'$tld' => RegistrarVerisignGrs::class," . PHP_EOL;
             file_put_contents(__DIR__ . '/data/_map_tlds.txt', $content, FILE_APPEND);
-        }
+        }*/
         $parser = new Parser($lookup, $domain);
         $output = $parser->getOutput();
         self::assertNull($output);
