@@ -9,8 +9,8 @@ class Kr extends Generic
     ];
     protected ?string $dateFormat = 'Y. m. d.|'; // eg: 2024. 01. 27.
     protected array $mapFields = [
-        'registeredDate' => 'created',
-        'lastUpdatedDate' => 'updated',
-        'expirationDate' => 'expiry',
+        'registeredDate' => self::DATE_CREATED,
+        'lastUpdatedDate' => self::DATE_UPDATED,
+        'expirationDate' => self::DATE_EXPIRY,
     ];
 }
