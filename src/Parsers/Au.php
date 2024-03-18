@@ -2,7 +2,7 @@
 
 namespace Deaduseful\WhoisParser\src\Parsers;
 
-class Au extends Generic
+class Au extends Org
 {
     protected array $matchNotFound = [
         'NOT FOUND',
