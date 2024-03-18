@@ -56,6 +56,7 @@ class CreatedDateTest extends TestCase
             ['confido.as', '08th March 2023 at 12:54:30.219'],
             ['salsalessonschicago.org', '2004-01-28T00:03:01Z', 'whois.aitdomains.com'],
             ['google.co.ug', '2016-02-17'],
+            ['spb24.net', '2009-07-22', 'whois.mastername.ru'],
         ];
     }
 }

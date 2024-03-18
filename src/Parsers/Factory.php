@@ -22,6 +22,7 @@ class Factory
         'whois.namesrs.com' => WhoisNameSrs::class,
         'whois.teleinfo.cn' => Cn::class,
         'whois.mediaserv.net' => WhoisMediaServ::class,
+        'whois.mastername.ru' => WhoisMasterName::class,
     ];
     private const TLD_MAP = [
         'aaa' => RegistrarGodaddy::class,
