@@ -9,9 +9,11 @@ namespace Deaduseful\WhoisParser\src\Parsers;
 class RegistrarIdentityDigital extends Generic
 {
     protected array $mapFields = [
-        'createdDate' => 'created',
-        'updatedDate' => 'updated',
-        'registrarRegistrationExpirationDate' => 'expiry',
+        'createdDate' => self::DATE_CREATED,
+        'creationDate' => self::DATE_CREATED,
+        'updatedDate' => self::DATE_UPDATED,
+        'registrarRegistrationExpirationDate' => self::DATE_EXPIRY,
+        'registryExpiryDate' => self::DATE_EXPIRY,
     ];
     protected array $matchNotFound = [
         'Domain not found.',
