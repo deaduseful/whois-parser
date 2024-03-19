@@ -1,0 +1,67 @@
+Domain Name: nic.kn
+Registry Domain ID: 1147-knNIC
+Updated Date: 2024-02-23T20:05:41.60Z
+Creation Date: 2008-05-23T04:00:00.0Z
+Registry Expiry Date: 2029-05-30T12:00:00.0Z
+Registrar Registration Expiration Date: 2029-05-30T12:00:00.0Z
+Domain Status: serverDeleteProhibited https://icann.org/epp#serverDeleteProhibited
+Domain Status: serverUpdateProhibited https://icann.org/epp#serverUpdateProhibited
+Domain Status: serverRenewProhibited https://icann.org/epp#serverRenewProhibited
+Domain Status: serverTransferProhibited https://icann.org/epp#serverTransferProhibited
+Registry Registrant ID: mFa5V-BlKYx
+Registrant Name: Christopher Herbert
+Registrant Organization: National ICT Centre
+Registrant Street: The Cable Building
+Registrant Street: Cnr Cayon & New Street
+Registrant City: St.Kitts
+Registrant State/Province: Basseterre
+Registrant Postal Code: 265
+Registrant Country: KN
+Registrant Phone: +869.465061
+Registrant Email: trevil.baker@gov.kn
+Registry Admin ID: w84FG-TGjKW
+Admin Name: Christopher Herbert
+Admin Organization: National ICT Centre
+Admin Street: The Cable Building
+Admin Street: Cnr Cayon & New Street
+Admin City: St.Kitts
+Admin State/Province: Basseterre
+Admin Postal Code: 265
+Admin Country: KN
+Admin Phone: +869.465061
+Admin Email: trevil.baker@gov.kn
+Registry Tech ID: OaiYs-43f1b
+Tech Name: Christopher Herbert
+Tech Organization: National ICT Centre
+Tech Street: The Cable Building
+Tech Street: Cnr Cayon & New Street
+Tech City: St.Kitts
+Tech State/Province: Basseterre
+Tech Postal Code: 265
+Tech Country: KN
+Tech Phone: +869.465061
+Tech Email: trevil.baker@gov.kn
+Registry Billing ID: Vn9Wr-uMScQ
+Billing Name: Christopher Herbert
+Billing Organization: National ICT Centre
+Billing Street: The Cable Building
+Billing Street: Cnr Cayon & New Street
+Billing City: St.Kitts
+Billing State/Province: Basseterre
+Billing Postal Code: 265
+Billing Country: KN
+Billing Phone: +869.465061
+Billing Email: trevil.baker@gov.kn
+Registrar: KN NIC Registrar
+Name Server: ns-518.awsdns-00.net
+Name Server: ns-1454.awsdns-53.org
+Name Server: ns-214.awsdns-26.com
+Name Server: ns-1631.awsdns-11.co.uk
+DNSSEC: unsigned
+>>> Last update of WHOIS database: 2024-03-14T14:43:24.361Z <<<
+
+For more information on EPP status codes, please visit https://icann.org/epp
+
+TERMS OF USE: You are not authorized to access or query our WHOIS database through the use of electronic processes that are high-volume and automated.  THis WHOIS database is provided by as a service to the internet community.
+
+The data is for information purposes only. We do not guarantee its accuracy. By submitting a WHOIS query, you agree to abide by the following terms of use: You agree that you may use this Data only for lawful purposes and that under no circumstances will you use this Data to: (1) allow, enable, or otherwise support the transmission of mass unsolicited, commercial advertising or solicitations via e-mail, telephone, or facsimile; or (2) enable high volume, automated, electronic processes. The compilation, repackaging, dissemination or other use of .kn WHOIS data is expressly prohibited.

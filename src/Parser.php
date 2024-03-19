@@ -22,7 +22,7 @@ class Parser
     private ?Strategy $parser;
     private ?string $source;
     private ?string $whoisServer;
-    private ?string $error;
+    private ?string $error = null;
 
     public function __construct(string $lookup, ?string $source = null, ?string $whoisServer = null)
     {
@@ -88,7 +88,7 @@ class Parser
         $registration->created = $parser->getCreated($rawData);
         $registration->expiry = $parser->getExpiry($rawData);
         $registration->updated = $parser->getUpdated($rawData);
-        $registration->registrar = $rawData['registrar'] ?? null;
+        $registration->registrar = $parser->getRegistrar($rawData);
         $registration->statuses = $this->getStatuses();
         return $registration;
     }
@@ -133,7 +133,7 @@ class Parser
          * 'url' => 'WWW.ENOM.COM,http://www.enomd...ns.com'
          * 'whois_server' => 'WHOIS.ENOM.COM'
          */
-        $registrar->name = $rawData['registrar'] ?? null;
+        $registrar->name = $this->parser->getRegistrar($rawData);
         $registrar->abuse_contact_phone = $rawData['registrarAbuseContactPhone'] ?? null;
         $registrar->abuse_contact_email = $rawData['registrarAbuseContactEmail'] ?? null;
         $registrar->iana_id = $rawData['registrarIANAID'] ?? null;

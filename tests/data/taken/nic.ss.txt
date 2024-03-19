@@ -1,0 +1,62 @@
+Domain Name: nic.ss
+Registry Domain ID: 36-SSNIC
+Registry WHOIS Server: whois.nic.ss
+Updated Date: 2024-02-26T13:40:51.832Z
+Creation Date: 2019-02-08T09:26:48.321Z
+Registry Expiry Date: 2099-10-30T14:30:00.0Z
+Registrar Registration Expiration Date: 2099-10-30T14:30:00.0Z
+Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
+Domain Status: serverTransferProhibited https://icann.org/epp#serverTransferProhibited
+Domain Status: serverRenewProhibited https://icann.org/epp#serverRenewProhibited
+Domain Status: serverUpdateProhibited https://icann.org/epp#serverUpdateProhibited
+Domain Status: clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited
+Registry Registrant ID: lZ9C8-1kFJj
+Registrant Name: South Sudan Network Information Centre
+Registrant Organization: South Sudan Network Information Centre
+Registrant Street: Gumbo
+Registrant City: Juba
+Registrant Country: SS
+Registrant Phone: +211.54001154
+Registrant Email: adminATnic.ss
+Registry Admin ID: s8wig-1aSDN
+Admin Name: South Sudan Network Information Centre
+Admin Organization: South Sudan Network Information Centre
+Admin Street: Gumbo
+Admin City: Juba
+Admin Country: SS
+Admin Phone: +211.54001154
+Admin Email: adminATnic.ss
+Registry Tech ID: wNZlu-dLm0u
+Tech Name: South Sudan Network Information Centre
+Tech Organization: South Sudan Network Information Centre
+Tech Street: Gumbo
+Tech City: Juba
+Tech Country: SS
+Tech Phone: +211.54001154
+Tech Email: adminATnic.ss
+Registry Billing ID: 0s1xz-GsB1w
+Billing Name: South Sudan Network Information Centre
+Billing Organization: South Sudan Network Information Centre
+Billing Street: Gumbo
+Billing City: Juba
+Billing Country: SS
+Billing Phone: +211.54001154
+Billing Email: adminATnic.ss
+Registrar: SS NIC
+Name Server: ns2.desec.org
+Name Server: ns1.desec.io
+DNSSEC: unsigned
+>>> Last update of WHOIS database: 2024-03-16T12:00:14.74Z <<<
+
+For more information on EPP status codes, please visit https://icann.org/epp
+
+Copyright SSNIC
+
+The data below is provided for information purposes  and to assist persons in obtaining information about or related to domain name registrations.
+By submitting a whois query, you agree to use this data only for lawful purposes.
+
+remarks:     Security issues should also be addressed to noc@nic.ss
+remarks:     Mail abuse issues should also be addressed to abuse@nic.ss
+ 
+whois.nic.ss accepts only direct match queries.
+Types of queries are: domains (.SS) and POCs.

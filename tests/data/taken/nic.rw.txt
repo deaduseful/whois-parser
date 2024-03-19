@@ -1,0 +1,35 @@
+Domain Name: nic.rw
+Registry Domain ID: 106676RICTA
+Registrar URL: 
+Updated Date: 2024-01-21T00:00:15.973Z
+Creation Date: 2024-01-15T19:57:51.225Z
+Registry Expiry Date: 2025-01-15T19:57:51.290Z
+Registrar Registration Expiration Date: 2025-01-15T19:57:51.290Z
+Domain Status: ok https://icann.org/epp#ok
+Registry Registrant ID: lLV8R-HCtbm
+Registrant Name: NIC Rwanda
+Registrant Organization: N.A.
+Registrant Street: unknown
+Registrant City: unkown
+Registrant Country: RW
+Registrant Phone: +250.788424148
+Registrant Fax: N.A.
+Registrant Email: w-adm@ricta.org.rw
+Registrar: RICTA Reserved
+Registrar Country: AF
+Name Server: ns1.desec.io
+Name Server: ns2.desec.org
+DNSSEC: signedDelegation
+>>> Last update of WHOIS database: 2024-03-16T16:00:02.694Z <<<
+
+For more information on EPP status codes, please visit https://icann.org/epp
+
+The Data in Ricta WHOIS database is provided by RICTA  for information purposes, and to assist persons in obtaining information
+about or related to a domain name registration record.RICTA does not guarantee its accuracy.  By submitting a WHOIS query, you agree
+that you will use this Data only for lawful purposes and that, under no
+circumstances will you use this Data to: (1) allow, enable, or otherwise
+support the transmission of mass unsolicited, commercial advertising or
+solicitations via e-mail (spam); or  (2) enable high volume, automated,
+electronic processes that apply to RICTA  (or its systems).
+RICTA reserves the right to modify these terms at any time.
+By submitting this query, you agree to abide by this policy.

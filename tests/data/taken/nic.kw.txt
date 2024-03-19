@@ -1,0 +1,61 @@
+Domain Name: nic.kw
+Registrar URL: 
+Updated Date: 2021-09-30T17:24:38.491Z
+Creation Date: 2017-05-27T00:00:00.0Z
+Registry Expiry Date: 2050-12-30T21:00:00.0Z
+Registrar Registration Expiration Date: 2050-12-30T21:00:00.0Z
+Registrar: NIC Reserved
+Registrar Country: KW
+Registrar Phone: +965125
+Domain Status: serverRenewProhibited https://icann.org/epp#serverRenewProhibited
+Domain Status: serverTransferProhibited https://icann.org/epp#serverTransferProhibited
+Domain Status: clientRenewProhibited https://icann.org/epp#clientRenewProhibited
+Domain Status: serverDeleteProhibited https://icann.org/epp#serverDeleteProhibited
+Domain Status: clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited
+Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
+Registry Registrant ID: Redacted | Registry Policy
+Registrant Name: Manal K. AlMazyad
+Registrant Organization: Communications and Information Technology Regulatory Authority
+Registrant Street: Khaled Ibn Alwaleed street, block 6, plot 1, aldhow tower, 12th floor
+Registrant City: Sharq
+Registrant Country: KW
+Registrant Phone: Redacted | Registry Policy
+Registrant Email: Redacted | Registry Policy
+Registry Admin ID: lCkA0-FNwSH
+Admin Name: Redacted | Registry Policy
+Admin Organization: Communications and Information Technology Regulatory Authority
+Admin Street: Redacted | Registry Policy
+Admin City: Redacted | Registry Policy
+Admin Country: Redacted | Registry Policy
+Admin Phone: Redacted | Registry Policy
+Admin Email: Redacted | Registry Policy
+Registry Tech ID: Redacted | Registry Policy
+Tech Name: Redacted | Registry Policy
+Tech Organization: KUWAITNET General Trading and Contracting Co.
+Tech Street: Redacted | Registry Policy
+Tech City: Redacted | Registry Policy
+Tech Postal Code: Redacted | Registry Policy
+Tech Country: KW
+Tech Phone: Redacted | Registry Policy
+Tech Fax: Redacted | Registry Policy
+Tech Email: Redacted | Registry Policy
+Registry Billing ID: 5ZdSR-hQsvM
+Billing Name: Redacted | Registry Policy
+Billing Organization: Communications and Information Technology Regulatory Authority
+Billing Street: Redacted | Registry Policy
+Billing City: Redacted | Registry Policy
+Billing Country: KW
+Billing Phone: Redacted | Registry Policy
+Billing Email: Redacted | Registry Policy
+Name Server: a.nic.kw
+Name Server: b.nic.kw
+Name Server: c.nic.kw
+Name Server: d.nic.kw
+Name Server: pch.nic.kw
+>>> Last update of WHOIS database: 2024-03-14T18:50:12.789Z <<<
+
+For more information on Whois status codes, please visit https://icann.org/epp
+
+You are not authorized to access or query our Whois database through the use of electronic processes that are high-volume and automated. Whois database is provided by CITRA .
+
+CITRA makes every effort to maintain the completeness and accuracy of the Whois data, but cannot guarantee that the results are error-free. Therefore, any data provided through the Whois service are on an "as is" basis without any warranties. BY USING THE WHOIS SERVICE AND THE DATA CONTAINED HEREIN OR IN ANY REPORT GENERATED WITH RESPECT THERETO, IT IS ACCEPTED THAT CITRA IS NOT LIABLE FOR ANY DAMAGES OF ANY KIND ARISING OUT OF, OR IN CONNECTION WITH, THE REPORT OR THE INFORMATION PROVIDED BY THE WHOIS SERVICE, NOR OMISSIONS OR MISSING INFORMATION. THE RESULTS OF ANY WHOIS REPORT OR INFORMATION PROVIDED BY THE WHOIS SERVICE CANNOT BE RELIED UPON IN CONTEMPLATION OF LEGAL PROCEEDINGS WITHOUT FURTHER VERIFICATION, NOR DO SUCH RESULTS CONSTITUTE A LEGAL OPINION. Acceptance of the results of the Whois constitutes acceptance of these terms, conditions and limitations. Whois data may be requested only for lawful purposes, in particular, to protect legal rights and obligations. Illegitimate uses of Whois data include, but are not limited to, unsolicited email, data mining, direct marketing or any other improper purpose. Any request made for Whois data will be documented by CITRA but will not be used for any commercial purpose whatsoever. NOTE: FAILURE TO LOCATE A RECORD IN THE WHOIS DATABASE IS NOT INDICATIVE OF THE AVAILABILITY OF A DOMAIN NAME.

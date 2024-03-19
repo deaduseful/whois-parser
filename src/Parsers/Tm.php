@@ -11,6 +11,7 @@ class Tm extends Generic
     public function isNotFound(): bool
     {
         $rawData = $this->parse();
-        return str_ends_with($rawData[1], $this->matchNotFound[0]);
+        return isset($rawData[1])
+            && str_ends_with($rawData[1], $this->matchNotFound[0]);
     }
 }

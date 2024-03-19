@@ -1,0 +1,43 @@
+
+ NOMBRE DE DOMINIO: nic.bo
+
+CONTACTO ADMINISTRATIVO
+Razón social: ADSIB
+Nombre Completo: ADSIB
+Correo electrónico: mibanez@adsib.gob.bo
+País: Bolivia
+Ciudad: LA PAZ
+Dirección: Calle Ayacucho y Mercado No 308
+Teléfono: 2200720
+
+CONTACTO TECNICO
+Razón social: ADSIB
+Nombre Completo: ADSIB
+Correo electrónico: jmachicado@adsib.gob.bo
+País: Bolivia
+Ciudad: LA PAZ
+Dirección: Calle Ayacucho y Mercado No 308
+Teléfono: 2200720
+
+CONTACTO FINANCIERO
+Razón social: ADSIB
+Nombre Completo: ADSIB
+Correo electrónico: aconde@adsib.gob.bo
+País: Bolivia
+Ciudad: La Paz
+Dirección: Calle Ayacucho y Mercado No 308
+Teléfono: 2200720
+
+TITULAR DEL DOMINIO
+Razón social: ADSIB
+Nombre Completo: ADSIB
+Correo electrónico: mibanez@adsib.gob.bo
+País: Bolivia
+Ciudad: La Paz
+Dirección: Calle Ayacucho y Mercado No 308
+Teléfono: 2200720
+
+Fecha de activación: 2004-11-19
+Fecha de corte: 2025-03-19
+
+whois.nic.bo solo acepta consultas con dominios .bo

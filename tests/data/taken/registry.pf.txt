@@ -1,0 +1,11 @@
+This is the PF top level domain whois server.
+Informations about 'registry.pf' :
+
+Status : active
+Created (JJ/MM/AAAA) : 04/02/2013
+Last renewed (JJ/MM/AAAA) : 02/02/2024
+Expire (JJ/MM/AAAA) : 01/02/2025
+Name server 1 : ns1.mana.pf
+Name server 2 : ns2.mana.pf
+
+There is no contact information about registry.pf

@@ -11,6 +11,7 @@ class Nl extends Generic
     public function isNotFound(): bool
     {
         $rawData = $this->parse();
-        return str_ends_with($rawData[0], $this->matchNotFound[0]);
+        return isset($rawData[0])
+            && str_ends_with($rawData[0], $this->matchNotFound[0]);
     }
 }

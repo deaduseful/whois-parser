@@ -1,0 +1,64 @@
+Domain Name: registry.om
+Registry Domain ID: DA7F3AE4BBAC6CC5EA28CA162E492AE58-OMREG
+Registrar WHOIS Server:
+Registrar URL: http://www.omantel.om
+Updated Date: 2024-03-19T08:27:43Z
+Creation Date: 2012-02-07T00:00:00Z
+Registry Expiry Date: 2024-03-17T23:59:59Z
+Registrar: Oman Telecommunication Company (Omantel)
+Registrar IANA ID: 700000007
+Registrar Abuse Contact Email:
+Registrar Abuse Contact Phone:
+Domain Status: serverDeleteProhibited http://www.icann.org/epp#serverDeleteProhibited
+Domain Status: serverTransferProhibited http://www.icann.org/epp#serverTransferProhibited
+Domain Status: autoRenewPeriod http://www.icann.org/epp#autoRenewPeriod
+Registry Registrant ID: C0001432-OMREG
+Registrant Name: Telecommunications Regulatory Authority (TRA-OMAN)
+Registrant Organization: Telecommunications Regulatory Authority (TRA-OMAN)
+Registrant Street:
+Registrant Street:
+Registrant Street:
+Registrant City: Muscat
+Registrant State/Province:
+Registrant Postal Code:
+Registrant Country: om
+Registrant Phone:
+Registrant Phone Ext:
+Registrant Fax:
+Registrant Fax Ext:
+Registrant Email: registry@tra.gov.om
+Registry Admin ID: C0001432-OMREG
+Admin Name: Telecommunications Regulatory Authority (TRA-OMAN)
+Admin Organization: Telecommunications Regulatory Authority (TRA-OMAN)
+Admin Street:
+Admin Street:
+Admin Street:
+Admin City: Muscat
+Admin State/Province:
+Admin Postal Code:
+Admin Country: om
+Admin Phone:
+Admin Phone Ext:
+Admin Fax:
+Admin Fax Ext:
+Admin Email: registry@tra.gov.om
+Registry Tech ID: C0001432-OMREG
+Tech Name: Telecommunications Regulatory Authority (TRA-OMAN)
+Tech Organization: Telecommunications Regulatory Authority (TRA-OMAN)
+Tech Street:
+Tech Street:
+Tech Street:
+Tech City: Muscat
+Tech State/Province:
+Tech Postal Code:
+Tech Country: om
+Tech Phone:
+Tech Phone Ext:
+Tech Fax:
+Tech Fax Ext:
+Tech Email: registry@tra.gov.om
+Name Server: ns2.registry.om
+Name Server: ns1.registry.om
+DNSSEC: unsigned
+URL of the ICANN Whois Inaccuracy Complaint Form: https://www.icann.org/wicf/
+>>> Last update of WHOIS database: 2024-03-19T09:52:49Z <<<

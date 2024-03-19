@@ -11,7 +11,7 @@ class Name extends Generic
     {
         $rawData = $this->parse();
         foreach ($rawData as $line) {
-            if (str_starts_with($line, $this->matchNotFound[0])) {
+            if (is_string($line) && str_starts_with($line, $this->matchNotFound[0])) {
                 return true;
             }
         }

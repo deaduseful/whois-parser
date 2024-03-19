@@ -1,0 +1,64 @@
+Domain Name: nic.gn
+Registry Domain ID: 5058-nicgn
+Registrar URL: https://ande.gov.gn/dns-gn/
+Creation Date: 2024-01-31T15:08:23.4Z
+Registry Expiry Date: 2025-01-31T15:08:23.51Z
+Registrar Registration Expiration Date: 2025-01-31T15:08:23.51Z
+Registrar: Internal Registrars
+Registrar Abuse Contact Email: abuse@ande.gov.gn
+Registrar Abuse Contact Phone: +224.622298656
+Registrar Country: GN
+Registrar Phone: +224.622298656
+Registrar Admin Contact: Boubacar 55 Barry
+Registrar Admin Email: president@nic.org.gn
+Domain Status: ok https://icann.org/epp#ok
+Registry RegistrantID: vVD8D-kiCzR
+RegistrantName: Boubacar 55 Barry
+RegistrantOrganization: Association en Charge pour le Nommage Internet en Coopération de la République de Guinée
+RegistrantStreet: Almamiya Kaloum
+RegistrantCity: Conakry
+RegistrantState/Province: Conakry
+RegistrantPostal Code: 766
+RegistrantCountry: GN
+RegistrantPhone: +224.628592833
+RegistrantEmail: b55barry@yahoo.fr
+Registry AdminID: UHcou-myRcm
+AdminName: Boubacar 55 Barry
+AdminOrganization: Association en Charge pour le Nommage Internet en Coopération de la République de Guinée
+AdminStreet: Almamiya Kaloum
+AdminCity: Conakry
+AdminState/Province: Conakry
+AdminPostal Code: 766
+AdminCountry: GN
+AdminPhone: +224.628592833
+AdminEmail: b55barry@yahoo.fr
+Registry TechID: AXSZN-5UVog
+TechName: Ousmane DOUKOURE
+TechOrganization: Agence Nationale de Digitalisation de l'Etat
+TechStreet: Immeuble Pacific , Kipé
+TechCity: Conakry
+TechState/Province: Conakry
+TechPostal Code: 6278
+TechCountry: GN
+TechPhone: +224.629684930
+TechEmail: ousmane.doukoure@ande.gov.gn
+Registry BillingID: scFkG-S2R6I
+BillingName: Boubacar 55 Barry
+BillingOrganization: Association en Charge pour le Nommage Internet en Coopération de la République de Guinée
+BillingStreet: Almamiya Kaloum
+BillingCity: Conakry
+BillingState/Province: Conakry
+BillingPostal Code: 766
+BillingCountry: GN
+BillingPhone: +224.628592833
+BillingEmail: b55barry@yahoo.fr
+Name Server: ns1.siteground.net
+Name Server: ns2.siteground.net
+DNSSEC: unsigned
+>>> Last update of WHOIS database: 2024-02-28T14:00:40.624Z <<<
+
+For more information on Whois status codes, please visit https://icann.org/epp
+
+TERMS OF USE: You are not authorized to access or query our WHOIS database through the use of electronic processes that are high-volume and automated.  This WHOIS database is provided by as a service to the internet community.
+
+The data is for information purposes only. We do not guarantee its accuracy. By submitting a WHOIS query, you agree to abide by the following terms of use: You agree that you may use this Data only for lawful purposes and that under no circumstances will you use this Data to: (1) allow, enable, or otherwise support the transmission of mass unsolicited, commercial advertising or solicitations via e-mail, telephone, or facsimile; or (2) enable high volume, automated, electronic processes that apply to CoCCA it's members (or CoCCA or member computer systems). The compilation, repackaging, dissemination or other use of this Data is expressly prohibited.

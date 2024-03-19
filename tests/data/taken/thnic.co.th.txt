@@ -1,0 +1,27 @@
+Whois Server Version 2.1.7
+
+Domain Name:                THNIC.CO.TH
+Registrar:                  THNIC
+Name Server:                B-NS.THNIC.CO.TH
+Name Server:                A-NS.THNIC.CO.TH
+Name Server:                E-NS.THNIC.CO.TH
+Name Server:                F-NS.THNIC.CO.TH
+DNSSEC:                     signedDelegation
+Status:                     ACTIVE
+Updated date:               10 Jan 2024
+Created date:               30 Mar 1999
+Exp date:                   01 Apr 2030
+Domain Holder Organization: T.H.NIC Co.,Ltd. (บริษัท ที.เอช.นิค จำกัด)
+Domain Holder Street:       Personal Information*
+Domain Holder Country:      TH
+
+Tech Contact:               Personal Information*
+Tech Organization:          Personal Information*
+Tech Street:                Personal Information*
+Tech Country:               Personal Information*
+
+>>> Last updated on Tue, 19 Mar 2024 16:52:12 UTC+7 <<<
+
+If you have a legitimate interest in viewing the non-public WHOIS details, send your request and the reasons for your request to staff@thnic.co.th and specify the domain name in the subject line. We will review that request and may ask for supporting documentation and explanation.
+
+For more information please visit: https://www.thnic.co.th/whois

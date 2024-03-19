@@ -39,6 +39,7 @@ abstract class KeyValue implements Strategy
         'billing-c' => 'billing',
     ];
     protected string $statusField = 'status';
+    private string $registrarField = 'registrar';
 
     public function __construct(string $lookup)
     {
@@ -102,6 +103,9 @@ abstract class KeyValue implements Strategy
     protected function parseDate(string $dateString): ?Carbon
     {
         if (strlen($dateString) < 3) {
+            return null;
+        }
+        if ($dateString == 'Never') {
             return null;
         }
         if ($this->dateFormat) {
@@ -182,5 +186,14 @@ abstract class KeyValue implements Strategy
             }
         }
         return $data;
+    }
+
+    public function getRegistrar(array $rawData): ?string
+    {
+        $registrar = $rawData[$this->registrarField] ?? null;
+        if (is_array($registrar)) {
+            return array_shift($registrar);
+        }
+        return $registrar;
     }
 }

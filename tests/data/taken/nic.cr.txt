@@ -1,0 +1,65 @@
+%  *The information provided by WHOIS is supplied by NIC Costa Rica's database of registered domains. This option has the sole intention of showing information about the domains registered under the CR Top level domain for name assignation purposes. It is absolutely forbidden to collect, store, use or transmit any information displayed by WHOIS for commercial and advertising purposes without prior notice to the persons involved and to NIC Costa Rica. NIC Costa Rica does not guarantee the accuracy of the information displayed by this option. Since it is provided by the contacts, the accuracy is their responsibility. The National Academy of Sciences is not liable for the use of the information here revealed. The National Academy of Sciences undertakes to comply with the terms set forth in the Data Protection laws of the Republic of Costa Rica and therefore protects the data collected from NIC Costa Rica users, regardless of whether they are Costa Rican citizens or not. If you are a contact of a .cr domain name and wish to use the WHOIS Privacy service, select this option in "Edit account" once your login with your username and password, or access the following link:
+% https://www.nic.cr/iniciar-sesion/?next=/my-account/
+% 
+% 
+% *La información mostrada a través de la opción WHOIS es provista de la base de datos de los dominios registrados en NIC Costa Rica. Esta opción tiene el propósito exclusivo de mostrar información sobre los dominios registrados bajo el Dominio Superior .CR para los fines de la delegación de los nombs. Queda absolutamente prohibido compilar, almacenar, usar y/o trasmitir la información mostrada mediante la opción WHOIS para fines comerciales y publicitarios, sin la previa autorización de los afectados y de NIC Costa Rica. NIC Costa Rica no garantiza la exactitud de la información desplegada mediante esta opción, ya que ésta proviene de los contactos, y su veracidad es responsabilidad de estos últimos. La Academia Nacional de Ciencias no se responsabiliza por el uso que se le dé a la información aquí mostrada. La Academia Nacional de Ciencias se compromete a cumplir con los términos establecidos en las leyes de Protección de Datos de la República de Costa Rica y por lo tanto protege los datos recolectados de todos los usuarios de NIC Costa Rica que sean ciudadanos o no de la República de Costa Rica. Si un contacto de un dominio .cr desea hacer uso del servicio de Privacidad WHOIS puede escoger esta opción en "Editar cuenta" con su usuario y clave, o ingresar al siguiente link:
+% https://www.nic.cr/iniciar-sesion/?next=/mi-cuenta/
+% 
+% Whoisd Server Version: 3.12.2
+% Timestamp: Thu Mar 14 15:41:41 2024
+
+domain:       nic.cr
+registrant:   CN_1633
+nsset:        NS_NIC_CR
+keyset:       KS_NIC_CR
+registrar:    NIC-REG1
+registered:   31.12.1995 18:00:00
+changed:      15.10.2021 08:36:18
+expire:       01.01.2035
+
+contact:      CN_1633
+org:          Academia Nacional de Ciencias
+name:         Walter Fernandez
+address:      Cámara de Industrias, 100 m. sur
+address:      San Jose
+address:      4020-1000
+address:      San Jose
+address:      CR
+phone:        +506.40205000
+e-mail:       manager@nic.cr
+registrar:    NIC-REG1
+created:      15.10.2021 08:34:05
+
+nsset:        NS_NIC_CR
+nserver:      p.nic.cr (204.61.216.89, 2001:500:14:6089:ad::1)
+nserver:      dns.nic.cr (200.107.82.100, 2001:13c7:7004:1::d100)
+nserver:      a.lactld.org 
+nserver:      de.nic.cr (194.0.11.107, 2001:678:e:107::53)
+nserver:      ca2.nic.cr (185.159.198.100, 2620:10a:80ab::100)
+nserver:      ca1.nic.cr (185.159.197.100, 2620:10a:80aa::100)
+tech-c:       CN_227
+registrar:    NIC-REG1
+created:      14.08.2015 04:50:05
+changed:      06.08.2019 04:39:22
+
+contact:      CN_227
+org:          NIC Costa Rica
+name:         Sergio Tenorio Vargas
+address:      Francisco Peralta
+address:      San Jose
+address:      1002
+address:      San José
+address:      CR
+phone:        +506.22806453
+e-mail:       stenorio@nic.cr
+registrar:    NIC-REG1
+created:      01.08.2019 09:19:41
+
+keyset:       KS_NIC_CR
+dnskey:       257 3 13 hZnkCPWFZgPl1Mn86jPqf6Pib5o4cGuIPtcrbxm8G5Mcd0FukiM7TB8saILY9fZWi0cCVtrh0R23Lw80RDJEHA==
+tech-c:       CN_227
+registrar:    NIC-REG1
+created:      27.03.2020 09:14:51
+changed:      20.10.2023 09:51:39
+
+

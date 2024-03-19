@@ -12,4 +12,5 @@ interface Strategy {
     public function getCreated(array $rawData): ?Carbon;
     public function getUpdated(array $rawData): ?Carbon;
     public function getExpiry(array $rawData): ?Carbon;
+    public function getRegistrar(array $rawData): ?string;
 }

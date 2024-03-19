@@ -1,0 +1,67 @@
+Domain Name: NIC.NTT
+Registry Domain ID: 00000I53U9HOX270TYO02U507-NTT
+Registrar WHOIS Server: whois.registrar.ntt
+Registrar URL: https://jprs.jp/registrar
+Updated Date: 2023-12-05T00:15:01Z
+Creation Date: 2015-01-19T12:38:15Z
+Registry Expiry Date: 2025-01-19T12:38:15Z
+Registrar: Japan Registry Services Co.,Ltd.
+Registrar IANA ID: 1485
+Registrar Abuse Contact Email: gtld-contact@jprs.co.jp
+Registrar Abuse Contact Phone: +81.352158451
+Domain Status: ok  https://icann.org/epp#ok
+Registry Registrant ID: 00000JCSOKW0OYU0TYO01ZAIZ-NTT
+Registrant Name: Technology Planning Department
+Registrant Organization: NIPPON TELEGRAPH AND TELEPHONE CORPORATION
+Registrant Street: 5-1, Otemachi 1-Chome
+Registrant Street: Otemachi First Square, East Tower
+Registrant City: Chiyoda-ku
+Registrant State/Province: Tokyo
+Registrant Postal Code: 100-8116
+Registrant Country: JP
+Registrant Phone: +81.368385590
+Registrant Email: dotntt-ml@ntt.com
+Registry Admin ID: 00000JCSOKW0OYU0TYO01ZAIZ-NTT
+Admin Name: Technology Planning Department
+Admin Organization: NIPPON TELEGRAPH AND TELEPHONE CORPORATION
+Admin Street: 5-1, Otemachi 1-Chome
+Admin Street: Otemachi First Square, East Tower
+Admin City: Chiyoda-ku
+Admin State/Province: Tokyo
+Admin Postal Code: 100-8116
+Admin Country: JP
+Admin Phone: +81.368385590
+Admin Email: dotntt-ml@ntt.com
+Registry Tech ID: 00000JCSOKW0OYU0TYO01ZAIZ-NTT
+Tech Name: Technology Planning Department
+Tech Organization: NIPPON TELEGRAPH AND TELEPHONE CORPORATION
+Tech Street: 5-1, Otemachi 1-Chome
+Tech Street: Otemachi First Square, East Tower
+Tech City: Chiyoda-ku
+Tech State/Province: Tokyo
+Tech Postal Code: 100-8116
+Tech Country: JP
+Tech Phone: +81.368385590
+Tech Email: dotntt-ml@ntt.com
+Name Server: NS1.NIC.NTT
+Name Server: NS2.NIC.NTT
+Name Server: NS3.NIC.NTT
+Name Server: NS4.NIC.NTT
+DNSSEC: signedDelegation
+URL of the ICANN Whois Inaccuracy Complaint Form: https://www.icann.org/wicf/
+>>> Last update of WHOIS database: 2024-03-16T19:40:50Z <<<
+
+For more information on Whois status codes, please visit https://icann.org/epp
+
+NTT WHOIS LEGAL DISCLAIMER:
+
+The WHOIS service (the "Service") offered by Nippon Telegraph and Telephone Corporation (NTT) and the access to the records in the NTT WHOIS database (the "Database") are provided for information purposes and query-based public access.
+
+Neither NTT nor any of its officers, directors, employees or agents makes any warranty as to the results to be obtained from use of the Service.  NTT specifically disclaims all warranties of any kind, whether express, implied or statutory, including, but not limited to, any warranties of title, non-infringement, merchantability or fitness for a particular purpose.
+In no event shall NTT nor anyone else involved in creating, supporting, producing or delivering the Service be liable to you for any lost profits or costs, even if NTT or such person has been advised of the possibility of such damages.
+
+NTT allows you to use the Service only for lawful purposes and that, under no circumstances shall you use the Service to: (a) allow, enable or otherwise support the transmission by e-mail, telephone, postal mail, facsimile or other means of mass unsolicited, commercial advertising or solicitations to entities other than the data recipient's own existing customers; or (b) enable high volume, automated, electronic processes that send queries or data to the systems of NTT or any ICANN-accredited registrar, except as reasonably necessary to register domain names or modify existing registrations.
+
+By submitting the query you agree to abide by these terms and further agree that NTT may take measures to limit the use of the Service in order to protect the privacy of its registrants or the integrity of the Database.
+
+NTT reserves the right to modify or change these terms at any time without prior or subsequent notification of any kind.

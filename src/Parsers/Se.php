@@ -26,6 +26,7 @@ class Se extends Generic
     {
         $rawData = $this->parse();
         $lastElement = array_pop($rawData);
-        return str_ends_with($lastElement, $this->matchNotFound[0]);
+        return is_string($lastElement)
+            && str_ends_with($lastElement, $this->matchNotFound[0]);
     }
 }

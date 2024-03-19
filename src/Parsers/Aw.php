@@ -12,7 +12,8 @@ class Aw extends Generic
     {
         $rawData = $this->parse();
         foreach ($this->matchNotFound as $find) {
-            if (str_contains($rawData[0], $find)) {
+            if (isset($rawData[0])
+                && str_contains($rawData[0], $find)) {
                 return true;
             }
         }

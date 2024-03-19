@@ -9,7 +9,7 @@ class RateLimitTest extends TestCase
 {
 
     /** @dataProvider RateLimitedData */
-    public function testRateLimited(string $domain, ?string $whoisServer)
+    public function testRateLimited(string $domain, ?string $whoisServer = null)
     {
         $lookup = file_get_contents(__DIR__ . '/data/' . $domain . '.txt');
         $parser = new Parser($lookup, $domain, $whoisServer);

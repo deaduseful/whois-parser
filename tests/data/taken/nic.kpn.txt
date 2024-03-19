@@ -1,0 +1,70 @@
+Domain Name: NIC.KPN
+Registry Domain ID: D57956134-CNIC
+Registrar WHOIS Server: whois.nic.kpn
+Registrar URL: https://nic.kpn/
+Updated Date: 2023-08-31T16:51:02.0Z
+Creation Date: 2015-01-21T16:36:34.0Z
+Registry Expiry Date: 2025-01-21T23:59:59.0Z
+Registrar: KPN B.V
+Registrar IANA ID: 9999
+Domain Status: serverTransferProhibited https://icann.org/epp#serverTransferProhibited
+Domain Status: serverUpdateProhibited https://icann.org/epp#serverUpdateProhibited
+Domain Status: serverDeleteProhibited https://icann.org/epp#serverDeleteProhibited
+Domain Status: serverRenewProhibited https://icann.org/epp#serverRenewProhibited
+Registrant Name: .KPN Registry
+Registrant Organization: Koninklijke KPN N.V.
+Registrant Street: Maanplein 55
+Registrant City: Den Haag
+Registrant State/Province:
+Registrant Postal Code: 2516 CK
+Registrant Country: NL
+Registrant Phone: +31.704460904
+Registrant Fax:
+Registrant Email: kpncipodomain@kpn.com
+Admin Name: .KPN Registry
+Admin Organization: Koninklijke KPN N.V.
+Admin Street: Maanplein 55
+Admin City: Den Haag
+Admin State/Province:
+Admin Postal Code: 2516 CK
+Admin Country: NL
+Admin Phone: +31.704460904
+Admin Fax:
+Admin Email: kpncipodomain@kpn.com
+Tech Name: .KPN Registry
+Tech Organization: Koninklijke KPN N.V.
+Tech Street: Maanplein 55
+Tech City: Den Haag
+Tech State/Province:
+Tech Postal Code: 2516 CK
+Tech Country: NL
+Tech Phone: +31.704460904
+Tech Fax:
+Tech Email: kpncipodomain@kpn.com
+Name Server: D.NIC.KPN
+Name Server: C.NIC.KPN
+Name Server: B.NIC.KPN
+Name Server: A.NIC.KPN
+DNSSEC: signedDelegation
+Registrar Abuse Contact Email: abuse@kpn.com
+Registrar Abuse Contact Phone: +31.610163500
+URL of the ICANN Whois Inaccuracy Complaint Form: https://www.icann.org/wicf/
+>>> Last update of WHOIS database: 2024-03-14T21:48:58.0Z <<<
+
+For more information on Whois status codes, please visit https://icann.org/epp
+
+>>> IMPORTANT INFORMATION ABOUT THE DEPLOYMENT OF RDAP: please visit
+https://www.centralnic.com/support/rdap <<<
+
+The Whois and RDAP services are provided by CentralNic, and contain
+information pertaining to Internet domain names registered by our
+our customers. By using this service you are agreeing (1) not to use any
+information presented here for any purpose other than determining
+ownership of domain names, (2) not to store or reproduce this data in
+any way, (3) not to use any high-volume, automated, electronic processes
+to obtain data from this service. Abuse of this service is monitored and
+actions in contravention of these terms will result in being permanently
+blacklisted. All data is (c) CentralNic Ltd (https://www.centralnic.com)
+
+Access to the Whois and RDAP services is rate limited. For more
+information, visit https://registrar-console.centralnic.com/pub/whois_guidance.

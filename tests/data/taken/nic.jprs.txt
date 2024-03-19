@@ -1,0 +1,70 @@
+Domain Name: NIC.JPRS
+Registry Domain ID: 00000IBC64RKJ1F0TYO02F7Q6-JPRS
+Registrar WHOIS Server: whois.registrar.jprs
+Registrar URL: http://jprs-registrar.co.jp/
+Updated Date: 2023-05-11T00:15:01Z
+Creation Date: 2015-06-25T12:30:53Z
+Registry Expiry Date: 2024-06-25T12:30:53Z
+Registrar: JPRS Registrar Co., Ltd.
+Registrar IANA ID: 1721
+Registrar Abuse Contact Email: contact@jprs-registrar.co.jp
+Registrar Abuse Contact Phone: +81.352158473
+Domain Status: ok  https://icann.org/epp#ok
+Registry Registrant ID: 00000JB1U54F52B0TYO01Q710-JPRS
+Registrant Name: Japan Registry Services Co., Ltd.
+Registrant Organization: Japan Registry Services Co., Ltd.
+Registrant Street: 3-8-1 Nishi-Kanda
+Registrant Street: Chiyoda First Bldg. East 13F
+Registrant City: Chiyoda-ku
+Registrant State/Province: Tokyo
+Registrant Postal Code: 101-0065
+Registrant Country: JP
+Registrant Phone: +81.352158451
+Registrant Fax: +81.352158452
+Registrant Email: info@jprs.jp
+Registry Admin ID: 00000JB1U54F52B0TYO01Q710-JPRS
+Admin Name: Japan Registry Services Co., Ltd.
+Admin Organization: Japan Registry Services Co., Ltd.
+Admin Street: 3-8-1 Nishi-Kanda
+Admin Street: Chiyoda First Bldg. East 13F
+Admin City: Chiyoda-ku
+Admin State/Province: Tokyo
+Admin Postal Code: 101-0065
+Admin Country: JP
+Admin Phone: +81.352158451
+Admin Fax: +81.352158452
+Admin Email: info@jprs.jp
+Registry Tech ID: 00000JB1U54F52B0TYO01Q710-JPRS
+Tech Name: Japan Registry Services Co., Ltd.
+Tech Organization: Japan Registry Services Co., Ltd.
+Tech Street: 3-8-1 Nishi-Kanda
+Tech Street: Chiyoda First Bldg. East 13F
+Tech City: Chiyoda-ku
+Tech State/Province: Tokyo
+Tech Postal Code: 101-0065
+Tech Country: JP
+Tech Phone: +81.352158451
+Tech Fax: +81.352158452
+Tech Email: info@jprs.jp
+Name Server: NS1.NIC.JPRS
+Name Server: NS2.NIC.JPRS
+Name Server: NS3.NIC.JPRS
+Name Server: NS4.NIC.JPRS
+DNSSEC: signedDelegation
+URL of the ICANN Whois Inaccuracy Complaint Form: https://www.icann.org/wicf/
+>>> Last update of WHOIS database: 2022-05-25T01:33:04Z <<<
+
+For more information on Whois status codes, please visit https://icann.org/epp
+
+JPRS WHOIS LEGAL DISCLAIMER:
+
+The WHOIS service (the "Service") offered by Japan Registry Services Co., Ltd. (JPRS) and the access to the records in the JPRS WHOIS database (the "Database") are provided for information purposes and query-based public access.
+
+Neither JPRS nor any of its officers, directors, employees or agents makes any warranty as to the results to be obtained from use of the Service.  JPRS specifically disclaims all warranties of any kind, whether express, implied or statutory, including, but not limited to, any warranties of title, non-infringement, merchantability or fitness for a particular purpose.
+In no event shall JPRS nor anyone else involved in creating, supporting, producing or delivering the Service be liable to you for any lost profits or costs, even if JPRS or such person has been advised of the possibility of such damages.
+
+JPRS allows you to use the Service only for lawful purposes and that, under no circumstances shall you use the Service to: (a) allow, enable or otherwise support the transmission by e-mail, telephone, postal mail, facsimile or other means of mass unsolicited, commercial advertising or solicitations to entities other than the data recipient's own existing customers; or (b) enable high volume, automated, electronic processes that send queries or data to the systems of JPRS or any ICANN-accredited registrar, except as reasonably necessary to register domain names or modify existing registrations.
+
+By submitting the query you agree to abide by these terms and further agree that JPRS may take measures to limit the use of the Service in order to protect the privacy of its registrants or the integrity of the Database.
+
+JPRS reserves the right to modify or change these terms at any time without prior or subsequent notification of any kind.

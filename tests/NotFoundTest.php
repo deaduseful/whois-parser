@@ -7,7 +7,7 @@ use Tests\TestCase;
 
 class NotFoundTest extends TestCase
 {
-    /** @dataProvider NotFoundData */
+    /** @dataProvider notFoundData */
     public function testNotFound(string $domain)
     {
         $lookup = file_get_contents(__DIR__ . '/data/notfound/' . $domain . '.txt');
@@ -23,11 +23,29 @@ class NotFoundTest extends TestCase
         self::assertEquals($expected, $parser->getError(), $domain);
     }
 
-    public function NotFoundData(): array
+    public function notFoundData(): array
     {
         $glob = glob(__DIR__ . '/data/notfound/*.txt');
         return array_map(function ($value) {
-           return [str_replace('.txt', '', basename($value))];
+            return [str_replace('.txt', '', basename($value))];
+        }, $glob);
+    }
+
+    /** @dataProvider takenData */
+    public function testFound(string $domain)
+    {
+        $lookup = file_get_contents(__DIR__ . '/data/taken/' . $domain . '.txt');
+        $parser = new Parser($lookup, $domain);
+        $output = $parser->getOutput();
+        self::assertNull($parser->getError(), $domain);
+        self::assertIsObject($output, $domain);
+    }
+
+    public function takenData(): array
+    {
+        $glob = glob(__DIR__ . '/data/taken/*.txt');
+        return array_map(function ($value) {
+            return [str_replace('.txt', '', basename($value))];
         }, $glob);
     }
 }
