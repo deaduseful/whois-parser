@@ -51,6 +51,7 @@ class UpdatedDateTest extends TestCase
             ['woodchuck.app', '2023-11-16T08:09:01Z'],
             ['www.gov.bn', '02-Feb-2018 16:45:04'],
             ['test.online', '2024-01-15T00:04:29.0Z'],
+            ['continuity.com', null],
         ];
     }
 }

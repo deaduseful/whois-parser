@@ -108,6 +108,9 @@ abstract class KeyValue implements Strategy
         if ($dateString == 'Never') {
             return null;
         }
+        if ($dateString[0] === '-') { // eg: -0001-29-11T19:03:58Z
+            return null;
+        }
         if ($this->dateFormat) {
             $carbon = Carbon::createFromFormat($this->dateFormat, $dateString);
         } else {
