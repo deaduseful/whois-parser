@@ -52,6 +52,7 @@ class UpdatedDateTest extends TestCase
             ['www.gov.bn', '02-Feb-2018 16:45:04'],
             ['test.online', '2024-01-15T00:04:29.0Z'],
             ['continuity.com', null],
+            ['zara', '2023-08-04', 'whois.iana.org'],
         ];
     }
 }

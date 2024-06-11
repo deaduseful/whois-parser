@@ -57,6 +57,7 @@ class CreatedDateTest extends TestCase
             ['salsalessonschicago.org', '2004-01-28T00:03:01Z', 'whois.aitdomains.com'],
             ['google.co.ug', '2016-02-17'],
             ['spb24.net', '2009-07-22', 'whois.mastername.ru'],
+            ['zara', '2015-09-10']
         ];
     }
 }

@@ -43,6 +43,7 @@ class ExpiryDateTest extends TestCase
             ['tokobungaindonesia.com', '2024-05-29T04:52:11Z', 'whois.webnic.cc'],
             ['dinamoon.pl', null],
             ['toko.ly', '2022-01-21 08:50:34'],
+            ['zara', null],
         ];
     }
 }
