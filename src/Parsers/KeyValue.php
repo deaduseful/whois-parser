@@ -40,18 +40,32 @@ abstract class KeyValue implements Strategy
     ];
     protected string $statusField = 'status';
     private string $registrarField = 'registrar';
+    private ?array $parsed = null;
 
     public function __construct(string $lookup)
     {
         $this->lookup = $lookup;
     }
 
+    public function getParsed(): array
+    {
+        if ($this->parsed === null) {
+            $this->setParsed($this->parse());
+        }
+        return $this->parsed;
+    }
+
+    public function setParsed(array $parsed): void
+    {
+        $this->parsed = $parsed;
+    }
+
     public function parse(): array
     {
-        $lookup = $this->lookup;
-        $lines = $this->getLines($lookup);
-        $raw = $this->getRaw($lines);
-        $data = $this->getParsed($raw);
+        $lookup = $this->getLookup();
+        $lines = $this->parseLines($lookup);
+        $raw = $this->parseRaw($lines);
+        $data = $this->mapParsed($raw);
         return $this->getFilter($data);
     }
 
@@ -67,7 +81,7 @@ abstract class KeyValue implements Strategy
 
     public function isRateLimit(): bool
     {
-        $lookup = $this->lookup;
+        $lookup = $this->getLookup();
         foreach ($this->matchRateLimit as $find) {
             if (str_contains(strtolower($lookup), strtolower($find))) {
                 return true;
@@ -78,7 +92,7 @@ abstract class KeyValue implements Strategy
 
     public function isInvalid(): bool
     {
-        $lookup = $this->lookup;
+        $lookup = $this->getLookup();
         foreach ($this->matchInvalid as $find) {
             if (str_contains(strtolower($lookup), strtolower($find))) {
                 return true;
@@ -122,12 +136,12 @@ abstract class KeyValue implements Strategy
         return null;
     }
 
-    protected function getLines(?string $lookup): array
+    protected function parseLines(?string $lookup): array
     {
         return explode(PHP_EOL, $lookup);
     }
 
-    private function getRaw(array $lines): array
+    private function parseRaw(array $lines): array
     {
         $raw = [];
         $hasKeys = [];
@@ -169,7 +183,7 @@ abstract class KeyValue implements Strategy
         return $rawData[$this->statusField] ?? null;
     }
 
-    public function getParsed(array $raw): array
+    private function mapParsed(array $raw): array
     {
         $data = [];
         foreach ($raw as $key => $value) {
@@ -198,5 +212,20 @@ abstract class KeyValue implements Strategy
             return array_shift($registrar);
         }
         return $registrar;
+    }
+
+    public function getNameservers(): ?array
+    {
+        $rawData = $this->getParsed();
+        $nameservers = $rawData['nameserver'] ?? null;
+        if (is_array($nameservers) === false) {
+            return null;
+        }
+        return $nameservers;
+    }
+
+    private function getLookup(): ?string
+    {
+        return $this->lookup;
     }
 }

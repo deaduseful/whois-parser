@@ -11,10 +11,10 @@ class Ru extends Generic
         'nserver' => 'nameServer',
     ];
 
-    protected function getLines(?string $lookup): array
+    protected function parseLines(?string $lookup): array
     {
         $lookup = str_replace('Last updated on ', 'Last updated on:', $lookup);
-        return parent::getLines($lookup);
+        return parent::parseLines($lookup);
     }
 
     protected array $matchNotFound = [

@@ -5,6 +5,16 @@ namespace Deaduseful\WhoisParser\src\Parsers;
 class Uz extends Generic
 {
     protected array $matchNotFound = [
-        '% Domain names in the .uz domain can now be registered',
+        'not found in database',
     ];
+
+    public function isNotFound(): bool
+    {
+        foreach ($this->matchNotFound as $find) {
+            if (str_contains($this->lookup, $find)) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

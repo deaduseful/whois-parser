@@ -1102,7 +1102,7 @@ class Factory
         'tl' => GenericCcTld::class,
         'tm' => Tm::class,
         'tmall' => RegistrarIdentityDigital::class,
-        'tn' => WhoisMediaServ::class,
+        'tn' => Tn::class,
         'today' => RegistrarIdentityDigital::class,
         'tokyo' => RegistrarCentralNic::class,
         'tools' => RegistrarIdentityDigital::class,

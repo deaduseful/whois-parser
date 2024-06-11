@@ -13,10 +13,10 @@ class Gg extends Generic
         'NOT FOUND',
     ];
 
-    protected function getLines(?string $lookup): array
+    protected function parseLines(?string $lookup): array
     {
         $lookup = str_replace('Registered on ', 'Registered on:', $lookup);
-        return parent::getLines($lookup);
+        return parent::parseLines($lookup);
     }
 
     public function isNotFound(): bool

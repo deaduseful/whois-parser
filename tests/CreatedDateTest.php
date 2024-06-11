@@ -16,7 +16,7 @@ class CreatedDateTest extends TestCase
         $data = $parser->getOutput();
         $result = $data?->createdDate();
         $expected = $expected ? Carbon::parse($expected) : null;
-        self::assertEquals($expected, $result);
+        self::assertEquals($expected, $result, $domain);
     }
 
     public function expiryData(): array

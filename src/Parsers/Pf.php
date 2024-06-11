@@ -15,9 +15,9 @@ class Pf extends Generic
         'expire' => 'expiry',
     ];
 
-    protected function getLines(?string $lookup): array
+    protected function parseLines(?string $lookup): array
     {
         $lookup = str_replace('(JJ/MM/AAAA)', '', $lookup);
-        return parent::getLines($lookup);
+        return parent::parseLines($lookup);
     }
 }
