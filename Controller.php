@@ -13,7 +13,7 @@ class Controller extends BaseController
         return view(ServiceProvider::NAMESPACE . '::index');
     }
 
-    public function store(Request $request)
+    public function store(Request $request): \Illuminate\Http\JsonResponse
     {
         $lookup = $request->get('lookup');
         if (empty($lookup)) {
@@ -23,6 +23,7 @@ class Controller extends BaseController
         }
         $parser = new Parser($lookup);
         $result = $parser->getOutput();
-        return json_encode($result, JSON_PRETTY_PRINT);
+        // return a proper json response
+        return response()->json($result);
     }
 }

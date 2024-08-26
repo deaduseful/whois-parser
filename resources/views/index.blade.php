@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">@yield('title')</div>
 
@@ -17,16 +17,26 @@
                                        class="col-sm-4 col-form-label text-md-right">{{ __('Query') }}</label>
                                 <div class="col-md-6">
                                     <input id="query" type="text" class="form-control" name="query"
-                                           value="{{ old('query') }}" placeholder="eg: example.com" autofocus>
+                                           value="{{ old('query') }}" placeholder="eg: example.com" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="query"
+                                       class="col-sm-4 col-form-label text-md-right">{{ __('Server') }}</label>
+                                <div class="col-md-6">
+                                    <input id="query" type="text" class="form-control" name="server"
+                                           value="{{ old('server') }}" placeholder="eg: whois.example.com">
                                 </div>
                             </div>
 
                             <div class="form-group row">
                                 <label for="lookup"
                                        class="col-sm-4 col-form-label text-md-right">{{ __('Lookup') }}</label>
-                                <div class="col-md-6">
+                                <div class="col-md-8">
                                     <textarea id="lookup" class="form-control" name="lookup"
-                                              placeholder="Whois Lookup..." required autofocus></textarea>
+                                              placeholder="Whois Lookup..." required
+                                    rows="30"></textarea>
                                 </div>
                             </div>
 
