@@ -12,7 +12,7 @@ class StatusTest extends TestCase
         $query = 'fiat';
         $lookup = file_get_contents(__DIR__ . '/data/' . $query . '.txt');
         $parser = new Parser($lookup, $query, 'whois.iana.org');
-        $output = $parser->getOutput();
+        $output = $parser->get();
         $this->assertEquals('FORMER', $output->registration->statuses[0]);
     }
 
@@ -21,7 +21,7 @@ class StatusTest extends TestCase
         $query = 'news.app';
         $lookup = file_get_contents(__DIR__ . '/data/' . $query . '.txt');
         $parser = new Parser($lookup, $query);
-        $output = $parser->getOutput();
+        $output = $parser->get();
         $status = $output->hasStatus('clienttransferprohibited');
         $this->assertTrue($status);
     }

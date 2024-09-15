@@ -13,7 +13,7 @@ class RateLimitTest extends TestCase
     {
         $lookup = file_get_contents(__DIR__ . '/data/' . $domain . '.txt');
         $parser = new Parser($lookup, $domain, $whoisServer);
-        $output = $parser->getOutput();
+        $output = $parser->get();
         self::assertNull($output);
         $expected = 'Rate limited';
         self::assertEquals($expected, $parser->getError());

@@ -7,9 +7,9 @@ use stdClass;
 
 class Response extends Record
 {
-    const DATE_CREATED = 'created';
-    const DATE_EXPIRY = 'expiry';
-    const DATE_UPDATED = 'updated';
+    const DATE_CREATED = 'created_date';
+    const DATE_EXPIRY = 'expired_date';
+    const DATE_UPDATED = 'updated_date';
     const FIELD_STATUSES = 'statuses';
 
     public ?string $registrant;
@@ -32,11 +32,11 @@ class Response extends Record
 
     public function get(string $key): mixed
     {
-        if (isset($this->whois->{$key})) {
-            return $this->whois->{$key};
-        }
         if (isset($this->registration->{$key})) {
             return $this->registration->{$key};
+        }
+        if (isset($this->whois->{$key})) {
+            return $this->whois->{$key};
         }
         return null;
     }
@@ -44,19 +44,24 @@ class Response extends Record
     public function createdDate(): ?Carbon
     {
         $key = self::DATE_CREATED;
-        return $this->get($key);
+        return $this->getDate($key);
     }
 
     public function expiryDate(): ?Carbon
     {
         $key = self::DATE_EXPIRY;
-        return $this->get($key);
+        return $this->getDate($key);
     }
 
     public function updatedDate(): ?Carbon
     {
         $key = self::DATE_UPDATED;
-        return $this->get($key);
+        return $this->getDate($key);
+    }
+
+    protected function getDate(string $key): ?Carbon
+    {
+        return $this->has($key) ? Carbon::parse($this->get($key)) : null;
     }
 
     public function hasStatus(string $checkStatus): bool
@@ -76,5 +81,15 @@ class Response extends Record
     public function getRegistrant(): ?string
     {
         return $this->registrant;
+    }
+
+    protected function has(string $key): bool
+    {
+        return isset($this->registration->{$key}) || isset($this->whois->{$key});
+    }
+
+    public function __toString(): string
+    {
+        return json_encode($this->all());
     }
 }

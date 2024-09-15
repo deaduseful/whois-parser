@@ -13,7 +13,7 @@ class CreatedDateTest extends TestCase
     {
         $lookup = file_get_contents(__DIR__ . '/data/' . $domain . '.txt');
         $parser = new Parser($lookup, $domain, $whoisServer);
-        $data = $parser->getOutput();
+        $data = $parser->get();
         $result = $data?->createdDate();
         $expected = $expected ? Carbon::parse($expected) : null;
         self::assertEquals($expected, $result, $domain);

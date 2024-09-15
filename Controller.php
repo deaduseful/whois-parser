@@ -22,7 +22,7 @@ class Controller extends BaseController
             $lookup = $whois->lookup;
         }
         $parser = new Parser($lookup);
-        $result = $parser->getOutput();
+        $result = $parser->get();
         // return a proper json response
         return response()->json($result);
     }

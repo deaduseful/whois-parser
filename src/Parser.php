@@ -23,6 +23,7 @@ class Parser
     private ?string $source;
     private ?string $whoisServer;
     private ?string $error = null;
+    private ?Response $output = null;
 
     public function __construct(string $lookup, ?string $source = null, ?string $whoisServer = null)
     {
@@ -31,10 +32,20 @@ class Parser
         $this->whoisServer = $whoisServer;
     }
 
+    public function hasOutput(): bool
+    {
+        return !empty($this->output);
+    }
+
     public function getOutput(): ?Response
     {
-        if (empty($this->output)) {
-            $this->output = $this->parse();
+        return $this->output;
+    }
+
+    public function get(): string|bool|null|Response
+    {
+        if ($this->hasOutput() === false) {
+            $this->setOutput();
         }
         return $this->output;
     }
@@ -85,9 +96,9 @@ class Parser
         $rawData = $this->getRaw();
         $parser = $this->getParser();
         $registration = new Registration();
-        $registration->created = $parser->getCreated($rawData)->toDateString();
-        $registration->expiry = $parser->getExpiry($rawData)->toDateString();
-        $registration->updated = $parser->getUpdated($rawData)->toDateString();
+        $registration->created = $parser->getCreated($rawData);
+        $registration->expiry = $parser->getExpiry($rawData);
+        $registration->updated = $parser->getUpdated($rawData);
         $registration->registrar = $parser->getRegistrar($rawData);
         $registration->statuses = $this->getStatuses();
         return $registration;
@@ -108,9 +119,9 @@ class Parser
         $whois = new Whois();
         $whois->record = $this->lookup;
         $whois->domain = $rawData['domainName'] ?? null;
-        $whois->created_date = $parser->getCreated($rawData)->toIso8601String();
-        $whois->updated_date = $parser->getUpdated($rawData)->toIso8601String();
-        $whois->expired_date = $parser->getExpiry($rawData)->toIso8601String();
+        $whois->created_date = $parser->getCreated($rawData);
+        $whois->updated_date = $parser->getUpdated($rawData);
+        $whois->expired_date = $parser->getExpiry($rawData);
         $whois->statuses = $this->getStatuses();
         $whois->name_servers = $this->getNameServers($rawData);
         $registrar = $this->getRegistrar();
@@ -287,5 +298,10 @@ class Parser
             $data[] = strtolower(trim($nameServer, '.'));
         }
         return $data;
+    }
+
+    private function setOutput(): void
+    {
+        $this->output = $this->parse();
     }
 }

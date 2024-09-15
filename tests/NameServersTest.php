@@ -12,7 +12,7 @@ class NameServersTest extends TestCase
         $query = 'domaintools.com';
         $lookup = file_get_contents(__DIR__ . '/data/' . $query . '.txt');
         $parser = new Parser($lookup, $query);
-        $output = $parser->getOutput();
+        $output = $parser->get();
         $actual = $output->name_servers;
         $expected = [
             'dns1.p04.nsone.net',

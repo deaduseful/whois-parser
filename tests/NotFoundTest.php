@@ -17,7 +17,7 @@ class NotFoundTest extends TestCase
             file_put_contents(__DIR__ . '/data/_map_tlds.txt', $content, FILE_APPEND);
         }*/
         $parser = new Parser($lookup, $domain);
-        $output = $parser->getOutput();
+        $output = $parser->get();
         self::assertNull($output);
         $expected = 'Not found';
         self::assertEquals($expected, $parser->getError(), $domain);
@@ -36,7 +36,7 @@ class NotFoundTest extends TestCase
     {
         $lookup = file_get_contents(__DIR__ . '/data/taken/' . $domain . '.txt');
         $parser = new Parser($lookup, $domain);
-        $output = $parser->getOutput();
+        $output = $parser->get();
         self::assertNull($parser->getError(), $domain);
         self::assertIsObject($output, $domain);
     }
