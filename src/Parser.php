@@ -16,14 +16,13 @@ class Parser
     const ERROR_NOT_FOUND = 'Not found';
     const ERROR_RATE_LIMITED = 'Rate limited';
     const ERROR_INVALID = 'Invalid query';
-    private Response $response;
+    private ?Response $response = null;
     private ?string $lookup;
     private ?array $raw;
     private ?Strategy $parser;
     private ?string $source;
     private ?string $whoisServer;
     private ?string $error = null;
-    private ?Response $output = null;
 
     public function __construct(string $lookup, ?string $source = null, ?string $whoisServer = null)
     {
@@ -32,22 +31,15 @@ class Parser
         $this->whoisServer = $whoisServer;
     }
 
-    public function hasOutput(): bool
+    public function get(): ?Response
     {
-        return !empty($this->output);
-    }
-
-    public function getOutput(): ?Response
-    {
-        return $this->output;
-    }
-
-    public function get(): string|bool|null|Response
-    {
-        if ($this->hasOutput() === false) {
-            $this->setOutput();
+        if ($this->error !== null) {
+            return null;
         }
-        return $this->output;
+        if ($this->hasResponse()) {
+            return $this->getResponse();
+        }
+        return $this->parse()->getResponse();
     }
 
     private function getParser(): Strategy
@@ -67,26 +59,24 @@ class Parser
         return $this->raw;
     }
 
-    private function parse(): ?Response
+    private function parse(): self
     {
         $parser = $this->getParser();
         if ($parser->isRateLimit()) {
             $this->error = self::ERROR_RATE_LIMITED;
-            return null;
         }
-        if ($parser->isInvalid()) {
+        elseif ($parser->isInvalid()) {
             $this->error = self::ERROR_INVALID;
-            return null;
         }
-        if ($parser->isNotFound()) {
+        elseif ($parser->isNotFound()) {
             $this->error = self::ERROR_NOT_FOUND;
-            return null;
+        } else {
+            $this->setResponse();
         }
-        $this->response = $this->parseResponse();
-        return $this->response;
+        return $this;
     }
 
-    public function getResponse(): Response
+    public function getResponse(): ?Response
     {
         return $this->response;
     }
@@ -284,6 +274,12 @@ class Parser
 
     public function getError(): ?string
     {
+        if ($this->response !== null) {
+            return null;
+        }
+        if ($this->error === null) {
+            $this->parse();
+        }
         return $this->error;
     }
 
@@ -302,11 +298,6 @@ class Parser
         return $data;
     }
 
-    private function setOutput(): void
-    {
-        $this->output = $this->parse();
-    }
-
     private function getDates(): stdClass
     {
         $rawData = $this->getRaw();
@@ -315,5 +306,20 @@ class Parser
         $dates->updated = $rawData['updated'] ?? null;
         $dates->expiry = $rawData['expiry'] ?? null;
         return $dates;
+    }
+
+    public function isNotFound(): bool
+    {
+        return $this->getError() === self::ERROR_NOT_FOUND;
+    }
+
+    public function hasResponse(): bool
+    {
+        return !empty($this->response);
+    }
+
+    protected function setResponse(): void
+    {
+        $this->response = $this->parseResponse();
     }
 }
