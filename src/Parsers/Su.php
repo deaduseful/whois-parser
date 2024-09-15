@@ -2,6 +2,6 @@
 
 namespace Deaduseful\WhoisParser\src\Parsers;
 
-class Su extends Ru
+class Su extends WhoisTcinetRu
 {
 }

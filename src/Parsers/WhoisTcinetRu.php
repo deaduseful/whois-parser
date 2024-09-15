@@ -2,7 +2,7 @@
 
 namespace Deaduseful\WhoisParser\src\Parsers;
 
-class Ru extends Generic
+class WhoisTcinetRu extends Generic
 {
     protected array $mapFields = [
         'created' => 'created',
@@ -24,7 +24,11 @@ class Ru extends Generic
     public function isNotFound(): bool
     {
         $rawData = $this->parse();
-        return isset($rawData[1])
-            && $rawData[1] === $this->matchNotFound[0];
+        foreach ($rawData as $row) {
+            if (in_array($row, $this->matchNotFound, true)) {
+                return true;
+            }
+        }
+        return false;
     }
 }

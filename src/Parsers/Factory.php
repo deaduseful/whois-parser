@@ -23,6 +23,7 @@ class Factory
         'whois.teleinfo.cn' => Cn::class,
         'whois.mediaserv.net' => WhoisMediaServ::class,
         'whois.mastername.ru' => WhoisMasterName::class,
+        'whois.nic.ru' => WhoisNicRu::class,
     ];
     private const TLD_MAP = [
         'aaa' => RegistrarGodaddy::class,
@@ -936,7 +937,7 @@ class Factory
         'room' => RegistrarAmazon::class,
         'rs' => Rs::class,
         'rsvp' => RegistrarIdentityDigital::class,
-        'ru' => Ru::class,
+        'ru' => WhoisTcinetRu::class,
         'rugby' => RegistrarGodaddy::class,
         'ruhr' => RegistrarCentralNic::class,
         'run' => RegistrarIdentityDigital::class,
