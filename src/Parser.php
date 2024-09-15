@@ -85,9 +85,9 @@ class Parser
         $rawData = $this->getRaw();
         $parser = $this->getParser();
         $registration = new Registration();
-        $registration->created = $parser->getCreated($rawData);
-        $registration->expiry = $parser->getExpiry($rawData);
-        $registration->updated = $parser->getUpdated($rawData);
+        $registration->created = $parser->getCreated($rawData)->toDateString();
+        $registration->expiry = $parser->getExpiry($rawData)->toDateString();
+        $registration->updated = $parser->getUpdated($rawData)->toDateString();
         $registration->registrar = $parser->getRegistrar($rawData);
         $registration->statuses = $this->getStatuses();
         return $registration;
@@ -108,9 +108,9 @@ class Parser
         $whois = new Whois();
         $whois->record = $this->lookup;
         $whois->domain = $rawData['domainName'] ?? null;
-        $whois->created_date = $parser->getCreated($rawData);
-        $whois->updated_date = $parser->getUpdated($rawData);
-        $whois->expired_date = $parser->getExpiry($rawData);
+        $whois->created_date = $parser->getCreated($rawData)->toIso8601String();
+        $whois->updated_date = $parser->getUpdated($rawData)->toIso8601String();
+        $whois->expired_date = $parser->getExpiry($rawData)->toIso8601String();
         $whois->statuses = $this->getStatuses();
         $whois->name_servers = $this->getNameServers($rawData);
         $registrar = $this->getRegistrar();

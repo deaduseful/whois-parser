@@ -6,7 +6,6 @@ use stdClass;
 
 class Whois extends Record
 {
-
     public ?string $date;
     public ?string $record;
     public ?string $domain;
