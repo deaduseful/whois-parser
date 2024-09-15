@@ -4,7 +4,7 @@ namespace Deaduseful\WhoisParser\src\Parsers;
 
 class Factory
 {
-    private const WHOIS_SERVER_MAP = [
+    protected const WHOIS_SERVER_MAP = [
         'whois.registry.in' => In::class,
         'whois.joker.com' => WhoisJoker::class,
         'whois.godaddy.com' => RegistrarGodaddy::class,
@@ -25,7 +25,7 @@ class Factory
         'whois.mastername.ru' => WhoisMasterName::class,
         'whois.nic.ru' => WhoisNicRu::class,
     ];
-    private const TLD_MAP = [
+    protected const TLD_MAP = [
         'aaa' => RegistrarGodaddy::class,
         'aarp' => RegistrarVerisignGrs::class,
         'abb' => RegistrarIdentityDigital::class,
@@ -1225,31 +1225,55 @@ class Factory
         'ee' => Ee::class,
         'moscow' => Moscow::class,
     ];
-
     public static function create(string $lookup, string $query = null, string $whoisServer = null): Strategy
     {
+        if (empty($whoisServer)) {
+            $whoisServer = self::parseWhoisServer($lookup);
+        }
         if ($whoisServer) {
-            $whoisServer = strtolower($whoisServer);
-            if (isset(self::WHOIS_SERVER_MAP[$whoisServer])) {
-                $class = self::WHOIS_SERVER_MAP[$whoisServer];
-                return new $class($lookup);
-            }
+            $class = self::getClassByWhoisServer($whoisServer);
         }
-        if (strpos($query, '.')) {
-            $tld = self::parseTld($query);
-            if (isset(self::TLD_MAP[$tld])) {
-                $class = self::TLD_MAP[$tld];
-                return new $class($lookup);
-            }
+        if (empty($class)) {
+            $class = self::getClass($query);
         }
-        return new Generic($lookup);
+        return new $class($lookup);
     }
 
-    private static function parseTld(string $query): ?string
+    protected static function parseTld(string $query): ?string
     {
         if (strpos($query, '.')) {
             return pathinfo(strtolower($query), PATHINFO_EXTENSION);
         }
         return null;
+    }
+
+    protected static function getClassByWhoisServer(string $whoisServer): ?string
+    {
+        $whoisServer = strtolower($whoisServer);
+        if (isset(self::WHOIS_SERVER_MAP[$whoisServer])) {
+            return self::WHOIS_SERVER_MAP[$whoisServer];
+        }
+        return null;
+    }
+
+    protected static function parseWhoisServer(string $lookup): ?string
+    {
+        $pattern = '/Registrar WHOIS Server:\s*(\S+)/i';
+        if (preg_match($pattern, $lookup, $matches)) {
+            return $matches[1];
+        }
+        return null;
+    }
+
+    protected static function getClass(?string $query): ?string
+    {
+        if (strpos($query, '.')) {
+            $tld = self::parseTld($query);
+            if (isset(self::TLD_MAP[$tld])) {
+                return self::TLD_MAP[$tld];
+
+            }
+        }
+        return Generic::class;
     }
 }

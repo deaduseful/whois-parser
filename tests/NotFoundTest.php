@@ -48,4 +48,11 @@ class NotFoundTest extends TestCase
             return [str_replace('.txt', '', basename($value))];
         }, $glob);
     }
+
+    public function testIsAvailableFalse()
+    {
+        $lookup = file_get_contents(__DIR__ . '/data/xexample.ru.txt');
+        $parser = new Parser($lookup, 'example.ru', 'whois.nic.ru');
+        self::assertTrue($parser->isNotFound());
+    }
 }
