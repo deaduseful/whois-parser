@@ -6,7 +6,7 @@ class Contact extends Record
 {
     public ?string $name;
     public ?string $org;
-    public mixed $street;
+    public null|string|array $street;
     public ?string $city;
     public ?string $state;
     public ?string $postal;
