@@ -96,9 +96,9 @@ class Parser
         $rawData = $this->getRaw();
         $parser = $this->getParser();
         $registration = new Registration();
-        $registration->created = $parser->getCreated($rawData);
-        $registration->expiry = $parser->getExpiry($rawData);
-        $registration->updated = $parser->getUpdated($rawData);
+        $registration->created = $parser->getCreated($rawData)?->toDateString();
+        $registration->expiry = $parser->getExpiry($rawData)?->toDateString();
+        $registration->updated = $parser->getUpdated($rawData)?->toDateString();
         $registration->registrar = $parser->getRegistrar($rawData);
         $registration->statuses = $this->getStatuses();
         return $registration;
@@ -119,11 +119,11 @@ class Parser
         $whois = new Whois();
         $whois->record = $this->lookup;
         $whois->domain = $rawData['domainName'] ?? null;
-        $whois->created_date = $parser->getCreated($rawData);
-        $whois->updated_date = $parser->getUpdated($rawData);
-        $whois->expired_date = $parser->getExpiry($rawData);
+        $whois->created_date = $parser->getCreated($rawData)?->toIso8601String();
+        $whois->updated_date = $parser->getUpdated($rawData)?->toIso8601String();
+        $whois->expired_date = $parser->getExpiry($rawData)?->toIso8601String();
         $whois->statuses = $this->getStatuses();
-        $whois->name_servers = $this->getNameServers($rawData);
+        $whois->name_servers = $this->getNameServers();
         $registrar = $this->getRegistrar();
         $whois->registrar = $registrar;
         $contacts = $this->getContacts();
@@ -146,10 +146,10 @@ class Parser
          */
         $registrar->name = $this->parser->getRegistrar($rawData);
         $registrar->abuse_contact_phone = $rawData['registrarAbuseContactPhone'] ?? null;
-        $registrar->abuse_contact_email = $rawData['registrarAbuseContactEmail'] ?? null;
+        $registrar->abuse_contact_email = array_key_exists('registrarAbuseContactEmail', $rawData) ? strtolower($rawData['registrarAbuseContactEmail']) : null;
         $registrar->iana_id = $rawData['registrarIANAID'] ?? null;
-        $registrar->url = $rawData['registrarURL'] ?? null;
-        $registrar->whois_server = $rawData['registrarWHOISServer'] ?? null;
+        $registrar->url = array_key_exists('registrarURL', $rawData) ? strtolower($rawData['registrarURL']) : null;
+        $registrar->whois_server = array_key_exists('registrarWHOISServer', $rawData) ? strtolower($rawData['registrarWHOISServer']) : null;
         return $registrar;
     }
 
@@ -253,9 +253,10 @@ class Parser
         $response->registrant = $rawData['registrantName'] ?? null;
         $registration = $this->getRegistration();
         $response->registration = $registration;
-        $response->name_servers = $this->getNameServers($rawData);
+        $response->name_servers = $this->getNameServers();
         $whois = $this->getWhois();
         $response->whois = $whois;
+        $response->dates = $this->getDates();
         $response->raw_data = $rawData;
         $response->record_source = $this->source;
         return $response;
@@ -286,8 +287,9 @@ class Parser
         return $this->error;
     }
 
-    private function getNameServers(array $rawData): ?array
+    private function getNameServers(): ?array
     {
+        $rawData = $this->getRaw();
         if (empty($rawData['nameServer'])) {
             return null;
         }
@@ -303,5 +305,15 @@ class Parser
     private function setOutput(): void
     {
         $this->output = $this->parse();
+    }
+
+    private function getDates(): stdClass
+    {
+        $rawData = $this->getRaw();
+        $dates = new stdClass();
+        $dates->created = $rawData['created'] ?? null;
+        $dates->updated = $rawData['updated'] ?? null;
+        $dates->expiry = $rawData['expiry'] ?? null;
+        return $dates;
     }
 }

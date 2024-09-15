@@ -42,9 +42,7 @@
             "registrant": {
                 "name": "REDACTED FOR PRIVACY",
                 "org": "REDACTED FOR PRIVACY",
-                "street": [
-                    "REDACTED FOR PRIVACY"
-                ],
+                "street": "REDACTED FOR PRIVACY",
                 "city": "REDACTED FOR PRIVACY",
                 "state": "WA",
                 "postal": "REDACTED FOR PRIVACY",
@@ -56,30 +54,26 @@
             "admin": {
                 "name": "REDACTED FOR PRIVACY",
                 "org": "REDACTED FOR PRIVACY",
-                "street": [
-                    "REDACTED FOR PRIVACY"
-                ],
+                "street": "REDACTED FOR PRIVACY",
                 "city": "REDACTED FOR PRIVACY",
                 "state": "REDACTED FOR PRIVACY",
                 "postal": "REDACTED FOR PRIVACY",
                 "country": "REDACTED FOR PRIVACY",
                 "phone": "REDACTED FOR PRIVACY",
                 "fax": "REDACTED FOR PRIVACY",
-                "email": ""
+                "email": "REDACTED FOR PRIVACY"
             },
             "tech": {
                 "name": "REDACTED FOR PRIVACY",
                 "org": "REDACTED FOR PRIVACY",
-                "street": [
-                    "REDACTED FOR PRIVACY"
-                ],
+                "street": "REDACTED FOR PRIVACY",
                 "city": "REDACTED FOR PRIVACY",
                 "state": "REDACTED FOR PRIVACY",
                 "postal": "REDACTED FOR PRIVACY",
                 "country": "REDACTED FOR PRIVACY",
                 "phone": "REDACTED FOR PRIVACY",
                 "fax": "REDACTED FOR PRIVACY",
-                "email": ""
+                "email": "REDACTED FOR PRIVACY"
             },
             "billing": {
                 "name": "",

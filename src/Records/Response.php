@@ -7,9 +7,9 @@ use stdClass;
 
 class Response extends Record
 {
-    const DATE_CREATED = 'created_date';
-    const DATE_EXPIRY = 'expired_date';
-    const DATE_UPDATED = 'updated_date';
+    const DATE_CREATED = 'created';
+    const DATE_EXPIRY = 'expiry';
+    const DATE_UPDATED = 'updated';
     const FIELD_STATUSES = 'statuses';
 
     public ?string $registrant;
@@ -18,6 +18,7 @@ class Response extends Record
     public ?Whois $whois;
     public ?string $record_source;
     public ?array $raw_data;
+    public ?stdClass $dates;
 
     public function all(): stdClass
     {
@@ -61,7 +62,7 @@ class Response extends Record
 
     protected function getDate(string $key): ?Carbon
     {
-        return $this->has($key) ? Carbon::parse($this->get($key)) : null;
+        return $this->dates->{$key} ?? null;
     }
 
     public function hasStatus(string $checkStatus): bool
