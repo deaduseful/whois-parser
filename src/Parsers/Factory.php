@@ -1236,7 +1236,7 @@ class Factory
         if (empty($class)) {
             $class = self::getClass($query);
         }
-        return new $class($lookup);
+        return new $class($lookup, $whoisServer);
     }
 
     protected static function parseTld(string $query): ?string

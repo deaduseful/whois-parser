@@ -7,9 +7,9 @@ use Illuminate\Support\Str;
 
 abstract class KeyValue implements Strategy
 {
-    const DATE_CREATED = 'created';
-    const DATE_UPDATED = 'updated';
-    const DATE_EXPIRY = 'expiry';
+    public const DATE_CREATED = 'created';
+    public const DATE_UPDATED = 'updated';
+    public const DATE_EXPIRY = 'expiry';
     protected ?string $dateFormat = null;
     protected array $matchNotFound = [
         'No Object Found',
@@ -39,12 +39,14 @@ abstract class KeyValue implements Strategy
         'billing-c' => 'billing',
     ];
     protected string $statusField = 'status';
-    private string $registrarField = 'registrar';
-    private ?array $parsed = null;
+    protected string $registrarField = 'registrar';
+    protected ?array $parsed = null;
+    protected ?string $whoisServer;
 
-    public function __construct(string $lookup)
+    public function __construct(string $lookup, ?string $whoisServer = null)
     {
         $this->lookup = $lookup;
+        $this->whoisServer = $whoisServer;
     }
 
     public function getParsed(): array
@@ -58,6 +60,11 @@ abstract class KeyValue implements Strategy
     public function setParsed(array $parsed): void
     {
         $this->parsed = $parsed;
+    }
+
+    public function getWhoisServer(): ?string
+    {
+        return $this->whoisServer;
     }
 
     public function parse(): array
