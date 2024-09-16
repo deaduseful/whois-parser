@@ -16,7 +16,7 @@ class UpdatedDateTest extends TestCase
         $data = $parser->get();
         $result = $data->updatedDate();
         $expected = $expected ? Carbon::parse($expected) : null;
-        self::assertEquals($expected, $result);
+        self::assertEquals($expected, $result, $domain);
     }
 
     public function updatedData(): array
@@ -24,7 +24,7 @@ class UpdatedDateTest extends TestCase
         return [
             ['allsvenskan2023.se'],
             ['alprof.kz', '2017-11-16 09:40:04'],
-            ['aname.net'],
+            ['aname.net', '2022-11-02T21:31:09'],
             ['appraiseyourart.com', '2019-03-15 19:35:08', 'whois.webmasters.com'],
             ['aytitekstil.com.tr', '2023-04-07T13:16:47+03:00'],
             ['bestcasinotoplist.online', '2022-12-09T21:50:15.00Z', 'whois.namesrs.com'],
