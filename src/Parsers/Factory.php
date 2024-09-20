@@ -24,6 +24,7 @@ class Factory
         'whois.mediaserv.net' => WhoisMediaServ::class,
         'whois.mastername.ru' => WhoisMasterName::class,
         'whois.nic.ru' => WhoisNicRu::class,
+        'whois.dynadot.com' => WhoisDynadot::class,
     ];
     protected const TLD_MAP = [
         'aaa' => RegistrarGodaddy::class,

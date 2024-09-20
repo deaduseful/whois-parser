@@ -11,7 +11,8 @@ class RateLimitTest extends TestCase
     /** @dataProvider RateLimitedData */
     public function testRateLimited(string $domain, ?string $whoisServer = null)
     {
-        $lookup = file_get_contents(__DIR__ . '/data/' . $domain . '.txt');
+        $filename = __DIR__ . '/data/ratelimit/' . $domain . '.txt';
+        $lookup = file_get_contents($filename);
         $parser = new Parser($lookup, $domain, $whoisServer);
         $output = $parser->get();
         self::assertNull($output);
@@ -32,6 +33,8 @@ class RateLimitTest extends TestCase
             ['qcmf.com.au', null],
             ['test.vip', null],
             ['test.cz', null],
+            ['whois.nominet.uk', null],
+            ['whois.dynadot.com', 'whois.dynadot.com'],
         ];
     }
 }
