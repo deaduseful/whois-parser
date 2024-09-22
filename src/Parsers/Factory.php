@@ -25,6 +25,7 @@ class Factory
         'whois.mastername.ru' => WhoisMasterName::class,
         'whois.nic.ru' => WhoisNicRu::class,
         'whois.dynadot.com' => WhoisDynadot::class,
+        'whois.identitydigital.services' => RegistrarIdentityDigital::class,
     ];
     protected const TLD_MAP = [
         'aaa' => RegistrarGodaddy::class,
@@ -1148,6 +1149,7 @@ class Factory
         'vacations' => RegistrarIdentityDigital::class,
         'vana' => RegistrarUniregistry::class,
         'vanguard' => RegistrarIdentityDigital::class,
+        'vc' => RegistrarIdentityDigital::class,
         've' => Cr::class,
         'vegas' => RegistrarIdentityDigital::class,
         'ventures' => RegistrarIdentityDigital::class,
