@@ -18,6 +18,12 @@ class RegistrarIdentityDigital extends Generic
     protected array $matchNotFound = [
         'Domain not found.',
     ];
+
+    protected array $matchRateLimit = [
+        'WHOIS LIMIT EXCEEDED',
+        'Query rate exceeded, please try again later.',
+    ];
+
     public function isNotFound(): bool
     {
         $rawData = $this->parse();

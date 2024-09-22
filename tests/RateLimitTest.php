@@ -30,7 +30,7 @@ class RateLimitTest extends TestCase
             ['dogtrainingcollar.org', 'whois.godaddy.com'],
             ['glucofence.org', null],
             ['hebrewbooks.org', null],
-            ['qcmf.com.au', null],
+            ['qcmf.com.au', null, 'whois.auda.org.au'],
             ['test.vip', null],
             ['test.cz', null],
             ['whois.nominet.uk', null],

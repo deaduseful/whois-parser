@@ -26,6 +26,8 @@ class Factory
         'whois.nic.ru' => WhoisNicRu::class,
         'whois.dynadot.com' => WhoisDynadot::class,
         'whois.identitydigital.services' => RegistrarIdentityDigital::class,
+        'whois.nic.uk' => RegistrarNominet::class,
+        'whois.auda.org.au' => WhoisAudaOrgAu::class,
     ];
     protected const TLD_MAP = [
         'aaa' => RegistrarGodaddy::class,
@@ -102,7 +104,7 @@ class Factory
         'at' => At::class,
         'athleta' => RegistrarGodaddy::class,
         'attorney' => RegistrarIdentityDigital::class,
-        'au' => Au::class,
+        'au' => WhoisAudaOrgAu::class,
         'auction' => RegistrarIdentityDigital::class,
         'audi' => RegistrarIdentityDigital::class,
         'audible' => RegistrarAmazon::class,
