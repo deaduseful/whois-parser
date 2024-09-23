@@ -13,4 +13,8 @@ class RegistrarGodaddy extends Generic
     protected array $matchReserved = [
         'Reserved Domain Name',
     ];
+
+    protected array $matchInvalid = [
+        'TLD is not supported.',
+    ];
 }
