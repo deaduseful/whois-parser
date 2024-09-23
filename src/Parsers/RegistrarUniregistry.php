@@ -8,6 +8,10 @@ class RegistrarUniregistry extends Generic
         ' is available for registration',
     ];
 
+    protected array $matchReserved = [
+        'IANA Reserved',
+    ];
+
     public function isNotFound(): bool
     {
         $rawData = $this->parse();

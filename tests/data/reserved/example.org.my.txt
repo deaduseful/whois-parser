@@ -1,0 +1,9 @@
+
+Domain Name: example.org.my
+
+>>> This name is not available for registration:
+
+>>> IANA Reserved
+
+>>> Last update of WHOIS database: 2024-09-23T19:58:24.685Z <<<
+

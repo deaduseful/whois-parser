@@ -23,7 +23,8 @@ class ReservedTest extends TestCase
     {
         return [
             ['agogo.tv'],
-            ['story.io']
+            ['story.io'],
+            ['example.org.my'],
         ];
     }
 }
