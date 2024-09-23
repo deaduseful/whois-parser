@@ -8,6 +8,10 @@ class Nl extends Generic
         ' is free',
     ];
 
+    protected array $matchInvalid = [
+        'Error: invalid domain name',
+    ];
+
     public function isNotFound(): bool
     {
         $rawData = $this->parse();

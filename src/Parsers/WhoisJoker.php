@@ -5,6 +5,7 @@ namespace Deaduseful\WhoisParser\src\Parsers;
 class WhoisJoker extends Generic
 {
     protected array $matchRateLimit = [
-        'whois.joker.com' => 'Service is temporarily not available',
+        'ERROR: Service is temporarily not available; please try again later',
+        'ERROR: Too many requests; rate limited',
     ];
 }
