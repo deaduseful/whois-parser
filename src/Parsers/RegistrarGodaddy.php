@@ -10,7 +10,7 @@ class RegistrarGodaddy extends Generic
     protected array $matchNotFound = [
         'No Data Found',
     ];
-    protected array $matchInvalid = [
+    protected array $matchReserved = [
         'Reserved Domain Name',
     ];
 }

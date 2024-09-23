@@ -16,6 +16,7 @@ class Parser
     const ERROR_NOT_FOUND = 'Not found';
     const ERROR_RATE_LIMITED = 'Rate limited';
     const ERROR_INVALID = 'Invalid query';
+    const ERROR_RESERVED = 'Reserved';
     private ?Response $response = null;
     private ?string $lookup;
     private ?array $raw;
@@ -67,6 +68,9 @@ class Parser
         }
         elseif ($parser->isInvalid()) {
             $this->error = self::ERROR_INVALID;
+        }
+        elseif ($parser->isReserved()) {
+            $this->error = self::ERROR_RESERVED;
         }
         elseif ($parser->isNotFound()) {
             $this->error = self::ERROR_NOT_FOUND;

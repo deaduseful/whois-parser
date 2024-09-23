@@ -24,6 +24,10 @@ class RegistrarIdentityDigital extends Generic
         'Query rate exceeded, please try again later.',
     ];
 
+    protected array $matchReserved = [
+        'This name is reserved by the Registry.',
+    ];
+
     public function isNotFound(): bool
     {
         return $this->getUpdated($this->parse()) === null;

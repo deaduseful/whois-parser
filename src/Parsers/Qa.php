@@ -10,4 +10,8 @@ class Qa extends Generic
     protected array $matchNotFound = [
         'No Data Found',
     ];
+
+    protected array $matchReserved = [
+        'Reserved by QDR',
+    ];
 }
