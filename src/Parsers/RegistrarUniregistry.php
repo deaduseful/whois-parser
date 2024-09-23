@@ -8,6 +8,10 @@ class RegistrarUniregistry extends Generic
         ' is available for registration',
     ];
 
+    protected array $matchInvalid = [
+        'Domain name violates registry policy',
+    ];
+
     protected array $matchReserved = [
         'IANA Reserved',
     ];
