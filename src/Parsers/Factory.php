@@ -28,6 +28,7 @@ class Factory
         'whois.identitydigital.services' => RegistrarIdentityDigital::class,
         'whois.nic.uk' => RegistrarNominet::class,
         'whois.auda.org.au' => WhoisAudaOrgAu::class,
+        'whois.ename.com' => WhoisEname::class,
     ];
     protected const TLD_MAP = [
         'aaa' => RegistrarGodaddy::class,

@@ -5,7 +5,7 @@ namespace Deaduseful\WhoisParser\src\Parsers;
 class NotFoundParser
 {
     protected const NOT_FOUND_WORDS = [
-        'available for registration',
+        'is available for registration',
         'Domain not found',
         'Domain not Found',
         'No Data Found',
@@ -31,7 +31,6 @@ class NotFoundParser
         'not known',
         'No such domain',
         'Domain unknown',
-        'is available for purchase',
         'encuentra',
         'No information available',
         'registration status: available',
@@ -49,20 +48,6 @@ class NotFoundParser
         'ro' => '% No entries found for the selected source(s).',
         'lt' => 'Status:			available',
         'il' => '%ERROR:101: no entries found',
-    ];
-
-    protected const AUP_MATCH = [
-        'dm' => 'Domain name violates registry policy',
-        'lb' => 'Prohibited String - Domain Cannot Be Registered',
-        'qa' => 'Reserved by QDR',
-    ];
-
-    const RATE_LIMIT_MATCH = [
-        'es' => 'exceeded the established limit',
-    ];
-
-    const TLD_NOT_SUPPORTED = [
-        'schaeffler' => 'TLD is not supported.',
     ];
 
     protected function findSubject(string $line): ?string
