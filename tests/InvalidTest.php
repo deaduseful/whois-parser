@@ -11,12 +11,12 @@ class InvalidTest extends TestCase
     /** @dataProvider InvalidData */
     public function testInvalid(string $domain, ?string $whoisServer = null)
     {
-        $lookup = file_get_contents(__DIR__ . '/data/' . $domain . '.txt');
+        $lookup = file_get_contents(__DIR__ . '/data/invalid/' . $domain . '.txt');
         $parser = new Parser($lookup, $domain, $whoisServer);
         $output = $parser->get();
         self::assertNull($output);
         $expected = 'Invalid query';
-        self::assertEquals($expected, $parser->getError());
+        self::assertEquals($expected, $parser->getError(), $domain);
     }
 
     public function InvalidData(): array
@@ -25,6 +25,7 @@ class InvalidTest extends TestCase
             ['7.eu'],
             ['agogo.tv'],
             ['test.top'],
+            ['lookup-----eg--example-com-or-192-168-0-1-.co.nz']
         ];
     }
 }
