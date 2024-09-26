@@ -61,8 +61,11 @@ class NotFoundParser
         return null;
     }
 
-    public function getMatch(array $lines): string
+    public function getMatch(string|array $lines): string
     {
+        if (is_string($lines)) {
+            $lines = explode(PHP_EOL, $lines);
+        }
         $match = null;
         if (count($lines) === 0) {
             $match = '<no lines>';
