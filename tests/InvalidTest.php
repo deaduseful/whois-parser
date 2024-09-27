@@ -23,7 +23,6 @@ class InvalidTest extends TestCase
     {
         return [
             ['7.eu'],
-            ['test.top'],
             ['lookup-----eg--example-com-or-192-168-0-1-.co.nz'],
             ['invalid-tld-c7fa0926.local', 'whois.nic.uk'],
             ['nic.ke'],

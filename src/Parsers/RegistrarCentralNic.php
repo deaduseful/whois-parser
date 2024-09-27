@@ -9,11 +9,13 @@ class RegistrarCentralNic extends Generic
         'updatedDate' => 'updated',
         'registrarRegistrationExpirationDate' => 'expiry',
     ];
-    protected array $matchInvalid = [
-        'Name Collision Reservation From ICANN',
-    ];
+
     protected array $matchNotFound = [
         'The queried object does not exist',
+    ];
+
+    protected array $matchReserved = [
+        'Name Collision Reservation From ICANN',
     ];
 
     public function isNotFound(): bool

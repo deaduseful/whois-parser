@@ -25,6 +25,7 @@ class ReservedTest extends TestCase
             ['agogo.tv'],
             ['story.io'],
             ['example.org.my'],
+            ['test.top'],
         ];
     }
 }
