@@ -17,7 +17,7 @@ class Parser
     protected const ERROR_RATE_LIMITED = 'Rate limited';
     protected const ERROR_INVALID = 'Invalid query';
     protected const ERROR_RESERVED = 'Reserved';
-    protected const ERROR_BAD = 'Bad query';
+    protected const ERROR_BAD = 'Bad response';
     protected ?Response $response = null;
     protected ?string $lookup;
     protected ?array $raw;
