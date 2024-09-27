@@ -250,6 +250,6 @@ abstract class KeyValue implements Strategy
 
     public function isBad(): ?string
     {
-        return (strlen($this->getLookup()) > 7);
+        return strlen($this->getLookup()) <= 7;
     }
 }
