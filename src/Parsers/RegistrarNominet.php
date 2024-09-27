@@ -10,4 +10,8 @@ class RegistrarNominet extends Generic
     protected array $matchNotFound = [
         'This domain name has not been registered.',
     ];
+
+    protected array $matchInvalid = [
+        'Nominet is not the registry for this domain name.',
+    ];
 }

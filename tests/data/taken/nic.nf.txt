@@ -1,0 +1,50 @@
+Domain Name: nic.nf
+Registry Domain ID: 463039-CoCCA
+Registrar URL:
+Updated Date: 2024-02-25T14:52:02Z
+Creation Date: 2010-10-01T02:38:45Z
+Registry Expiry Date: 2025-12-31T00:00:00Z
+Registrar Registration Expiration Date: 2025-12-31T00:00:00Z
+Domain Status: clientRenewProhibited https://icann.org/epp#clientRenewProhibited
+Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
+Domain Status: clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited
+Domain Status: clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited
+Registrar: CoCCA Registry Stub Zones
+Registrar Address: 4a - 36 College Hill
+Registrar Country: NZ
+Registrar Abuse Contact Email: support@coccaregistry.org
+Registrar Abuse Contact Phone:
+Registry Registrant ID: 1923142-CoCCA
+Registrant Name: Rob Ryan
+Registrant Organization: Norfolk Island Data Services
+Registrant Street: 706 Collins Head Rd.
+Registrant City: Norfolk Island
+Registrant State/Province: South Pacific
+Registrant Postal Code: 2899
+Registrant Country: NF
+Registrant Phone: +64 94466370
+Registrant Email: support@coccaregistry.org
+Registry Admin ID: 1923142-CoCCA
+Admin Name: Rob Ryan
+Admin Organization: Norfolk Island Data Services
+Admin Street: 706 Collins Head Rd.
+Admin City: Norfolk Island
+Admin State/Province: South Pacific
+Admin Postal Code: 2899
+Admin Country: NF
+Admin Phone: +64 94466370
+Admin Email: support@coccaregistry.org
+Registry Tech ID: 1923142-CoCCA
+Tech Name: Rob Ryan
+Tech Organization: Norfolk Island Data Services
+Tech Street: 706 Collins Head Rd.
+Tech City: Norfolk Island
+Tech State/Province: South Pacific
+Tech Postal Code: 2899
+Tech Country: NF
+Tech Phone: +64 94466370
+Tech Email: support@coccaregistry.org
+Name Server: a.nic.nf
+Name Server: b.nic.nf
+DNSSEC: signedDelegation
+>>> Last update of WHOIS database: 2024-09-27T01:48:55.767Z <<<

@@ -1,0 +1,24 @@
+Domain Name: REGISTRY.GOV.MM
+Registry Domain ID: DO1007-MM
+Registrar WHOIS Server:
+Registrar URL: http://example.com
+Updated Date: 2019-10-02T06:04:35.0Z
+Creation Date: 2018-09-11T02:28:56.0Z
+Registry Expiry Date: 2029-09-11T23:59:59.0Z
+Registrar: Posts and Telecommunications Department
+Registrar IANA ID:
+Registrar Abuse Contact Email:
+Registrar Abuse Contact Phone:
+Domain Status: serverDeleteProhibited https://icann.org/epp#serverDeleteProhibited
+Domain Status: serverTransferProhibited https://icann.org/epp#serverTransferProhibited
+Registrant State/Province: Naypyitaw
+Registrant Country: MM
+Registrant Email:
+Admin Email:
+Tech Email:
+Name Server: NS1.REGISTRY.GOV.MM
+Name Server: NS2.REGISTRY.GOV.MM
+Name Server: NS3.REGISTRY.GOV.MM
+DNSSEC: unsigned
+URL of the ICANN Whois Inaccuracy Complaint Form: https://www.icann.org/wicf/
+>>> Last update of WHOIS database: 2024-09-27T01:48:33.0Z <<<

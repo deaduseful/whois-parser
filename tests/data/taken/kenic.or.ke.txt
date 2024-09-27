@@ -1,0 +1,36 @@
+Domain Name: kenic.or.ke
+Registry Domain ID: 1285-Kenic
+Registrar URL: https://registry.kenic.or.ke
+Updated Date: 2024-05-21T14:57:59Z
+Creation Date: 2003-02-12T21:00:00Z
+Registry Expiry Date: 2025-12-31T21:00:00Z
+Registrar Registration Expiration Date: 2025-12-31T21:00:00Z
+Domain Status: clientRenewProhibited https://icann.org/epp#clientRenewProhibited
+Domain Status: serverRenewProhibited https://icann.org/epp#serverRenewProhibited
+Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
+Domain Status: serverTransferProhibited https://icann.org/epp#serverTransferProhibited
+Domain Status: clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited
+Domain Status: serverDeleteProhibited https://icann.org/epp#serverDeleteProhibited
+Registrar: Kenya Network Information Centre
+Registrar IANA ID: P051147513Q
+Registrar Address: Communications Authority Complex,
+Waiyaki Way opp. Kianda School
+P.O. Box 1461 - 00606
+Nairobi
+Registrar Country: KE
+Registrar Abuse Contact Email: admin@kenic.or.ke
+Registrar Abuse Contact Phone:
+Registry Registrant ID: 23-KENIC
+Registrant Name: REDACTED FOR PRIVACY
+Registrant Organization:
+Registrant Street: REDACTED FOR PRIVACY
+Registrant City: REDACTED FOR PRIVACY
+Registrant State/Province: REDACTED FOR PRIVACY
+Registrant Postal Code: REDACTED FOR PRIVACY
+Registrant Country: KE
+Registrant Phone: REDACTED FOR PRIVACY
+Registrant Email: REDACTED FOR PRIVACY
+Name Server: tessa.ns.cloudflare.com
+Name Server: sage.ns.cloudflare.com
+DNSSEC: signedDelegation
+>>> Last update of WHOIS database: 2024-09-27T01:49:55.729Z <<<
