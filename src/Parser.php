@@ -13,17 +13,18 @@ use stdClass;
 
 class Parser
 {
-    const ERROR_NOT_FOUND = 'Not found';
-    const ERROR_RATE_LIMITED = 'Rate limited';
-    const ERROR_INVALID = 'Invalid query';
-    const ERROR_RESERVED = 'Reserved';
-    private ?Response $response = null;
-    private ?string $lookup;
-    private ?array $raw;
-    private ?Strategy $parser;
-    private ?string $source;
-    private ?string $whoisServer;
-    private ?string $error = null;
+    protected const ERROR_NOT_FOUND = 'Not found';
+    protected const ERROR_RATE_LIMITED = 'Rate limited';
+    protected const ERROR_INVALID = 'Invalid query';
+    protected const ERROR_RESERVED = 'Reserved';
+    protected const ERROR_BAD = 'Bad query';
+    protected ?Response $response = null;
+    protected ?string $lookup;
+    protected ?array $raw;
+    protected ?Strategy $parser;
+    protected ?string $source;
+    protected ?string $whoisServer;
+    protected ?string $error = null;
 
     public function __construct(string $lookup, ?string $source = null, ?string $whoisServer = null)
     {
@@ -43,7 +44,7 @@ class Parser
         return $this->parse()->getResponse();
     }
 
-    private function getParser(): Strategy
+    protected function getParser(): Strategy
     {
         if (empty($this->parser)) {
             $this->parser = Factory::create($this->lookup, $this->source, $this->whoisServer);
@@ -51,7 +52,7 @@ class Parser
         return $this->parser;
     }
 
-    private function getRaw(): array
+    protected function getRaw(): array
     {
         if (empty($this->raw)) {
             $parser = $this->getParser();
@@ -60,24 +61,34 @@ class Parser
         return $this->raw;
     }
 
-    private function parse(): self
+    protected function parse(): self
     {
-        $parser = $this->getParser();
-        if ($parser->isRateLimit()) {
-            $this->error = self::ERROR_RATE_LIMITED;
-        }
-        elseif ($parser->isInvalid()) {
-            $this->error = self::ERROR_INVALID;
-        }
-        elseif ($parser->isReserved()) {
-            $this->error = self::ERROR_RESERVED;
-        }
-        elseif ($parser->isNotFound()) {
-            $this->error = self::ERROR_NOT_FOUND;
-        } else {
+        $this->error = $this->checkForErrors();
+        if ($this->error === null) {
             $this->setResponse();
         }
         return $this;
+    }
+
+    protected function checkForErrors(): ?string
+    {
+        $parser = $this->getParser();
+        if ($parser->isRateLimit()) {
+            return self::ERROR_RATE_LIMITED;
+        }
+        if ($parser->isInvalid()) {
+            return self::ERROR_INVALID;
+        }
+        if ($parser->isReserved()) {
+            return self::ERROR_RESERVED;
+        }
+        if ($parser->isNotFound()) {
+            return self::ERROR_NOT_FOUND;
+        }
+        if ($parser->isBad()) {
+            return self::ERROR_BAD;
+        }
+        return null;
     }
 
     public function getResponse(): ?Response
@@ -85,7 +96,7 @@ class Parser
         return $this->response;
     }
 
-    private function getRegistration(): Registration
+    protected function getRegistration(): Registration
     {
         $rawData = $this->getRaw();
         $parser = $this->getParser();
@@ -98,7 +109,7 @@ class Parser
         return $registration;
     }
 
-    private function getStatuses(): array
+    protected function getStatuses(): array
     {
         $rawData = $this->getRaw();
         $parser = $this->getParser();
@@ -106,7 +117,7 @@ class Parser
         return is_array($statues) ? $statues : [$statues];
     }
 
-    private function getWhois(): Whois
+    protected function getWhois(): Whois
     {
         $rawData = $this->getRaw();
         $parser = $this->getParser();
@@ -126,7 +137,7 @@ class Parser
         return $whois;
     }
 
-    private function getRegistrar(): Registrar
+    protected function getRegistrar(): Registrar
     {
         $rawData = $this->getRaw();
         $registrar = new Registrar();
@@ -147,7 +158,7 @@ class Parser
         return $registrar;
     }
 
-    private function getRegistrant(): Contact
+    protected function getRegistrant(): Contact
     {
         $rawData = $this->getRaw();
         /**
@@ -176,7 +187,7 @@ class Parser
         return $registrant;
     }
 
-    private function getAdmin(): Contact
+    protected function getAdmin(): Contact
     {
         $rawData = $this->getRaw();
         $admin = new Contact();
@@ -193,7 +204,7 @@ class Parser
         return $admin;
     }
 
-    private function getTech(): Contact
+    protected function getTech(): Contact
     {
         $rawData = $this->getRaw();
         $tech = new Contact();
@@ -210,7 +221,7 @@ class Parser
         return $tech;
     }
 
-    private function getBilling(): Contact
+    protected function getBilling(): Contact
     {
         $rawData = $this->getRaw();
         $billing = new Contact();
@@ -227,7 +238,7 @@ class Parser
         return $billing;
     }
 
-    private function getOtherProperties(): stdClass
+    protected function getOtherProperties(): stdClass
     {
         $rawData = $this->getRaw();
         /**
@@ -240,7 +251,7 @@ class Parser
         return $properties;
     }
 
-    private function parseResponse(): Response
+    protected function parseResponse(): Response
     {
         $rawData = $this->getRaw();
         $response = new Response();
@@ -256,7 +267,7 @@ class Parser
         return $response;
     }
 
-    private function getContacts(): stdClass
+    protected function getContacts(): stdClass
     {
         /**
          * 'registrant' => stdClass Object (...)
@@ -287,7 +298,7 @@ class Parser
         return $this->error;
     }
 
-    private function getNameServers(): ?array
+    protected function getNameServers(): ?array
     {
         $rawData = $this->getRaw();
         if (empty($rawData['nameServer'])) {
@@ -302,7 +313,7 @@ class Parser
         return $data;
     }
 
-    private function getDates(): stdClass
+    protected function getDates(): stdClass
     {
         $rawData = $this->getRaw();
         $dates = new stdClass();

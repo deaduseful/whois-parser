@@ -247,4 +247,9 @@ abstract class KeyValue implements Strategy
     {
         return $this->lookup;
     }
+
+    public function isBad(): ?string
+    {
+        return (strlen($this->getLookup()) > 7);
+    }
 }
