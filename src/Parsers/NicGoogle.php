@@ -2,7 +2,7 @@
 
 namespace Deaduseful\WhoisParser\src\Parsers;
 
-class App extends RegistrarGoogle
+class NicGoogle extends RegistrarGoogle
 {
     protected array $matchRateLimit = [
         'Rate limit exceeded',

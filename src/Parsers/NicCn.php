@@ -2,7 +2,7 @@
 
 namespace Deaduseful\WhoisParser\src\Parsers;
 
-class Cn extends Generic
+class NicCn extends Generic
 {
     protected array $matchNotFound = [
         'No matching record.',

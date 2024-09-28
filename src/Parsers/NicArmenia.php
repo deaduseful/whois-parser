@@ -2,7 +2,7 @@
 
 namespace Deaduseful\WhoisParser\src\Parsers;
 
-class Am extends Generic
+class NicArmenia extends Generic
 {
     protected array $matchNotFound = [
         'No match',

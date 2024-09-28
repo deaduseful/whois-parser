@@ -2,7 +2,7 @@
 
 namespace Deaduseful\WhoisParser\src\Parsers;
 
-class In extends Generic
+class RegistryIndia extends Generic
 {
     protected array $matchNotFound = [
         'No Data Found',

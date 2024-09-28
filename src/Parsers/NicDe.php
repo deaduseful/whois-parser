@@ -2,7 +2,7 @@
 
 namespace Deaduseful\WhoisParser\src\Parsers;
 
-class De extends Generic
+class NicDe extends Generic
 {
     protected string $statusField = 'status';
 

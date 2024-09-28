@@ -2,10 +2,14 @@
 
 namespace Deaduseful\WhoisParser\src\Parsers;
 
-class Za extends Generic
+class RegistryAfrica extends Generic
 {
     protected array $matchNotFound = [
         'Available',
+    ];
+
+    protected array $matchReserved = [
+        'Reserved:',
     ];
 
     public function isNotFound(): bool
