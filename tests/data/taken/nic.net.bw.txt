@@ -1,0 +1,23 @@
+Domain Name: nic.net.bw
+Registry Domain ID: 9043-bwnic
+Updated Date: 2024-03-22T15:43:54Z
+Creation Date: 2012-11-14T08:53:55Z
+Registry Expiry Date: 2050-12-31T00:00:00Z
+Registrar Registration Expiration Date: 2050-12-31T00:00:00Z
+Registrar: BOCRA Reserved
+Registrar Street Address: Botswana Telecommunications Authority
+Plot 206-207, Independence Avenue, Gaborone
+Private bag 00495, Gaborone
+Registrar City: Plot 206-207, Independence Avenue,
+Registrar State: 00495
+Registrar Postal Code: 00495
+Registrar Email: registry@bocra.org.bw
+Domain Status: serverRenewProhibited https://icann.org/epp#serverRenewProhibited
+Domain Status: serverTransferProhibited https://icann.org/epp#serverTransferProhibited
+Domain Status: serverUpdateProhibited https://icann.org/epp#serverUpdateProhibited
+Domain Status: serverDeleteProhibited https://icann.org/epp#serverDeleteProhibited
+Registry Registrant ID: 56852-bwnic
+Name Server: a.nic.net.bw
+Name Server: b.nic.net.bw
+DNSSEC: unsigned
+>>> Last update of WHOIS database: 2025-08-19T14:10:53.020Z <<<

@@ -56,7 +56,7 @@ class Parser
     {
         if (empty($this->raw)) {
             $parser = $this->getParser();
-            $this->raw = $parser->parse();
+            $this->raw = $parser->getParsed();
         }
         return $this->raw;
     }

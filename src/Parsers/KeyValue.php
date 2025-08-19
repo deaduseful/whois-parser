@@ -122,7 +122,10 @@ abstract class KeyValue implements Strategy
 
     public function isNotFound(): bool
     {
-        if (isset($rawData[$this->statusField]) && $rawData[$this->statusField] === $this->matchNotFound[0]) {
+        $rawData = $this->getParsed();
+        if (isset($this->matchNotFound[0]) &&
+            isset($rawData[$this->statusField]) &&
+            $rawData[$this->statusField] === $this->matchNotFound[0]) {
             return true;
         }
         return false;
@@ -157,6 +160,9 @@ abstract class KeyValue implements Strategy
 
     protected function parseLines(?string $lookup): array
     {
+        if (empty($lookup) === true) {
+            return [];
+        }
         return explode(PHP_EOL, $lookup);
     }
 

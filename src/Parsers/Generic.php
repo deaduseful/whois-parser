@@ -10,7 +10,22 @@ class Generic extends KeyValue
      * @var string[] Not Found Matching
      * @see https://github.com/cheenanet/whois-servers-list/blob/master/whois.json
      */
-    protected array $matchNotFound = [];
+    protected array $matchNotFound = [
+        'No Object Found',
+        'No match for',
+        'NOT FOUND',
+        'No entries found for the selected source(s)',
+        'No entries found',
+        'Object not found',
+        'Object does not exist',
+        'Domain not found',
+        'Domain not found in database',
+        'Domain name not found',
+        'Domain not found in database',
+        'Domain name not registered',
+        'Domain not registered',
+        'Domain not found in registry',
+    ];
 
     /**
      * @var string[] Rate Limit Matching
@@ -38,6 +53,10 @@ class Generic extends KeyValue
             }
         }
         if (empty($rawData['notFound']) === false) {
+            return true;
+        }
+        if (isset($rawData[$this->statusField])
+            && in_array($rawData[$this->statusField], $this->matchNotFound, true)) {
             return true;
         }
         return parent::isNotFound();
