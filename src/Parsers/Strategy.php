@@ -14,4 +14,13 @@ interface Strategy {
     public function getExpiry(array $rawData): ?Carbon;
     public function getRegistrar(array $rawData): ?string;
     public function getNameservers(): ?array;
+
+    /**
+     * Generate a unique hash based on the parsed WHOIS data
+     * This hash should be immutable and represent the "change state" of the record
+     *
+     * @param array $rawData The parsed WHOIS data
+     * @return string A unique hash representing the record's content
+     */
+    public function getHash(array $rawData): string;
 }

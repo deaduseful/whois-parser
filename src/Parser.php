@@ -264,6 +264,7 @@ class Parser
         $response->dates = $this->getDates();
         $response->raw_data = $rawData;
         $response->record_source = $this->source;
+        $response->change_hash = $this->getHash();
         return $response;
     }
 
@@ -331,6 +332,18 @@ class Parser
     public function hasResponse(): bool
     {
         return !empty($this->response);
+    }
+
+    /**
+     * Get a unique hash representing the current state of the WHOIS record
+     * This hash can be used to detect changes in the record over time
+     *
+     * @return string|null A unique hash or null if there's an error
+     */
+    public function getHash(): ?string
+    {
+        $rawData = $this->getRaw();
+        return $this->getParser()->getHash($rawData);
     }
 
     protected function setResponse(): void

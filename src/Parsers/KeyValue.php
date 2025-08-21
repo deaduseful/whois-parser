@@ -258,4 +258,52 @@ abstract class KeyValue implements Strategy
     {
         return strlen($this->getLookup()) <= 7;
     }
+    
+    /**
+     * Generate a unique hash based on the parsed WHOIS data
+     * This hash represents the "change state" of the record and excludes volatile timestamps
+     * 
+     * @param array $rawData The parsed WHOIS data
+     * @return string A unique hash representing the record's content
+     */
+    public function getHash(array $rawData): string
+    {
+        // Create a data structure with only the immutable/relevant fields
+        $hashData = [
+            'domain' => $rawData['domainName'] ?? $rawData['domain'] ?? null,
+            'registrar' => $this->getRegistrar($rawData),
+            'status' => $this->getStatus($rawData),
+            'nameservers' => $this->getNameservers(),
+            'dnssec' => $rawData['dnssec'] ?? null,
+            'registry_domain_id' => $rawData['registryDomainID'] ?? $rawData['registry_domain_id'] ?? null,
+        ];
+        
+        // Add contact information if available (excluding personal details for privacy)
+        $contactFields = [
+            'registrantName', 'registrantOrganization', 'registrantCountry',
+            'adminName', 'adminOrganization', 'adminCountry',
+            'techName', 'techOrganization', 'techCountry',
+            'billingName', 'billingOrganization', 'billingCountry'
+        ];
+        
+        foreach ($contactFields as $field) {
+            if (isset($rawData[$field])) {
+                $hashData[$field] = $rawData[$field];
+            }
+        }
+        
+        // Filter out null/empty values and sort for consistency
+        $hashData = array_filter($hashData, function($value) {
+            return $value !== null && $value !== '' && $value !== [];
+        });
+        
+        // Sort keys for consistent hashing
+        ksort($hashData);
+        
+        // Convert to JSON and hash
+        $jsonString = json_encode($hashData, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+        
+        // Use SHA256 for good uniqueness and collision resistance
+        return hash('sha256', $jsonString);
+    }
 }

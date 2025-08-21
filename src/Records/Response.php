@@ -19,6 +19,7 @@ class Response extends Record
     public ?string $record_source;
     public ?array $raw_data;
     public ?stdClass $dates;
+    public ?string $change_hash;
 
     public function all(): stdClass
     {
@@ -28,6 +29,7 @@ class Response extends Record
         $properties->name_servers = $this->name_servers;
         $properties->whois = $this->whois;
         $properties->record_source = $this->record_source;
+        $properties->change_hash = $this->change_hash;
         return $properties;
     }
 
@@ -92,5 +94,16 @@ class Response extends Record
     public function __toString(): string
     {
         return json_encode($this->all());
+    }
+    
+    /**
+     * Get the change hash for this WHOIS response
+     * This hash represents the unique state of the record and can be used to detect changes
+     * 
+     * @return string|null The change hash or null if not available
+     */
+    public function getChangeHash(): ?string
+    {
+        return $this->change_hash;
     }
 }
