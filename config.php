@@ -12,6 +12,7 @@ use Deaduseful\WhoisParser\src\Parsers\Br;
 use Deaduseful\WhoisParser\src\Parsers\By;
 use Deaduseful\WhoisParser\src\Parsers\Ch;
 use Deaduseful\WhoisParser\src\Parsers\Cl;
+use Deaduseful\WhoisParser\src\Parsers\Com;
 use Deaduseful\WhoisParser\src\Parsers\Cr;
 use Deaduseful\WhoisParser\src\Parsers\Cz;
 use Deaduseful\WhoisParser\src\Parsers\Dk;
@@ -48,6 +49,7 @@ use Deaduseful\WhoisParser\src\Parsers\Moscow;
 use Deaduseful\WhoisParser\src\Parsers\Mx;
 use Deaduseful\WhoisParser\src\Parsers\Name;
 use Deaduseful\WhoisParser\src\Parsers\Nc;
+use Deaduseful\WhoisParser\src\Parsers\Net;
 use Deaduseful\WhoisParser\src\Parsers\NicArmenia;
 use Deaduseful\WhoisParser\src\Parsers\NicCn;
 use Deaduseful\WhoisParser\src\Parsers\NicDe;
@@ -396,7 +398,7 @@ return [
         'coffee' => RegistrarIdentityDigital::class,
         'college' => RegistrarCentralNic::class,
         'cologne' => RegistrarRyce::class,
-        'com' => RegistrarVerisignGrs::class,
+        'com' => Com::class,
         'commbank' => RegistrarGodaddy::class,
         'community' => RegistrarIdentityDigital::class,
         'company' => RegistrarIdentityDigital::class,
@@ -901,7 +903,7 @@ return [
         'nba' => RegistrarGodaddy::class,
         'nc' => Nc::class,
         'nec' => RegistrarCentralNic::class,
-        'net' => RegistrarVerisignGrs::class,
+        'net' => Net::class,
         'netbank' => RegistrarGodaddy::class,
         'netflix' => RegistrarGodaddy::class,
         'network' => RegistrarIdentityDigital::class,
