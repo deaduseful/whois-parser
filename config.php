@@ -25,7 +25,6 @@ use Deaduseful\WhoisParser\src\Parsers\Gdn;
 use Deaduseful\WhoisParser\src\Parsers\Ge;
 use Deaduseful\WhoisParser\src\Parsers\Generic;
 use Deaduseful\WhoisParser\src\Parsers\GenericCcTld;
-use Deaduseful\WhoisParser\src\Parsers\Gg;
 use Deaduseful\WhoisParser\src\Parsers\Hk;
 use Deaduseful\WhoisParser\src\Parsers\Hr;
 use Deaduseful\WhoisParser\src\Parsers\Hu;
@@ -35,7 +34,6 @@ use Deaduseful\WhoisParser\src\Parsers\Im;
 use Deaduseful\WhoisParser\src\Parsers\Io;
 use Deaduseful\WhoisParser\src\Parsers\Is;
 use Deaduseful\WhoisParser\src\Parsers\It;
-use Deaduseful\WhoisParser\src\Parsers\Je;
 use Deaduseful\WhoisParser\src\Parsers\Jp;
 use Deaduseful\WhoisParser\src\Parsers\Kg;
 use Deaduseful\WhoisParser\src\Parsers\Kr;
@@ -69,6 +67,7 @@ use Deaduseful\WhoisParser\src\Parsers\RegistrarAfNic;
 use Deaduseful\WhoisParser\src\Parsers\RegistrarAmazon;
 use Deaduseful\WhoisParser\src\Parsers\RegistrarArpa;
 use Deaduseful\WhoisParser\src\Parsers\RegistrarCentralNic;
+use Deaduseful\WhoisParser\src\Parsers\RegistrarChannelIsles;
 use Deaduseful\WhoisParser\src\Parsers\RegistrarGodaddy;
 use Deaduseful\WhoisParser\src\Parsers\RegistrarIdentityDigital;
 use Deaduseful\WhoisParser\src\Parsers\RegistrarNominet;
@@ -97,7 +96,6 @@ use Deaduseful\WhoisParser\src\Parsers\Tr;
 use Deaduseful\WhoisParser\src\Parsers\Tw;
 use Deaduseful\WhoisParser\src\Parsers\Ua;
 use Deaduseful\WhoisParser\src\Parsers\Ug;
-use Deaduseful\WhoisParser\src\Parsers\Uk;
 use Deaduseful\WhoisParser\src\Parsers\Uz;
 use Deaduseful\WhoisParser\src\Parsers\Vip;
 use Deaduseful\WhoisParser\src\Parsers\Whois1Api;
@@ -113,7 +111,6 @@ use Deaduseful\WhoisParser\src\Parsers\WhoisMasterName;
 use Deaduseful\WhoisParser\src\Parsers\WhoisMediaServ;
 use Deaduseful\WhoisParser\src\Parsers\WhoisNameSrs;
 use Deaduseful\WhoisParser\src\Parsers\WhoisNetworkSolutions;
-use Deaduseful\WhoisParser\src\Parsers\WhoisNicAs;
 use Deaduseful\WhoisParser\src\Parsers\WhoisNicRu;
 use Deaduseful\WhoisParser\src\Parsers\WhoisOne;
 use Deaduseful\WhoisParser\src\Parsers\WhoisPorkBun;
@@ -222,7 +219,7 @@ return [
         'arpa' => RegistrarArpa::class,
         'art' => RegistrarCentralNic::class,
         'arte' => RegistrarVerisignGrs::class,
-        'as' => WhoisNicAs::class,
+        'as' => RegistrarChannelIsles::class,
         'asda' => RegistrarIdentityDigital::class,
         'asia' => RegistrarIdentityDigital::class,
         'associates' => RegistrarIdentityDigital::class,
@@ -592,7 +589,7 @@ return [
         'genting' => RegistrarVerisignGrs::class,
         'george' => RegistrarIdentityDigital::class,
         'gf' => WhoisMediaServ::class,
-        'gg' => Gg::class,
+        'gg' => RegistrarChannelIsles::class,
         'ggee' => RegistrarCentralNic::class,
         'gift' => RegistrarUniregistry::class,
         'gifts' => RegistrarIdentityDigital::class,
@@ -722,7 +719,7 @@ return [
         'jaguar' => RegistrarIdentityDigital::class,
         'java' => RegistrarIdentityDigital::class,
         'jcb' => RegistrarCentralNic::class,
-        'je' => Je::class,
+        'je' => RegistrarChannelIsles::class,
         'jeep' => RegistrarIdentityDigital::class,
         'jetzt' => RegistrarIdentityDigital::class,
         'jewelry' => RegistrarIdentityDigital::class,
@@ -1268,7 +1265,7 @@ return [
         'ubank' => RegistrarIdentityDigital::class,
         'ubs' => RegistrarIdentityDigital::class,
         'ug' => Ug::class,
-        'uk' => Uk::class,
+        'uk' => RegistrarNominet::class,
         'unicom' => RegistrarCentralNic::class,
         'university' => RegistrarIdentityDigital::class,
         'uno' => RegistrarCentralNic::class,

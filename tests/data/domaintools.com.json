@@ -93,5 +93,6 @@
             "registry_domain_id": "1697312_DOMAIN_COM-VRSN"
         }
     },
-    "record_source": "domaintools.com"
+    "record_source": "domaintools.com",
+    "change_hash": "86650ed24bd5d03e53c42c1be1dde44e188a141506e1a0635ec7f76928215ea3"
 }
