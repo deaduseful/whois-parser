@@ -3,7 +3,7 @@
         'name' => 'deaduseful/whois-parser',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '4804610c35f79f651e6e18ea85d915938f64722e',
+        'reference' => '8bb80e34af369a27970d8f5590fc78cf0b6dd5b0',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -31,7 +31,7 @@
         'deaduseful/whois-parser' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '4804610c35f79f651e6e18ea85d915938f64722e',
+            'reference' => '8bb80e34af369a27970d8f5590fc78cf0b6dd5b0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

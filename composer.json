@@ -19,18 +19,18 @@
     },
     "autoload": {
         "psr-4": {
-            "Deaduseful\\WhoisParser\\": "src/"
+            "DeadusefulWhoisParser\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Deaduseful\\WhoisParser\\Tests\\": "tests/"
+            "DeadusefulWhoisParser\\Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Deaduseful\\WhoisParser\\ServiceProvider"
+                "DeadusefulWhoisParser\\ServiceProvider"
             ]
         }
     },
