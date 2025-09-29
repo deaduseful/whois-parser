@@ -4,7 +4,7 @@ namespace Deaduseful\WhoisParser\Tests;
 
 use Deaduseful\WhoisParser\Version;
 use Deaduseful\WhoisParser\Parsers\Generic;
-use Tests\TestCase;
+
 
 class VersionTest extends TestCase
 {

@@ -3,7 +3,7 @@
 namespace Deaduseful\WhoisParser\Tests;
 
 use Deaduseful\WhoisParser\Parser;
-use Tests\TestCase;
+
 
 class ParserTest extends TestCase
 {

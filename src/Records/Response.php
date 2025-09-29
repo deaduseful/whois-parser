@@ -92,4 +92,9 @@ class Response extends Record
     {
         return json_encode($this->all());
     }
+
+    public function __array(): array
+    {
+        return (array)$this->all();
+    }
 }

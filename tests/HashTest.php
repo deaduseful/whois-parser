@@ -4,7 +4,7 @@ namespace Deaduseful\WhoisParser\Tests;
 
 use Deaduseful\WhoisParser\Parsers\Factory;
 use Deaduseful\WhoisParser\Parsers\Generic;
-use Tests\TestCase;
+
 
 class HashTest extends TestCase
 {
