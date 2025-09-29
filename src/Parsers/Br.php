@@ -6,7 +6,9 @@ use Carbon\Carbon;
 
 class Br extends Generic
 {
-    protected ?string $dateFormat = 'Ymd|'; // Could not parse '20220803 #24844081': DateTime::__construct(): Failed to parse time string (20220803 #24844081) at position 9 (#): Unexpected character
+    // Could not parse '20220803 #24844081': DateTime::__construct(): Failed to parse time string (20220803 #24844081)
+    // at position 9 (#): Unexpected character
+    protected ?string $dateFormat = 'Ymd|';
     protected array $mapFields = [
         'created' => 'created',
         'changed' => 'updated',

@@ -124,9 +124,11 @@ abstract class KeyValue implements Strategy
     public function isNotFound(): bool
     {
         $rawData = $this->getParsed();
-        if (isset($this->matchNotFound[0]) &&
+        if (
+            isset($this->matchNotFound[0]) &&
             isset($rawData[$this->statusField]) &&
-            $rawData[$this->statusField] === $this->matchNotFound[0]) {
+            $rawData[$this->statusField] === $this->matchNotFound[0]
+        ) {
             return true;
         }
         return false;
@@ -183,8 +185,10 @@ abstract class KeyValue implements Strategy
                         $raw[$key] = [];
                         $raw[$key][] = $firstValue;
                     }
-                    if ($value &&
-                        in_array($value, $raw[$key]) === false) {
+                    if (
+                        $value &&
+                        in_array($value, $raw[$key]) === false
+                    ) {
                         $raw[$key][] = $value;
                     }
                     $raw[$key] = array_unique($raw[$key]);
@@ -259,13 +263,13 @@ abstract class KeyValue implements Strategy
     {
         return strlen($this->getLookup()) <= 7;
     }
-    
+
     /**
      * Generate a unique hash based on the parsed WHOIS data
      * This hash represents the "change state" of the record and excludes volatile timestamps
      * The hash includes version information as a salt to ensure changes when versions change
-     * 
-     * @param array $rawData The parsed WHOIS data
+     *
+     * @param  array $rawData The parsed WHOIS data
      * @return string A unique hash representing the record's content
      */
     public function getHash(array $rawData): string
@@ -279,7 +283,7 @@ abstract class KeyValue implements Strategy
             'dnssec' => $rawData['dnssec'] ?? null,
             'registry_domain_id' => $rawData['registryDomainID'] ?? $rawData['registry_domain_id'] ?? null,
         ];
-        
+
         // Add contact information if available (excluding personal details for privacy)
         $contactFields = [
             'registrantName', 'registrantOrganization', 'registrantCountry',
@@ -287,27 +291,27 @@ abstract class KeyValue implements Strategy
             'techName', 'techOrganization', 'techCountry',
             'billingName', 'billingOrganization', 'billingCountry'
         ];
-        
+
         foreach ($contactFields as $field) {
             if (isset($rawData[$field])) {
                 $hashData[$field] = $rawData[$field];
             }
         }
-        
+
         // Filter out null/empty values and sort for consistency
-        $hashData = array_filter($hashData, function($value) {
+        $hashData = array_filter($hashData, function ($value) {
             return $value !== null && $value !== '' && $value !== [];
         });
-        
+
         // Sort keys for consistent hashing
         ksort($hashData);
-        
+
         // Convert to JSON and hash
         $jsonString = json_encode($hashData, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
-        
+
         // Include version information as salt to ensure hash changes when versions change
         $versionSalt = Version::getVersion();
-        
+
         // Use SHA256 for good uniqueness and collision resistance
         return hash('sha256', $jsonString . '|' . $versionSalt);
     }

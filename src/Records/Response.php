@@ -7,10 +7,10 @@ use stdClass;
 
 class Response extends Record
 {
-    const DATE_CREATED = 'created';
-    const DATE_EXPIRY = 'expiry';
-    const DATE_UPDATED = 'updated';
-    const FIELD_STATUSES = 'statuses';
+    private const DATE_CREATED = 'created';
+    private const DATE_EXPIRY = 'expiry';
+    private const DATE_UPDATED = 'updated';
+    private const FIELD_STATUSES = 'statuses';
 
     public ?string $registrant;
     public ?Registration $registration;

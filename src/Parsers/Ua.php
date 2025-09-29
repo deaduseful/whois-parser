@@ -17,12 +17,12 @@ class Ua extends Generic
         $pattern = '#^\w+-UANIC \d{4}[01]\d[0-3]\d[0-2]\d[0-5]\d[0-5]\d$#';
         if (preg_match($pattern, $dateString, $matches)) {
             $dateTime = $matches[0];
-            
+
             // Handle case where date is all zeros (like "0-UANIC 00000000000000")
             if (str_contains($dateTime, '00000000000000')) {
                 return null;
             }
-            
+
             $carbon = Carbon::createFromFormat($this->dateFormat, $dateTime);
             if ($carbon->unix() < 0) {
                 return null;

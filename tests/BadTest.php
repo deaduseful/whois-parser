@@ -6,8 +6,9 @@ use Deaduseful\WhoisParser\Parser;
 
 class BadTest extends TestCase
 {
-
-    /** @dataProvider BadData */
+    /**
+     * @dataProvider BadData
+     */
     public function testInvalid(string $domain, ?string $whoisServer = null)
     {
         $lookup = file_get_contents(__DIR__ . '/data/bad/' . $domain . '.txt');

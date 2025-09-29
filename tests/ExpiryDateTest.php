@@ -5,10 +5,11 @@ namespace Deaduseful\WhoisParser\Tests;
 use Carbon\Carbon;
 use Deaduseful\WhoisParser\Parser;
 
-
 class ExpiryDateTest extends TestCase
 {
-    /** @dataProvider expiryData */
+    /**
+     * @dataProvider expiryData
+     */
     public function testParseExpiryDateData(string $domain, ?string $expected = null, ?string $whoisServer = null)
     {
         $lookup = file_get_contents(__DIR__ . '/data/' . $domain . '.txt');

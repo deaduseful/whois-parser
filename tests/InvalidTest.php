@@ -4,11 +4,11 @@ namespace Deaduseful\WhoisParser\Tests;
 
 use Deaduseful\WhoisParser\Parser;
 
-
 class InvalidTest extends TestCase
 {
-
-    /** @dataProvider InvalidData */
+    /**
+     * @dataProvider InvalidData
+     */
     public function testInvalid(string $domain, ?string $whoisServer = null)
     {
         $lookup = file_get_contents(__DIR__ . '/data/invalid/' . $domain . '.txt');

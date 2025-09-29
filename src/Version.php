@@ -4,7 +4,7 @@ namespace Deaduseful\WhoisParser;
 
 /**
  * Version management for the WhoisParser library
- * 
+ *
  * This class manages the overall library version and provides
  * a mechanism for version-based change detection in hashes.
  */
@@ -21,12 +21,11 @@ class Version
 
     /**
      * Get the current version
-     * 
+     *
      * @return string The version
      */
     public static function getVersion(): string
     {
         return self::VERSION;
     }
-
 }

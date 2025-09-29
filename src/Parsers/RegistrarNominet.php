@@ -9,7 +9,7 @@ class RegistrarNominet extends Generic
     protected array $matchRateLimit = [
         'the WHOIS query quota',
     ];
-    
+
     protected array $matchNotFound = [
         'This domain name has not been registered.',
         'No match for',
@@ -57,24 +57,24 @@ class RegistrarNominet extends Generic
         $lines = explode("\n", $this->lookup);
         $data = [];
         $currentSection = null;
-        
+
         foreach ($lines as $line) {
             $line = trim($line);
             if (empty($line)) {
                 continue;
             }
-            
+
             // Check for section headers
             if (preg_match('/^([^:]+):\s*$/', $line, $matches)) {
                 $currentSection = strtolower(trim($matches[1]));
                 continue;
             }
-            
+
             // Check for key-value pairs within sections
             if (preg_match('/^([^:]+):\s*(.+)$/', $line, $matches)) {
                 $key = strtolower(trim($matches[1]));
                 $value = trim($matches[2]);
-                
+
                 // Map to standard fields
                 switch ($key) {
                     case 'domain name':
@@ -122,7 +122,7 @@ class RegistrarNominet extends Generic
                 }
             }
         }
-        
+
         return $this->mapFields($data);
     }
 
@@ -132,22 +132,22 @@ class RegistrarNominet extends Generic
     protected function mapFields(array $data): array
     {
         $mapped = [];
-        
+
         // Map domain
         if (isset($data['domain'])) {
             $mapped['domain'] = $data['domain'];
         }
-        
+
         // Map registrar
         if (isset($data['registrar'])) {
             $mapped['registrar'] = $data['registrar'];
         }
-        
+
         // Map status
         if (isset($data['status'])) {
             $mapped['status'] = $data['status'];
         }
-        
+
         // Map dates
         if (isset($data['registeredOn'])) {
             $mapped['created'] = $this->parseDate($data['registeredOn']);
@@ -158,12 +158,12 @@ class RegistrarNominet extends Generic
         if (isset($data['expiryDate'])) {
             $mapped['expiry'] = $this->parseDate($data['expiryDate']);
         }
-        
+
         // Map nameservers
         if (isset($data['nameserver']) && is_array($data['nameserver'])) {
             $mapped['nameserver'] = $data['nameserver'];
         }
-        
+
         return $mapped;
     }
 }

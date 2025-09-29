@@ -5,7 +5,6 @@ namespace Deaduseful\WhoisParser\Tests;
 use Deaduseful\WhoisParser\Parsers\Factory;
 use Deaduseful\WhoisParser\Parsers\Generic;
 
-
 class HashTest extends TestCase
 {
     /**
@@ -17,7 +16,7 @@ class HashTest extends TestCase
         $lookup = file_get_contents($filePath);
         $parser = Factory::create($lookup, $domain, $whoisServer);
         $rawData = $parser->getParsed();
-        
+
         return [$parser, $rawData];
     }
 
@@ -28,11 +27,17 @@ class HashTest extends TestCase
     {
         $this->assertIsString($hash, "Hash should be a string for {$domain}");
         $this->assertEquals(64, strlen($hash), "Hash should be 64 characters for {$domain}");
-        $this->assertMatchesRegularExpression('/^[a-f0-9]{64}$/', $hash, "Hash should be valid SHA256 hex for {$domain}");
+        $this->assertMatchesRegularExpression(
+            '/^[a-f0-9]{64}$/',
+            $hash,
+            "Hash should be valid SHA256 hex for {$domain}"
+        );
         $this->assertNotNull($hash, "Hash should not be null for {$domain}");
     }
 
-    /** @dataProvider hashData */
+    /**
+     * @dataProvider hashData
+     */
     public function testHashMethodGeneratesConsistentHash(string $domain, ?string $whoisServer = null)
     {
         [$parser, $rawData] = $this->createParserAndParseData($domain, $whoisServer);
@@ -50,7 +55,9 @@ class HashTest extends TestCase
         $this->assertValidHash($hash1, $domain);
     }
 
-    /** @dataProvider hashData */
+    /**
+     * @dataProvider hashData
+     */
     public function testHashMethodExcludesTimestamps(string $domain, ?string $whoisServer = null)
     {
         [$parser, $rawData] = $this->createParserAndParseData($domain, $whoisServer);
@@ -73,10 +80,16 @@ class HashTest extends TestCase
         $modifiedHash = $parser->getHash($modifiedRawData);
 
         // Hash should be the same since we exclude timestamps
-        $this->assertEquals($originalHash, $modifiedHash, "Hash should be the same for {$domain} even with different timestamps");
+        $this->assertEquals(
+            $originalHash,
+            $modifiedHash,
+            "Hash should be the same for {$domain} even with different timestamps"
+        );
     }
 
-    /** @dataProvider hashData */
+    /**
+     * @dataProvider hashData
+     */
     public function testHashMethodDetectsContentChanges(string $domain, ?string $whoisServer = null)
     {
         [$parser, $rawData] = $this->createParserAndParseData($domain, $whoisServer);
@@ -121,16 +134,24 @@ class HashTest extends TestCase
 
         // If we still couldn't modify anything, skip this test
         if (!$fieldModified) {
-            $this->markTestSkipped("No suitable fields found to modify for {$domain}. Available fields: " . implode(', ', array_keys($rawData)));
+            $this->markTestSkipped("No suitable fields found to modify for {$domain}. Available fields: " . implode(
+                ', ',
+                array_keys($rawData)
+            ));
         }
 
         $modifiedHash = $parser->getHash($modifiedRawData);
 
         // Hash should be different for different content
-        $this->assertNotEquals($originalHash, $modifiedHash, "Hash should be different for {$domain} when content changes. Original: {$originalHash}, Modified: {$modifiedHash}. Field modified: {$modifiedField}. Raw data keys: " . implode(', ', array_keys($rawData)));
+        $message = "Hash should be different for {$domain} when content changes. " .
+            "Original: {$originalHash}, Modified: {$modifiedHash}. " .
+            "Field modified: {$modifiedField}. Raw data keys: " . implode(', ', array_keys($rawData));
+        $this->assertNotEquals($originalHash, $modifiedHash, $message);
     }
 
-    /** @dataProvider hashData */
+    /**
+     * @dataProvider hashData
+     */
     public function testHashMethodHandlesRealWhoisData(string $domain, ?string $whoisServer = null)
     {
         [$parser, $rawData] = $this->createParserAndParseData($domain, $whoisServer);
@@ -175,7 +196,9 @@ class HashTest extends TestCase
      * Note: Some domains may have identical hashes if they have identical WHOIS data
      * (e.g., multiple "not found" responses)
      */
-    /** @dataProvider hashData */
+    /**
+     * @dataProvider hashData
+     */
     public function testHashUniquenessAcrossDomains(string $domain, ?string $whoisServer = null)
     {
         [$parser, $rawData] = $this->createParserAndParseData($domain, $whoisServer);
@@ -185,7 +208,9 @@ class HashTest extends TestCase
         $this->assertValidHash($hash, $domain);
     }
 
-    /** @dataProvider hashData */
+    /**
+     * @dataProvider hashData
+     */
     public function testHashDeterminismMultipleIterations(string $domain, ?string $whoisServer = null)
     {
         [$parser, $rawData] = $this->createParserAndParseData($domain, $whoisServer);

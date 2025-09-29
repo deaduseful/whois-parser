@@ -13,7 +13,9 @@ class ServiceProvider extends BaseProvider
     public const RESOURCES_DIR = __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'resources';
     public const MIGRATIONS_DIR = __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'database';
 
-    /** @var string[] */
+    /**
+     * @var string[]
+     */
     public const COMMANDS = [
         Command::class,
     ];

@@ -12,7 +12,7 @@ class Command extends BaseCommand
     public function handle(): int
     {
         $query = $this->argument('query');
-        
+
         // Check if the query is a file path
         if (file_exists($query)) {
             // Read WHOIS data from file
@@ -25,21 +25,21 @@ class Command extends BaseCommand
             $this->info("Example: php artisan whois:parse tests/data/domaintools.com.txt");
             return self::FAILURE;
         }
-        
+
         // Create parser and parse the data
         $parser = new Parser($lookup);
         $result = $parser->get();
-        
+
         if ($result === null) {
             $error = $parser->getError();
             $this->error("Parsing failed: $error");
             return self::FAILURE;
         }
-        
+
         // Output the result as formatted JSON
         $this->info("WHOIS parsing successful!");
         $this->line(json_encode($result, JSON_PRETTY_PRINT));
-        
+
         return self::SUCCESS;
     }
 }

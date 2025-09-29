@@ -4,7 +4,8 @@ namespace Deaduseful\WhoisParser\Parsers;
 
 use Carbon\Carbon;
 
-interface Strategy {
+interface Strategy
+{
     public function parse();
 
     public function getStatus(array $rawData);
@@ -19,7 +20,7 @@ interface Strategy {
      * Generate a unique hash based on the parsed WHOIS data
      * This hash should be immutable and represent the "change state" of the record
      *
-     * @param array $rawData The parsed WHOIS data
+     * @param  array $rawData The parsed WHOIS data
      * @return string A unique hash representing the record's content
      */
     public function getHash(array $rawData): string;

@@ -47,16 +47,20 @@ class Generic extends KeyValue
             if (in_array($find, $rawData, true)) {
                 return true;
             }
-            if (isset($rawData[0])
-                && str_contains($rawData[0], $find)) {
+            if (
+                isset($rawData[0])
+                && str_contains($rawData[0], $find)
+            ) {
                 return true;
             }
         }
         if (empty($rawData['notFound']) === false) {
             return true;
         }
-        if (isset($rawData[$this->statusField])
-            && in_array($rawData[$this->statusField], $this->matchNotFound, true)) {
+        if (
+            isset($rawData[$this->statusField])
+            && in_array($rawData[$this->statusField], $this->matchNotFound, true)
+        ) {
             return true;
         }
         return parent::isNotFound();

@@ -4,10 +4,11 @@ namespace Deaduseful\WhoisParser\Tests;
 
 use Deaduseful\WhoisParser\Parser;
 
-
 class NotFoundTest extends TestCase
 {
-    /** @dataProvider notFoundData */
+    /**
+     * @dataProvider notFoundData
+     */
     public function testNotFound(string $domain)
     {
         $lookup = file_get_contents(__DIR__ . '/data/notfound/' . $domain . '.txt');
@@ -31,7 +32,9 @@ class NotFoundTest extends TestCase
         }, $glob);
     }
 
-    /** @dataProvider takenData */
+    /**
+     * @dataProvider takenData
+     */
     public function testFound(string $domain)
     {
         $lookup = file_get_contents(__DIR__ . '/data/taken/' . $domain . '.txt');

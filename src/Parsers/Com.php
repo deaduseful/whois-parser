@@ -11,7 +11,7 @@ class Com extends Generic
     {
         // Handle hyphen before T: "1987-03-04-T05:00:00Z" -> "1987-03-04T05:00:00Z"
         $dateString = str_replace('-T', 'T', $dateString);
-        
+
         return parent::parseDate($dateString);
     }
 }

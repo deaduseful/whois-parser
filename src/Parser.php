@@ -151,10 +151,16 @@ class Parser
          */
         $registrar->name = $this->parser->getRegistrar($rawData);
         $registrar->abuse_contact_phone = $rawData['registrarAbuseContactPhone'] ?? null;
-        $registrar->abuse_contact_email = array_key_exists('registrarAbuseContactEmail', $rawData) ? strtolower($rawData['registrarAbuseContactEmail']) : null;
+        $registrar->abuse_contact_email = array_key_exists(
+            'registrarAbuseContactEmail',
+            $rawData
+        ) ? strtolower($rawData['registrarAbuseContactEmail']) : null;
         $registrar->iana_id = $rawData['registrarIANAID'] ?? null;
         $registrar->url = array_key_exists('registrarURL', $rawData) ? strtolower($rawData['registrarURL']) : null;
-        $registrar->whois_server = array_key_exists('registrarWHOISServer', $rawData) ? strtolower($rawData['registrarWHOISServer']) : null;
+        $registrar->whois_server = array_key_exists(
+            'registrarWHOISServer',
+            $rawData
+        ) ? strtolower($rawData['registrarWHOISServer']) : null;
         return $registrar;
     }
 

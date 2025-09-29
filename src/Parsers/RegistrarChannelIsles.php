@@ -5,7 +5,7 @@ namespace Deaduseful\WhoisParser\Parsers;
 class RegistrarChannelIsles extends Generic
 {
     protected ?string $dateFormat = 'jS F Y \a\t H:i:s.u';
-    
+
     protected array $matchNotFound = [
         'NOT FOUND',
     ];
@@ -27,40 +27,40 @@ class RegistrarChannelIsles extends Generic
             $lines = explode("\n", $lookup);
             $raw = $this->parseRawChannelIsles($lines);
         }
-        
+
         // Map the structured data to standard fields
         $data = [];
-        
+
         // Map domain
         if (isset($raw['domain'])) {
             $data['domain'] = $raw['domain'];
         }
-        
+
         // Map registrar
         if (isset($raw['registrar'])) {
             $data['registrar'] = $raw['registrar'];
         }
-        
+
         // Map domain status as array (EPP status codes)
         if (isset($raw['domainStatus']) && is_array($raw['domainStatus'])) {
             $data['status'] = $raw['domainStatus'];
         }
-        
+
         // Map registration status
         if (isset($raw['registrationStatus'])) {
             $data['registrationStatus'] = $raw['registrationStatus'];
         }
-        
+
         // Map created date
         if (isset($raw['registeredOn'])) {
             $data['created'] = $this->parseDate($raw['registeredOn']);
         }
-        
+
         // Map nameservers
         if (isset($raw['nameserver']) && is_array($raw['nameserver'])) {
             $data['nameserver'] = $raw['nameserver'];
         }
-        
+
         return $data;
     }
 
@@ -71,24 +71,24 @@ class RegistrarChannelIsles extends Generic
     {
         $raw = [];
         $currentKey = null;
-        
+
         foreach ($lines as $lineNum => $line) {
             $originalLine = $line;
             $line = trim($line);
             if (empty($line)) {
                 continue;
             }
-            
-            
+
+
             // Check for section headers (lines ending with colon and no value)
             if (preg_match('/^([^:]+):\s*$/', $line, $matches)) {
                 $currentKey = strtolower(trim($matches[1]));
                 continue;
-            } 
+            }
             // Handle continuation lines (indented values that follow section headers)
             if ($currentKey && (str_starts_with($originalLine, '     ') || str_starts_with($originalLine, '    '))) {
                 $value = $line;
-                
+
                 if ($currentKey === 'name servers') {
                     // Extract nameserver from line (may include IP addresses)
                     $nameserver = trim(explode(' ', $value)[0]);
@@ -122,20 +122,18 @@ class RegistrarChannelIsles extends Generic
                     // Handle other continuation values
                     $this->processKeyValue($raw, $currentKey, $value);
                 }
-            }
-            // Check for key-value pairs on same line (key: value) - but only if not a continuation line
-            elseif (preg_match('/^([^:]+):\s*(.+)$/', $line, $matches)) {
+            } elseif (preg_match('/^([^:]+):\s*(.+)$/', $line, $matches)) {
                 $key = strtolower(trim($matches[1]));
                 $value = trim($matches[2]);
                 $currentKey = $key;
-                
+
                 $this->processKeyValue($raw, $key, $value);
             }
         }
-        
+
         return $raw;
     }
-    
+
     /**
      * Process key-value pairs
      */

@@ -4,11 +4,11 @@ namespace Deaduseful\WhoisParser\Tests;
 
 use Deaduseful\WhoisParser\Parser;
 
-
 class RateLimitTest extends TestCase
 {
-
-    /** @dataProvider RateLimitedData */
+    /**
+     * @dataProvider RateLimitedData
+     */
     public function testRateLimited(string $domain, ?string $whoisServer = null)
     {
         $filename = __DIR__ . '/data/ratelimit/' . $domain . '.txt';

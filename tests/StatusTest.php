@@ -4,7 +4,6 @@ namespace Deaduseful\WhoisParser\Tests;
 
 use Deaduseful\WhoisParser\Parser;
 
-
 class StatusTest extends TestCase
 {
     public function testStatus()

@@ -4,11 +4,11 @@ namespace Deaduseful\WhoisParser\Tests;
 
 use Deaduseful\WhoisParser\Parser;
 
-
 class ReservedTest extends TestCase
 {
-
-    /** @dataProvider DomainData */
+    /**
+     * @dataProvider DomainData
+     */
     public function testReserved(string $domain, ?string $whoisServer = null)
     {
         $lookup = file_get_contents(__DIR__ . '/data/reserved/' . $domain . '.txt');

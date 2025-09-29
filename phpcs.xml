@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<ruleset name="WhoisParser">
+    <description>Coding standards for WhoisParser library</description>
+
+    <!-- Include the whole project -->
+    <file>src</file>
+    <file>tests</file>
+    <file>config.php</file>
+
+    <!-- Exclude vendor directory -->
+    <exclude-pattern>*/vendor/*</exclude-pattern>
+
+    <!-- Use PSR-12 standard -->
+    <rule ref="PSR12"/>
+
+    <!-- Disable overly strict documentation rules -->
+    <rule ref="Squiz.Commenting.FunctionComment.Missing">
+        <severity>0</severity>
+    </rule>
+    <rule ref="Squiz.Commenting.VariableComment.Missing">
+        <severity>0</severity>
+    </rule>
+    <rule ref="Squiz.Commenting.FunctionComment.MissingParamTag">
+        <severity>0</severity>
+    </rule>
+    <rule ref="Squiz.Commenting.FunctionComment.MissingReturn">
+        <severity>0</severity>
+    </rule>
+    <rule ref="Generic.Commenting.DocComment.MissingShort">
+        <severity>0</severity>
+    </rule>
+
+    <!-- Allow method names that don't follow camelCase for data providers -->
+    <rule ref="PSR1.Methods.CamelCapsMethodName.NotCamelCaps">
+        <severity>0</severity>
+    </rule>
+
+    <!-- Allow longer lines for better readability -->
+    <rule ref="Generic.Files.LineLength">
+        <properties>
+            <property name="lineLimit" value="150"/>
+            <property name="absoluteLineLimit" value="200"/>
+        </properties>
+    </rule>
+
+    <!-- Ignore some rules that might be too strict for this project -->
+    <rule ref="PSR12.Files.FileHeader.SpacingAfterBlock">
+        <severity>0</severity>
+    </rule>
+
+    <!-- Show progress -->
+    <arg value="p"/>
+    
+    <!-- Show sniff codes -->
+    <arg value="s"/>
+    
+    <!-- Show colors -->
+    <arg name="colors"/>
+</ruleset>

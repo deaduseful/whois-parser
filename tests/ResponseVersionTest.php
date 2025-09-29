@@ -4,7 +4,6 @@ namespace Deaduseful\WhoisParser\Tests;
 
 use Deaduseful\WhoisParser\Parser;
 
-
 class ResponseVersionTest extends TestCase
 {
     public function testResponseIncludesVersion()
@@ -13,7 +12,7 @@ class ResponseVersionTest extends TestCase
         $lookup = file_get_contents(__DIR__ . '/data/' . $query . '.txt');
         $parser = new Parser($lookup, $query);
         $result = $parser->get();
-        
+
         // Check that the response includes parser version information
         $this->assertNotNull($result->parser_version, 'Response should include parser_version field');
         $this->assertIsString($result->parser_version, 'Parser version should be a string');
@@ -26,11 +25,11 @@ class ResponseVersionTest extends TestCase
         $lookup = file_get_contents(__DIR__ . '/data/' . $query . '.txt');
         $parser = new Parser($lookup, $query);
         $result = $parser->get();
-        
+
         // Convert to JSON and decode to check structure
-        $jsonString = (string) $result;
+        $jsonString = (string)$result;
         $data = json_decode($jsonString, true);
-        
+
         // Check that parser_version is included in the JSON output
         $this->assertArrayHasKey('parser_version', $data, 'JSON output should include parser_version field');
         $this->assertEquals('1.0.0', $data['parser_version'], 'Parser version in JSON should match version');
@@ -42,10 +41,14 @@ class ResponseVersionTest extends TestCase
         $lookup = file_get_contents(__DIR__ . '/data/' . $query . '.txt');
         $parser = new Parser($lookup, $query);
         $result = $parser->get();
-        
+
         // Check that the all() method includes parser_version
         $allData = $result->all();
-        $this->assertObjectHasProperty('parser_version', $allData, 'all() method should include parser_version property');
+        $this->assertObjectHasProperty(
+            'parser_version',
+            $allData,
+            'all() method should include parser_version property'
+        );
         $this->assertEquals('1.0.0', $allData->parser_version, 'Parser version in all() should match version');
     }
 }

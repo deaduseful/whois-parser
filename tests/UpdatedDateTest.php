@@ -5,10 +5,11 @@ namespace Deaduseful\WhoisParser\Tests;
 use Carbon\Carbon;
 use Deaduseful\WhoisParser\Parser;
 
-
 class UpdatedDateTest extends TestCase
 {
-    /** @dataProvider updatedData */
+    /**
+     * @dataProvider updatedData
+     */
     public function testParseUpdatedDateData(string $domain, ?string $expected = null, ?string $whoisServer = null)
     {
         $lookup = file_get_contents(__DIR__ . '/data/' . $domain . '.txt');
