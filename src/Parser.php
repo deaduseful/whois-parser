@@ -1,15 +1,15 @@
 <?php
 
-namespace Deaduseful\WhoisParser;
+namespace DeadusefulWhoisParser;
 
-use Deaduseful\WhoisParser\Parsers\Factory;
-use Deaduseful\WhoisParser\Parsers\Strategy;
-use Deaduseful\WhoisParser\Records\Contact;
-use Deaduseful\WhoisParser\Records\Registrar;
-use Deaduseful\WhoisParser\Records\Registration;
-use Deaduseful\WhoisParser\Records\Response;
-use Deaduseful\WhoisParser\Records\Whois;
-use Deaduseful\WhoisParser\Version;
+use DeadusefulWhoisParser\Parsers\Factory;
+use DeadusefulWhoisParser\Parsers\Strategy;
+use DeadusefulWhoisParser\Records\Contact;
+use DeadusefulWhoisParser\Records\Registrar;
+use DeadusefulWhoisParser\Records\Registration;
+use DeadusefulWhoisParser\Records\Response;
+use DeadusefulWhoisParser\Records\Whois;
+use DeadusefulWhoisParser\Version;
 use stdClass;
 
 class Parser

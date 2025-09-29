@@ -1,6 +1,6 @@
 <?php
 
-namespace Deaduseful\WhoisParser\Parsers;
+namespace DeadusefulWhoisParser\Parsers;
 
 class No extends Generic
 {
