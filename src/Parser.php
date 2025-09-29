@@ -9,6 +9,7 @@ use Deaduseful\WhoisParser\src\Records\Registrar;
 use Deaduseful\WhoisParser\src\Records\Registration;
 use Deaduseful\WhoisParser\src\Records\Response;
 use Deaduseful\WhoisParser\src\Records\Whois;
+use Deaduseful\WhoisParser\src\Version;
 use stdClass;
 
 class Parser
@@ -265,6 +266,7 @@ class Parser
         $response->raw_data = $rawData;
         $response->record_source = $this->source;
         $response->change_hash = $this->getHash();
+        $response->parser_version = $this->getVersion();
         return $response;
     }
 
@@ -337,6 +339,7 @@ class Parser
     /**
      * Get a unique hash representing the current state of the WHOIS record
      * This hash can be used to detect changes in the record over time
+     * The hash includes version information to ensure it changes when parser versions change
      *
      * @return string|null A unique hash or null if there's an error
      */
@@ -344,6 +347,16 @@ class Parser
     {
         $rawData = $this->getRaw();
         return $this->getParser()->getHash($rawData);
+    }
+
+    /**
+     * Get version information for this parser instance
+     *
+     * @return string The version
+     */
+    public function getVersion(): string
+    {
+        return Version::getVersion();
     }
 
     protected function setResponse(): void

@@ -94,5 +94,6 @@
         }
     },
     "record_source": "domaintools.com",
-    "change_hash": "86650ed24bd5d03e53c42c1be1dde44e188a141506e1a0635ec7f76928215ea3"
+    "change_hash": "cf8b7446ff05e046496a1184f950d8de6e98c22e9980eb01460fea0b3d495dcf",
+    "parser_version": "1.0.0"
 }

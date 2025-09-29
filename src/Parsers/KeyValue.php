@@ -4,6 +4,7 @@ namespace Deaduseful\WhoisParser\src\Parsers;
 
 use Carbon\Carbon;
 use Illuminate\Support\Str;
+use Deaduseful\WhoisParser\src\Version;
 
 abstract class KeyValue implements Strategy
 {
@@ -262,6 +263,7 @@ abstract class KeyValue implements Strategy
     /**
      * Generate a unique hash based on the parsed WHOIS data
      * This hash represents the "change state" of the record and excludes volatile timestamps
+     * The hash includes version information as a salt to ensure changes when versions change
      * 
      * @param array $rawData The parsed WHOIS data
      * @return string A unique hash representing the record's content
@@ -303,7 +305,10 @@ abstract class KeyValue implements Strategy
         // Convert to JSON and hash
         $jsonString = json_encode($hashData, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
         
+        // Include version information as salt to ensure hash changes when versions change
+        $versionSalt = Version::getVersion();
+        
         // Use SHA256 for good uniqueness and collision resistance
-        return hash('sha256', $jsonString);
+        return hash('sha256', $jsonString . '|' . $versionSalt);
     }
 }
