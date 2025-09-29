@@ -12,7 +12,12 @@ class Factory
     private static function loadConfig(): array
     {
         if (self::$config === null) {
-            self::$config = config('whois-parser', []);
+            $configPath = __DIR__ . '/../../config.php';
+            if (file_exists($configPath)) {
+                self::$config = require $configPath;
+            } else {
+                self::$config = [];
+            }
         }
         return self::$config;
     }
