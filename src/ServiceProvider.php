@@ -9,9 +9,9 @@ use Illuminate\Support\ServiceProvider as BaseProvider;
 class ServiceProvider extends BaseProvider
 {
     public const NAMESPACE = 'whois-parser';
-    public const CONFIG_PATH = __DIR__ . DIRECTORY_SEPARATOR . 'config.php';
-    public const RESOURCES_DIR = __DIR__ . DIRECTORY_SEPARATOR . 'resources';
-    public const MIGRATIONS_DIR = __DIR__ . DIRECTORY_SEPARATOR . 'database';
+    public const CONFIG_PATH = __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'config.php';
+    public const RESOURCES_DIR = __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'resources';
+    public const MIGRATIONS_DIR = __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'database';
 
     /** @var string[] */
     public const COMMANDS = [
@@ -69,7 +69,7 @@ class ServiceProvider extends BaseProvider
             ->name($name)
             ->middleware($middleware)
             ->namespace(__NAMESPACE__)
-            ->group(__DIR__ . DIRECTORY_SEPARATOR . 'routes.php');
+            ->group(__DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'routes.php');
     }
 
     private function loadViews(): void
