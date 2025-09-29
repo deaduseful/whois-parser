@@ -3,7 +3,7 @@
 namespace Deaduseful\WhoisParser;
 
 use Illuminate\Console\Command as BaseCommand;
-use Deaduseful\WhoisParser\src\Parser;
+use Deaduseful\WhoisParser\Parser;
 
 class Command extends BaseCommand
 {

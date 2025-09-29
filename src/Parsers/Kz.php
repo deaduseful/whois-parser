@@ -1,6 +1,6 @@
 <?php
 
-namespace DeadusefulWhoisParser\Parsers;
+namespace Deaduseful\WhoisParser\Parsers;
 
 // @todo map all fields correctly
 use Carbon\Carbon;

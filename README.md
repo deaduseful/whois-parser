@@ -40,7 +40,7 @@ The main example is now the `Command.php` file, which implements a working `whoi
 ### Basic Example
 
 ```php
-use Deaduseful\WhoisParser\src\Parser;
+use Deaduseful\WhoisParser\Parser;
 
 // Create parser instance with WHOIS data
 $parser = new Parser($whoisData);

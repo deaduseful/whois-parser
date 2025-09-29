@@ -1,10 +1,10 @@
 <?php
 
-namespace DeadusefulWhoisParser\Parsers;
+namespace Deaduseful\WhoisParser\Parsers;
 
 use Carbon\Carbon;
 use Illuminate\Support\Str;
-use DeadusefulWhoisParser\Version;
+use Deaduseful\WhoisParser\Version;
 
 abstract class KeyValue implements Strategy
 {

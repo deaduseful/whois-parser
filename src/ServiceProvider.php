@@ -1,6 +1,6 @@
 <?php
 
-namespace DeadusefulWhoisParser;
+namespace Deaduseful\WhoisParser;
 
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Route;

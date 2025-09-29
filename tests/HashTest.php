@@ -1,9 +1,9 @@
 <?php
 
-namespace Deaduseful\WhoisParser\tests;
+namespace Deaduseful\WhoisParser\Tests;
 
-use Deaduseful\WhoisParser\src\Parsers\Factory;
-use Deaduseful\WhoisParser\src\Parsers\Generic;
+use Deaduseful\WhoisParser\Parsers\Factory;
+use Deaduseful\WhoisParser\Parsers\Generic;
 use Tests\TestCase;
 
 class HashTest extends TestCase

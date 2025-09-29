@@ -1,9 +1,9 @@
 <?php
 
-namespace Deaduseful\WhoisParser\tests;
+namespace Deaduseful\WhoisParser\Tests;
 
-use Deaduseful\WhoisParser\src\Version;
-use Deaduseful\WhoisParser\src\Parsers\Generic;
+use Deaduseful\WhoisParser\Version;
+use Deaduseful\WhoisParser\Parsers\Generic;
 use Tests\TestCase;
 
 class VersionTest extends TestCase
@@ -51,7 +51,7 @@ class VersionTest extends TestCase
 
     public function testParserVersionUsesVersion()
     {
-        $parser = new \Deaduseful\WhoisParser\src\Parser('test lookup', 'test.com');
+        $parser = new \Deaduseful\WhoisParser\Parser('test lookup', 'test.com');
         $version = $parser->getVersion();
         
         $this->assertIsString($version);

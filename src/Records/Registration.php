@@ -1,6 +1,6 @@
 <?php
 
-namespace DeadusefulWhoisParser\Records;
+namespace Deaduseful\WhoisParser\Records;
 
 class Registration extends Record
 {

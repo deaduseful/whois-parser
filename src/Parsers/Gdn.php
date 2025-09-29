@@ -1,6 +1,6 @@
 <?php
 
-namespace DeadusefulWhoisParser\Parsers;
+namespace Deaduseful\WhoisParser\Parsers;
 
 class Gdn extends Generic
 {

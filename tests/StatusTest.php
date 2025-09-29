@@ -1,8 +1,8 @@
 <?php
 
-namespace Deaduseful\WhoisParser\tests;
+namespace Deaduseful\WhoisParser\Tests;
 
-use Deaduseful\WhoisParser\src\Parser;
+use Deaduseful\WhoisParser\Parser;
 use Tests\TestCase;
 
 class StatusTest extends TestCase

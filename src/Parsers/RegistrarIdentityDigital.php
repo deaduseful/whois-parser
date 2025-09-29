@@ -1,6 +1,6 @@
 <?php
 
-namespace DeadusefulWhoisParser\Parsers;
+namespace Deaduseful\WhoisParser\Parsers;
 
 /**
  * Donuts Inc. and Afilias, Inc. Rebrand to Identity Digital

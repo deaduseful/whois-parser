@@ -1,9 +1,9 @@
 <?php
 
-namespace Deaduseful\WhoisParser\tests;
+namespace Deaduseful\WhoisParser\Tests;
 
 use Carbon\Carbon;
-use Deaduseful\WhoisParser\src\Parser;
+use Deaduseful\WhoisParser\Parser;
 use Tests\TestCase;
 
 class UpdatedDateTest extends TestCase
