@@ -1,6 +1,6 @@
 <?php
 
-namespace Deaduseful\WhoisParser\src;
+namespace Deaduseful\WhoisParser;
 
 /**
  * Version management for the WhoisParser library

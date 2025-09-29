@@ -1,6 +1,6 @@
 <?php
 
-namespace Deaduseful\WhoisParser\src\Parsers;
+namespace Deaduseful\WhoisParser\Parsers;
 
 class Be extends Generic
 {

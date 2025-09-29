@@ -1,6 +1,6 @@
 <?php
 
-namespace Deaduseful\WhoisParser\src\Records;
+namespace Deaduseful\WhoisParser\Records;
 
 class Contact extends Record
 {
