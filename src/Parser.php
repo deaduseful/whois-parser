@@ -9,7 +9,6 @@ use Deaduseful\WhoisParser\Records\Registrar;
 use Deaduseful\WhoisParser\Records\Registration;
 use Deaduseful\WhoisParser\Records\Response;
 use Deaduseful\WhoisParser\Records\Whois;
-use Deaduseful\WhoisParser\Version;
 use stdClass;
 
 class Parser

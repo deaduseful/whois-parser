@@ -2,8 +2,6 @@
 
 namespace Deaduseful\WhoisParser;
 
-use App\Whois;
-use Deaduseful\WhoisParser\Parser;
 use Illuminate\Routing\Controller as BaseController;
 
 class Controller extends BaseController
