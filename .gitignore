@@ -1,1 +1,6 @@
 /.idea/
+.phpunit.result.cache
+/.history/
+
+# Composer dependencies
+/vendor/
