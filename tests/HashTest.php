@@ -8,17 +8,34 @@ use Tests\TestCase;
 
 class HashTest extends TestCase
 {
-    /** @dataProvider hashData */
-    public function testHashMethodGeneratesConsistentHash(string $domain, ?string $whoisServer = null)
+    /**
+     * Helper method to create parser and parse data for a domain
+     */
+    private function createParserAndParseData(string $domain, ?string $whoisServer = null): array
     {
         $filePath = __DIR__ . '/data/' . $domain . '.txt';
         $lookup = file_get_contents($filePath);
-
-        // Use the Factory to get the correct parser for this domain
         $parser = Factory::create($lookup, $domain, $whoisServer);
-
-        // Parse the data first
         $rawData = $parser->getParsed();
+        
+        return [$parser, $rawData];
+    }
+
+    /**
+     * Helper method to validate hash format
+     */
+    private function assertValidHash(string $hash, string $domain): void
+    {
+        $this->assertIsString($hash, "Hash should be a string for {$domain}");
+        $this->assertEquals(64, strlen($hash), "Hash should be 64 characters for {$domain}");
+        $this->assertMatchesRegularExpression('/^[a-f0-9]{64}$/', $hash, "Hash should be valid SHA256 hex for {$domain}");
+        $this->assertNotNull($hash, "Hash should not be null for {$domain}");
+    }
+
+    /** @dataProvider hashData */
+    public function testHashMethodGeneratesConsistentHash(string $domain, ?string $whoisServer = null)
+    {
+        [$parser, $rawData] = $this->createParserAndParseData($domain, $whoisServer);
 
         // Get the hash multiple times to ensure consistency
         $hash1 = $parser->getHash($rawData);
@@ -28,31 +45,15 @@ class HashTest extends TestCase
         // All hashes should be exactly the same
         $this->assertEquals($hash1, $hash2, "Hash should be consistent for {$domain} (1st vs 2nd)");
         $this->assertEquals($hash2, $hash3, "Hash should be consistent for {$domain} (2nd vs 3rd)");
-        $this->assertEquals($hash1, $hash3, "Hash should be consistent for {$domain} (1st vs 3rd)");
 
-        // Hash should be a valid SHA256 string
-        $this->assertIsString($hash1, "Hash should be a string for {$domain}");
-        $this->assertEquals(64, strlen($hash1), "Hash should be 64 characters for {$domain}");
-        $this->assertMatchesRegularExpression('/^[a-f0-9]{64}$/', $hash1, "Hash should be valid SHA256 hex for {$domain}");
-
-        // Hash should not be null
-        $this->assertNotNull($hash1, "Hash should not be null for {$domain}");
+        // Validate hash format
+        $this->assertValidHash($hash1, $domain);
     }
 
     /** @dataProvider hashData */
     public function testHashMethodExcludesTimestamps(string $domain, ?string $whoisServer = null)
     {
-        $filePath = __DIR__ . '/data/' . $domain . '.txt';
-        if (!file_exists($filePath)) {
-            $this->markTestSkipped("Test data file not found: {$filePath}");
-        }
-        $lookup = file_get_contents($filePath);
-
-        // Use the Factory to get the correct parser for this domain
-        $parser = Factory::create($lookup, $domain, $whoisServer);
-
-        // Parse the data first
-        $rawData = $parser->getParsed();
+        [$parser, $rawData] = $this->createParserAndParseData($domain, $whoisServer);
 
         // Get the hash from the original data
         $originalHash = $parser->getHash($rawData);
@@ -78,17 +79,7 @@ class HashTest extends TestCase
     /** @dataProvider hashData */
     public function testHashMethodDetectsContentChanges(string $domain, ?string $whoisServer = null)
     {
-        $filePath = __DIR__ . '/data/' . $domain . '.txt';
-        if (!file_exists($filePath)) {
-            $this->markTestSkipped("Test data file not found: {$filePath}");
-        }
-        $lookup = file_get_contents($filePath);
-
-        // Use the Factory to get the correct parser for this domain
-        $parser = Factory::create($lookup, $domain, $whoisServer);
-
-        // Parse the data first
-        $rawData = $parser->getParsed();
+        [$parser, $rawData] = $this->createParserAndParseData($domain, $whoisServer);
 
         // Get the hash from the original data
         $originalHash = $parser->getHash($rawData);
@@ -142,25 +133,12 @@ class HashTest extends TestCase
     /** @dataProvider hashData */
     public function testHashMethodHandlesRealWhoisData(string $domain, ?string $whoisServer = null)
     {
-        $filePath = __DIR__ . '/data/' . $domain . '.txt';
-        if (!file_exists($filePath)) {
-            $this->markTestSkipped("Test data file not found: {$filePath}");
-        }
-        $lookup = file_get_contents($filePath);
-
-        // Use the Factory to get the correct parser for this domain
-        $parser = Factory::create($lookup, $domain, $whoisServer);
-
-        // Parse the data first
-        $rawData = $parser->getParsed();
+        [$parser, $rawData] = $this->createParserAndParseData($domain, $whoisServer);
 
         $hash = $parser->getHash($rawData);
 
         // Basic validation
-        $this->assertIsString($hash, "Hash should be a string for {$domain}");
-        $this->assertEquals(64, strlen($hash), "Hash should be 64 characters for {$domain}");
-        $this->assertMatchesRegularExpression('/^[a-f0-9]{64}$/', $hash, "Hash should be valid SHA256 hex for {$domain}");
-        $this->assertNotNull($hash, "Hash should not be null for {$domain}");
+        $this->assertValidHash($hash, $domain);
 
         // Hash should be consistent across multiple calls
         $hash2 = $parser->getHash($rawData);
@@ -200,47 +178,30 @@ class HashTest extends TestCase
     /** @dataProvider hashData */
     public function testHashUniquenessAcrossDomains(string $domain, ?string $whoisServer = null)
     {
-        $filePath = __DIR__ . '/data/' . $domain . '.txt';
-        if (!file_exists($filePath)) {
-            $this->markTestSkipped("Test data file not found: {$filePath}");
-        }
-        
-        $lookup = file_get_contents($filePath);
-        $parser = Factory::create($lookup, $domain, $whoisServer);
-        $rawData = $parser->getParsed();
+        [$parser, $rawData] = $this->createParserAndParseData($domain, $whoisServer);
         $hash = $parser->getHash($rawData);
-        
+
         // Each domain should produce a valid hash
-        $this->assertIsString($hash, "Hash should be a string for {$domain}");
-        $this->assertEquals(64, strlen($hash), "Hash should be 64 characters for {$domain}");
-        $this->assertMatchesRegularExpression('/^[a-f0-9]{64}$/', $hash, "Hash should be valid SHA256 hex for {$domain}");
-        $this->assertNotNull($hash, "Hash should not be null for {$domain}");
+        $this->assertValidHash($hash, $domain);
     }
 
     /** @dataProvider hashData */
     public function testHashDeterminismMultipleIterations(string $domain, ?string $whoisServer = null)
     {
-        $filePath = __DIR__ . '/data/' . $domain . '.txt';
-        if (!file_exists($filePath)) {
-            $this->markTestSkipped("Test data file not found: {$filePath}");
-        }
-        
-        $lookup = file_get_contents($filePath);
-        $parser = Factory::create($lookup, $domain, $whoisServer);
-        $rawData = $parser->getParsed();
-        
+        [$parser, $rawData] = $this->createParserAndParseData($domain, $whoisServer);
+
         // Generate hash 10 times to ensure consistency
         $hashes = [];
         for ($i = 0; $i < 10; $i++) {
             $hashes[] = $parser->getHash($rawData);
         }
-        
+
         // All hashes should be exactly the same
         $firstHash = $hashes[0];
         foreach ($hashes as $index => $hash) {
             $this->assertEquals(
-                $firstHash, 
-                $hash, 
+                $firstHash,
+                $hash,
                 "Hash for {$domain} should be consistent (iteration {$index})"
             );
         }
