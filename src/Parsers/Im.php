@@ -12,6 +12,9 @@ class Im extends Generic
     {
         $rawData = $this->parse();
         $lastElement = array_pop($rawData);
-        return str_ends_with($lastElement, $this->matchNotFound[0]);
+        if (is_string($lastElement)) {
+            return str_ends_with($lastElement, $this->matchNotFound[0]);
+        }
+        return false;
     }
 }
