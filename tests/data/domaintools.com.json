@@ -78,7 +78,7 @@
             "billing": {
                 "name": "",
                 "org": "",
-                "street": [],
+                "street": "",
                 "city": "",
                 "state": "",
                 "postal": "",

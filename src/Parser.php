@@ -137,6 +137,27 @@ class Parser
         return $whois;
     }
 
+    /**
+     * Helper method to safely handle values that might be arrays
+     * Takes the first value if it's an array, applies strtolower only when explicitly requested
+     *
+     * @param null|string|array $value The value to process (could be string, array, or null)
+     * @param bool $lowercase Whether to apply strtolower to the result
+     * @return string|null The processed value
+     */
+    protected function processValue(null|string|array $value, bool $lowercase = false): ?string
+    {
+        if (is_array($value)) {
+            $value = !empty($value) ? $value[0] : null;
+        }
+
+        if ($value !== null && $lowercase) {
+            return strtolower($value);
+        }
+
+        return $value;
+    }
+
     protected function getRegistrar(): Registrar
     {
         $rawData = $this->getRaw();
@@ -151,16 +172,11 @@ class Parser
          */
         $registrar->name = $this->parser->getRegistrar($rawData);
         $registrar->abuse_contact_phone = $rawData['registrarAbuseContactPhone'] ?? null;
-        $registrar->abuse_contact_email = array_key_exists(
-            'registrarAbuseContactEmail',
-            $rawData
-        ) ? strtolower($rawData['registrarAbuseContactEmail']) : null;
+        $registrar->abuse_contact_email = $this->processValue($rawData['registrarAbuseContactEmail'] ?? null, true);
         $registrar->iana_id = $rawData['registrarIANAID'] ?? null;
-        $registrar->url = array_key_exists('registrarURL', $rawData) ? strtolower($rawData['registrarURL']) : null;
-        $registrar->whois_server = array_key_exists(
-            'registrarWHOISServer',
-            $rawData
-        ) ? strtolower($rawData['registrarWHOISServer']) : null;
+        $registrar->url = $this->processValue($rawData['registrarURL'] ?? null, true);
+        $registrar->whois_server = $this->processValue($rawData['registrarWHOISServer'] ?? null, true);
+
         return $registrar;
     }
 
@@ -182,14 +198,14 @@ class Parser
         $registrant = new Contact();
         $registrant->name = $rawData['registrantName'] ?? '';
         $registrant->org = $rawData['registrantOrganization'] ?? '';
-        $registrant->street = $rawData['registrantStreet'] ?? '';
+        $registrant->street = $this->processValue($rawData['registrantStreet'] ?? '', false);
         $registrant->city = $rawData['registrantCity'] ?? '';
         $registrant->state = $rawData['registrantState/Province'] ?? '';
         $registrant->postal = $rawData['registrantPostalCode'] ?? '';
         $registrant->country = $rawData['registrantCountry'] ?? '';
         $registrant->phone = $rawData['registrantPhone'] ?? '';
         $registrant->fax = $rawData['registrantFax'] ?? '';
-        $registrant->email = $rawData['registrantEmail'] ?? '';
+        $registrant->email = $this->processValue($rawData['registrantEmail'] ?? '');
         return $registrant;
     }
 
@@ -199,14 +215,14 @@ class Parser
         $admin = new Contact();
         $admin->name = $rawData['adminName'] ?? '';
         $admin->org = $rawData['adminOrganization'] ?? '';
-        $admin->street = $rawData['adminStreet'] ?? [];
+        $admin->street = $this->processValue($rawData['adminStreet'] ?? '', false);
         $admin->city = $rawData['adminCity'] ?? '';
         $admin->state = $rawData['adminState/Province'] ?? '';
         $admin->postal = $rawData['adminPostalCode'] ?? '';
         $admin->country = $rawData['adminCountry'] ?? '';
         $admin->phone = $rawData['adminPhone'] ?? '';
         $admin->fax = $rawData['adminFax'] ?? '';
-        $admin->email = $rawData['adminEmail'] ?? '';
+        $admin->email = $this->processValue($rawData['adminEmail'] ?? '');
         return $admin;
     }
 
@@ -216,14 +232,14 @@ class Parser
         $tech = new Contact();
         $tech->name = $rawData['techName'] ?? '';
         $tech->org = $rawData['techOrganization'] ?? '';
-        $tech->street = $rawData['techStreet'] ?? [];
+        $tech->street = $this->processValue($rawData['techStreet'] ?? '', false);
         $tech->city = $rawData['techCity'] ?? '';
         $tech->state = $rawData['techState/Province'] ?? '';
         $tech->postal = $rawData['techPostalCode'] ?? '';
         $tech->country = $rawData['techCountry'] ?? '';
         $tech->phone = $rawData['techPhone'] ?? '';
         $tech->fax = $rawData['techFax'] ?? '';
-        $tech->email = $rawData['techEmail'] ?? '';
+        $tech->email = $this->processValue($rawData['techEmail'] ?? '');
         return $tech;
     }
 
@@ -233,14 +249,14 @@ class Parser
         $billing = new Contact();
         $billing->name = $rawData['billingName'] ?? '';
         $billing->org = $rawData['billingOrganization'] ?? '';
-        $billing->street = $rawData['billingStreet'] ?? [];
+        $billing->street = $this->processValue($rawData['billingStreet'] ?? '', false);
         $billing->city = $rawData['billingCity'] ?? '';
         $billing->state = $rawData['billingState/Province'] ?? '';
         $billing->postal = $rawData['billingPostalCode'] ?? '';
         $billing->country = $rawData['billingCountry'] ?? '';
         $billing->phone = $rawData['billingPhone'] ?? '';
         $billing->fax = $rawData['billingFax'] ?? '';
-        $billing->email = $rawData['billingEmail'] ?? '';
+        $billing->email = $this->processValue($rawData['billingEmail'] ?? '');
         return $billing;
     }
 
@@ -312,13 +328,20 @@ class Parser
         if (empty($rawData['nameServer'])) {
             return null;
         }
+
         $nameServers = $rawData['nameServer'];
+        // Name servers are meant to remain as an array, so we handle them differently
         $nameServers = is_string($nameServers) ? [$nameServers] : $nameServers;
+
+        // Process each name server consistently
         $data = [];
         foreach ($nameServers as $nameServer) {
-            $data[] = strtolower(trim($nameServer, '.'));
+            if (is_string($nameServer)) {
+                $data[] = strtolower(trim($nameServer, '.'));
+            }
         }
-        return $data;
+
+        return !empty($data) ? $data : null;
     }
 
     protected function getDates(): stdClass
