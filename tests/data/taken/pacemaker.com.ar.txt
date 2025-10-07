@@ -1,0 +1,31 @@
+% La informaciÃ³n a la que estÃ¡s accediendo se provee exclusivamente para
+% fines relacionados con operaciones sobre nombres de dominios y DNS,
+% quedando absolutamente prohibido su uso para otros fines.
+%
+% La DIRECCIÃN NACIONAL DEL REGISTRO DE DOMINIOS DE INTERNET es depositaria
+% de la informaciÃ³n que los usuarios declaran con la sola finalidad de
+% registrar nombres de dominio en â.arâ, para ser publicada en el sitio web
+% de NIC Argentina.
+%
+% La informaciÃ³n personal que consta en la base de datos generada a partir
+% del sistema de registro de nombres de dominios se encuentra amparada por
+% la Ley NÂ° 25326 âProtecciÃ³n de Datos Personalesâ y el Decreto
+% Reglamentario 1558/01.
+
+domain:		pacemaker.com.ar
+registrant:	30602087618
+registrar:	nicar
+registered:	1997-10-30 00:00:00
+changed:	2024-12-30 13:48:50.775442
+expire:		2025-11-29 00:00:00
+
+contact:	30602087618
+name:		PACEMAKER SRL
+registrar:	nicar
+created:	2014-11-03 00:00:00
+changed:	2024-12-30 13:48:48.837275
+
+nserver:	ns2.data-domain.com ()
+nserver:	ns1.data-domain.com ()
+registrar:	nicar
+created:	2016-07-01 01:14:08.254009
