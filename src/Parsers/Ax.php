@@ -1,19 +1,11 @@
 <?php
 
 namespace Deaduseful\WhoisParser\Parsers;
-
 class Ax extends Generic
 {
-    protected array $matchNotFound = [
-        'Domain not found',
+    protected array $mapFields = [
+        'modified' => self::DATE_UPDATED,
+        'expires' => self::DATE_EXPIRY,
     ];
-
-    public function isNotFound(): bool
-    {
-        $rawData = $this->parse();
-        if (in_array($this->matchNotFound[0], $rawData)) {
-            return true;
-        }
-        return false;
-    }
 }
+

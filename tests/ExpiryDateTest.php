@@ -45,6 +45,7 @@ class ExpiryDateTest extends TestCase
             ['dinamoon.pl', null],
             ['toko.ly', '2022-01-21 08:50:34'],
             ['zara', null],
+            ['cams.ax', '24.03.2026'],
         ];
     }
 }

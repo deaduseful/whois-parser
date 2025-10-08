@@ -1,0 +1,23 @@
+
+
+
+domain...............: cams.ax
+status...............: Registered
+created..............: 24.03.2025
+expires..............: 24.03.2026
+available............: 25.04.2026
+modified.............: 24.03.2025
+RegistryLock.........: no
+
+Nameservers
+
+nserver..............: ns1.netim.net
+nserver..............: ns2.netim.net
+nserver..............: ns3.netim.net
+
+Registrar
+
+registrar............: NETIM
+www..................: https://www.netim.com/en/domain-name/ax-domain
+
+Copyright (c) Ålands Landskapsregering
