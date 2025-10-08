@@ -1,0 +1,77 @@
+Domain Name: eu.com
+Registry Domain ID:
+Registrar WHOIS Server: whois.instra.net
+Registrar URL: http://www.instra.com
+Updated Date: 2017-12-15T19:50:47Z
+Creation Date: UNDEFINED
+Registrar Registration Expiration Date: 2026-10-25T13:00:00Z
+Registrar: Instra Corporation Pty Ltd.
+Registrar IANA ID: 1376
+Registrar Abuse Contact Email: abuse@instra.com
+Registrar Abuse Contact Phone: +61.397831800
+Registry Registrant ID: Private data
+Registrant Name: Private data
+Registrant Organization: Private data
+Registrant Street: Private data
+Registrant City: Private data
+Registrant State/Province: Private data
+Registrant Postal Code: Private data
+Registrant Country: Private data
+Registrant Phone: Private data
+Registrant Phone Ext: Private data
+Registrant Fax: Private data
+Registrant Fax Ext: Private data
+Registrant Email: https://whoiscontact.secure-admin.com/?token=92BBB6A3-57CE-46B8-AC52-337AE1A9DBD6
+Registry Admin ID: Private data
+Admin Name: Private data
+Admin Organization: Private data
+Admin Street: Private data
+Admin City: Private data
+Admin State/Province: Private data
+Admin Postal Code: Private data
+Admin Country: Private data
+Admin Phone: Private data
+Admin Phone Ext: Private data
+Admin Fax: Private data
+Admin Fax Ext: Private data
+Admin Email: https://whoiscontact.secure-admin.com/?token=A053FB12-E257-4A2E-B24D-580D6C9F1B85
+Registry Tech ID: Private data
+Tech Name: Private data
+Tech Organization: Private data
+Tech Street: Private data
+Tech City: Private data
+Tech State/Province: Private data
+Tech Postal Code: Private data
+Tech Country: Private data
+Tech Phone: Private data
+Tech Phone Ext: Private data
+Tech Fax: Private data
+Tech Fax Ext: Private data
+Tech Email: https://whoiscontact.secure-admin.com/?token=1D2DE59E-2E99-4580-9C07-F5B80A149BB5
+Domain Status: clientTransferProhibited - http://www.icann.org/epp#clientTransferProhibited
+Domain Status: clientDeleteProhibited - http://www.icann.org/epp#clientDeleteProhibited
+Domain Status: clientUpdateProhibited - http://www.icann.org/epp#clientUpdateProhibited
+Name Server: ns1.centralnic.net
+Name Server: ns2.centralnic.net
+Name Server: ns3.centralnic.net
+Name Server: ns4.centralnic.net
+DNSSEC: unsigned
+URL of the ICANN WHOIS Data Problem Reporting System:
+http://wdprs.internic.net/
+>>> Last update of WHOIS database: 2017-12-15T19:50:47Z <<<
+
+For more information on Whois status codes, please visit https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en.
+
+; This data is provided for information purposes, and to assist persons
+; obtaining information about or related to domain name registration
+; records. We do not guarantee its accuracy.
+; By submitting a WHOIS query, you agree that you will use this data
+; only for lawful purposes and that, under no circumstances, you will
+; use this data to
+; 1) allow, enable, or otherwise support the transmission of mass
+;    unsolicited, commercial advertising or solicitations via E-mail
+;    (spam); or
+; 2) enable high volume, automated, electronic processes that apply
+;    to this WHOIS server.
+; These terms may be changed without prior notice.
+; By submitting this query, you agree to abide by this policy.

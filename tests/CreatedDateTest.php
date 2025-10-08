@@ -60,6 +60,7 @@ class CreatedDateTest extends TestCase
             ['spb24.net', '2009-07-22', 'whois.mastername.ru'],
             ['zara', '2015-09-10'],
             ['amid.org', '2009-03-31T14:30:31Z', 'whois.uniregistrar.com'],
+            ['eu.com', null, 'whois.instra.net'],
         ];
     }
 }

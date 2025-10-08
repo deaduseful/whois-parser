@@ -25,6 +25,11 @@ abstract class KeyValue implements Strategy
         self::DATE_UPDATED,
         self::DATE_EXPIRY,
     ];
+    protected array $nullDateStrings = [
+        'Never',
+        'UNDEFINED',
+        'N/A',
+    ];
 
     protected array $mapFields = [
         'nserver' => 'nameserver',
@@ -141,10 +146,11 @@ abstract class KeyValue implements Strategy
 
     protected function parseDate(string $dateString): ?Carbon
     {
+        $dateString = trim($dateString);
         if (strlen($dateString) < 3) {
             return null;
         }
-        if ($dateString == 'Never') {
+        if (in_array($dateString, $this->nullDateStrings, true)) {
             return null;
         }
         if ($dateString[0] === '-') { // eg: -0001-29-11T19:03:58Z
