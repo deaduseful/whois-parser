@@ -180,84 +180,28 @@ class Parser
         return $registrar;
     }
 
-    protected function getRegistrant(): Contact
+    protected function getRegistrant(): Contact|array
     {
-        $rawData = $this->getRaw();
-        /**
-         * 'name' => 'REDACTED FOR PRIVACY'
-         * 'org' => 'REDACTED FOR PRIVACY'
-         * 'street' => Array (...)
-         * 'city' => 'REDACTED FOR PRIVACY'
-         * 'state' => 'WA'
-         * 'postal' => 'REDACTED FOR PRIVACY'
-         * 'country' => 'US'
-         * 'phone' => 'REDACTED FOR PRIVACY'
-         * 'fax' => 'REDACTED FOR PRIVACY'
-         * 'email' => 'https://tieredaccess.com/cont...bd3696'
-         */
-        $registrant = new Contact();
-        $registrant->name = $rawData['registrantName'] ?? '';
-        $registrant->org = $rawData['registrantOrganization'] ?? '';
-        $registrant->street = $this->processValue($rawData['registrantStreet'] ?? '', false);
-        $registrant->city = $rawData['registrantCity'] ?? '';
-        $registrant->state = $rawData['registrantState/Province'] ?? '';
-        $registrant->postal = $rawData['registrantPostalCode'] ?? '';
-        $registrant->country = $rawData['registrantCountry'] ?? '';
-        $registrant->phone = $rawData['registrantPhone'] ?? '';
-        $registrant->fax = $rawData['registrantFax'] ?? '';
-        $registrant->email = $this->processValue($rawData['registrantEmail'] ?? '');
-        return $registrant;
+        $contactParser = new ContactParser($this->getRaw());
+        return $contactParser->getContact('registrant');
     }
 
-    protected function getAdmin(): Contact
+    protected function getAdmin(): Contact|array
     {
-        $rawData = $this->getRaw();
-        $admin = new Contact();
-        $admin->name = $rawData['adminName'] ?? '';
-        $admin->org = $rawData['adminOrganization'] ?? '';
-        $admin->street = $this->processValue($rawData['adminStreet'] ?? '', false);
-        $admin->city = $rawData['adminCity'] ?? '';
-        $admin->state = $rawData['adminState/Province'] ?? '';
-        $admin->postal = $rawData['adminPostalCode'] ?? '';
-        $admin->country = $rawData['adminCountry'] ?? '';
-        $admin->phone = $rawData['adminPhone'] ?? '';
-        $admin->fax = $rawData['adminFax'] ?? '';
-        $admin->email = $this->processValue($rawData['adminEmail'] ?? '');
-        return $admin;
+        $contactParser = new ContactParser($this->getRaw());
+        return $contactParser->getContact('admin');
     }
 
-    protected function getTech(): Contact
+    protected function getTech(): Contact|array
     {
-        $rawData = $this->getRaw();
-        $tech = new Contact();
-        $tech->name = $rawData['techName'] ?? '';
-        $tech->org = $rawData['techOrganization'] ?? '';
-        $tech->street = $this->processValue($rawData['techStreet'] ?? '', false);
-        $tech->city = $rawData['techCity'] ?? '';
-        $tech->state = $rawData['techState/Province'] ?? '';
-        $tech->postal = $rawData['techPostalCode'] ?? '';
-        $tech->country = $rawData['techCountry'] ?? '';
-        $tech->phone = $rawData['techPhone'] ?? '';
-        $tech->fax = $rawData['techFax'] ?? '';
-        $tech->email = $this->processValue($rawData['techEmail'] ?? '');
-        return $tech;
+        $contactParser = new ContactParser($this->getRaw());
+        return $contactParser->getContact('tech');
     }
 
-    protected function getBilling(): Contact
+    protected function getBilling(): Contact|array
     {
-        $rawData = $this->getRaw();
-        $billing = new Contact();
-        $billing->name = $rawData['billingName'] ?? '';
-        $billing->org = $rawData['billingOrganization'] ?? '';
-        $billing->street = $this->processValue($rawData['billingStreet'] ?? '', false);
-        $billing->city = $rawData['billingCity'] ?? '';
-        $billing->state = $rawData['billingState/Province'] ?? '';
-        $billing->postal = $rawData['billingPostalCode'] ?? '';
-        $billing->country = $rawData['billingCountry'] ?? '';
-        $billing->phone = $rawData['billingPhone'] ?? '';
-        $billing->fax = $rawData['billingFax'] ?? '';
-        $billing->email = $this->processValue($rawData['billingEmail'] ?? '');
-        return $billing;
+        $contactParser = new ContactParser($this->getRaw());
+        return $contactParser->getContact('billing');
     }
 
     protected function getOtherProperties(): stdClass

@@ -1,0 +1,118 @@
+{
+    "registrant": "Timor Telecom",
+    "registration": {
+        "created": "2009-08-27",
+        "expiry": "2024-06-05",
+        "updated": "2023-05-29",
+        "registrar": "Timor Telecom",
+        "statuses": [
+            "ok https://icann.org/epp#ok"
+        ]
+    },
+    "name_servers": [
+        "ns1.timortelecom.tl",
+        "ns2.timortelecom.tl",
+        "ns3.timortelecom.tl",
+        "ns4.timortelecom.tl"
+    ],
+    "whois": {
+        "record": "timortelecom.tl",
+        "domain": "timortelecom.tl",
+        "created_date": "2009-08-27T03:33:05.649Z",
+        "updated_date": "2023-05-29T01:56:01.483Z",
+        "expired_date": "2024-06-05T00:00:00.0Z",
+        "statuses": [
+            "ok https://icann.org/epp#ok"
+        ],
+        "name_servers": [
+            "ns1.timortelecom.tl",
+            "ns2.timortelecom.tl",
+            "ns3.timortelecom.tl",
+            "ns4.timortelecom.tl"
+        ],
+        "registrar": {
+            "name": "Timor Telecom",
+            "abuse_contact_phone": null,
+            "abuse_contact_email": null,
+            "iana_id": null,
+            "url": null,
+            "whois_server": null
+        },
+        "contacts": {
+            "registrant": {
+                "name": "Timor Telecom",
+                "org": "Timor Telecom, SA",
+                "street": "Timor Plaza",
+                "city": "Comoro",
+                "state": "Dili",
+                "postal": "135",
+                "country": "TL",
+                "phone": "+670.3303000",
+                "fax": "+670.3303419",
+                "email": "info@timortelecom.tl"
+            },
+            "admin": [
+                {
+                    "name": "Timor Telecom",
+                    "org": "Timor Telecom, SA",
+                    "street": "Timor Plaza",
+                    "city": "Comoro",
+                    "state": "Dili",
+                    "postal": "135",
+                    "country": "TL",
+                    "phone": "+670.3303000",
+                    "fax": "+670.3303419",
+                    "email": "info@timortelecom.tl"
+                },
+                {
+                    "name": "Timor Telecom DEO/OSI",
+                    "org": "Timor Telecom, SA",
+                    "street": "Caicoli",
+                    "city": "Dili",
+                    "state": "Dili",
+                    "postal": "135",
+                    "country": "TL",
+                    "phone": "+670.3303610",
+                    "fax": "",
+                    "email": "osi@timortelecom.tl"
+                }
+            ],
+            "tech": {
+                "name": "Timor Telecom DEO/OSI",
+                "org": "Timor Telecom, SA",
+                "street": "Caicoli",
+                "city": "Dili",
+                "state": "Dili",
+                "postal": "135",
+                "country": "TL",
+                "phone": "+670.3303610",
+                "fax": "",
+                "email": "osi@timortelecom.tl"
+            },
+            "billing": {
+                "name": "Jose Dias",
+                "org": "Timor Telecom, SA",
+                "street": "Timor Plaza 4th Floor",
+                "city": "Dili",
+                "state": "",
+                "postal": "060503",
+                "country": "TL",
+                "phone": "+670.3303540",
+                "fax": "",
+                "email": "jose.dias@timortelecom.tl"
+            }
+        },
+        "other_properties": {
+            "dnssec": "unsigned",
+            "registry_domain_id": "281141-CoCCA"
+        }
+    },
+    "dates": {
+        "created": "2009-08-27T03:33:05.649Z",
+        "updated": "2023-05-29T01:56:01.483Z",
+        "expiry": "2024-06-05T00:00:00.0Z"
+    },
+    "record_source": "timortelecom.tl",
+    "change_hash": null
+}
+
