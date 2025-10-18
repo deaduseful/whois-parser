@@ -1,0 +1,51 @@
+% This is the ISNIC Whois server.
+%
+% Rights restricted by copyright.
+% See https://www.isnic.is/en/about/copyright
+
+domain:       fwh.is
+registrant:   DA1271-IS
+admin-c:      NI231-IS
+tech-c:       NI231-IS
+zone-c:       NI231-IS
+billing-c:    NI230-IS
+nserver:      ns1.byet.org
+nserver:      ns2.byet.org
+nserver:      ns3.byet.org
+nserver:      ns4.byet.org
+dnssec:       unsigned delegation
+created:      November  1 2024
+expires:      November  1 2026
+source:       ISNIC
+
+role:         InfinityFree
+nic-hdl:      DA1271-IS
+address:      Kwikstaartlaan 42
+address:      Unit G1517
+address:      Zeist, Utrecht 3704GS
+address:      NL
+phone:        +31 853016126
+e-mail:       domains@infinityfree.com
+created:      November  1 2024
+source:       ISNIC
+
+role:         NameCheap, Inc.
+nic-hdl:      NI230-IS
+address:      4600 East Washington Street, Suite 305
+address:      Phoenix, AZ 85034
+address:      US
+phone:        +1 6613102107
+e-mail:       isnicdomains2@namecheap.com
+created:      March 21 2019
+source:       ISNIC
+
+role:         NameCheap, Inc.
+nic-hdl:      NI231-IS
+address:      4600 East Washington Street, Suite 305
+address:      Phoenix, AZ 85034
+address:      US
+phone:        +1 6613102107
+e-mail:       isnicdomains@namecheap.com
+created:      March 22 2019
+source:       ISNIC
+

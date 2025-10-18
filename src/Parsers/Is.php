@@ -10,8 +10,14 @@ class Is extends Generic
 
     public function isNotFound(): bool
     {
-        $rawData = $this->parse();
-        $lastElement = array_pop($rawData);
-        return str_starts_with($lastElement, $this->matchNotFound[0]);
+        // Check the raw WHOIS response for "not found" message
+        foreach ($this->matchNotFound as $find) {
+            if (str_contains($this->lookup, $find)) {
+                return true;
+            }
+        }
+        
+        // Fall back to parent implementation
+        return parent::isNotFound();
     }
 }
