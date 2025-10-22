@@ -23,18 +23,18 @@ class RateLimitTest extends TestCase
     public function RateLimitedData(): array
     {
         return [
-            ['tubosparis.es', null],
             ['devonhampers.com', 'whois.joker.com'],
-            ['test.ch', null],
-            ['test.com', 'whois.networksolutions.com'],
-            ['dogtrainingcollar.org', 'whois.godaddy.com'],
             ['glucofence.org', null],
             ['hebrewbooks.org', null],
+            ['nic.lincoln', 'whois.nic.lincoln'],
             ['qcmf.com.au', null, 'whois.auda.org.au'],
-            ['test.vip', null],
+            ['test.ch', null],
+            ['test.com', 'whois.networksolutions.com'],
             ['test.cz', null],
-            ['whois.nominet.uk', null],
+            ['test.vip', null],
+            ['tubosparis.es', null],
             ['whois.dynadot.com', 'whois.dynadot.com'],
+            ['whois.nominet.uk', null],
         ];
     }
 }

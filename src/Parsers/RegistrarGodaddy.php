@@ -5,7 +5,7 @@ namespace Deaduseful\WhoisParser\Parsers;
 class RegistrarGodaddy extends Generic
 {
     protected array $matchRateLimit = [
-        'Rate limit exceeded',
+        'Number of allowed queries exceeded',
     ];
     protected array $matchNotFound = [
         'No Data Found',
