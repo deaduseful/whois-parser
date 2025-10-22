@@ -5,15 +5,15 @@ simple and intuitive interface for extracting domain registration details from v
 
 ## Why?
 
-- WHOIS is an interesting challenge to solve.
+- [WHOIS](https://en.wikipedia.org/wiki/WHOIS) is an interesting challenge to solve.
 - It encapsulates the sum of many years of dealing with WHOIS records.
 - It has tests.
 - It's just a parser, the Whois Lookup mechanism is a separate concern.
 - It's fast, because it only does what it needs to.
 - Why not use [RDAP](https://en.wikipedia.org/wiki/Registration_Data_Access_Protocol)? A downside
   of [RDAP](https://github.com/spatie/laravel-rdap/) is that not all TLDs are supported, and likely never will.
-- Although the ICANN Board has set the date for WHOIS Sunset for gTLDs was set as 28 January 2025, WHOIS will continue
-  to be use indeterminately.
+- Although the ICANN Board set the date for WHOIS Sunset for gTLDs was set as 28 January 2025, WHOIS use will continue
+  indeterminately.
 
 ## Aims
 
