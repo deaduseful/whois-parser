@@ -12,7 +12,6 @@ use Deaduseful\WhoisParser\Parsers\Br;
 use Deaduseful\WhoisParser\Parsers\By;
 use Deaduseful\WhoisParser\Parsers\Ch;
 use Deaduseful\WhoisParser\Parsers\Cl;
-use Deaduseful\WhoisParser\Parsers\Com;
 use Deaduseful\WhoisParser\Parsers\Cr;
 use Deaduseful\WhoisParser\Parsers\Cz;
 use Deaduseful\WhoisParser\Parsers\Dk;
@@ -52,7 +51,7 @@ use Deaduseful\WhoisParser\Parsers\NicArmenia;
 use Deaduseful\WhoisParser\Parsers\NicCn;
 use Deaduseful\WhoisParser\Parsers\NicDe;
 use Deaduseful\WhoisParser\Parsers\NicGoogle;
-use Deaduseful\WhoisParser\Parsers\Nl;
+use Deaduseful\WhoisParser\Parsers\RegistrarSidn;
 use Deaduseful\WhoisParser\Parsers\No;
 use Deaduseful\WhoisParser\Parsers\Nu;
 use Deaduseful\WhoisParser\Parsers\Nz;
@@ -60,7 +59,6 @@ use Deaduseful\WhoisParser\Parsers\Org;
 use Deaduseful\WhoisParser\Parsers\Pf;
 use Deaduseful\WhoisParser\Parsers\Pk;
 use Deaduseful\WhoisParser\Parsers\Pl;
-use Deaduseful\WhoisParser\Parsers\Politie;
 use Deaduseful\WhoisParser\Parsers\Pt;
 use Deaduseful\WhoisParser\Parsers\Qa;
 use Deaduseful\WhoisParser\Parsers\RegistrarAfNic;
@@ -91,13 +89,11 @@ use Deaduseful\WhoisParser\Parsers\Su;
 use Deaduseful\WhoisParser\Parsers\Th;
 use Deaduseful\WhoisParser\Parsers\Tm;
 use Deaduseful\WhoisParser\Parsers\Tn;
-use Deaduseful\WhoisParser\Parsers\Top;
 use Deaduseful\WhoisParser\Parsers\Tr;
 use Deaduseful\WhoisParser\Parsers\Tw;
 use Deaduseful\WhoisParser\Parsers\Ua;
 use Deaduseful\WhoisParser\Parsers\Ug;
 use Deaduseful\WhoisParser\Parsers\Uz;
-use Deaduseful\WhoisParser\Parsers\Vip;
 use Deaduseful\WhoisParser\Parsers\Whois1Api;
 use Deaduseful\WhoisParser\Parsers\WhoisAitDomains;
 use Deaduseful\WhoisParser\Parsers\WhoisAudaOrgAu;
@@ -119,7 +115,6 @@ use Deaduseful\WhoisParser\Parsers\WhoisTcinetRu;
 use Deaduseful\WhoisParser\Parsers\WhoisUniregistrar;
 use Deaduseful\WhoisParser\Parsers\WhoisWebmasters;
 use Deaduseful\WhoisParser\Parsers\WhoisWebNic;
-use Deaduseful\WhoisParser\Parsers\Xyz;
 use Deaduseful\WhoisParser\Parsers\Ye;
 
 return [
@@ -395,7 +390,7 @@ return [
         'coffee' => RegistrarIdentityDigital::class,
         'college' => RegistrarCentralNic::class,
         'cologne' => RegistrarRyce::class,
-        'com' => Com::class,
+        'com' => Generic::class,
         'commbank' => RegistrarGodaddy::class,
         'community' => RegistrarIdentityDigital::class,
         'company' => RegistrarIdentityDigital::class,
@@ -921,7 +916,7 @@ return [
         'ninja' => RegistrarIdentityDigital::class,
         'nissan' => RegistrarCentralNic::class,
         'nissay' => RegistrarVerisignGrs::class,
-        'nl' => Nl::class,
+        'nl' => RegistrarSidn::class,
         'no' => No::class,
         'nokia' => RegistrarCentralNic::class,
         'norton' => RegistrarVerisignGrs::class,
@@ -999,7 +994,7 @@ return [
         'pnc' => RegistrarIdentityDigital::class,
         'pohl' => RegistrarCentralNic::class,
         'poker' => RegistrarIdentityDigital::class,
-        'politie' => Politie::class,
+        'politie' => RegistrarSidn::class,
         'porn' => RegistrarGodaddy::class,
         'post' => RegistrarIdentityDigital::class,
         'pr' => RegistrarIdentityDigital::class,
@@ -1236,7 +1231,7 @@ return [
         'today' => RegistrarIdentityDigital::class,
         'tokyo' => RegistrarCentralNic::class,
         'tools' => RegistrarIdentityDigital::class,
-        'top' => Top::class,
+        'top' => RegistrarCentralNic::class,
         'toray' => RegistrarCentralNic::class,
         'toshiba' => RegistrarCentralNic::class,
         'total' => RegistrarAfNic::class,
@@ -1290,7 +1285,7 @@ return [
         'viking' => RegistrarIdentityDigital::class,
         'villas' => RegistrarIdentityDigital::class,
         'vin' => RegistrarIdentityDigital::class,
-        'vip' => Vip::class,
+        'vip' => RegistrarGodaddy::class,
         'virgin' => RegistrarNominet::class,
         'visa' => RegistrarVerisignGrs::class,
         'vision' => RegistrarIdentityDigital::class,
@@ -1333,7 +1328,7 @@ return [
         'xn--vermgensberater-ctb' => RegistrarCentralNic::class,
         'xn--vermgensberatung-pwb' => RegistrarCentralNic::class,
         'xn--vhquv' => RegistrarIdentityDigital::class,
-        'xyz' => Xyz::class,
+        'xyz' => RegistrarCentralNic::class,
         'yachts' => RegistrarCentralNic::class,
         'yahoo' => RegistrarVerisignGrs::class,
         'yamaxun' => RegistrarAmazon::class,
