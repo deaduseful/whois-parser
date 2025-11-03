@@ -52,7 +52,7 @@ class NotFoundTest extends TestCase
         }, $glob);
     }
 
-    public function testIsAvailableFalse()
+    public function testIsAvailable()
     {
         $lookup = file_get_contents(__DIR__ . '/data/xexample.ru.txt');
         $parser = new Parser($lookup, 'example.ru', 'whois.nic.ru');
