@@ -105,7 +105,6 @@ use Deaduseful\WhoisParser\Parsers\WhoisMasterName;
 use Deaduseful\WhoisParser\Parsers\WhoisMediaServ;
 use Deaduseful\WhoisParser\Parsers\WhoisNameSrs;
 use Deaduseful\WhoisParser\Parsers\WhoisNetworkSolutions;
-use Deaduseful\WhoisParser\Parsers\WhoisNicRu;
 use Deaduseful\WhoisParser\Parsers\WhoisOne;
 use Deaduseful\WhoisParser\Parsers\WhoisPorkBun;
 use Deaduseful\WhoisParser\Parsers\WhoisPublicDomainRegistry;
@@ -132,7 +131,7 @@ return [
         'whois.namesrs.com' => WhoisNameSrs::class,
         'whois.networksolutions.com' => WhoisNetworkSolutions::class,
         'whois.nic.google' => NicGoogle::class,
-        'whois.nic.ru' => WhoisNicRu::class,
+        'whois.nic.ru' => WhoisTcinetRu::class,
         'whois.nic.uk' => RegistrarNominet::class,
         'whois.one.com' => WhoisOne::class,
         'whois.porkbun.com' => WhoisPorkBun::class,
