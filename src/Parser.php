@@ -5,6 +5,12 @@ namespace Deaduseful\WhoisParser;
 use Deaduseful\WhoisParser\Parsers\Factory;
 use Deaduseful\WhoisParser\Parsers\Strategy;
 use Deaduseful\WhoisParser\Records\Contact;
+use Deaduseful\WhoisParser\Records\Errors\BadError;
+use Deaduseful\WhoisParser\Records\Errors\Error;
+use Deaduseful\WhoisParser\Records\Errors\InvalidError;
+use Deaduseful\WhoisParser\Records\Errors\NotFoundError;
+use Deaduseful\WhoisParser\Records\Errors\RateLimitError;
+use Deaduseful\WhoisParser\Records\Errors\ReservedError;
 use Deaduseful\WhoisParser\Records\Registrar;
 use Deaduseful\WhoisParser\Records\Registration;
 use Deaduseful\WhoisParser\Records\Response;
@@ -13,18 +19,13 @@ use stdClass;
 
 class Parser
 {
-    protected const ERROR_NOT_FOUND = 'Not found';
-    protected const ERROR_RATE_LIMITED = 'Rate limited';
-    protected const ERROR_INVALID = 'Invalid query';
-    protected const ERROR_RESERVED = 'Reserved';
-    protected const ERROR_BAD = 'Bad response';
     protected ?Response $response = null;
+    protected ?Error $error = null;
     protected ?string $lookup;
     protected ?array $raw;
     protected ?Strategy $parser;
     protected ?string $source;
     protected ?string $whoisServer;
-    protected ?string $error = null;
 
     public function __construct(string $lookup, ?string $source = null, ?string $whoisServer = null)
     {
@@ -70,25 +71,10 @@ class Parser
         return $this;
     }
 
-    protected function checkForErrors(): ?string
+    protected function checkForErrors(): ?Error
     {
         $parser = $this->getParser();
-        if ($parser->isRateLimit()) {
-            return self::ERROR_RATE_LIMITED;
-        }
-        if ($parser->isInvalid()) {
-            return self::ERROR_INVALID;
-        }
-        if ($parser->isReserved()) {
-            return self::ERROR_RESERVED;
-        }
-        if ($parser->isNotFound()) {
-            return self::ERROR_NOT_FOUND;
-        }
-        if ($parser->isBad()) {
-            return self::ERROR_BAD;
-        }
-        return null;
+        return Error::fromParser($parser, $this->lookup, $this->source);
     }
 
     public function getResponse(): ?Response
@@ -221,7 +207,7 @@ class Parser
     {
         $rawData = $this->getRaw();
         $response = new Response();
-        $response->registrant = $rawData['registrantName'] ?? null;
+        $response->registrant = $this->getRegistrant();
         $registration = $this->getRegistration();
         $response->registration = $registration;
         $response->name_servers = $this->getNameServers();
@@ -255,7 +241,7 @@ class Parser
         return $contacts;
     }
 
-    public function getError(): ?string
+    public function getError(): null|string|Error
     {
         if ($this->response !== null) {
             return null;
@@ -300,7 +286,37 @@ class Parser
 
     public function isNotFound(): bool
     {
-        return $this->getError() === self::ERROR_NOT_FOUND;
+        return $this->getError() instanceof NotFoundError;
+    }
+
+    public function isRateLimit(): bool
+    {
+        return $this->getError() instanceof RateLimitError;
+    }
+
+    public function isInvalid(): bool
+    {
+        return $this->getError() instanceof InvalidError;
+    }
+
+    public function isReserved(): bool
+    {
+        return $this->getError() instanceof ReservedError;
+    }
+
+    public function isBad(): bool
+    {
+        return $this->getError() instanceof BadError;
+    }
+
+    public function hasError(): bool
+    {
+        return $this->getError() !== null;
+    }
+
+    public function isSuccess(): bool
+    {
+        return $this->hasResponse();
     }
 
     public function hasResponse(): bool

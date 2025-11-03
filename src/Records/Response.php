@@ -12,7 +12,7 @@ class Response extends Record
     private const DATE_UPDATED = 'updated';
     private const FIELD_STATUSES = 'statuses';
 
-    public ?string $registrant;
+    public ?Contact $registrant;
     public ?Registration $registration;
     public ?array $name_servers;
     public ?Whois $whois;
@@ -25,7 +25,7 @@ class Response extends Record
     public function all(): stdClass
     {
         $properties = new stdClass();
-        $properties->registrant = $this->registrant;
+        $properties->registrant = $this->registrant->name;
         $properties->registration = $this->registration;
         $properties->name_servers = $this->name_servers;
         $properties->whois = $this->whois;
@@ -86,15 +86,5 @@ class Response extends Record
     protected function has(string $key): bool
     {
         return isset($this->registration->{$key}) || isset($this->whois->{$key});
-    }
-
-    public function __toString(): string
-    {
-        return json_encode($this->all());
-    }
-
-    public function __array(): array
-    {
-        return (array)$this->all();
     }
 }
