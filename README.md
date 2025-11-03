@@ -25,6 +25,7 @@ simple and intuitive interface for extracting domain registration details from v
 
 - **Multiple Parser Strategies**: Generic, TLD-specific, and WHOIS server-specific parsers
 - **Comprehensive Data Extraction**: Registration details, contacts, name servers, dates
+- **Domain Transferability Detection**: Determine if a domain can be transferred based on WHOIS data
 - **Error Handling**: Not found, rate limited, invalid query detection
 - **Laravel Integration**: Service provider, controllers, and artisan commands
 - **Test Data**: Extensive collection of WHOIS records for testing
@@ -72,6 +73,42 @@ The package automatically registers with Laravel and provides:
 - **Service Provider**: `Deaduseful\WhoisParser\ServiceProvider`
 - **Controller**: `Deaduseful\WhoisParser\Controller`
 - **Commands**: Various WHOIS-related artisan commands
+
+### Domain Transferability
+
+Check if a domain can be transferred based on its WHOIS record:
+
+```php
+use Deaduseful\WhoisParser\Parser;
+
+$parser = new Parser($whoisData, 'example.com');
+$result = $parser->get();
+
+// Check if transferable
+$isTransferable = $result->isTransferable();
+
+if ($isTransferable === true) {
+    echo "Domain is transferable";
+} elseif ($isTransferable === false) {
+    echo "Domain is NOT transferable (locked or prohibited)";
+} else {
+    echo "Cannot determine transferability";
+}
+
+// Access the transferability record
+$transferability = $result->transferability;
+echo $transferability->transferable; // true, false, or null
+```
+
+The transferability feature:
+- **Built into Parser Strategy**: Each parser class can define transferability patterns
+- **EPP Status Detection**: Automatically checks for standard EPP status codes
+- **TLD-Specific Support**: `.tr` and `.se`/`.nu` have custom transfer lock detection
+- **Extensible**: Override `isTransferable()` in parser classes for custom logic
+
+**Detected Patterns:**
+- **Non-Transferable**: `clientTransferProhibited`, `serverTransferProhibited`, `pendingDelete`, `redemptionPeriod`, etc.
+- **Transferable**: `status: ok`, `registry-lock: unlocked`, presence of Registrar IANA ID
 
 ### Available Commands
 

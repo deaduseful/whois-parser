@@ -24,4 +24,12 @@ interface Strategy
      * @return string A unique hash representing the record's content
      */
     public function getHash(array $rawData): string;
+
+    /**
+     * Determine if domain is transferable based on parsed data
+     *
+     * @param  array $rawData The parsed WHOIS data
+     * @return bool|null True if transferable, false if not, null if cannot determine
+     */
+    public function isTransferable(array $rawData): ?bool;
 }

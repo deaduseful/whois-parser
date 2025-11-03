@@ -14,6 +14,7 @@ use Deaduseful\WhoisParser\Records\Errors\ReservedError;
 use Deaduseful\WhoisParser\Records\Registrar;
 use Deaduseful\WhoisParser\Records\Registration;
 use Deaduseful\WhoisParser\Records\Response;
+use Deaduseful\WhoisParser\Records\Transferability;
 use Deaduseful\WhoisParser\Records\Whois;
 use stdClass;
 
@@ -218,7 +219,17 @@ class Parser
         $response->record_source = $this->source;
         $response->change_hash = $this->getHash();
         $response->parser_version = $this->getVersion();
+        $response->transferability = $this->getTransferability();
         return $response;
+    }
+
+    protected function getTransferability(): Transferability
+    {
+        $rawData = $this->getRaw();
+        $parser = $this->getParser();
+        $transferability = new Transferability();
+        $transferability->transferable = $parser->isTransferable($rawData);
+        return $transferability;
     }
 
     protected function getContacts(): stdClass

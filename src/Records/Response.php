@@ -21,6 +21,7 @@ class Response extends Record
     public ?stdClass $dates;
     public ?string $change_hash;
     public ?string $parser_version;
+    public ?Transferability $transferability;
 
     public function all(): stdClass
     {
@@ -76,6 +77,9 @@ class Response extends Record
             return true;
         }
         foreach ($allStatuses as $status) {
+            if ($status === null) {
+                continue;
+            }
             if (str_contains(strtolower($status), strtolower($checkStatus))) {
                 return true;
             }
@@ -86,5 +90,15 @@ class Response extends Record
     protected function has(string $key): bool
     {
         return isset($this->registration->{$key}) || isset($this->whois->{$key});
+    }
+
+    /**
+     * Determine if the domain is transferable based on WHOIS data
+     *
+     * @return bool|null True if transferable, false if not, null if cannot determine
+     */
+    public function isTransferable(): ?bool
+    {
+        return $this->transferability?->isTransferable();
     }
 }

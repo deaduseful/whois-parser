@@ -17,6 +17,28 @@ abstract class KeyValue implements Strategy
     ];
     protected array $matchRateLimit = [];
     protected array $matchInvalid = [];
+    
+    /**
+     * Status patterns that indicate domain is NOT transferable
+     * Checked against the status field
+     */
+    protected array $matchNonTransferable = [
+        'clientTransferProhibited',
+        'serverTransferProhibited',
+        'clientUpdateProhibited',
+        'serverUpdateProhibited',
+        'pendingDelete',
+        'pendingTransfer',
+        'redemptionPeriod',
+    ];
+    
+    /**
+     * Status patterns that indicate domain IS transferable
+     * Only used if no non-transferable patterns match
+     */
+    protected array $matchTransferable = [
+        'ok',
+    ];
 
     protected ?string $lookup;
     protected ?string $error = null;
@@ -320,5 +342,58 @@ abstract class KeyValue implements Strategy
 
         // Use SHA256 for good uniqueness and collision resistance
         return hash('sha256', $jsonString . '|' . $versionSalt);
+    }
+
+    /**
+     * Determine if domain is transferable based on parsed data
+     * Checks status field against non-transferable and transferable patterns
+     *
+     * @param  array $rawData The parsed WHOIS data
+     * @return bool|null True if transferable, false if not, null if cannot determine
+     */
+    public function isTransferable(array $rawData): ?bool
+    {
+        // Get status using the configured status field
+        // (domainStatus is already mapped to status via $mapFields)
+        $status = $this->getStatus($rawData);
+        
+        // Normalize status to array
+        $statuses = is_array($status) ? $status : [$status];
+        
+        // First check for non-transferable patterns (these take priority)
+        foreach ($statuses as $statusValue) {
+            if ($statusValue === null || $statusValue === '') {
+                continue;
+            }
+            
+            $statusLower = strtolower($statusValue);
+            foreach ($this->matchNonTransferable as $pattern) {
+                if (str_contains($statusLower, strtolower($pattern))) {
+                    return false;
+                }
+            }
+        }
+        
+        // Then check for transferable patterns
+        foreach ($statuses as $statusValue) {
+            if ($statusValue === null || $statusValue === '') {
+                continue;
+            }
+            
+            $statusLower = strtolower($statusValue);
+            foreach ($this->matchTransferable as $pattern) {
+                if (str_contains($statusLower, strtolower($pattern))) {
+                    return true;
+                }
+            }
+        }
+        
+        // Check if we have a registrar IANA ID (positive indicator when no prohibitions)
+        if (!empty($rawData['registrarIANAID'])) {
+            return true;
+        }
+        
+        // Cannot determine
+        return null;
     }
 }

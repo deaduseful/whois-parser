@@ -10,6 +10,7 @@ class RegistrarCentralNic extends Generic
         'creationDate' => 'created',
         'updatedDate' => 'updated',
         'registrarRegistrationExpirationDate' => 'expiry',
+        'domainStatus' => 'status',
     ];
 
     protected array $matchNotFound = [
