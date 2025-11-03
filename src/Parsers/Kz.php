@@ -2,7 +2,6 @@
 
 namespace Deaduseful\WhoisParser\Parsers;
 
-// @todo map all fields correctly
 use Carbon\Carbon;
 
 class Kz extends Generic

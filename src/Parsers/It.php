@@ -10,14 +10,6 @@ class It extends Generic
         'expireDate' => 'expiry',
     ];
 
-    protected function getFilter(array $raw): array
-    {
-        // @todo handle sections and dates better.
-        $data = parent::getFilter($raw);
-
-        return $data;
-    }
-
     protected string $statusField = 'status';
 
     protected array $matchNotFound = [

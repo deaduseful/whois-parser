@@ -30,7 +30,6 @@ use Deaduseful\WhoisParser\Parsers\Hu;
 use Deaduseful\WhoisParser\Parsers\Id;
 use Deaduseful\WhoisParser\Parsers\Il;
 use Deaduseful\WhoisParser\Parsers\Im;
-use Deaduseful\WhoisParser\Parsers\Io;
 use Deaduseful\WhoisParser\Parsers\Is;
 use Deaduseful\WhoisParser\Parsers\It;
 use Deaduseful\WhoisParser\Parsers\Jp;
@@ -53,7 +52,6 @@ use Deaduseful\WhoisParser\Parsers\NicDe;
 use Deaduseful\WhoisParser\Parsers\NicGoogle;
 use Deaduseful\WhoisParser\Parsers\RegistrarSidn;
 use Deaduseful\WhoisParser\Parsers\No;
-use Deaduseful\WhoisParser\Parsers\Nu;
 use Deaduseful\WhoisParser\Parsers\Nz;
 use Deaduseful\WhoisParser\Parsers\Org;
 use Deaduseful\WhoisParser\Parsers\Pf;
@@ -700,7 +698,7 @@ return [
         'international' => RegistrarIdentityDigital::class,
         'intuit' => RegistrarGodaddy::class,
         'investments' => RegistrarIdentityDigital::class,
-        'io' => Io::class,
+        'io' => RegistrarIdentityDigital::class,
         'ipiranga' => RegistrarGodaddy::class,
         'ir' => Cr::class,
         'irish' => RegistrarIdentityDigital::class,
@@ -926,7 +924,7 @@ return [
         'nra' => RegistrarIdentityDigital::class,
         'nrw' => RegistrarCentralNic::class,
         'ntt' => RegistrarCentralNic::class,
-        'nu' => Nu::class,
+        'nu' => Se::class,
         'nyc' => RegistrarGodaddy::class,
         'nz' => Nz::class,
         'obi' => RegistrarIdentityDigital::class,
