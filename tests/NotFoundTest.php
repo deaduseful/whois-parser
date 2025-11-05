@@ -19,7 +19,7 @@ class NotFoundTest extends TestCase
         }*/
         $parser = new Parser($lookup, $domain);
         $output = $parser->get();
-        self::assertNull($output);
+        self::assertNull($output, $domain);
         $expected = 'Not found';
         self::assertEquals($expected, $parser->getError(), $domain);
     }
