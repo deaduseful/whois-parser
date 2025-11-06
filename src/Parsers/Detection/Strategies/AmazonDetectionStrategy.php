@@ -25,7 +25,6 @@ class AmazonDetectionStrategy extends AbstractDetectionStrategy
     
     public function detect(string $lookup): ?string
     {
-        // "ARS" removed - too broad (only 3 letters)
         // Now requires full "Amazon Registry Services, Inc." or their domain
         if ($this->containsIndicators($lookup, self::INDICATORS, 1, false)) {
             return RegistrarAmazon::class;

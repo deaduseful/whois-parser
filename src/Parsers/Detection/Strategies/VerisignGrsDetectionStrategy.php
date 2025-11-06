@@ -27,8 +27,6 @@ class VerisignGrsDetectionStrategy extends AbstractDetectionStrategy
     
     public function detect(string $lookup): ?string
     {
-        // Removed generic "Verisign"/"VERISIGN" - too broad
-        // The first indicator is very specific and sufficient
         if ($this->containsIndicators($lookup, self::INDICATORS, 1, false)) {
             return RegistrarVerisignGrs::class;
         }

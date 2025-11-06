@@ -22,7 +22,6 @@ class GodaddyDetectionStrategy extends AbstractDetectionStrategy
     // Not just any mention of GoDaddy (which could be registrar/nameservers)
     protected const INDICATORS = [
         'The data contained in GoDaddy.com',
-        'abuse@godaddy.com',
         'whois.godaddy.com',
     ];
     

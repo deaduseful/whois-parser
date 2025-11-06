@@ -19,8 +19,6 @@ class ChannelIslandsDetectionStrategy extends AbstractDetectionStrategy
     
     protected const INDICATORS = [
         'Island Networks',
-        'Island Biz',
-        'channelisles.net',
     ];
     
     public function detect(string $lookup): ?string

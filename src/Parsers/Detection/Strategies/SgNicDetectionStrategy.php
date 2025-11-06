@@ -20,13 +20,10 @@ class SgNicDetectionStrategy extends AbstractDetectionStrategy
     
     protected const INDICATORS = [
         'SGNIC WHOIS Server',
-        'Error code: 01044',
-        'Error code: 02304',
     ];
     
     public function detect(string $lookup): ?string
     {
-        // SGNIC has distinctive server identification and error codes
         if ($this->containsIndicators($lookup, self::INDICATORS, 1)) {
             return SgNic::class;
         }
