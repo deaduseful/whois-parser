@@ -2,8 +2,11 @@
 
 namespace Deaduseful\WhoisParser\Parsers;
 
+use Deaduseful\WhoisParser\Parsers\Traits\NotFoundByDomainData;
+
 class WhoisTcinetRu extends Generic
 {
+    use NotFoundByDomainData;
     protected array $mapFields = [
         'created' => 'created',
         'lastUpdatedOn' => 'updated',
@@ -20,15 +23,4 @@ class WhoisTcinetRu extends Generic
     protected array $matchNotFound = [
         'No entries found for the selected source(s).',
     ];
-
-    public function isNotFound(): bool
-    {
-        $rawData = $this->parse();
-        foreach ($rawData as $row) {
-            if (in_array($row, $this->matchNotFound, true)) {
-                return true;
-            }
-        }
-        return false;
-    }
 }

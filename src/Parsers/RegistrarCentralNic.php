@@ -3,9 +3,11 @@
 namespace Deaduseful\WhoisParser\Parsers;
 
 use Carbon\Carbon;
+use Deaduseful\WhoisParser\Parsers\Traits\NotFoundByLookupContains;
 
 class RegistrarCentralNic extends Generic
 {
+    use NotFoundByLookupContains;
     protected array $mapFields = [
         'creationDate' => 'created',
         'updatedDate' => 'updated',
@@ -15,19 +17,12 @@ class RegistrarCentralNic extends Generic
 
     protected array $matchNotFound = [
         'The queried object does not exist',
+        'No Object Found',
     ];
 
     protected array $matchReserved = [
         'Name Collision Reservation From ICANN',
     ];
-
-    public function isNotFound(): bool
-    {
-        if (str_starts_with($this->lookup, $this->matchNotFound[0])) {
-            return true;
-        }
-        return false;
-    }
 
     // Fixes: Could not parse '2023-04-26 08:57:22.0T00:00:00Z': DateTime::__construct(): Failed to parse time string
     // (2023-04-26 08:57:22.0T00:00:00Z) at position 21 (T): Double time specification

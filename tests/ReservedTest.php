@@ -7,25 +7,23 @@ use Deaduseful\WhoisParser\Parser;
 class ReservedTest extends TestCase
 {
     /**
-     * @dataProvider DomainData
+     * @dataProvider reservedData
      */
-    public function testReserved(string $domain, ?string $whoisServer = null)
+    public function testReserved(string $domain)
     {
         $lookup = file_get_contents(__DIR__ . '/data/reserved/' . $domain . '.txt');
-        $parser = new Parser($lookup, $domain, $whoisServer);
+        $parser = new Parser($lookup, $domain);
         $output = $parser->get();
-        self::assertNull($output);
+        self::assertNull($output, $domain);
         $expected = 'Reserved';
         self::assertEquals($expected, $parser->getError(), $domain);
     }
 
-    public function DomainData(): array
+    public function reservedData(): array
     {
-        return [
-            ['agogo.tv'],
-            ['story.io'],
-            ['example.org.my'],
-            ['test.top'],
-        ];
+        $glob = glob(__DIR__ . '/data/reserved/*.txt');
+        return array_map(function ($value) {
+            return [str_replace('.txt', '', basename($value))];
+        }, $glob);
     }
 }

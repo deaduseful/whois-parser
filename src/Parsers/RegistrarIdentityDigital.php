@@ -2,6 +2,8 @@
 
 namespace Deaduseful\WhoisParser\Parsers;
 
+use Deaduseful\WhoisParser\Parsers\Traits\NotFoundByDomainData;
+
 /**
  * Donuts Inc. and Afilias, Inc. Rebrand to Identity Digital
  *
@@ -9,6 +11,7 @@ namespace Deaduseful\WhoisParser\Parsers;
  */
 class RegistrarIdentityDigital extends Generic
 {
+    use NotFoundByDomainData;
     protected array $mapFields = [
         'createdDate' => self::DATE_CREATED,
         'creationDate' => self::DATE_CREATED,
@@ -28,9 +31,4 @@ class RegistrarIdentityDigital extends Generic
     protected array $matchReserved = [
         'This name is reserved by the Registry.',
     ];
-
-    public function isNotFound(): bool
-    {
-        return $this->getUpdated($this->parse()) === null;
-    }
 }

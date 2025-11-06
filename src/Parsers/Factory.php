@@ -64,6 +64,11 @@ class Factory
             $class = self::getClass($query);
         }
 
+        // Try to detect format from content before falling back to Generic
+        if (empty($class)) {
+            $class = FormatDetector::detect($lookup);
+        }
+
         if (empty($class)) {
             $class = self::getDefaultParser();
         }

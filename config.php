@@ -49,6 +49,7 @@ use Deaduseful\WhoisParser\Parsers\Sa;
 use Deaduseful\WhoisParser\Parsers\Samsung;
 use Deaduseful\WhoisParser\Parsers\Sb;
 use Deaduseful\WhoisParser\Parsers\Scb;
+use Deaduseful\WhoisParser\Parsers\SgNic;
 use Deaduseful\WhoisParser\Parsers\Sm;
 use Deaduseful\WhoisParser\Parsers\St;
 use Deaduseful\WhoisParser\Parsers\Th;
@@ -1068,6 +1069,7 @@ return [
         'rwe' => RegistrarVerisignGrs::class,
         'ryukyu' => RegistrarCentralNic::class,
         'sa' => Sa::class,
+        'xn--mgberp4a5d4ar' => Sa::class, // السعودية (Saudi Arabia in Arabic)
         'saarland' => RegistrarCentralNic::class,
         'safe' => RegistrarAmazon::class,
         'safety' => RegistrarGodaddy::class,
@@ -1112,7 +1114,7 @@ return [
         'sex' => RegistrarGodaddy::class,
         'sexy' => RegistrarUniregistry::class,
         'sfr' => RegistrarCentralNic::class,
-        'sg' => RegistrarRegistryAsp::class,
+        'sg' => SgNic::class,
         'sh' => RegistrarIdentityDigital::class,
         'shangrila' => RegistrarIdentityDigital::class,
         'sharp' => RegistrarCentralNic::class,

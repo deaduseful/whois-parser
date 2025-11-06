@@ -70,7 +70,6 @@ abstract class KeyValue implements Strategy
     protected string $registrarField = 'registrar';
     protected ?array $parsed = null;
     protected ?string $whoisServer;
-    protected array $matchReserved = [];
 
     public function __construct(string $lookup, ?string $whoisServer = null)
     {
@@ -139,12 +138,6 @@ abstract class KeyValue implements Strategy
 
     public function isReserved(): bool
     {
-        $lookup = $this->getLookup();
-        foreach ($this->matchReserved as $find) {
-            if (str_contains(strtolower($lookup), strtolower($find))) {
-                return true;
-            }
-        }
         return false;
     }
 

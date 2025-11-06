@@ -3,68 +3,34 @@
 namespace Deaduseful\WhoisParser\Parsers;
 
 use Carbon\Carbon;
+use Deaduseful\WhoisParser\Parsers\Traits\CommonNotFoundPatterns;
+use Deaduseful\WhoisParser\Parsers\Traits\ReservedByLookupContains;
 
+/**
+ * Generic WHOIS parser - fallback for unknown formats
+ * 
+ * This parser uses common patterns from WhoisPatterns to detect not found/reserved domains.
+ * It serves as the default parser when no specific registry format is detected.
+ */
 class Generic extends KeyValue
 {
-    /**
-     * @var string[] Not Found Matching
-     * @see https://github.com/cheenanet/whois-servers-list/blob/master/whois.json
-     */
-    protected array $matchNotFound = [
-        'No Object Found',
-        'No match for',
-        'NOT FOUND',
-        'No entries found for the selected source(s)',
-        'No entries found',
-        'Object not found',
-        'Object does not exist',
-        'Domain not found',
-        'Domain not found in database',
-        'Domain name not found',
-        'Domain not found in database',
-        'Domain name not registered',
-        'Domain not registered',
-        'Domain not found in registry',
-    ];
+    use CommonNotFoundPatterns;
+    use ReservedByLookupContains;
 
     /**
-     * @var string[] Rate Limit Matching
-     * @see https://github.com/cheenanet/whois-servers-list/blob/master/limit-reached-messages.json
+     * @var string[] Common "not found" patterns across registries
      */
-    protected array $matchRateLimit = [
-        'Query rate exceeded, please try again later.',
-    ];
+    protected array $matchNotFound = WhoisPatterns::NOT_FOUND;
 
-    public function isNotFound(): bool
-    {
-        foreach ($this->matchNotFound as $find) {
-            if (str_starts_with($this->lookup, $find)) {
-                return true;
-            }
-        }
-        $rawData = $this->parse();
-        foreach ($this->matchNotFound as $find) {
-            if (in_array($find, $rawData, true)) {
-                return true;
-            }
-            if (
-                isset($rawData[0])
-                && str_contains($rawData[0], $find)
-            ) {
-                return true;
-            }
-        }
-        if (empty($rawData['notFound']) === false) {
-            return true;
-        }
-        if (
-            isset($rawData[$this->statusField])
-            && in_array($rawData[$this->statusField], $this->matchNotFound, true)
-        ) {
-            return true;
-        }
-        return parent::isNotFound();
-    }
+    /**
+     * @var string[] Reserved patterns
+     */
+    protected array $matchReserved = WhoisPatterns::RESERVED;
+
+    /**
+     * @var string[] Rate limit patterns
+     */
+    protected array $matchRateLimit = WhoisPatterns::RATE_LIMIT;
 
     public function getCreated(array $rawData): ?Carbon
     {
