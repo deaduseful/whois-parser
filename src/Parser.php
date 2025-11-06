@@ -158,7 +158,7 @@ class Parser
          * 'whois_server' => 'WHOIS.ENOM.COM'
          */
         $registrar->name = $this->parser->getRegistrar($rawData);
-        $registrar->abuse_contact_phone = $rawData['registrarAbuseContactPhone'] ?? null;
+        $registrar->abuse_contact_phone = $this->processValue($rawData['registrarAbuseContactPhone'] ?? null);
         $registrar->abuse_contact_email = $this->processValue($rawData['registrarAbuseContactEmail'] ?? null, true);
         $registrar->iana_id = $rawData['registrarIANAID'] ?? null;
         $registrar->url = $this->processValue($rawData['registrarURL'] ?? null, true);
