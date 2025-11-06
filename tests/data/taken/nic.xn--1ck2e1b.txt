@@ -1,0 +1,27 @@
+
+This domain is protected by the Registry Lock service. If you are the registrant and wish to take action on this lock, please contact your registrar.
+
+Domain Name: nic.xn--1ck2e1b
+Registry Domain ID: REDACTED
+Registrar WHOIS Server: whois.identitydigital.services
+Registrar URL: https://identity.digital
+Updated Date: 2025-09-24T00:00:55Z
+Creation Date: 2013-08-10T00:36:12Z
+Registry Expiry Date: 2026-08-09T23:59:59Z
+Registrar: Registry Operator acts as Registrar (9999)
+Registrar IANA ID: 9999
+Registrar Abuse Contact Email: abuse@identity.digital
+Registrar Abuse Contact Phone: +1.6664447777
+Domain Status: serverDeleteProhibited https://icann.org/epp#serverDeleteProhibited
+Domain Status: serverTransferProhibited https://icann.org/epp#serverTransferProhibited
+Domain Status: serverUpdateProhibited https://icann.org/epp#serverUpdateProhibited
+Name Server: v0n0.nic.xn--1ck2e1b
+Name Server: v0n1.nic.xn--1ck2e1b
+Name Server: v0n2.nic.xn--1ck2e1b
+Name Server: v0n3.nic.xn--1ck2e1b
+Name Server: v2n0.nic.xn--1ck2e1b
+Name Server: v2n1.nic.xn--1ck2e1b
+DNSSEC: signedDelegation
+URL of the ICANN Whois Inaccuracy Complaint Form: https://icann.org/wicf/
+>>> Last update of WHOIS database: 2025-11-05T15:20:56Z <<<
+

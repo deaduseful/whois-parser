@@ -1,0 +1,12 @@
+
+    Domain: pknic.net.pk
+    Status: Domain is Registered
+    
+
+    Creation Date: 2001-02-23
+    Expiry Date: 2057-02-23
+    Name Server: 
+    Name Server: 
+    Name Server: 
+    Name Server: 
+

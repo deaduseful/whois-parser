@@ -1,0 +1,25 @@
+
+This domain is protected by the Registry Lock service. If you are the registrant and wish to take action on this lock, please contact your registrar.
+
+Domain Name: nic.xn--b4w605ferd
+Registry Domain ID: cc49239d352a4e85b9a32a2c115fa0b2-DONUTS
+Registrar WHOIS Server: whois.identitydigital.services
+Registrar URL: https://identity.digital
+Updated Date: 2025-08-19T09:05:44Z
+Creation Date: 2016-01-23T01:56:16Z
+Registry Expiry Date: 2026-01-23T01:56:16Z
+Registrar: Registry Operator acts as Registrar (9999)
+Registrar IANA ID: 9999
+Registrar Abuse Contact Email: abuse@identity.digital
+Registrar Abuse Contact Phone: +1.6664447777
+Domain Status: serverDeleteProhibited https://icann.org/epp#serverDeleteProhibited
+Domain Status: serverTransferProhibited https://icann.org/epp#serverTransferProhibited
+Domain Status: serverUpdateProhibited https://icann.org/epp#serverUpdateProhibited
+Name Server: a0.nic.xn--b4w605ferd
+Name Server: b0.nic.xn--b4w605ferd
+Name Server: c0.nic.xn--b4w605ferd
+Name Server: a2.nic.xn--b4w605ferd
+DNSSEC: signedDelegation
+URL of the ICANN Whois Inaccuracy Complaint Form: https://icann.org/wicf/
+>>> Last update of WHOIS database: 2025-11-05T15:27:50Z <<<
+

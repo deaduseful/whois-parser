@@ -1,0 +1,24 @@
+
+Domain: nic.sr
+WHOIS Server: https://whois.sr/
+Creation Date: 2001-05-04
+Registry Expiry Date: 2038-01-01
+Status: inactive
+Name server: ns2.nic.sr
+Name server: ns1.nic.sr
+Registrant Name: REDACTED FOR PRIVACY
+Registrant Address: REDACTED FOR PRIVACY
+Registrant City: REDACTED FOR PRIVACY
+Registrant State/Province: REDACTED FOR PRIVACY
+Registrant Postal Code: REDACTED FOR PRIVACY
+Registrant Country: REDACTED FOR PRIVACY
+Registrant Email: REDACTED FOR PRIVACY
+Registrant Phone: REDACTED FOR PRIVACY
+Registrant information has been redacted for privacy. Contact the registrar for more information.
+Sponsoring Registrar: Caribbean Communication Services N.V. (Datasur)
+Sponsoring Registrar URL: https://isp.datasur.sr/
+Sponsoring Registrar Country: SR
+Sponsoring Registrar Abuse Email: abuse@datasur.sr
+
+>>> Last update of WHOIS database: 2025-11-05 15:15:48 UTC <<<
+

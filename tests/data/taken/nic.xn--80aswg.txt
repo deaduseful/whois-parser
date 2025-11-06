@@ -1,0 +1,62 @@
+
+Domain Name: nic.xn--80aswg
+Internationalized Domain Name: nic.сайт
+Registry Domain ID: D9-80ASWG
+Registrar WHOIS Server:
+Registrar URL: https://corenic.org
+Updated Date: 2025-09-16T12:01:05.978Z
+Creation Date: 2013-08-02T11:13:07.114Z
+Registry Expiry Date: 2026-08-02T11:13:07.114Z
+Registrar Registration Expiration Date: 
+Registrar: Registry self-allocated
+Registrar IANA ID: 9999
+Registrar Abuse Contact Email: secretariat@corenic.org
+Registrar Abuse Contact Phone: +41.229295744
+Reseller: 
+Domain Status: ok https://icann.org/epp#ok
+Registry Registrant ID: 
+Registrant Name: 
+Registrant Organization: CORE Association
+Registrant Street: 
+Registrant City: 
+Registrant State/Province: 
+Registrant Postal Code: 
+Registrant Country: CH
+Registrant Phone: 
+Registrant Phone Ext: 
+Registrant Fax: 
+Registrant Fax Ext: 
+Registrant Email: Please query the Whois service of the Registrar of Record identified in this output for information on how to contact the Registrant, Admin, or Tech contact of the queried domain name.
+Registry Admin ID: 
+Admin Name: 
+Admin Organization: 
+Admin Street: 
+Admin City: 
+Admin State/Province: 
+Admin Postal Code: 
+Admin Country: 
+Admin Phone: 
+Admin Phone Ext: 
+Admin Fax: 
+Admin Fax Ext: 
+Admin Email: 
+Registry Tech ID: 
+Tech Name: 
+Tech Organization: 
+Tech Street: 
+Tech City: 
+Tech State/Province: 
+Tech Postal Code: 
+Tech Country: 
+Tech Phone: 
+Tech Phone Ext: 
+Tech Fax: 
+Tech Fax Ext: 
+Tech Email: Please query the Whois service of the Registrar of Record identified in this output for information on how to contact the Registrant, Admin, or Tech contact of the queried domain name.
+Name Server: anycast1.irondns.net
+Name Server: anycast2.irondns.net
+DNSSEC: signedDelegation
+IDN Tag: Cyrl
+URL of the ICANN Whois Inaccuracy Complaint Form: https://icann.org/wicf
+>>> Last update of Whois database: 2025-11-05T15:25:30.301Z <<<
+

@@ -1,0 +1,21 @@
+
+Domain Name: nic.xn--c1avg
+Registry Domain ID: REDACTED
+Registrar WHOIS Server: whois.publicinterestregistry.org
+Registrar URL: https://thenew.org/
+Updated Date: 2025-06-05T18:47:09Z
+Creation Date: 2014-04-21T18:46:16Z
+Registry Expiry Date: 2026-04-21T18:46:16Z
+Registrar: PIR Internal (9999)
+Registrar IANA ID: 9999
+Registrar Abuse Contact Email: cbath@pir.org
+Registrar Abuse Contact Phone: +1.1234567890
+Domain Status: ok https://icann.org/epp#ok
+Name Server: a0.nic.xn--c1avg
+Name Server: a2.nic.xn--c1avg
+Name Server: b0.nic.xn--c1avg
+Name Server: c0.nic.xn--c1avg
+DNSSEC: signedDelegation
+URL of the ICANN Whois Inaccuracy Complaint Form: https://icann.org/wicf/
+>>> Last update of WHOIS database: 2025-11-05T15:27:57Z <<<
+

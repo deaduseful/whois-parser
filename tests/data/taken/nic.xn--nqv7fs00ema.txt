@@ -1,0 +1,21 @@
+
+Domain Name: nic.xn--nqv7fs00ema
+Registry Domain ID: REDACTED
+Registrar WHOIS Server: whois.publicinterestregistry.org
+Registrar URL: https://thenew.org/
+Updated Date: 2025-09-29T18:31:39Z
+Creation Date: 2019-08-15T18:31:01Z
+Registry Expiry Date: 2026-08-15T18:31:01Z
+Registrar: PIR Internal (9999)
+Registrar IANA ID: 9999
+Registrar Abuse Contact Email: cbath@pir.org
+Registrar Abuse Contact Phone: +1.1234567890
+Domain Status: ok https://icann.org/epp#ok
+Name Server: a0.nic.xn--nqv7fs00ema
+Name Server: b0.nic.xn--nqv7fs00ema
+Name Server: c0.nic.xn--nqv7fs00ema
+Name Server: a2.nic.xn--nqv7fs00ema
+DNSSEC: signedDelegation
+URL of the ICANN Whois Inaccuracy Complaint Form: https://icann.org/wicf/
+>>> Last update of WHOIS database: 2025-11-05T15:41:57Z <<<
+

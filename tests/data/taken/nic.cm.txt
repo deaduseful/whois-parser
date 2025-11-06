@@ -1,0 +1,41 @@
+
+Domain Name: nic.cm
+Registry Domain ID: 5309-RegCM
+Registrar URL: http://www.antic.cm
+Updated Date: 2025-11-05T07:33:46Z
+Creation Date: 2009-08-28T00:00:00Z
+Registry Expiry Date: 2025-08-27T23:00:00Z
+Registrar Registration Expiration Date: 2025-08-27T23:00:00Z
+Registrar: Registrar ANTIC
+Registrar Street Address: P.O BOX 6170 Yaoundé, Cameroun
+BASTOS - RUE AMBASSADE DE CHINE
+Registrar Email: dg@antic.cm
+Domain Status: active https://icann.org/epp#active
+Registry Registrant ID: 68495-RegCM
+Registrant Name: ANTIC
+Registrant Street: Bastos, Rue Ambassade de Chine
+Registrant City: Yaounde
+Registrant State/Province: 
+Registrant Postal Code: 6170
+Registrant Country: CM
+Registrant Email: dotcm@antic.cm
+Admin Name: ANTIC
+Admin Street: Bastos, Rue Ambassade de Chine
+Admin City: Yaounde
+Admin State/Province: 
+Admin Postal Code: 6170
+Admin Country: CM
+Admin Email: dotcm@antic.cm
+Tech Name: ANTIC
+Tech Street: Bastos, Rue Ambassade de Chine
+Tech City: Yaounde
+Tech State/Province: 
+Tech Postal Code: 6170
+Tech Country: CM
+Tech Email: dotcm@antic.cm
+Name Server: ns2.nic.cm
+Name Server: ns.registrar.cm
+Name Server: dns1.antic.cm
+Name Server: ns1.nic.cm
+>>> Last update of WHOIS database: 2025-11-05T15:08:11.517Z <<<
+

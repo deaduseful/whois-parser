@@ -1,0 +1,60 @@
+
+Domain Name: nic.sc
+Registry Domain ID: REDACTED
+Registrar WHOIS Server: 
+Registrar URL: 
+Updated Date: 2025-01-15T05:00:52Z
+Creation Date: 2001-12-01T05:00:00Z
+Registry Expiry Date: 2025-12-01T05:00:00Z
+Registrar: VCS Pty Ltd
+Registrar IANA ID: 800171
+Registrar Abuse Contact Email: 
+Registrar Abuse Contact Phone: 
+Domain Status: serverDeleteProhibited https://icann.org/epp#serverDeleteProhibited
+Domain Status: serverTransferProhibited https://icann.org/epp#serverTransferProhibited
+Domain Status: serverUpdateProhibited https://icann.org/epp#serverUpdateProhibited
+Registry Registrant ID: REDACTED
+Registrant Name: REDACTED
+Registrant Organization: VCS (Pty) Ltd
+Registrant Street: REDACTED
+Registrant City: REDACTED
+Registrant State/Province: Mahe
+Registrant Postal Code: REDACTED
+Registrant Country: SC
+Registrant Phone: REDACTED
+Registrant Phone Ext: REDACTED
+Registrant Fax: REDACTED
+Registrant Fax Ext: REDACTED
+Registrant Email: REDACTED
+Registry Admin ID: REDACTED
+Admin Name: REDACTED
+Admin Organization: REDACTED
+Admin Street: REDACTED
+Admin City: REDACTED
+Admin State/Province: REDACTED
+Admin Postal Code: REDACTED
+Admin Country: REDACTED
+Admin Phone: REDACTED
+Admin Phone Ext: REDACTED
+Admin Fax: REDACTED
+Admin Fax Ext: REDACTED
+Admin Email: REDACTED
+Registry Tech ID: REDACTED
+Tech Name: REDACTED
+Tech Organization: REDACTED
+Tech Street: REDACTED
+Tech City: REDACTED
+Tech State/Province: REDACTED
+Tech Postal Code: REDACTED
+Tech Country: REDACTED
+Tech Phone: REDACTED
+Tech Phone Ext: REDACTED
+Tech Fax: REDACTED
+Tech Fax Ext: REDACTED
+Tech Email: REDACTED
+Name Server: ns49.domaincontrol.com
+Name Server: ns50.domaincontrol.com
+DNSSEC: unsigned
+URL of the ICANN Whois Inaccuracy Complaint Form: https://icann.org/wicf/
+>>> Last update of WHOIS database: 2025-11-05T15:15:42Z <<<
+

@@ -1,0 +1,19 @@
+
+Domain Name: nic.pg
+Registry Domain ID: 36769-nicpg
+Updated Date: 2025-04-25T09:41:41Z
+Creation Date: 2025-04-18T00:00:00Z
+Registry Expiry Date: 2026-04-18T00:00:00Z
+Registrar Registration Expiration Date: 2026-04-18T00:00:00Z
+Registrar: PG NIC Reserved
+Registrar Email: dns@pnguot.ac.pg
+Registrar Abuse Contact Email: dns@pnguot.ac.pg
+Registrar Abuse Contact Phone: +(675) 473 4214
+Domain Status: serverRenewProhibited https://icann.org/epp#serverRenewProhibited
+Domain Status: serverTransferProhibited https://icann.org/epp#serverTransferProhibited
+Domain Status: serverDeleteProhibited https://icann.org/epp#serverDeleteProhibited
+Name Server: ns1.desec.io
+Name Server: ns2.desec.org
+DNSSEC: signedDelegation
+>>> Last update of WHOIS database: 2025-11-05T15:15:29.202Z <<<
+

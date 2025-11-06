@@ -1,0 +1,20 @@
+
+Domain Name: nic.to
+Registry Domain ID: DO_1bf1e33f172525be504979087d871f19-TONIC
+Registrar WHOIS Server: whois.tonicregistry.to
+Registrar URL: http://tonicregistry.to/
+Updated Date: 2025-07-03T19:22:49.000Z
+Creation Date: 1997-07-03T18:52:27.000Z
+Registry Expiry Date: 2027-07-03T10:39:07.000Z
+Registrar: Government of Kingdom of Tonga
+Registrar IANA ID: 6763001
+Registrar Abuse Contact Email: info@tonicregistry.to
+Registrar Abuse Contact Phone: +999.12345678
+Domain Status: ok https://icann.org/epp#ok
+Name Server: ns1.dreamhost.com
+Name Server: ns2.dreamhost.com
+DNSSEC: unsigned
+URL of the ICANN RDDS Inaccuracy Complaint Form: https://icann.org/wicf
+
+>>> Last update of WHOIS database: 2025-11-05T15:16:02.218Z <<<
+

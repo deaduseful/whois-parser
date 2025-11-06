@@ -1,0 +1,28 @@
+
+Domain Name: NIC.XN--4GBRIM
+Registry Domain ID: D279236222-CNIC
+Registrar WHOIS Server: whois.nic.xn--4gbrim
+Registrar URL: http://www.nic.xn--4gbrim
+Updated Date: 2025-09-05T00:06:15.0Z
+Creation Date: 2014-09-11T20:08:52.0Z
+Registry Expiry Date: 2026-09-11T23:59:59.0Z
+Registrar: Helium TLDs Ltd
+Registrar IANA ID: 9999
+Domain Status: serverUpdateProhibited https://icann.org/epp#serverUpdateProhibited
+Domain Status: serverDeleteProhibited https://icann.org/epp#serverDeleteProhibited
+Domain Status: serverTransferProhibited https://icann.org/epp#serverTransferProhibited
+Registrant Organization: Helium TLDs Ltd
+Registrant State/Province: Khobar
+Registrant Country: SA
+Registrant Email: Please query the RDDS service of the Registrar of Record identified in this output for information on how to contact the Registrant, Admin, or Tech contact of the queried domain name.
+Tech Email: Please query the RDDS service of the Registrar of Record identified in this output for information on how to contact the Registrant, Admin, or Tech contact of the queried domain name.
+Name Server: A.NIC.XN--4GBRIM
+Name Server: D.NIC.XN--4GBRIM
+Name Server: C.NIC.XN--4GBRIM
+Name Server: B.NIC.XN--4GBRIM
+DNSSEC: signedDelegation
+Registrar Abuse Contact Email: info@centralnic.com
+Registrar Abuse Contact Phone: +44.2033880600
+URL of the ICANN Whois Inaccuracy Complaint Form: https://www.icann.org/wicf/
+>>> Last update of WHOIS database: 2025-11-05T15:24:15.0Z <<<
+

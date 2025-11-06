@@ -1,0 +1,5 @@
+
+The queried object does not exist: DOMAIN NOT FOUND
+
+>>> Last update of WHOIS database: 2025-11-05T16:06:13.0Z <<<
+

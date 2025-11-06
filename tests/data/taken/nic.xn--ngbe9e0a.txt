@@ -1,0 +1,41 @@
+
+Domain Name: NIC.XN--NGBE9E0A
+Registry Domain ID: D1465567-CNIC
+Registrar WHOIS Server: whois.centralnic.com
+Registrar URL: https://www.centralnic.com/
+Updated Date: 2025-09-05T00:06:14.0Z
+Creation Date: 2013-09-11T11:56:58.0Z
+Registry Expiry Date: 2026-09-11T23:59:59.0Z
+Registrar: CentralNic Ltd
+Registrar IANA ID: 9999
+Domain Status: ok https://icann.org/epp#ok
+Registrant Name: Domain Administrator
+Registrant Organization: CentralNic Ltd
+Registrant Street: 35-39 Moorgate
+Registrant City: London
+Registrant State/Province:
+Registrant Postal Code: EC2R 6AR
+Registrant Country: GB
+Registrant Phone: +44.2033880600
+Registrant Fax: +44.2033880601
+Registrant Email: domains@centralnic.com
+Tech Name: Domain Administrator
+Tech Organization: CentralNic Ltd
+Tech Street: 35-39 Moorgate
+Tech City: London
+Tech State/Province:
+Tech Postal Code: EC2R 6AR
+Tech Country: GB
+Tech Phone: +44.2033880600
+Tech Fax: +44.2033880601
+Tech Email: domains@centralnic.com
+Name Server: A.NIC.XN--NGBE9E0A
+Name Server: B.NIC.XN--NGBE9E0A
+Name Server: C.NIC.XN--NGBE9E0A
+Name Server: D.NIC.XN--NGBE9E0A
+DNSSEC: unsigned
+Registrar Abuse Contact Email: ops@centralnic.com
+Registrar Abuse Contact Phone: +44.2033880600
+URL of the ICANN Whois Inaccuracy Complaint Form: https://www.icann.org/wicf/
+>>> Last update of WHOIS database: 2025-11-05T15:41:48.0Z <<<
+

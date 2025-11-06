@@ -1,0 +1,28 @@
+
+Domain Name: nic.xn--io0a7i
+Internationalized Domain Name: nic.网络
+Registry Domain ID: 2-CNNIC
+Registrar WHOIS Server: whois.ngtld.cn
+Registrar URL: http://whois.ngtld.cn
+Updated Date: 2025-05-31T16:05:02Z
+Creation Date: 2014-04-15T09:46:39Z
+Registry Expiry Date: 2026-04-15T09:46:39Z
+Sponsoring Registrar: Reserved for non-billable transactions where Registry Operator acts as Registrar
+Sponsoring Registrar IANA ID: 9999
+Registrar Abuse Contact Email: ******
+Registrar Abuse Contact Phone: ******
+Domain Status: ok https://icann.org/epp#ok
+Registrant Organization: 中国互联网络信息中心
+Registrant State/Province: beijing
+Registrant Email: Please query the RDDS service of the Registrar of Record identified in this output for information on how to contact the Registrant, Admin, or Tech contact of the queried domain name.
+Admin Email: Please query the RDDS service of the Registrar of Record identified in this output for information on how to contact the Registrant, Admin, or Tech contact of the queried domain name.
+Tech Email: Please query the RDDS service of the Registrar of Record identified in this output for information on how to contact the Registrant, Admin, or Tech contact of the queried domain name.
+Name Server: e.ngtld.cn
+Name Server: d.ngtld.cn
+Name Server: c.ngtld.cn
+Name Server: b.ngtld.cn
+Name Server: a.ngtld.cn
+DNSSEC: signedDelegation
+URL of the ICANN Whois Inaccuracy Complaint Form: https://www.icann.org/wicf/
+>>> Last update of WHOIS database: 2025-11-05T15:31:00Z <<<
+

@@ -1,0 +1,17 @@
+
+% This is the IRNIC Whois server v1.6.2.
+% Available on web at http://whois.nic.ir/
+% Find the terms and conditions of use on http://www.nic.ir/
+% 
+% This server uses UTF-8 as the encoding for requests and responses.
+
+% NOTE: This output has been filtered.
+
+% Information related to 'nic.xn--mgba3a4f16a'
+
+
+domain:		nic.ایران
+ascii:		nic.xn--mgba3a4f16a
+remarks:	This domain is only available for registration under certain conditions
+source:		IRNIC
+

@@ -1,0 +1,23 @@
+
+Domain Name: nic.gi
+Registry Domain ID: REDACTED
+Registrar WHOIS Server: 
+Registrar URL: 
+Updated Date: 2024-09-23T15:54:33Z
+Creation Date: 2000-07-01T04:00:00Z
+Registry Expiry Date: 2032-07-01T04:00:00Z
+Registrar: GibNet Registrar
+Registrar IANA ID: 800072
+Registrar Abuse Contact Email: 
+Registrar Abuse Contact Phone: 
+Domain Status: serverDeleteProhibited https://icann.org/epp#serverDeleteProhibited
+Domain Status: serverTransferProhibited https://icann.org/epp#serverTransferProhibited
+Domain Status: serverUpdateProhibited https://icann.org/epp#serverUpdateProhibited
+Name Server: ns-1215.awsdns-23.org
+Name Server: ns-398.awsdns-49.com
+Name Server: ns-1854.awsdns-39.co.uk
+Name Server: ns-794.awsdns-35.net
+DNSSEC: unsigned
+URL of the ICANN Whois Inaccuracy Complaint Form: https://icann.org/wicf/
+>>> Last update of WHOIS database: 2025-11-05T15:13:56Z <<<
+
