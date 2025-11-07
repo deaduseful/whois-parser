@@ -15,18 +15,18 @@ use Deaduseful\WhoisParser\Parsers\RegistrarSidn;
  */
 class SidnDetectionStrategy extends AbstractDetectionStrategy
 {
-    protected int $priority = 70;
+    protected int $priority = 18;
     protected const NAME = 'SIDN (Netherlands)';
 
-    protected const PATTERN_INDICATORS = [
-        'Copyright (c) The SIDN Foundation',
+    protected const INDICATORS = [
+        ' is free',
+        'Record maintained by: SIDN',
+        'SIDN BV',
     ];
     
     public function detect(string $lookup): ?string
     {
-        // Removed standalone "SIDN" - too broad
-        // Now requires "is free" + copyright/registrar field combination
-        if ($this->containsIndicators($lookup, self::PATTERN_INDICATORS, 2)) {
+        if ($this->containsIndicators($lookup, self::INDICATORS, 1, false)) {
             return RegistrarSidn::class;
         }
         

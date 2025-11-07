@@ -61,6 +61,7 @@ class WhoisPatterns
      */
     public const RESERVED = [
         'Reserved by',
+        'usage restrictions applied',
     ];
 
     /**

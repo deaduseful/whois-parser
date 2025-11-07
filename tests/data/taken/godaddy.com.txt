@@ -1,0 +1,54 @@
+Domain Name: GODADDY.COM
+Registry Domain ID: 4013247_DOMAIN_COM-VRSN
+Registrar WHOIS Server: whois.godaddy.com
+Registrar URL: https://www.godaddy.com
+Updated Date: 2023-10-26T13:05:54Z
+Creation Date: 1999-03-02T00:00:00Z
+Registrar Registration Expiration Date: 2032-11-01T06:59:59Z
+Registrar: GoDaddy.com, LLC
+Registrar IANA ID: 146
+Registrar Abuse Contact Email: abuse@godaddy.com
+Registrar Abuse Contact Phone: +1.4806242505
+Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
+Domain Status: clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited
+Domain Status: clientRenewProhibited https://icann.org/epp#clientRenewProhibited
+Domain Status: clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited
+Registry Registrant ID: Not Available From Registry
+Registrant Name: Registration Private
+Registrant Organization: Domains By Proxy, LLC
+Registrant Street: DomainsByProxy.com
+Registrant Street: 100 S. Mill Ave, Suite 1600
+Registrant City: Tempe
+Registrant State/Province: Arizona
+Registrant Postal Code: 85281
+Registrant Country: US
+Registrant Phone: +1.4806242599
+Registrant Phone Ext:
+Registrant Fax:
+Registrant Fax Ext:
+Registrant Email: https://www.godaddy.com/whois/results.aspx?domain=GODADDY.COM&action=contactDomainOwner
+Registry Tech ID: Not Available From Registry
+Tech Name: Registration Private
+Tech Organization: Domains By Proxy, LLC
+Tech Street: DomainsByProxy.com
+Tech Street: 100 S. Mill Ave, Suite 1600
+Tech City: Tempe
+Tech State/Province: Arizona
+Tech Postal Code: 85281
+Tech Country: US
+Tech Phone: +1.4806242599
+Tech Phone Ext:
+Tech Fax:
+Tech Fax Ext:
+Tech Email: https://www.godaddy.com/whois/results.aspx?domain=GODADDY.COM&action=contactDomainOwner
+Name Server: CNS1.GODADDY.COM
+Name Server: CNS2.GODADDY.COM
+Name Server: A11-64.AKAM.NET
+Name Server: A1-245.AKAM.NET
+Name Server: A20-65.AKAM.NET
+Name Server: A6-66.AKAM.NET
+Name Server: A8-67.AKAM.NET
+Name Server: A9-67.AKAM.NET
+DNSSEC: unsigned
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+>>> Last update of WHOIS database: 2025-11-07T09:37:45Z <<<

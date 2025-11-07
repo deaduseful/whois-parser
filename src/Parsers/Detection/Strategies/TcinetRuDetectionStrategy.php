@@ -21,6 +21,9 @@ class TcinetRuDetectionStrategy extends AbstractDetectionStrategy
     
     protected const INDICATORS = [
         '% TCI Whois Service',
+        'source:        TCI',
+        'No entries found for the selected source(s).',
+        'Last updated on',
     ];
     
     public function detect(string $lookup): ?string

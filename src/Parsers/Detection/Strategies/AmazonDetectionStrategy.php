@@ -14,7 +14,7 @@ use Deaduseful\WhoisParser\Parsers\RegistrarAmazon;
  */
 class AmazonDetectionStrategy extends AbstractDetectionStrategy
 {
-    protected int $priority = 100;
+    protected int $priority = 16;
     protected const NAME = 'Amazon Registry';
     
     // Amazon Registry-specific WHOIS patterns (not just brand mentions)

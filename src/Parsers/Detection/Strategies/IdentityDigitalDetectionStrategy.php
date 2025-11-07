@@ -32,6 +32,13 @@ class IdentityDigitalDetectionStrategy extends AbstractDetectionStrategy
     
     public function detect(string $lookup): ?string
     {
+        $lowerLookup = strtolower($lookup);
+
+        // Skip when more specific registries should handle the format
+        if (str_contains($lowerLookup, 'whois.verisign-grs.com')) {
+            return null;
+        }
+
         // Need at least 2 indicators for confident detection
         if ($this->containsIndicators($lookup, self::PRIMARY_INDICATORS, 2)) {
             return RegistrarIdentityDigital::class;

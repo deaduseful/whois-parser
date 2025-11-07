@@ -24,7 +24,7 @@ class RyceDetectionStrategy extends AbstractDetectionStrategy
     
     public function detect(string $lookup): ?string
     {
-        if ($this->containsIndicators($lookup, self::INDICATORS, 1)) {
+        if ($this->containsIndicators($lookup, self::INDICATORS, 1, false)) {
             return RegistrarRyce::class;
         }
         

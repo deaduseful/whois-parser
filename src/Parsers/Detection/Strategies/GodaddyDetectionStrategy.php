@@ -15,7 +15,7 @@ use Deaduseful\WhoisParser\Parsers\RegistrarGodaddy;
  */
 class GodaddyDetectionStrategy extends AbstractDetectionStrategy
 {
-    protected int $priority = 50;
+    protected int $priority = 17;
     protected const NAME = 'GoDaddy';
     
     // More specific indicators that identify GoDaddy WHOIS format

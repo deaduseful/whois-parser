@@ -6,9 +6,12 @@ use Deaduseful\WhoisParser\Parsers\Detection\DetectionStrategy;
 use Deaduseful\WhoisParser\Parsers\Detection\Strategies\NominetDetectionStrategy;
 use Deaduseful\WhoisParser\Parsers\Detection\Strategies\TcinetRuDetectionStrategy;
 use Deaduseful\WhoisParser\Parsers\Detection\Strategies\IdentityDigitalDetectionStrategy;
+use Deaduseful\WhoisParser\Parsers\Detection\Strategies\CentralNicDetectionStrategy;
 use Deaduseful\WhoisParser\Parsers\Detection\Strategies\SgNicDetectionStrategy;
 use Deaduseful\WhoisParser\Parsers\Detection\Strategies\VerisignGrsDetectionStrategy;
+use Deaduseful\WhoisParser\Parsers\Detection\Strategies\AfnicDetectionStrategy;
 use Deaduseful\WhoisParser\Parsers\Detection\Strategies\GodaddyDetectionStrategy;
+use Deaduseful\WhoisParser\Parsers\Detection\Strategies\UniregistryDetectionStrategy;
 use Deaduseful\WhoisParser\Parsers\Detection\Strategies\SidnDetectionStrategy;
 use Deaduseful\WhoisParser\Parsers\Detection\Strategies\AfricaRegistryDetectionStrategy;
 use Deaduseful\WhoisParser\Parsers\Detection\Strategies\IndiaRegistryDetectionStrategy;
@@ -124,9 +127,12 @@ class FormatDetector
             new NominetDetectionStrategy(),
             new TcinetRuDetectionStrategy(),
             new IdentityDigitalDetectionStrategy(),
+            new CentralNicDetectionStrategy(),
             new SgNicDetectionStrategy(),
             new VerisignGrsDetectionStrategy(),
+            new AfnicDetectionStrategy(),
             new GodaddyDetectionStrategy(),
+            new UniregistryDetectionStrategy(),
             new SidnDetectionStrategy(),
             new AfricaRegistryDetectionStrategy(),
             new IndiaRegistryDetectionStrategy(),
