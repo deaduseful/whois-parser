@@ -56,7 +56,6 @@ use Deaduseful\WhoisParser\Parsers\Th;
 use Deaduseful\WhoisParser\Parsers\Tw;
 use Deaduseful\WhoisParser\Parsers\Uz;
 use Deaduseful\WhoisParser\Parsers\Whois1Api;
-use Deaduseful\WhoisParser\Parsers\WhoisAitDomains;
 use Deaduseful\WhoisParser\Parsers\WhoisDynadot;
 use Deaduseful\WhoisParser\Parsers\WhoisEname;
 use Deaduseful\WhoisParser\Parsers\WhoisFreenoms;
@@ -118,7 +117,6 @@ use Deaduseful\WhoisParser\Parsers\WhoisUniregistrar;
 return [
     'whois_servers' => [
         'whois.1api.net' => Whois1Api::class,
-        'whois.aitdomains.com' => WhoisAitDomains::class,
         'whois.auda.org.au' => WhoisAudaOrgAu::class,
         'whois.dynadot.com' => WhoisDynadot::class,
         'whois.ename.com' => WhoisEname::class,

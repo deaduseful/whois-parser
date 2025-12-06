@@ -1,0 +1,71 @@
+Domain Name: ISOFTMARKETING.COM
+	Registrar WHOIS Server: whois.aitdomains.com
+	Registrar URL: https://ait.com
+	Updated Date: 2022-04-25T03:47:12Z
+	Creation Date: 2002-04-23T07:56:59Z
+	Registrar Expiration Date: 2023-04-23T03:47:12Z
+	Registrar: THE NAME IT CORPORATION DBA NAMESERVICES.NET
+	Registrar IANA ID: 57
+	Registrar Abuse Contact Email: abuse@ait.com
+	Registrar Abuse Contact Phone: +1.9103211200
+	Domain Status: clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited
+	Domain Status: clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited
+	Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
+	Billing Name: Akos Vajda
+	Billing Organization: GFI USA Inc.
+	Billing Street: Ste 240-2650 2028 E Ben White Blvd.
+	Billing City: Austin
+	Billing State/Province: Texas
+	Billing Postal Code: 78741
+	Billing Country: US
+	Billing Phone: (+36)705-352787
+	Billing Fax: 
+	Billing Email: domains@techgenix.com
+	Registrant Name: Akos Vajda
+	Registrant Organization: GFI USA Inc.
+	Registrant Street: Ste 240-2650 2028 E Ben White Blvd.
+	Registrant City: Austin
+	Registrant State/Province: Texas
+	Registrant Postal Code: 78741
+	Registrant Country: US
+	Registrant Phone: (+36)705-352787
+	Registrant Fax: 
+	Registrant Email: domains@techgenix.com
+	Tech Name: Akos Vajda
+	Tech Organization: GFI USA Inc.
+	Tech Street: Ste 240-2650 2028 E Ben White Blvd.
+	Tech City: Austin
+	Tech State/Province: Texas
+	Tech Postal Code: 78741
+	Tech Country: US
+	Tech Phone: (+36)705-352787
+	Tech Fax: 
+	Tech Email: domains@techgenix.com
+	Admin Name: Akos Vajda
+	Admin Organization: GFI USA Inc.
+	Admin Street: Ste 240-2650 2028 E Ben White Blvd.
+	Admin City: Austin
+	Admin State/Province: Texas
+	Admin Postal Code: 78741
+	Admin Country: US
+	Admin Phone: (+36)705-352787
+	Admin Fax: 
+	Admin Email: domains@techgenix.com
+	Name Server: HUGH.NS.CLOUDFLARE.COM
+	Name Server: MARY.NS.CLOUDFLARE.COM
+	DNSSEC: unsigned
+	URL of ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+	>>> Last update of WHOIS database: 2023-03-26T06:04:17Z <<<
+	
+  The Data in THE NAMEIT CORPORATION WHOIS database is provided by 
+  THE NAMEIT CORPORATION for information purposes, and to assist persons 
+  in obtaining information about or related to a domain name registration record.
+  THE NAMEIT CORPORATION does not guarantee its accuracy.  By submitting a 
+  WHOIS query, you agree that you will use this Data only for lawful purposes 
+  and that, under no circumstances will you use this Data to: (1) allow, enable, 
+  or otherwise support the transmission of mass unsolicited, commercial advertising 
+  or solicitations via e-mail (spam); or  (2) enable high volume, automated, 
+  electronic processes that apply to THE NAMEIT CORPORATION (or its systems). 
+                    
+  THE NAMEIT CORPORATION reserves the right to modify these terms at any time.
+  By submitting this query, you agree to abide by this policy.
