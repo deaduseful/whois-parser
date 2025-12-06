@@ -4,8 +4,6 @@ namespace Deaduseful\WhoisParser\Parsers;
 
 class RegistrarChannelIsles extends Generic
 {
-    protected ?string $dateFormat = 'jS F Y \a\t H:i:s.u';
-
     protected array $matchNotFound = [
         'NOT FOUND',
     ];
