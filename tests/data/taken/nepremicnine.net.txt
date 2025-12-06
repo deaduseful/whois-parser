@@ -1,0 +1,262 @@
+
+Domain Name: stanko.pics
+Registry Domain ID: D308029942-CNIC
+Registrar WHOIS Server: whois.regtons.com
+Registrar URL: http://regtons.com
+Updated Date: 2022-11-15T00:00:00Z
+Creation Date: 2019-11-18T00:00:00Z
+Registrar Registration Expiration Date: 2024-11-19T00:00:00Z
+Registrar: GRANSY S.R.O D/B/A SUBREG.CZ
+Registrar IANA ID: 1505
+Registrar Abuse Contact Email: abuse@regtons.com
+Registrar Abuse Contact Phone: +420.734463373
+Domain Status: ok https://www.icann.org/epp#ok
+Registry Registrant ID: 
+Domain Name: sub_882255
+Registrant Name: Domain Admin
+Registrant Organization: stanko.pics
+Registry Domain ID: Whois protection, this company does not own this domain name s.r.o.
+Registrar WHOIS Server: 
+Registrant Street: Jaurisova 515/4whois.regtons.com
+Registrant City: 
+Registrar URL: http://regtons.comPraha 4
+Updated Date: 
+Registrant State/Province: 2022-11-15T00:00:00Z
+Creation Date: 
+Registrant Postal Code: 2019-11-18T00:00:00Z
+Registrar Registration Expiration Date: 14000
+Registrant Country: 2024-11-19T00:00:00Z
+Registrar: CZ
+Registrant Phone: GRANSY S.R.O D/B/A SUBREG.CZ
+Registrar IANA ID: +420.226517351
+Registrant Phone Ext: 1505
+Registrar Abuse Contact Email: abuse@regtons.com
+Registrar Abuse Contact Phone: 
+Registrant Fax: +420.734463373+420.226517341
+Registrant Fax Ext:  
+Registrant Email: stanko.pics@whoisprotection.domains
+Registry Admin ID: sub_882255
+Admin Name: Domain Admin
+Admin Organization: Whois protection, this company does not own this domain name s.r.o.
+Admin Street: Jaurisova 515/4
+Admin City: Praha 4
+Admin State/Province: 
+Admin Postal Code: 14000
+Admin Country: CZ
+Admin Phone: +420.226517351
+Admin Phone Ext: 
+
+Admin Fax: +420.226517341
+Admin Fax Ext:  Domain Status: 
+Admin Email: ok https://www.icann.org/epp#ok
+Registry Registrant ID: stanko.pics@whoisprotection.domains
+Registry Tech ID: sub_882255
+Registrant Name: sub_882255
+Tech Name: Domain Domain Admin
+Registrant Organization: Whois protection, this company does not own this domain name s.r.o.Tech
+Registrant Street: 
+Tech Organization: Jaurisova 515/4
+Registrant City: Whois protection, this company does not own this domain name s.r.o.
+Tech Street: Praha 4
+Registrant State/Province: Jaurisova 515/4
+Tech City: 
+Registrant Postal Code: 14000
+Registrant Country: 
+Tech State/Province: CZ
+Registrant Phone: 
+Tech Postal Code: +420.226517351
+Registrant Phone Ext: 14000
+Tech Country: 
+Registrant Fax: +420.226517341
+Registrant Fax Ext:  CZ
+Tech Phone: 
+Registrant Email: +420.226517351
+Tech Phone Ext: stanko.pics@whoisprotection.domains
+Registry Admin ID: 
+Tech Fax: sub_882255
+Admin Name: Domain+420.226517341 
+Tech Fax Ext:  Admin
+Admin Organization: 
+Tech Email: Whois protection, this company does not own this domain name s.r.o.
+Admin Street: stanko.pics@whoisprotection.domains
+Jaurisova 515/4
+Admin City: Praha 4
+Admin State/Province: Name Server: 
+Admin Postal Code: ns1.hukot.cz
+Name Server: ns2.securitynet.cz
+Name Server: 14000
+Admin Country: ns3.hukot.cz
+CZ
+Admin Phone: DNSSEC: unsigned
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+>>> Last update of WHOIS database: +420.226517351
+Admin Phone Ext: 2023-06-20
+Admin Fax: +420.226517341
+Admin Fax Ext:  
+Admin Email: stanko.pics@whoisprotection.domains
+Registry Tech ID: sub_882255
+Tech Name: Domain Tech
+Tech Organization: Whois protection, this company does not own this domain name s.r.o.
+Tech Street: Jaurisova 515/4
+Tech City: Praha 4
+Tech State/Province: 
+Tech Postal Code: 14000
+Tech Country: CZ
+Tech Phone: +420.226517351
+Tech Phone Ext: 
+Tech Fax: +420.226517341
+Tech Fax Ext:  
+Tech Email: stanko.pics@whoisprotection.domains
+Name Server: ns1.hukot.cz
+Name Server: ns2.securitynet.cz
+Name Server: ns3.hukot.cz
+DNSSEC: unsigned
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+>>> Last update of WHOIS database: 2023-06-20T00:00:00Z <<<
+Domain Name: vilagiwinery.com
+Registry Domain ID: 2277501474_DOMAIN_COM-VRSN
+Registrar WHOIS Server: whois.regtons.com
+Registrar URL: http://regtons.com
+Updated Date: 2023-06-14T00:00:00Z
+Creation Date: 2018-06-21T00:00:00Z
+Registrar Registration Expiration Date: 2024-06-21T00:00:00Z
+Registrar: GRANSY S.R.O D/B/A SUBREG.CZ
+Registrar IANA ID: 1505
+Registrar Abuse Contact Email: abuse@regtons.com
+Registrar Abuse Contact Phone: +420.734463373
+Domain Name: nepremicnine.net
+Registry Domain ID: 
+Reseller: 8981273_DOMAIN_NET-VRSN
+Registrar WHOIS Server: WebSupport s.r.o.
+whois.regtons.com
+Registrar URL: Domain Status: http://regtons.com
+Updated Date: 2022-11-15okT00:00:00Z
+Creation Date:  https://www.icann.org/epp#ok
+Registry Registrant ID: 1999-08-10T00:00:00Z
+Registrar Registration Expiration Date: G-1060259
+Registrant Name: 2031-08-10T00:00:00Z
+Registrar: Domain GRANSY S.R.O D/B/A SUBREG.CZ
+Registrar IANA ID: Admin
+Registrant Organization: 1505
+Registrar Abuse Contact Email: Whois protection, this company does not own this domain name s.r.o.
+Registrant Street: abuse@regtons.com
+Registrar Abuse Contact Phone: Jaurisova 515/4
+Registrant City: +420.734463373Praha 4
+Registrant State/Province: 
+Registrant Postal Code: 14000
+Registrant Country: CZ
+Registrant Phone: +420.226517351
+Registrant Phone Ext: 
+Registrant Fax: +420.226517341
+Registrant Fax Ext:  
+Registrant Email: vilagiwinery.com@whoisprotection.domains
+Registry Admin ID: G-1060259
+Admin Name: Domain Admin
+Admin Organization: Whois protection, this company does not own this domain name s.r.o.
+Admin Street: Jaurisova 515/4
+Admin City: 
+
+Registry Domain ID: Domain Status: Praha 4
+Admin State/Province: clienttransferprohibited https://www.icann.org/epp#2636231892_DOMAIN_COM-VRSN
+Registrar WHOIS Server: clienttransferprohibited
+Registry Registrant ID: 
+Admin Postal Code: whois.regtons.com
+Registrar URL: 
+Admin Country: 
+Registrant Name: Not Disclosed
+Updated Date: CZ 
+Admin Phone: 2022-07-29T00:00:00Z
+Creation Date: Not Disclosed+420.226517351
+Registrant Organization: 
+Admin Phone Ext: 2021-08-24T00:00:00Z
+Registrar Registration Expiration Date: MEGANET d.o.o.
+Registrant Street: 
+Admin Fax: 2023-08-24T00:00:00Z
+Registrar: Not Disclosed
+Registrant City: +420.226517341
+Admin Fax Ext:  GRANSY S.R.O D/B/A SUBREG.CZ
+Registrar IANA ID: Not Disclosed
+Registrant State/Province: 
+Admin Email: 1505
+Registrar Abuse Contact Email: 
+Registrant Postal Code: vilagiwinery.com@whoisprotection.domains
+Registry Tech ID: abuse@regtons.comNot Disclosed
+Registrar Abuse Contact Phone: 
+Registrant Country: G-1060259
+Tech Name: +420.734463373SI
+Registrant Phone: Not DisclosedDomain
+Registrant Phone Ext:  Tech
+Tech Organization: Whois protection, this company does not own this domain name s.r.o.
+Tech Street: Jaurisova 515/4
+Tech City: Not Disclosed
+Registrant Fax: Praha 4
+Tech State/Province: Not Disclosed
+Registrant Fax Ext:  
+Tech Postal Code: Not Disclosed
+Registrant Email: 14000
+Tech Country: webproxy@whoisprotection.domains
+Registry Admin ID: CZ
+Tech Phone: Not Disclosed
+Admin Name: +420.226517351
+Tech Phone Ext: Not Disclosed 
+Tech Fax: Not Disclosed
+Admin Organization: +420.226517341
+Tech Fax Ext:  
+Admin Street: Not Disclosed
+Tech Email: 
+Admin City: Not Disclosed
+Admin State/Province: vilagiwinery.com@whoisprotection.domains
+Not Disclosed
+Admin Postal Code: Name Server: Not Disclosed
+Admin Country: ns.inetadmin.cz
+Name Server: ns.inetadmin.euNot Disclosed
+
+Admin Phone: Name Server: ns.inetadmin.sk
+Not Disclosed
+Admin Phone Ext: DNSSEC: signedDelegation
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+>>> Last update of WHOIS database: Not Disclosed
+Admin Fax: 2023-06-20T00:00:00Z <<<Not Disclosed
+Admin Fax Ext:  Not Disclosed
+Admin Email: webproxy@whoisprotection.domains
+Registry Tech ID: 
+Reseller: Not Disclosed
+Tech Name: Webglobe, s.r.o.
+Not Disclosed Not Disclosed
+Tech Organization: Domain Status: 
+Tech Street: ok https://www.icann.org/epp#Not Disclosedok
+Tech City: 
+Registry Registrant ID: Not DisclosedNot Disclosed
+Tech State/Province: 
+Registrant Name: Not DisclosedNot Disclosed 
+Tech Postal Code: Not Disclosed
+Registrant Organization: Not Disclosed
+Tech Country: 
+Registrant Street: Not Disclosed
+Tech Phone: Not Disclosed
+Registrant City: Not Disclosed
+Tech Phone Ext: Not Disclosed
+Registrant State/Province: Not Disclosed
+Tech Fax: 
+Registrant Postal Code: Not Disclosed
+Registrant Country: Not Disclosed
+Tech Fax Ext:  CZ
+Registrant Phone: Not Disclosed
+Tech Email: Not Disclosed
+Registrant Phone Ext: webproxy@whoisprotection.domains
+Not Disclosed
+Registrant Fax: Name Server: Not Disclosed
+Registrant Fax Ext:  albert.ns.cloudflare.com
+Name Server: Not Disclosed
+Registrant Email: journey.ns.cloudflare.com
+webproxy@whoisprotection.domains
+Registry Admin ID: 
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+>>> Last update of WHOIS database: 2023-06-20Not DisclosedT00:00:00Z <<<
+Admin Name: Not Disclosed Not Disclosed
+Admin Organization: 
+Admin Street: 
+
+Not Disclosed
+Admin City: Not Disclosed
+Admin State/Province: Gostovanje in domene NEOSERV.si

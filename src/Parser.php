@@ -110,7 +110,7 @@ class Parser
         $parser = $this->getParser();
         $whois = new Whois();
         $whois->record = $this->lookup;
-        $whois->domain = $rawData['domainName'] ?? null;
+        $whois->domain = $this->processValue($rawData['domainName'] ?? null);
         $whois->created_date = $parser->getCreated($rawData)?->toIso8601String();
         $whois->updated_date = $parser->getUpdated($rawData)?->toIso8601String();
         $whois->expired_date = $parser->getExpiry($rawData)?->toIso8601String();
@@ -160,7 +160,7 @@ class Parser
         $registrar->name = $this->parser->getRegistrar($rawData);
         $registrar->abuse_contact_phone = $this->processValue($rawData['registrarAbuseContactPhone'] ?? null);
         $registrar->abuse_contact_email = $this->processValue($rawData['registrarAbuseContactEmail'] ?? null, true);
-        $registrar->iana_id = $rawData['registrarIANAID'] ?? null;
+        $registrar->iana_id = $this->processValue($rawData['registrarIANAID'] ?? null);
         $registrar->url = $this->processValue($rawData['registrarURL'] ?? null, true);
         $registrar->whois_server = $this->processValue($rawData['registrarWHOISServer'] ?? null, true);
 

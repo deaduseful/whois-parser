@@ -12,7 +12,7 @@ class Response extends Record
     private const DATE_UPDATED = 'updated';
     private const FIELD_STATUSES = 'statuses';
 
-    public ?Contact $registrant;
+    public null|array|Contact $registrant;
     public ?Registration $registration;
     public ?array $name_servers;
     public ?Whois $whois;
