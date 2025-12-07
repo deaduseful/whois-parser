@@ -27,6 +27,10 @@ class Br extends Generic
         '% No match for',
     ];
 
+    protected array $matchReserved = [
+        'blocked_word',
+    ];
+
     public function isNotFound(): bool
     {
         foreach ($this->matchNotFound as $find) {

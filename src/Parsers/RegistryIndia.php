@@ -10,7 +10,7 @@ class RegistryIndia extends Generic
     ];
 
     protected array $matchReserved = [
-        'Domain name matches a restricted word',
+        'This name is not available for registration',
     ];
     
     protected array $matchInvalid = [

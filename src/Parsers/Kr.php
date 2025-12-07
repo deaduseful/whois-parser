@@ -10,6 +10,10 @@ class Kr extends Generic
         'The requested domain was not found',
     ];
 
+    protected array $matchReserved = [
+        'restricted to specifically qualified registrants',
+    ];
+
     protected ?string $dateFormat = 'Y. m. d.|';
 
     protected array $mapFields = [
