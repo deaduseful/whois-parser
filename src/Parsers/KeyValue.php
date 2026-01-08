@@ -177,13 +177,13 @@ abstract class KeyValue implements Strategy
         if (str_starts_with($dateString, 'before ')) {
             $dateString = str_replace('before ', '', $dateString);
         }
-        
+
         if ($this->dateFormat) {
             $carbon = Carbon::createFromFormat($this->dateFormat, $dateString);
         } else {
             $carbon = Carbon::parse($dateString);
         }
-        if ($carbon->unix() > 0) {
+        if ($carbon && $carbon->unix() > 0) {
             return $carbon;
         }
         return null;

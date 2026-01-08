@@ -56,6 +56,7 @@ class Factory
         }
 
         $class = null;
+
         if ($whoisServer) {
             $class = self::getClassByWhoisServer($whoisServer);
         }
