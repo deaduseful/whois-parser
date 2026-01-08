@@ -20,20 +20,6 @@ class RegistrarNominet extends Generic
     ];
 
     /**
-     * Override parseDate to handle UK-specific date formats
-     */
-    protected function parseDate(string $dateString): ?Carbon
-    {
-        // Handle "before Aug-1996" case - return null as it's not a valid date
-        if (str_starts_with($dateString, 'before ')) {
-            return null;
-        }
-
-        // Use parent parseDate for normal date strings
-        return parent::parseDate($dateString);
-    }
-
-    /**
      * Override isNotFound to handle UK-specific not found patterns
      */
     public function isNotFound(): bool

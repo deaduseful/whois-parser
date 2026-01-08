@@ -173,6 +173,10 @@ abstract class KeyValue implements Strategy
         }
 
         $dateString = str_replace('T00:00:00Z', '', $dateString);
+
+        if (str_starts_with($dateString, 'before ')) {
+            $dateString = str_replace('before ', '', $dateString);
+        }
         
         if ($this->dateFormat) {
             $carbon = Carbon::createFromFormat($this->dateFormat, $dateString);

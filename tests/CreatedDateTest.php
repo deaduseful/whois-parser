@@ -34,7 +34,7 @@ class CreatedDateTest extends TestCase
             ['prediksijitu.site', '2023-04-05T18:47:03'],
             ['downloader.social', '2022-12-11 10:51:02'],
             ['cohenhouse.it', '2020-08-21T22:50:48'],
-            ['me.uk', null],
+            ['me.uk', 'Aug-1996'],
             ['me.rs', '2009-06-08 11:42:48'],
             ['giveaway.gg', '2020-06-03 18:06:52.856'],
             ['expressofritz.com.br', '2022-08-03 00:00'],
