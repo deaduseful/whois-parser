@@ -70,11 +70,22 @@ abstract class KeyValue implements Strategy
     protected string $registrarField = 'registrar';
     protected ?array $parsed = null;
     protected ?string $whoisServer;
+    protected ?string $queriedDomain = null;
 
     public function __construct(string $lookup, ?string $whoisServer = null)
     {
         $this->lookup = $lookup;
         $this->whoisServer = $whoisServer;
+    }
+
+    /**
+     * Set the domain that was queried (e.g. 24x7ads.com).
+     * When the WHOIS response contains multiple concatenated records, only the block
+     * matching this domain will be parsed. Call this before getParsed() if available.
+     */
+    public function setQueriedDomain(?string $domain): void
+    {
+        $this->queriedDomain = $domain === null || $domain === '' ? null : $domain;
     }
 
     public function getParsed(): array
@@ -99,9 +110,66 @@ abstract class KeyValue implements Strategy
     {
         $lookup = $this->getLookup();
         $lines = $this->parseLines($lookup);
+        $lines = $this->normaliseLinesForDomain($lines);
         $raw = $this->parseRaw($lines);
         $data = $this->mapParsed($raw);
         return $this->getFilter($data);
+    }
+
+    /**
+     * When the WHOIS body contains exactly two "Domain Name:" blocks (concatenated records),
+     * reduce to the single block that matches the queried domain (or the last block if
+     * no match / no queried domain set). This avoids duplicate keys becoming arrays.
+     * We only normalise when there are exactly 2 blocks to avoid breaking malformed
+     * responses that have many Domain Name lines in one mangled block.
+     *
+     * @param array<int, string> $lines Lines from the WHOIS response
+     * @return array<int, string> Lines for one domain block
+     */
+    protected function normaliseLinesForDomain(array $lines): array
+    {
+        $domainLineIndices = [];
+        foreach ($lines as $i => $line) {
+            $trimmed = trim($line);
+            if (preg_match('/^Domain\s+Name\s*:\s*(.+)$/i', $trimmed, $m)) {
+                $domainLineIndices[] = [
+                    'index' => $i,
+                    'domain' => trim($m[1]),
+                ];
+            }
+        }
+
+        if (count($domainLineIndices) !== 2) {
+            return $lines;
+        }
+
+        $queried = $this->queriedDomain !== null ? strtolower($this->queriedDomain) : null;
+        $chosen = null;
+
+        if ($queried !== null) {
+            foreach ($domainLineIndices as $info) {
+                if (strtolower($info['domain']) === $queried) {
+                    $chosen = $info;
+                    break;
+                }
+            }
+        }
+
+        if ($chosen === null) {
+            $chosen = $domainLineIndices[count($domainLineIndices) - 1];
+        }
+
+        $start = $chosen['index'];
+        $next = null;
+        foreach ($domainLineIndices as $info) {
+            if ($info['index'] > $start) {
+                $next = $info['index'];
+                break;
+            }
+        }
+        $end = $next !== null ? $next : count($lines);
+
+        return array_values(array_slice($lines, $start, $end - $start));
     }
 
     private function getCamel(string $key): string

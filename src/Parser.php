@@ -50,6 +50,9 @@ class Parser
     {
         if (empty($this->parser)) {
             $this->parser = Factory::create($this->lookup, $this->source, $this->whoisServer);
+            if ($this->source !== null && method_exists($this->parser, 'setQueriedDomain')) {
+                $this->parser->setQueriedDomain($this->source);
+            }
         }
         return $this->parser;
     }

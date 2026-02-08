@@ -88,6 +88,8 @@ class ContactParser
 
     /**
      * Process a single contact for a given prefix
+     * Ensures only scalar values are assigned to Contact string properties (e.g. when
+     * raw data contains arrays due to concatenated WHOIS records).
      *
      * @param string $prefix The contact type prefix
      * @return Contact A single Contact object
@@ -96,15 +98,13 @@ class ContactParser
     {
         $contact = new Contact();
 
-        // Handle standard properties
+        // Handle standard properties – always coerce to scalar so ?string never receives an array
         foreach (self::CONTACT_PROPERTIES as $property => $keySuffix) {
             $key = $prefix . $keySuffix;
-
-            if ($property === 'email') {
-                $contact->$property = $this->processValue($this->rawData[$key] ?? '');
-            } else {
-                $contact->$property = $this->rawData[$key] ?? '';
-            }
+            $value = $this->rawData[$key] ?? '';
+            $contact->$property = $property === 'email'
+                ? $this->processValue($value)
+                : $this->toScalarString($value);
         }
 
         // Handle street separately as it has special handling
@@ -147,16 +147,29 @@ class ContactParser
 
     /**
      * Helper method to safely handle values that might be arrays
-     * Takes the first value if it's an array
+     * Takes the first value if it's an array (recursively so nested arrays become scalar)
      *
      * @param null|string|array $value The value to process (could be string, array, or null)
      * @return string|null The processed value
      */
     private function processValue(null|string|array $value): ?string
     {
-        if (is_array($value)) {
+        while (is_array($value)) {
             $value = !empty($value) ? $value[0] : null;
         }
         return $value;
+    }
+
+    /**
+     * Coerce a value to a string for Contact properties typed as ?string.
+     * Prevents TypeError when raw data has duplicate keys (e.g. concatenated WHOIS).
+     *
+     * @param null|string|array $value Value from raw data
+     * @return string|null Scalar string or null, never an array
+     */
+    private function toScalarString(null|string|array $value): ?string
+    {
+        $scalar = $this->processValue($value);
+        return $scalar === null ? null : (string) $scalar;
     }
 }
